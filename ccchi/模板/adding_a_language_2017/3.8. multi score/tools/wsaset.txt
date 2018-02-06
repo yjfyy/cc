@@ -1,0 +1,17 @@
+WSAset v0.3, Jun 11 2016
+This tool is part of the RedAlert++ toolset.
+Developed by CCHyper and OmniBlade
+Visit redalertpp.org for more info on the RedAlert++ project.
+
+Usage:
+    wsaset [-l -p -x # -y #] filename
+
+    filename is without any extension or numbering.
+    WSAset will look for filename ####.pcx and generate filename.wsa
+
+    -l sets the WSA to include a loop frame.
+       XCC doesn't seem to like WSA without a loop.
+
+    -p sets if the WSA should include the palette in the file.
+
+    -x and -y set the upper left position, defaults to 0, 0.

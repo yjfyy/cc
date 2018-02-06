@@ -1,0 +1,34 @@
+[this file should be viewed in DOS text encoding]
+
+If any of the font's special characters are changed, and you need new
+upper case rules for them, you need to create a conversion rules string,
+and put it in the language ini file on a "CapsSpecialChars=" line.
+
+
+To create a conversion rules string, view this file in the character set of
+the 8-bit character encoding of your choice, and edit the original character
+range given below so all lower case characters in it are replaced by their
+upper case equivalents. For accented characters which don't have an uppercase
+accented equivalent in the character set, the basic rule is to just use the
+normal, non-accented version. If a character doesn't have an uppercase version,
+just leave it.
+
+Make sure your language file is viewed in the same text encoding as this one
+at the moment you copy the conversion rules string into it.
+
+Note that the line HAS to be exactly 127 characters long, or the system will
+fail, and strings ingame will be cut off whenever the character just beyond
+the given range is encountered.
+
+
+Original special characters set (the 128 to 255 range):
+€‚ƒ„…†‡ˆ‰Š‹Œ‘’“”•–—˜™š›œŸ ¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏĞÑÒÓÔÕÖ×ØÙÚÛÜİŞßàáâãäåæçèéêëìíîïğñòóôõö÷øùúûüış
+
+Examples of upper case conversion rules strings:
+
+Conversion rules for DOS-437, C&C's default character set:
+€šAA€EEEIII’’O™OUUY™š›œŸAIOU¥¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏĞÑÒÓÔÕÖ×ØÙÚÛÜİŞßàáâãäåæçèéêëìíîïğñòóôõö÷øùúûüış
+Conversion rules for DOS-860, Portuguese:
+€š‘†€‰‰’‹Œ˜‘’Œ™©–˜™š›œŸ†‹Ÿ–¥¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏĞÑÒÓÔÕÖ×ØÙÚÛÜİŞßàáâãäåæçèéêëìíîïğñòóôõö÷øùúûüış
+Conversion rules for DOS-852, Polish (Central european):
+€š¶Ş€ÓŠŠ×‘‘â™••——™š››¬µÖàé¤¤¦¦¨¨ª¬¸®¯°±²³´µ¶·¸¹º»¼½½¿ÀÁÂÃÄÅÆÆÈÉÊËÌÍÎÏÑÑÒÓÒÕÖ×·ÙÚÛÜİŞßàáâããÕææèéèëííİïğñòóôõö÷øùúëüüş

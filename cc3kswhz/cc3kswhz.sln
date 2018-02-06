@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "cc3kswhz", "cc3kswhz\cc3kswhz.vdproj", "{DB5E63E5-FCBD-4568-A0C2-A8E5A2AE48EB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DB5E63E5-FCBD-4568-A0C2-A8E5A2AE48EB}.Debug|Default.ActiveCfg = Debug
+		{DB5E63E5-FCBD-4568-A0C2-A8E5A2AE48EB}.Debug|Default.Build.0 = Debug
+		{DB5E63E5-FCBD-4568-A0C2-A8E5A2AE48EB}.Release|Default.ActiveCfg = Release
+		{DB5E63E5-FCBD-4568-A0C2-A8E5A2AE48EB}.Release|Default.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

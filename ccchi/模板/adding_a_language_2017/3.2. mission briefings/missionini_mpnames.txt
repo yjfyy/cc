@@ -1,0 +1,58 @@
+; Original maps
+[SCM01EA]
+Name=Green Acres
+[SCM02EA]
+Name=Sand Trap
+[SCM03EA]
+Name=Lost Arena
+[SCM04EA]
+Name=River Raid
+[SCM05EA]
+Name=Eye Of The Storm
+[SCM06EA]
+Name=Lakefront Clash
+[SCM07EA]
+Name=Desert Madness
+[SCM08EA]
+Name=Pitfall
+[SCM09EA]
+Name=Moosehead Barrens
+[SCM70EA]
+Name=Winter Waterland
+[SCM71EA]
+Name=One Pass Fits All
+[SCM72EA]
+Name=Straight And Narrow
+[SCM73EA]
+Name=King Takes Pawn
+[SCM74EA]
+Name=Nowhere To Hide
+[SCM77EA]
+Name=Marooned
+[SCM96EA]
+Name=Tiberium Garden
+
+; Covert Operations maps
+
+[SCM10EA]
+Name=Red Sands
+[SCM50EA]
+Name=Emerald Highlands
+[SCM51EA]
+Name=Four Corners
+[SCM52EA]
+Name=Cactus Valley
+[SCM60EA]
+Name=Monkey In The Middle
+[SCM61EA]
+Name=King Of The Mountain
+[SCM62EA]
+Name=Surgical Incision
+[SCM75EA]
+Name=Village Of The Unfortunate
+[SCM90EA]
+Name=A Long Way From Home
+[SCM97EA]
+Name=Northern Explosion
+[SCM98EA]
+Name=Diverse Region

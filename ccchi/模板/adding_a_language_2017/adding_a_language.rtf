@@ -1,0 +1,290 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil\fcharset2 Symbol;}}
+{\colortbl ;\red0\green0\blue255;}
+{\*\generator Msftedit 5.41.21.2510;}\viewkind4\uc1\pard\sa200\sl276\slmult1\qc\f0\fs24 =====================================\line Guide to adding a new language to C&C\line =====================================\line by Nyerguds\par
+\pard\sa200\sl276\slmult1 This guide explains how to add a new language pack to C&C95. After a language pack is added, the language can be enabled in the game by editing the configuration file "conquer.ini", and changing the Language setting:\par
+[Language]\line Language=Eng\par
+Note that this will only work on C&C95 versions starting from v1.06c. Officially included languages are English (eng), French (fre), German (ger), and audio-only Japanese (jap).\par
+Anyway, let's get started!\par
+\ul\b\fs28 Index:\ulnone\b0\fs24\par
+1. Important note in advance: text encodings\line 2. Modding basics\line 2.1 Setting up XCC Utilities\line 2.2 Converting files\line 2.3 Creating MIX files\line 3. Changing the game files\line 3.1 Game strings file\line 3.2 Mission briefings file\line 3.3 Fonts\line 3.4 Interface graphics\line 3.5 Sidebar icons\line 3.6 Sounds\line 3.7 "Coming Attraction" screen\line 3.8 Multiplayer score animation\line 4. Renaming your language files\line 5. Wrapping up\line 6. Configuration tool translation\line 7. Making an installer\par
+\par
+\ul\b\fs28 1. Important note in advance: text encodings\ulnone\b0\fs24\par
+Many translations will need special characters that don't exist in the C&C1 fonts, because the fonts are made for the standard United States / Western Europe text encoding, "DOS-437".\par
+Now, text encodings are a bit of a peculiar thing. I advice you to research it a bit on your own, but it boils down to this: there are several ways of saving text to your hard disk. The classic way is to have one byte per character, where one symbol is assigned to each of the 256 values that a byte can have.\par
+This limitation no longer applies with the creation of UTF encodings, but C&C only supports one byte per character, so we will focus on one-byte fonts here.\par
+There is a quite well-followed standard for the first half of these values (0-127), namely ASCII, which defines exactly which values to use for the standard Latin alphabet in lower and upper case, the numbers, and some other standard symbols like punctuations, quotes and brackets.\par
+But once you go outside English you quickly encounter characters with accents and such, or completely new symbols, as seen in Greek and Cyrillic alphabets. To support these, people started using the 128-255 range, but since there are more special characters than available values, people in these different regions all filled up that range with their own regional special symbols. This is how different "extended ASCII" text encodings were born.\par
+The obvious problem with extended ASCII is that you can't see the special characters correctly unless you know what encoding the file was written in, so such files viewed in the standard editors in a different region will have all thee special characters messed up. Anyway, the subject of this section is not the drawbacks of text encodings, but how we can use them to our advantage.\par
+Because these regional encodings exist, if the symbols you need for your language are not in DOS-437, you can most likely use your local extended-ASCII encoding for this translation, anf then make adapted versions of the game's font files by putting those characters into them.\par
+If you don't know your local extended-ASCII encoding, Wikipedia has quite some information on those. The Westwood Font Editor tool lists all commonly known ASCII-compatible one-byte-per-character text encodings in a handy dropdown list, so you can just open some file and check the 128-255 character range in different encodings from the list to see which characters fit.\par
+Another possibility for checking character compatibility is to open the included "extended_ascii.txt" file in an editor that supports switching to different text encodings, like Editpad Pro, and view it in different text encodings to quickly see all the extended ASCII characters. Do note that finding an encoding this way does not guarantee that the encoding is single-byte (or ASCII-compatible, though you should notice if the non-special-character part at the top of the file changes).\par
+Note that even if the required characters are in the DOS-437 encoding, the C&C fonts aren't actually complete; if the characters are above index 168, chances are the original game fonts will not contain it, and you'll need to edit the fonts anyway. I might fix that in a future patch; it's silly to need extra fonts for standard features.\par
+It is probably most practical to save the working copies of the files you translate in UTF-8 encoding, since that supports all special characters, and unlike extended ASCII, editors generally identify UTF-8 files automatically, but the final files that will be read by the game will all need to be in one specific chosen text encoding which supports all the characters you used.\par
+If no such encoding is available you could design your own (or make adaptions), since it all works as long as the font indices match the bytes in the text files, but that'll make converting your text a lot harder.\par
+\par
+\ul\b\fs28 2. Modding basics\ulnone\b0\fs24\par
+Adding a language into the game obviously involves editing some of the game's file formats. Specifically, graphics, and optionally, sounds. I'll quickly go over the basics of how to do that.\par
+\par
+\ul\b 2.1 Setting up XCC Utilities\ulnone\b0\par
+The primary modding suite for C&C games is still the XCC Utilities pack. These tools can be downloaded from:\par
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li1080\sa200\sl276\slmult1{\field{\*\fldinst{HYPERLINK "http://xhp.xwis.net/"}}{\fldrslt{\ul\cf1 http://xhp.xwis.net/}}}\f0\fs24\par
+\pard\sa200\sl276\slmult1 Click "Utilities" in the sidebar, and download the "XCC Utilities".\par
+The primary program inside this pack is "XCC Mixer". It contains configurations for the game folders which are used by some of the other programs too.\par
+On modern operating systems XCC Mixer has trouble accessing its own registry settings, so always start the program in elevated rights (Administrator) mode. To make sure all other tools can correctly read those same saved settings it is advised to start them in Administrator mode too.\par
+In the following sections we are going to need to use XCC Mixer to convert files. Since C&C graphics are paletteless 8-bit images you will need colour palettes to do that. There are some special adapted palettes included in this pack, but to use those in XCC, they need to be inside a mix file, inside a C&C folder, or XCC won't find them.\par
+So start by taking the file "sidebar_edit_palettes.mix" out of the \i interface -> sidebar -> tools\i0  folder and dumping it in your C&C95 folder. This will not affect your game, since it's not a filename the game recognises, but XCC scans all .mix files it finds.\par
+Now, start XCC Mixer as administrator, open the View menu, and select "Directories". Configure your C&C95 folder there as "TD Primary".\par
+Close XCC Mixer and reopen it (again, as Administrator). Now, as a test, open "updatec.mix" and find the file "hpips.shp". Its colours might look distorted or even completely black at first. Now press [Ctrl]+P to open the palettes menu, open "Tiberian Dawn" in the tree view, select "sidebar_edit_palettes.mix", and choose "palette_sidebar.pal" to view the graphics in their full glory.\par
+Note that the background is magenta, and the "READY" and "HOLD" text is in deep pink; these colour are edited on the palette to avoid mixing them up, because they have special functions. The magenta is obviously the transparent colour. The deep pink is the special glowing white colour used on the sidebar messages. These colours are respectively black and white on the original palette. They are changed for your convenience here to avoid mixing them up with real black and real white.\par
+\par
+\ul\b 2.2 Converting and editing files\ulnone\b0\par
+As briefly mentioned in the previous part, the standard C&C sprite graphics format is SHP, a paletteless 8-bit image format that supports multiple frames per file and which needs a 256-colour palette to be viewed.\par
+To convert files, make sure the second file browser in XCC Mixer is open. If it's not there, it's hidden because its width is set to zero, but you should see two bars in the middle. Pull the right-side bar farther to the right and the hidden section will appear.\par
+To convert the file to editable graphics there are four steps:\par
+\pard{\pntext\f0 1.\tab}{\*\pn\pnlvlbody\pnf0\pnindent0\pnstart1\pndec{\pntxta.}}
+\fi-360\li720\sl276\slmult1 Select the graphics file\par
+{\pntext\f0 2.\tab}Make sure you have the correct palette selected (using [Ctrl]+P)\par
+{\pntext\f0 3.\tab}Make sure the other file browser is set to the target folder\par
+\pard{\pntext\f0 4.\tab}{\*\pn\pnlvlbody\pnf0\pnindent0\pnstart1\pndec{\pntxta.}}
+\fi-360\li720\sa200\sl276\slmult1 Right-click your SHP file and select "Copy as PNG"\par
+\pard\sa200\sl276\slmult1 This will make all frames appear as different files in the other file browser; for "hpips.shp" you will get "hpips 0000.png" to "hpips 0007.png". To convert it back to SHP, just select the first frame of those, right click, and click "Copy as SHP". Note that conversion will fail if the other file browser has a mix file opened; it can't convert stuff straight into a mix file.\par
+The conversions will work both ways; things copied this way from the left pane will end up in the right pane, and vice versa.\par
+It is advised that the resulting PNG files are edited with a program that supports 8-bit paletted graphics, allows viewing the colour palette, and, most importantly, preserves the original format when editing and saving the files. I personally do all my graphics editing work in Gimp. In my opinion, all the floating windows of Gimp make it pretty annoying to work with, but thankfully it has a setting to reduce it to single-window mode with docking tool windows. Do note that the colour palette window in Gimp isn't named "color palette" but "colormap". It can be found under Windows -> Dockable dialogs.\par
+If the image you saved did lose its palette in the editing process, and is high-colour now, open the "View" menu in XCC Mixer, go to "Palet", and make sure "Use for conversion" is selected. Then, use [Ctrl]+P to select the correct palette to convert the graphics to. Once you have that set, the conversion should work even from high-colour images.\par
+\par
+On to the other type: audio. C&C has its own audio file format (.AUD files), and XCC Mixer can convert plain uncompressed .WAV files to and from that format in exactly the same was as the SHP graphics.\par
+There's only one thing to keep in mind here: the standard audio type in C&C is 22050 Hz, 16 bit, mono, so it is advised to make sure your files are in that format before you try to convert them to AUD files.\par
+\par
+\ul\b 2.3 Creating MIX files\ulnone\b0\par
+XCC Mixer is not the advised tool to make mix files, since the C&C1 format is missing in the file types drop down of the program's "File" -> "New" function.\par
+Instead, start the tool called "XCC Mix Editor", and follow these steps to make and fill a new mix file:\par
+\pard{\pntext\f0 1.\tab}{\*\pn\pnlvlbody\pnf0\pnindent0\pnstart1\pndec{\pntxta.}}
+\fi-360\li720\sl276\slmult1 Press "New", and select the location and name for your new mix file. Make sure you have the correct palette selected (using [Ctrl]+P)\par
+{\pntext\f0 2.\tab}In your new mix file, press "Options", and set the type to "Tiberian Dawn". It is vitally important that this setting is correct BEFORE any files are added into the archive, otherwise their internal identification inside the archive will be saved wrong.\par
+{\pntext\f0 3.\tab}Drag and drop any files you want to add into the program. If you replace files like this they will show twice, but that's okay, they'll be replaced.\par
+\pard{\pntext\f0 4.\tab}{\*\pn\pnlvlbody\pnf0\pnindent0\pnstart1\pndec{\pntxta.}}
+\fi-360\li720\sa200\sl276\slmult1 Save the mix file \b\i using the "compact" function\b0\i0 . Don't use "Save"; it won't optimize the mix file to clean up the space used by removed/replaced files.\par
+\pard\sa200\sl276\slmult1 Note that there's a common bug where the "New" button is disabled. If so, just make a copy of a small mix file from the game folder, open that in Mix Editor, select all files in it and delete them, and then insert your own files. If you copied a C&C1 mix file, the type will already be set correctly, so there's no need to adapt that.\par
+\par
+\ul\b\fs28 3. Changing the game files\ulnone\b0\fs24\par
+Here's the real work; applying all that knowledge to translate the game.\par
+\par
+\ul\b 3.1 Game strings file\ulnone\b0\par
+Source contents in:\par
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sl276\slmult1 text_eng.ini - English strings file in ini format\par
+{\pntext\f1\'B7\tab}text_XXX.ini - English strings file, with language-irrelevant things removed\par
+{\pntext\f1\'B7\tab}text_fre.ini - French strings list, as extra reference\par
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 text_ger.ini - German strings list, as extra reference\par
+\pard\sa200\sl276\slmult1 "String" is the programming term for "piece of text". The internal strings file contains the names of all units, buildings, and other objects, as well as the map selection screen information, game menu text, etc.\par
+This can be used in two ways: either you take the full strings file, and convert it to C&C Strings file format, or you use it as .ini file, though in v1.06c revision 3 this has the small problem that spaces are trimmed off the start of the text.\par
+Notes:\par
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li540\sl276\slmult1 As outlined in the first section, if any special characters are used in this file, it will need to be converted to the correct text encoding.\par
+{\pntext\f1\'B7\tab}The ` characters in the text represent line breaks, so make sure you keep them in when translating.\par
+{\pntext\f1\'B7\tab}Only entries that are in the file will be used. Any missing ones will default to the game's configured base language.\par
+{\pntext\f1\'B7\tab}The "Mission" at line 647 is the first line of the "Mission Accomplished" string. The second part of that is at line 22.\par
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li547\sl276\slmult1 The "Mission" at line 741 is the first line of the "Mission Failed" string. The second part of that is at line 23.\par
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li540\sa200\sl276\slmult1 The English-language strings file has all country area information (lines 374 to 390) in Square Miles (SQ. MI.). If you want that information in KM\'b2 instead, you can copy the data over from the French or German version of the strings file.\par
+\pard\sa200\sl276\slmult1\par
+\ul\b 3.2 Mission briefings file\ulnone\b0\par
+Source contents in:\par
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sl276\slmult1 missionini_briefings.txt - Mission briefings & names\par
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 missionini_mpnames.txt - multiplayer map names\par
+\pard\sa200\sl276\slmult1 The mission briefings file contains the following things:\par
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li540\sl276\slmult1 Briefings of the campaign missions\par
+{\pntext\f1\'B7\tab}Briefings of the Funpark dino missions\par
+{\pntext\f1\'B7\tab}Briefings of the Covert Operations missions\par
+{\pntext\f1\'B7\tab}Mission names of the Covert Operations missions\par
+{\pntext\f1\'B7\tab}Briefings of the N64 and Playstation Special Ops missions\par
+{\pntext\f1\'B7\tab}Mission names of the N64 and Playstation Special Ops missions\par
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li540\sa200\sl276\slmult1 Multiplayer map names (optional)\par
+\pard\sa200\sl276\slmult1 If you have opened mission.ini before, you'll see this one is slightly different. It includes all mission briefings of all addon missions, and it has Name= tags under the header of each addon mission. This system allows a language addon to translate the mission names in the "New Missions" list.\par
+If you want, you can even translate the multiplayer map names, though that's purely optional. To avoid confusion in multiplayer it might be advised to leave them as they are. If you do want to translate them, simply paste them at the end of the briefings file.\par
+Make sure all .ini files you edit have an extra open line at the end, or the game will not be able to read the last line.\par
+Note that just like the strings file, if any special characters are used in this file, it needs to be converted to the correct text encoding.\par
+\par
+\ul\b 3.3. Fonts\ulnone\b0\par
+If you are using a text encoding different from DOS-437, or want to use characters that aren't actually on the game font (most characters after index 170 aren't on the palettes), you will need to do some font editing!\par
+XCC Mixer can't convert these; the format is too complex for simple conversion. So use the Westwood Font Editor I made for this.\par
+Fonts that need editing:\par
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sl276\slmult1\tx2160 8fat.fnt\tab Font used to display item name tags and sidebar mouse-over info.\par
+{\pntext\f1\'B7\tab}12green.fnt\tab Active (non-fading) font for the world map and options bar text.\par
+{\pntext\f1\'B7\tab}12grngrd.fnt\tab The more commonly used fading variant of the 12green font.\par
+{\pntext\f1\'B7\tab}grad6fnt.fnt\tab The normal game font, for menus, briefings, etc.\par
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\tx2160 vcr.fnt\tab The huge "Mission Accomplished" / "Mission Failed" font.\par
+\pard\sa200\sl276\slmult1 The Westwood Font Editor contains palettes specifically for viewing these fonts with the colours normally used for the in the game, so make sure to select the right palette for them. There is no palette for grad6fnt because the font contains more detail than is actually visible in-game, but the 12grngrd font should be good enough to edit it with.\par
+In the Westwood Font Editor, under the symbols list, there is a dropdown menu containing all known 1-byte-per-character ASCII-compatible encodings, so chances are it'll contain the encoding you want to use. Once chosen, all characters in the > 127 range will change to the ones you need, so you can easily see which character to paint for each index.\par
+It is advised not to change the font's size, since that will mess up the text alignment in the game. This means no accents can be added to the vcr font. If you need accents on the "Mission Accomplished" or "Mission Failed" text, you'll either have to leave them off, or use workarounds; for example, the French version puts commas on an empty line above the actual text to fake the accents.\par
+However, v1.06c revision 3 does not support reading that kind of data from ini, since the game's ini read system trims all spaces off the start of strings. If you want to do this you could start the line with a character that is 0x0 pixels in the font. The other alternative is to convert the strings ini file to the game's original old strings file format.\par
+\par
+\ul\b 3.4 Interface graphics\ulnone\b0\par
+Source contents in:\par
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sl276\slmult1 hmap.shp - Map button on sidebar\par
+{\pntext\f1\'B7\tab}hrepair.shp - Repair button on sidebar\par
+{\pntext\f1\'B7\tab}hsell.shp - Sell button on sidebar\par
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 hpips.shp - Building and sidebar messages\par
+\pard\sa200\sl276\slmult1 The buttons to translate are these:\par
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li540\sl276\slmult1 "Sell", for the button on the sidebar\par
+{\pntext\f1\'B7\tab}"Repair", for the button on the sidebar\par
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li540\sa200\sl276\slmult1 "Map", for the button on the sidebar\par
+\pard\sa200\sl276\slmult1 The text on these buttons is actually in the 12grngrd font. There is a palette for this font provided in the Westwood Font Editor, so if you made the fonts first (or didn't need custom fonts), open it in the Font Editor, select the correct palette to show the nice green fade, and simply type your text in the preview text box at the bottom, so the text in the font appears in the preview pane. You can get the image out by right clicking the preview image and selecting "copy", and pasting it in your favourite image editor (preferably one that supports palettes). Since the Windows clipboard does not support transparency, though, you will need to clear the background colour from the copied image yourself.\par
+\par
+Besides that there's also "hpips.shp". This contains the building and sidebar messages, and a bunch of other stuff.\par
+Strings to translate:\par
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li540\sl276\slmult1 The "Primary" on the Primary Buildings\par
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li540\sa200\sl276\slmult1 The "On Hold" and "Ready" text for the sidebar icons\par
+\pard\sa200\sl276\slmult1 Keep in mind that you should use the very last colour on the palette to make the "On Hold" and "Ready" text, since that's the animated blinking white. The included sidebar_edit_palettes.mix contains an adapted palette on which this colour is changed to deep pink, so it does not get mixed up with real white.\par
+\par
+\ul\b 3.5 Sidebar icons\ulnone\b0\par
+Files:\par
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sl276\slmult1\tx2880 desert\\\tab desert icons in png format, in correct palette\par
+{\pntext\f1\'B7\tab}temperate\\\tab desert icons in png format, in correct palette\par
+{\pntext\f1\'B7\tab}cameo_font.fnt\tab font for icon text. Use with WWFontEditor and its VCR pal\par
+{\pntext\f1\'B7\tab}cameo_font_thin.fnt\tab Alternate narrower font, for longer words.\par
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\tx2880 blank icons mix\\\tab Blank icons prepackaged as mix files.\par
+\pard\sa200\sl276\slmult1 If you don't want to go through the effort of making translated icons, but also don't want the English text to remain, you can use the blank icons mix files.\par
+In case you do want to make them, blank_icons.rar contains the icons to use in C&C95. After translating the strings, you can use the Westwood Font Editor with the included cameo_font.fnt (viewed in the "TD VCR" palette) to make the text into images, as described in the previous section.\par
+Note that the maximum width for text on an icon is 62 pixels. For large words, you can either use the narrower font in the alphabet file or manually make some of the letters narrower to fit, or abbreviate the words. Since both the shadow of the letters and the right-side border of the icons is black, you could make words that are 63 pixels wide, if you make the last letter's shadow blend into the border.\par
+It is advised to edit the words on a separate image, since you always need to paste it on both the Desert version and the Temperate / Winter / Snow version. Since these last 3 theaters all use the same colour palette, you only have to make these once.\par
+After you put the text on all icon files, convert them to .shp format. Since the converted files from Desert and Temperate will end up with the same file names, make sure to convert them to separate folders.\par
+Once they are converted, change the icons' extensions from ".shp" to the code for that theater, so ".des" for desert and ".tem" for Temperate.\par
+The fastest way to bulk-rename files is using the command prompt. Hold [Shift] and right-click the folder your shp files are in, and you should see the option "open command prompt here" appear. Click it and the console window will appear, set in that folder. In the console, just type\par
+\pard\li720\sa200\sl276\slmult1 ren *.shp *.des\par
+\pard\sa200\sl276\slmult1 and press [enter], and it'll rename all ".shp" files to ".des". Once the command finishes, just close the console. If the files list in your Explorer window doesn't show the new extensions, press F5 to refresh it.\par
+Now, that's done. However, there are two more theaters, namely, Winter and Snow. Luckily, their colour palette is the same as Temperate, so the icons for these theaters can simply be copied. So make two copies of your temperate icons folder, and rename the extensions of the icons inside these folders to ".win" and ".sno".\par
+Now all your icons are finished, put them in separate mix files. The original names for them are "deseicnh.mix", "tempicnh.mix", "winticnh.mix" and "snowicnh.mix"\par
+\par
+\ul\b 3.6. Sounds\ulnone\b0\par
+Source contents in:\par
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sl276\slmult1\tx3600 list_speech.txt/csv/odt\tab Listing of all EVA voices, with notes.\par
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\tx3600 list_talk.txt/csv/odt\tab Listing of all unit voices, with notes.\par
+\pard\sa200\sl276\slmult1 This is usually purely optional. If you have a dub of the EVA and unit voices, or know some wonderful people who want to record the voices, you can make a speech.mix and talkeng.mix replacement.\par
+Make sure it includes all sounds, though. Replacement mix files are NOT supplemented with the English defaults if they're incomplete. So if you want to keep some English voices, simply put them in your mix file.\par
+In talkeng.mix you will see some of the file extensions of the .aud files are renamed to .v00 / .v01 / .v02 / .v03. This is a system to make different voice sets of the same unit response. So a unit that responds with a v02 sound will use all of the v02 files as responses. So don't mix those; make sure all files with the same extensions are voiced by the same person.\par
+Note that the even numbers (.v00 and .v02) are vehicle responses, and the uneven numbers (.v01 and .v03) are infantry responses. Typically, the vehicle responses have a little radio crackle at the start and end, and the infantry voices do not.\par
+A full listing is available in the list_speech and list_talk files. The listing is a spreadsheet, available in three formats to ensure people can open it.\par
+Note that some of the audio files that were inside transit.mix in the original game release were transferred to speech.mix (the EVA archive), to allow making them language-customizable. These are:\par
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sl276\slmult1 gdi_slct.aud - from side choice screen: \i "Global Defense Initiative selected."\i0\par
+{\pntext\f1\'B7\tab}nod_slct.aud - from side choice screen: \i "Brotherhood of Nod selected."\i0\par
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 kanefinl.aud - Kane's end speech after winning the final Nod mission.\line\i "The world... where to strike? Where will the world most keenly feel the blade of G.D.I. treachery? You have done much to aid the Brotherhood towards this final victory; the choice, my friend, is yours."\i0\par
+\pard\sa200\sl276\slmult1\ul\b\par
+3.7 "Coming Attraction" screen\par
+\ulnone\b0 Source contents in:\par
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sl276\slmult1 attraceng.cps (formerly attract2.cps) - "Coming Attraction" screen\par
+{\pntext\f1\'B7\tab}attracfre.cps - "Prochainement" screen (French)\par
+{\pntext\f1\'B7\tab}attracger.cps - "Demn\'e4chst F\'fcr Ihren PC" screen (German)\par
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 attract_blank.png - Textless version of the screen\par
+\pard\sa200\sl276\slmult1 The last image file to edit is the "Coming Attraction" screen shown between the sneak peek videos that are played after the introduction when you select the "Intro & Sneak Peek" option on the main menu. This is a 320x200 CPS-type image. It's not really necessary to translate this, but it's pretty easy, and it makes the translation more complete, so why not?\par
+There is an empty version of the image in "attract_blank.png". The font to be used on it is "Impact Condensed", which should be available as system font, so any image editor should be able to add it onto an image. The originally-used size is 44 points, though you can of course experiment with that a bit.\par
+In the German version, this text was added in plain red colour, in the French version it has a transparency effect, and on the original English version it has a shiny 3D effect. So; make it as simple or as fancy as you like.\par
+This is one of the formats that is simply supported by XCC Mixer, so it can be converted just by right-clicking it in the XCC Mixer files list and selecting "Copy as CPS".\par
+However, CPS is a 256-colour format, and XCC Mixer has no logics to generate an optimal palette for it, so it will just give it the colour palette you have selected for viewing SHP files at that moment, and will match the image data to the closest available colours on that palette. This gives \i really\i0  bad results for this image, though.\par
+So instead, reduce the file to 256 colours in your image editor \i before\i0  you try to convert it. In Gimp, you can do that by opening the "Image" menu, going to "Mode" and selecting "Indexed". In the "Indexed Color Conversion" dialog that pops up, select these options:\par
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sl276\slmult1 Generate optimum palette (256 colours)\par
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 Color dithering: None\par
+\pard\sa200\sl276\slmult1 Of course, do this \i after\i0  adding your text, or the palette will not contain the red colours you need for that.\par
+And that's it. Export the image as png, and it's ready to be converted to CPS with XCC Mixer.\par
+\par
+\ul\b 3.8 Multiplayer score animation\ulnone\b0\par
+Source contents in:\par
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 mltsceng.wsa\par
+\pard\sa200\sl276\slmult1 There's one more file that can be replaced, namely the multiplayer score WSA animation file. This is, again, purely optional, though. It is the animation that plays after playing a multiplayer or skirmish game, and on which the scores from the game will appear. The animation makes three columns, and in the final frames it'll put text in the headers. This text is what needs to be translated.\par
+The people of the RA++ team were kind enough to give me their WSA converter to include in this, but do note that this is a command line tool, so open a Command Prompt to use it.\par
+To get the original frames of the WSA, just use the "Copy As" method from XCC Mixer.\par
+WSA uses a variation on the fading 6-point font from the DOS version of the game. I've adapted and included that font, and added its palette into the font editor's custom palettes.\par
+\par
+\ul\b\fs28 4. Renaming your language files\ulnone\b0\fs24\par
+Source contents in:\par
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\tx2520 lang_XXX.ini\tab suggested name formats\par
+\pard\sa200\sl276\slmult1 Now here comes the real magic. You probably have translated versions of a bunch of files now. Well, the first thing you need to do now is rename them. The lang_XXX.ini contains the suggested filenames (with XXX as the language code), and it's generally advised to keep the filenames recognizable, but here are the actual strict rules:\par
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li540\sl276\slmult1 text_eng.ini:\par
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li900\sl276\slmult1 Suggested name: text_XXX.ini\par
+{\pntext\f1\'B7\tab}Restrictions: none\par
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li540\sl276\slmult1 mission.ini:\par
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li900\sl276\slmult1 Suggested name: miss_XXX.ini\par
+{\pntext\f1\'B7\tab}Restrictions: none\par
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li540\sl276\slmult1 hpips.shp / hrepair.shp / hsell.shp hmap.shp:\par
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li900\sl276\slmult1 Suggested names: hpipsXXX.shp / hreprXXX.shp / hsellXXX.shp / hmapXXX.shp\par
+{\pntext\f1\'B7\tab}Restrictions: the 'h' at the start must be kept.\par
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li540\sl276\slmult1 attrceng.cps:\par
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li900\sl276\slmult1 Suggested name: attrcXXX.cps\par
+{\pntext\f1\'B7\tab}Restrictions: none\par
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li540\sl276\slmult1 deseicnh.mix / tempicnh.mix winticnh.mix / snowicnh.mix:\par
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li900\sl276\slmult1 Suggested name: "iXXX.mix" suffix\par
+{\pntext\f1\'B7\tab}Restrictions: Always the four first letters of the theater name, followed by a suffix that is the same for all files.\par
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li540\sl276\slmult1 speech.mix / talkeng.mix\par
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li900\sl276\slmult1 Suggested names: speecXXX.mix / talkXXX.mix\par
+{\pntext\f1\'B7\tab}Restrictions: none\par
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li540\sl276\slmult1 grad6fnt.fnt / 12green.fnt / 12grngrd.fnt / 8fat.fnt / vcr.fnt\par
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li900\sl276\slmult1 Suggested names: grad6XXX.fnt / 12grnXXX.fnt / 12grdXXX.fnt / 8fatXXX.fnt / vcrXXX.fnt\par
+{\pntext\f1\'B7\tab}Restrictions: none\par
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li540\sl276\slmult1 mltsceng.wsa\par
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li900\sl276\slmult1 Suggested name: mltscXXX.wsa\par
+{\pntext\f1\'B7\tab}Restrictions: none\par
+\pard\sa200\sl276\slmult1\par
+\ul\b\fs28 5. Wrapping up\ulnone\b0\fs24\par
+Source contents in:\par
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sl276\slmult1 lang_eng.ini\par
+{\pntext\f1\'B7\tab}lang_XXX.ini\par
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 uppercase_rules.txt\par
+\pard\sa200\sl276\slmult1 This is the part where the magic happens. First, make the language ini file:\par
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li547\sl276\slmult1 Create a new file called "lang_???.ini", where ??? is your language code. This filename is what actually defines the code that will be accepted by the game.\par
+{\pntext\f1\'B7\tab}Copy the contents of lang_XXX.ini into your file. Open lang_eng.ini for the full explanation on each entry.\par
+{\pntext\f1\'B7\tab}Adapt the names as indicated.\par
+{\pntext\f1\'B7\tab}Remove all lines that can be kept to the English defaults. \b If you use an ini file for your strings, make sure to remove the "StringsExt" line. Do NOT adapt it to your language code!\b0\par
+{\pntext\f1\'B7\tab}If you have custom fonts, see uppercase_rules.txt on how to configure the uppercase conversion rules for the special characters.\par
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li540\sa200\sl276\slmult1 The 'CDDir' tag specifies a folder to use as CD for this language. This setting is meant to add language-specific video replacements, if NoCD mode is enabled and the "LangPath" variable in conquer.ini is activated. You should set this tag in case someone wants to make dubbed or subtitled versions of the game briefing videos for your language pack.\par
+\pard\sa200\sl276\slmult1\par
+That's it... the usual translation ini file will probably look something like this (for language 'XXX'):\par
+[Language]\line MisNametag=NameXXX\line MisBrieftag=BriefXXX\line CustomStringsFile=text_xxx.ini\line Brieffile=miss_XXX.ini\line CDDir=XXX\par
+MIXSpeech=speecXXX.mix\line MIXTalk=talkXXX.mix\line MIXIcnh=iXXX.mix\par
+SHPPips=pipsXXX.shp\line SHPRepair=reprXXX.shp\line SHPSell=sellXXX.shp\line SHPMap=mapXXX.shp\line CPSAttract=attrcXXX.cps\line WSAMulScore=mltscXXX.wsa\par
+FNTGrad6=grad6XXX.fnt\line FNT12green=12grnXXX.fnt\line FNT12grngrd=12grdXXX.fnt\line FNT8fat=8fatXXX.fnt\line FNTVcr=vcrXXX.fnt\line CapsSpecialChars=(see uppercase_rules.txt - \b Remove line if no custom fonts are used\b0 )\par
+Notes:\par
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li547\sl276\slmult1 MisNametag and MisBrieftag are replacements for the "Name=" mission name option and the [Briefing] header in the mission files. These are technically not used for language addons, but they HAVE TO BE SET to make the game read the versions from the adapted briefings ini file.\par
+{\pntext\f1\'B7\tab}MIXIcnh is the 4-character suffix plus the ".mix" part for the icon mixfiles.\par
+{\pntext\f1\'B7\tab}SHPPips, SHPRepair, SHPSell, SHPMap are the sidebar and UI files.\line\b Make sure you remove the  "h" at the start of the filenames for these!\b0  So if you have the file called "hpipsXXX.shp", your ini should have it as "pipsXXX.shp". The loading system of the game adds the "h" automatically.\par
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li540\sa200\sl276\slmult1 CapsSpecialChars is only needed if fonts are edited. See uppercase_rules.txt for the full method of making this.\par
+\pard\sa200\sl276\slmult1 Now, put all the loose non-mix files (including your new ini file) inside one mixfile called "lang_???.mix", where ??? is your language code.\par
+Note that this file has special priority. The game does not read all "lang_???.mix" files on startup, it ONLY reads the one of the language that is selected in conquer.ini.\par
+That's it! All your current mixfiles together are the new language pack. All you need to do to enable the new language is drop these files in the Command & Conquer folder and change the Language= setting in conquer.ini to your new language code. It's advised to make an installer that makes this ini change automatically.\par
+\par
+\ul\b\fs28 6. Configuration tool translation\ulnone\b0\fs24\par
+Source contents in:\par
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 ccconfigeng.lan\par
+\pard\sa200\sl276\slmult1 Patch 1.06c revision 2 added a new game configuration tool (CCConfig) that supports translations added by language packs. This is purely optional, but it's a nice extra to add to the translation pack. The strings format is an ini file in UTF-8 text encoding, so you don't need to mess around with text encodings for this one; it's for a modern program, not for a 20-year old Windows port of a DOS game ;)\par
+Note that any "\\n" you encounter in the text is a new line in the final text, so make sure you leave those in when translating, and don't put a space behind them to separate them from the next word.\par
+Simply add ccconfigXXX.lan (where XXX is your language code) to the translation pack, and the CCConfig tool will be able to use the text inside it to translate the configuration tool.\par
+Make sure to test this on the tool though, to make sure all text fits in the place where it is supposed to be shown.\par
+\par
+\ul\b\fs28 7. Making an installer\ulnone\b0\fs24\line\line Source contents in:\par
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sl276\slmult1 106c_addon_XXX.iss\par
+{\pntext\f1\'B7\tab}smallimage-clear.bmp\par
+{\pntext\f1\'B7\tab}node-clear.ico\par
+{\pntext\f1\'B7\tab}readme.rtf\par
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 insert.bmp\par
+\pard\sa200\sl276\slmult1 There are more files in the folder, but only these need editing. A Gimp .xcf project is provided for the insert.bmp and smallimage-clear.bmp files.\par
+An installer is a clean way to distribute a language pack, and it makes it easy to uninstall. I've included a bare InnoSetup script to make a simple installer. Note that you should use the UTF-8 version of InnoSetup for this.\par
+The basic steps are:\par
+In the script:\par
+-Generate a new AppId for the installer, to replace the "\{#REGENERATETHIS\}". You can normally do that simply by creating a new InnoSetup script in an innoSetup script editor like ISTool or InnoIDE, and copying the new ID into your "106c_addon_XXX.iss".\par
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li540\sl276\slmult1 Under [Languages], configure the MessagesFile to the language you're adding. This can normally be done through the interface; go to "Languages" in the sidebar and double-click the item in the list. Give it your 3-letter code as name.\par
+{\pntext\f1\'B7\tab}Replace "XXXX" by the language name, and "XXX" by the language code.\par
+{\pntext\f1\'B7\tab}Translate the other strings under [Messages] and [CustomMessages]\par
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li540\sa200\sl276\slmult1 Under [Files], remove all entries for files that aren't in your pack (for example, if you don't have unit voices or EVA voices)\par
+\pard\sa200\sl276\slmult1 Images:\par
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li540\sl276\slmult1 Edit insert.bmp to add the language name. The used font is Futura, included in "Futura Extra Black BT.ttf"; make sure to install it before editing so it can be used.\par
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li900\sl276\slmult1 If you use the included Gimp project:\par
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li1260\sl276\slmult1 Enable visibility on the "Text layer preparation" layer group\par
+{\pntext\f1\'B7\tab}Type your text in the "Language text" layer.\par
+{\pntext\f1\'B7\tab}Use "copy visible", and paste the result into the \b\i mask\b0\i0  of the "text fade" layer.\par
+{\pntext\f1\'B7\tab}Disable the visibility on the "Text layer preparation" layer group again and export as "insert.bmp".\par
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li540\sa200\sl276\slmult1 Edit node.ico and smallimage.bmp to put the flag for the language in the lower right corner. Use max. 50% of the icon's height for the flag.\par
+\pard\sa200\sl276\slmult1 Note that for the icon file I usually just edit node.png to add the flag, and then use {\field{\*\fldinst{HYPERLINK "http://convertico.com/"}}{\fldrslt{\ul\cf1 http://convertico.com/}}}\f0\fs24  to get the final icon file with all necessary internal sizes from that.\par
+Readme:\par
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li540\sa200\sl276\slmult1 Edit readme.rtf and fill in all necessary information. Translate the file, and save the translation in readme_XXX.rtf (XXX being your language code).\par
+\pard\sa200\sl276\slmult1 When all this is done, compile the script, and you have a fantastic new language addon installer!\par
+\par
+Have fun,\par
+Maarten 'Nyerguds' Meuris\lang9\fs22\par
+}
+ 

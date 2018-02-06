@@ -1,0 +1,102 @@
+﻿; "éèù" - Used to force UTF8-encoding
+
+; tooltips
+screenshot_info=Enabling CnC-DDraw will also activate Ctrl+S as screenshot saving shortcut ingame
+
+; general buttons text
+ok=OK
+apply=Apply
+cancel=Cancel
+browse=Browse
+refresh=Refresh
+
+; General
+ccsetup=C&C Windows 95 setup
+language=Language
+
+; Screen resolution tab
+visual_options=Visual options
+
+custom=Custom
+custom_res_help=Custom resolutions must be at least 640x400.
+
+use_cncddraw_enables_advanced_options=Use CnC-DDraw (enables advanced options)
+game_resolution=Game resolution
+vertical_video_stretch=Vertical video stretch mode
+leave_scanlines=Leave black scanlines
+duplicate_lines=Duplicate lines
+smooth_interpolate=Interpolate (smooth)
+
+; ddraw options
+use_original_aspect_ratio=Use original C&&C aspect ratio
+xx_stretched_to_yy=$0x$1 stretched to $0x$2
+needs_at_least_640x480=needs at least 640x480
+not_supported_for_centered=not supported for center filter
+stretch_to_custom_resolution=Stretch to custom resolution
+run_in_windowed_mode=Run in windowed mode
+scale_videos_to_fullscreen=Stretch videos to full resolution
+adjust_mouse_sensitivity=Automatically adjust mouse\nsensitivity to resolution
+limit_frame_rate=Limit frame rate\n(helps to fix the fast scroll bug)
+scaling_filter=Scaling filter
+nearest_sharp=Nearest (sharp/pixelated)
+linear_smooth=Linear (smooth/blurred)
+centered_duplicate=Center (doubles size if possible)
+allow_hardware_filled_blits=Allow hardware filled blits
+back_buffer_in_video_memory=Back buffer in video Memory
+
+
+; Game options tab
+game_options=Game options
+
+base_language=Basic language to use as default\nwhen using a partial language pack
+disable_scrolling_on_buttons=Disable scrolling upwards on the Options and Sidebar buttons
+enable_nocd=Enable No-CD mode
+folder_to_use_as_cd=folder to use as CD
+game_folder=Game folder
+custom_folder=Custom folder
+language_code_subfolder_in_game_folder=Subfolder of the game folder named like the language code
+enable_mod=Enable mod
+
+; Sound options tab
+sound_options=Sound options
+
+sound_options_title=Sound options
+announce_all_unit_deaths=Play EVA messages for all unit deaths
+disable_grenade_sound=Disable grenade throw sound
+
+music_options=Music options
+remix_scores=Enable music remixes and hidden themes
+multiplay_music=Enable music in multiplayer/skirmish games
+shuffle_start_music=Shuffle the start theme in single player
+increment_start_music=Correspond campaign start theme to the mission number\n(this overrides the start theme shuffling for the campaign)
+enable_new_credits_track=Use the new credits music track on the last mission's score screen
+reset_to_defaults=Reset to defaults
+
+; Multiplayer tab
+multiplayer=Multiplayer
+
+player_info=Player information
+handle=Handle
+side=Side
+gdi=GDI
+nod=Nod
+color=Color
+yellow=Yellow
+red=Red
+cyan=Cyan
+orange=Orange
+green=Green
+grey=Grey
+
+skirmish_opponents=Opponents in Skirmish
+
+network_information=Network information
+socket_number=Socket number
+destination_address=Destination address
+destination_address_help=A destination network address must be of the format xx.xx.xx.xx\nwhere xx is a hexadecimal address (ex. 73.0F.2C.8A).
+
+; No longer used. Ignore these:
+cncnet_options=CnCNet Options
+cncnet_not_found=CnCNet not found!
+cncnet_info=Click here to find more information about CnCNet
+run_cncnet_setup=Run CnCNet setup
