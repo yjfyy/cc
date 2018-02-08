@@ -1,0 +1,48 @@
+文件	英文	翻译	备注
+accom1.wav	"""Mission Accomplished"""		
+airredy1.wav	"""Airstrike Ready"""		
+baseatk1.wav	"""Our base is under attack"""		
+batlcon1.wav	"""Battle control terminated"""		
+bldg1.wav	"""Unable to comply, building in progress"""		
+bldging1.wav	"""Building"""		
+cancel1.wav	"""Cancelled"""		
+constru1.wav	"""Construction complete"""		
+deploy1.wav	"""Cannot deploy here"""		
+fail1.wav	"""Your mission is a failure"""		
+gdi_slct.wav	"""Global Defense Initiative selected"""		选择界面
+gdicapt1.wav	"""GDI building captured"""		
+ionchrg1.wav	"""Ion cannon charging"""		
+ionredy1.wav	"""Ion cannon ready"""		
+lopower1.wav	"""Low power"""		
+newopt1.wav	"""New construction options"""		
+nocash1.wav	"""Insufficient funds"""		
+nod_slct.wav	"""Brotherhood of Nod selected"""		选择界面
+nodcapt1.wav	"""Nod building captured"""		
+nopower1.wav	"""Insufficient power"""		
+nukavail.wav	"""Nuclear weapon available"""		
+nuke1.wav	"""Nuclear warhead approaching"""		
+nuklnch1.wav	"""Nuclear weapon launched"""		
+onhold1.wav	"""On hold"""		
+pribldg1.wav	"""Primary building selected"""		
+reinfor1.wav	"""Reinforcements have arrived"""		
+repair1.wav	"""Repairing"""		
+select1.wav	"""Select target"""		
+silos1.wav	"""Silos needed"""		
+strclost.wav	"""Structure lost"""		
+unitlost.wav	"""Unit lost"""		
+unitredy.wav	"""Unit ready"""		
+kanefinl.wav	"""The world... where to strike? Where will the world most keenly feel the blade of G.D.I. treachery? You have done much to aid the Brotherhood towards this final victory; the choice, my friend, is yours."""		凯恩
+civdead1.wav	"""Civilian killed"""		没用？
+enemya.wav	"""Enemy planes approaching"""		没用？
+enmyapp1.wav	"""Enemy approaching"""		没用？
+enmyunit.wav	"""Enemy unit destroyed"""		没用？
+estrucx.wav	"""Enemy structure destroyed"""		没用？
+gdidead1.wav	"""GDI unit destroyed"""		没用？
+gstruc1.wav	"""GDI structure destroyed"""		没用？
+income1.wav	"""Incoming missile"""		没用？
+mocash1.wav	"""Need more funds"""		没用？
+needharv.wav	"""Need harvester"""		没用？
+nobuild1.wav	"""Unable to build more"""		没用？
+noddead1.wav	"""Nod unit destroyed"""		没用？
+noredy1.wav	"""Not ready"""		没用？
+nstruc1.wav	"""Nod structure destroyed"""		没用？
