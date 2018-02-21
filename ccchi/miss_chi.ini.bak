@@ -1,19 +1,21 @@
 ;GDI BRIEFINGS
 
 [SCG01EA]
-1=þ 
-2=ý
+1=þ
+2=ýØ.
 
 [SCG02EA]
-1=ü 
+1=üØ.
 
 [SCG03EA]
-1=ú 
-2=û 
+1=Build up forces to destroy Nod base. Once all Nod SAM sites are neutralized
+2=then air support will be provided to combat obstacles such as turrets.
+3=Destroy all units and structures to complete the mission objective.
 
 [SCG03EB]
-1=ú 
-2=û 
+1=Build up forces to destroy Nod base. Once all Nod SAM sites are neutralized
+2=then air support will be provided to combat obstacles such as turrets.
+3=Destroy all units and structures to complete the mission objective.
 
 [SCG04EA]
 1=ø 
@@ -44,13 +46,13 @@
 2=õ 
 
 [SCG06EA]
-1=ñ 
-2=ò 
-3=ó 
+1=ñ
+2=*** **ò
+3=****ó.
 
 [SCG07EA]
-1=ï 
-2=ð 
+1=ï.
+2=ð.
 
 [SCG08EA]
 1=í 
@@ -77,7 +79,7 @@
 1=ã 
 2=ä 
 3=å 
-4=å
+4=å 
 
 [SCG12EA]
 1=á 
@@ -104,17 +106,17 @@
 [SCG15EA]
 1=Ù 
 2=Ú 
-3=Û 
+3=Û!
 
 [SCG15EB]
 1=Ù 
 2=Ú 
-3=Û 
+3=Û!
 
 [SCG15EC]
 1=Ù 
 2=Ú 
-3=Û 
+3=Û!
 
 
 ;NOD BRIEFINGS
