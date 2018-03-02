@@ -18,3 +18,8 @@ ascii x20为空格，别改，任务修改ascii必须2位，可以加一个空格
 保存mix可能会出错。
 
 界面用空格20可以占位。
+
+chi 共用
+chg gid
+chn nod
+chm 任务
