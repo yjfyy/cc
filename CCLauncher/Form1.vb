@@ -9,6 +9,20 @@ Public Class Form1
     Dim newuplog As String
     Dim up_root = "https://gitee.com/yjfyeyu/updatasys/raw/master/cnc1/patch/"
 
+    '声明INI配置文件读写API函数,lpApplicationName节名称， lpKeyName键名称，lpString是键值
+    Private Declare Function GetPrivateProfileString Lib "kernel32" Alias "GetPrivateProfileStringA" (ByVal lpApplicationName As String, ByVal lpKeyName As String, ByVal lpDefault As String, ByVal lpReturnedString As String, ByVal nSize As Int32, ByVal lpFileName As String) As Int32
+    Private Declare Function WritePrivateProfileString Lib "kernel32" Alias "WritePrivateProfileStringA" (ByVal lpApplicationName As String, ByVal lpKeyName As String, ByVal lpString As String, ByVal lpFileName As String) As Int32
+    '定义读取配置文件函数
+    Public Function GetINI(ByVal Section As String, ByVal AppName As String, ByVal lpDefault As String, ByVal FileName As String) As String
+        Dim Str As String = LSet(Str, 256)
+        GetPrivateProfileString(Section, AppName, lpDefault, Str, Len(Str), FileName)
+        Return Microsoft.VisualBasic.Left(Str, InStr(Str, Chr(0)) - 1)
+    End Function
+    '定义写入配置文件函数
+    Public Function WriteINI(ByVal Section As String, ByVal AppName As String, ByVal lpDefault As String, ByVal FileName As String) As Long
+        WriteINI = WritePrivateProfileString(Section, AppName, lpDefault, FileName)
+    End Function
+
     Private Sub Form1_Shown(sender As Object, e As EventArgs) Handles Me.Shown
         'MsgBox("检查更新")
         Label_status.Text = "正在检测更新......"
@@ -29,9 +43,7 @@ Public Class Form1
 
     Private Sub BackgroundWorker_check_ver_RunWorkerCompleted(sender As Object, e As RunWorkerCompletedEventArgs) Handles BackgroundWorker_check_ver.RunWorkerCompleted
         Label_r_version.Text = r_version
-        Button_run_ccconfig.Enabled = True
-        Button_run_game.Enabled = True
-        Button_run_cncnet.Enabled = True
+
 
         If r_version = "0" Then
             Label_status.Text = "检测失败"
@@ -40,11 +52,20 @@ Public Class Form1
         End If
 
         If l_version <> r_version Then
-            Button_run_game.Text = "启动更新"
             Label_status.Text = "有新版,请更新。"
             BackgroundWorker_load_uplog.RunWorkerAsync()
+            Button_updata.Enabled = True
+            Button_updata.Text = "更新"
         Else
             Label_status.Text = "已是最新版!"
+            Button_GDI.Enabled = True
+            Button_NOD.Enabled = True
+            Button_new_miss.Enabled = True
+            Button_run_cncnet.Enabled = True
+
+            Button_run_ccconfig.Enabled = True
+            Button_updata.Enabled = True
+
         End If
 
     End Sub
@@ -65,24 +86,6 @@ Public Class Form1
         TextBox1.Text = Replace(newuplog, vbLf, vbCrLf)
     End Sub
 
-    Private Sub Button_run_game_Click(sender As Object, e As EventArgs) Handles Button_run_game.Click
-        'MsgBox(Application.StartupPath & "\C&C95.exe")
-        If Button_run_game.Text = "启动游戏" Then
-            System.IO.File.WriteAllText("rungame.bat", TextBox_run_game_com.Text, encoding:=System.Text.Encoding.Default)
-            Shell("rungame.bat", Style:=AppWinStyle.MinimizedFocus)
-            Threading.Thread.Sleep(500)
-
-            If My.Computer.FileSystem.FileExists("rungame.bat") Then
-                Try
-                    My.Computer.FileSystem.DeleteFile("rungame.bat")
-                Catch ex As Exception
-
-                End Try
-            End If
-        Else
-            Up_autoupdata()
-        End If
-    End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         If My.Computer.FileSystem.FileExists("C&C95.exe") Then
@@ -111,9 +114,13 @@ Public Class Form1
     End Sub
 
     Private Sub Up_autoupdata()
-        Button_run_ccconfig.Enabled = False
+        Button_NOD.Enabled = False
+        Button_GDI.Enabled = False
+        Button_new_miss.Enabled = False
         Button_run_cncnet.Enabled = False
-        Button_run_game.Enabled = False
+
+        Button_run_ccconfig.Enabled = False
+        Button_updata.Enabled = False
 
         Dim dFile As New System.Net.WebClient
         Dim upUri_up_data As New Uri(up_root & "up_data.exe")
@@ -175,6 +182,22 @@ Public Class Form1
             End Try
         End If
 
+        If My.Computer.FileSystem.FileExists("lang_chi.mix") Then
+            Try
+                My.Computer.FileSystem.DeleteFile("lang_chi.mix")
+            Catch ex As Exception
+
+            End Try
+        End If
+
+        If My.Computer.FileSystem.FileExists("ccconfigchi.lan") Then
+            Try
+                My.Computer.FileSystem.DeleteFile("ccconfigchi.lan")
+            Catch ex As Exception
+
+            End Try
+        End If
+
     End Sub
 
     Private Sub Button_run_ccconfig_Click(sender As Object, e As EventArgs) Handles Button_run_ccconfig.Click
@@ -201,4 +224,60 @@ Public Class Form1
             End Try
         End If
     End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button_updata.Click
+        Up_autoupdata()
+    End Sub
+
+
+
+    Private Sub Button_GDI_Click(sender As Object, e As EventArgs) Handles Button_GDI.Click
+        WriteINI("Language", "Language", "CHG", ".\conquer.ini")
+        System.IO.File.WriteAllText("rungame.bat", TextBox_run_game_com.Text, encoding:=System.Text.Encoding.Default)
+        Shell("rungame.bat", Style:=AppWinStyle.MinimizedFocus)
+        Threading.Thread.Sleep(100)
+
+        If My.Computer.FileSystem.FileExists("rungame.bat") Then
+            Try
+                My.Computer.FileSystem.DeleteFile("rungame.bat")
+            Catch ex As Exception
+
+            End Try
+        End If
+    End Sub
+
+    Private Sub Button_NOD_Click(sender As Object, e As EventArgs) Handles Button_NOD.Click
+        WriteINI("Language", "Language", "CHN", ".\conquer.ini")
+
+        'MsgBox(Application.StartupPath & "\C&C95.exe")
+        System.IO.File.WriteAllText("rungame.bat", TextBox_run_game_com.Text, encoding:=System.Text.Encoding.Default)
+        Shell("rungame.bat", Style:=AppWinStyle.MinimizedFocus)
+        Threading.Thread.Sleep(100)
+
+        If My.Computer.FileSystem.FileExists("rungame.bat") Then
+            Try
+                My.Computer.FileSystem.DeleteFile("rungame.bat")
+            Catch ex As Exception
+
+            End Try
+        End If
+    End Sub
+
+    Private Sub Button_new_miss_Click(sender As Object, e As EventArgs) Handles Button_new_miss.Click
+        WriteINI("Language", "Language", "CHM", ".\conquer.ini")
+
+        'MsgBox(Application.StartupPath & "\C&C95.exe")
+        System.IO.File.WriteAllText("rungame.bat", TextBox_run_game_com.Text, encoding:=System.Text.Encoding.Default)
+        Shell("rungame.bat", Style:=AppWinStyle.MinimizedFocus)
+        Threading.Thread.Sleep(100)
+
+        If My.Computer.FileSystem.FileExists("rungame.bat") Then
+            Try
+                My.Computer.FileSystem.DeleteFile("rungame.bat")
+            Catch ex As Exception
+
+            End Try
+        End If
+    End Sub
+
 End Class

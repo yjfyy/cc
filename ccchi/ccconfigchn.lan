@@ -1,0 +1,102 @@
+﻿; "éèù" - Used to force UTF8-encoding
+
+; tooltips
+screenshot_info=使用CnC-DDraw 可以在游戏使用Ctrl+S截图。
+
+; general buttons text
+ok=确定
+apply=应用
+cancel=取消
+browse=浏览
+refresh=刷新
+
+; General
+ccsetup=命令与征服 配置工具
+language=语言
+
+; Screen resolution tab
+visual_options=画面选项
+
+custom=自定义
+custom_res_help=分辨率必须大于640x400。
+
+use_cncddraw_enables_advanced_options=使用CnC-DDraw (将打开高级选项)
+game_resolution=游戏分辨率
+vertical_video_stretch=视频模式
+leave_scanlines=隔行抽色（原版模式）
+duplicate_lines=复线
+smooth_interpolate=插值（更平滑）
+
+; ddraw options
+use_original_aspect_ratio=自动修正为原始比例
+xx_stretched_to_yy=$0x$2将修正为$0x$1
+needs_at_least_640x480=分辨率必须大于640x400
+not_supported_for_centered=不支持中心缩放
+stretch_to_custom_resolution=手动修正
+run_in_windowed_mode=窗口模式
+scale_videos_to_fullscreen=拉伸视频至全屏
+adjust_mouse_sensitivity=自动调整分辨率对应的鼠标灵敏度
+limit_frame_rate=限制帧数\n(有助于解决快速滚动错误)
+scaling_filter=缩放过滤器
+nearest_sharp=点状 (锐利/像素风)
+linear_smooth=线性 (平滑/模糊)
+centered_duplicate=中心 (放大)
+allow_hardware_filled_blits=使用硬件过滤器
+back_buffer_in_video_memory=使用显存缓冲下一帧
+
+
+; Game options tab
+game_options=游戏选项
+
+base_language=使用其他语言时的基础包
+disable_scrolling_on_buttons=Disable scrolling upwards on the Options and Sidebar buttons
+enable_nocd=免CD
+folder_to_use_as_cd=CD文件所在目录
+game_folder=游戏目录
+custom_folder=自定义目录
+language_code_subfolder_in_game_folder=游戏目录下的语言目录
+enable_mod=启用Mod
+
+; Sound options tab
+sound_options=声音选项
+
+sound_options_title=声音选项
+announce_all_unit_deaths=Play EVA messages for all unit deaths
+disable_grenade_sound=禁用手榴弹音效
+
+music_options=音乐选项
+remix_scores=Enable music remixes and hidden themes
+multiplay_music=Enable music in multiplayer/skirmish games
+shuffle_start_music=游戏开始后随机播放音乐
+increment_start_music=Correspond campaign start theme to the mission number\n(this overrides the start theme shuffling for the campaign)
+enable_new_credits_track=Use the new credits music track on the last mission's score screen
+reset_to_defaults=重置
+
+; Multiplayer tab
+multiplayer=联机选项
+
+player_info=玩家信息
+handle=玩家ID
+side=阵营
+gdi=GDI
+nod=Nod
+color=颜色
+yellow=黄
+red=红
+cyan=青
+orange=橙
+green=绿
+grey=灰
+
+skirmish_opponents=Opponents in Skirmish
+
+network_information=网络信息
+socket_number=端口
+destination_address=目标地址
+destination_address_help=A destination network address must be of the format xx.xx.xx.xx\nwhere xx is a hexadecimal address (ex. 73.0F.2C.8A).
+
+; No longer used. Ignore these:
+cncnet_options=CnCNet选项
+cncnet_not_found=CnCNet not found!
+cncnet_info=Click here to find more information about CnCNet
+run_cncnet_setup=运行CnCNet设置
