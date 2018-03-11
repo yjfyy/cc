@@ -120,6 +120,8 @@ Public Class Form1
         Button_run_cncnet.Enabled = False
 
         Button_run_ccconfig.Enabled = False
+
+        CheckBox_up_movies.Enabled = False
         Button_updata.Enabled = False
 
         Dim dFile As New System.Net.WebClient
@@ -140,7 +142,11 @@ Public Class Form1
     Sub wanchen(ByVal sender As Object, ByVal e As System.ComponentModel.AsyncCompletedEventArgs)
         Label_status.Text = "下载完成"
         Try
-            System.IO.File.WriteAllText("up_com.bat", TextBox_up_com.Text, encoding:=System.Text.Encoding.Default)
+            If CheckBox_up_movies.Checked Then
+                System.IO.File.WriteAllText("up_com.bat", TextBox_up_com_as_movies.Text, encoding:=System.Text.Encoding.Default)
+            Else
+                System.IO.File.WriteAllText("up_com.bat", TextBox_up_com.Text, encoding:=System.Text.Encoding.Default)
+            End If
             Label_status.Text = "升级完成后将自动重启。"
             Shell("up_com.bat", Style:=AppWinStyle.NormalFocus)
             Me.Close()
@@ -226,12 +232,26 @@ Public Class Form1
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button_updata.Click
-        Up_autoupdata()
+        If CheckBox_up_movies.Checked Then
+            Dim message As String = "更新动画包将耗费更长时间，确定更新动画包?"
+            Dim caption As String = "警告"
+            Dim result = MessageBox.Show(message, caption, MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+            ' If the no button was pressed ...
+            If (result = DialogResult.No) Then
+                ' cancel the closure of the form.
+            Else
+                Up_autoupdata()
+            End If
+        Else
+            Up_autoupdata()
+        End If
+
     End Sub
 
 
 
     Private Sub Button_GDI_Click(sender As Object, e As EventArgs) Handles Button_GDI.Click
+        WriteINI("CDControl", "CDPath", "CHI", ".\conquer.ini")
         WriteINI("Language", "Language", "CHG", ".\conquer.ini")
         System.IO.File.WriteAllText("rungame.bat", TextBox_run_game_com.Text, encoding:=System.Text.Encoding.Default)
         Shell("rungame.bat", Style:=AppWinStyle.MinimizedFocus)
@@ -247,6 +267,7 @@ Public Class Form1
     End Sub
 
     Private Sub Button_NOD_Click(sender As Object, e As EventArgs) Handles Button_NOD.Click
+        WriteINI("CDControl", "CDPath", "CHI", ".\conquer.ini")
         WriteINI("Language", "Language", "CHN", ".\conquer.ini")
 
         'MsgBox(Application.StartupPath & "\C&C95.exe")
@@ -264,6 +285,7 @@ Public Class Form1
     End Sub
 
     Private Sub Button_new_miss_Click(sender As Object, e As EventArgs) Handles Button_new_miss.Click
+        WriteINI("CDControl", "CDPath", "CHI", ".\conquer.ini")
         WriteINI("Language", "Language", "CHM", ".\conquer.ini")
 
         'MsgBox(Application.StartupPath & "\C&C95.exe")

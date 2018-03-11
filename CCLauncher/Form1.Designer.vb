@@ -41,6 +41,8 @@ Partial Class Form1
         Me.Button_GDI = New System.Windows.Forms.Button()
         Me.Button_new_miss = New System.Windows.Forms.Button()
         Me.Button_updata = New System.Windows.Forms.Button()
+        Me.CheckBox_up_movies = New System.Windows.Forms.CheckBox()
+        Me.TextBox_up_com_as_movies = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'Button_NOD
@@ -95,7 +97,7 @@ Partial Class Form1
         '
         Me.ProgressBar1.Location = New System.Drawing.Point(14, 219)
         Me.ProgressBar1.Name = "ProgressBar1"
-        Me.ProgressBar1.Size = New System.Drawing.Size(444, 23)
+        Me.ProgressBar1.Size = New System.Drawing.Size(364, 23)
         Me.ProgressBar1.TabIndex = 5
         '
         'TextBox1
@@ -145,10 +147,10 @@ Partial Class Form1
         'TextBox_up_com
         '
         Me.TextBox_up_com.Enabled = False
-        Me.TextBox_up_com.Location = New System.Drawing.Point(14, 14)
+        Me.TextBox_up_com.Location = New System.Drawing.Point(237, 24)
         Me.TextBox_up_com.Multiline = True
         Me.TextBox_up_com.Name = "TextBox_up_com"
-        Me.TextBox_up_com.Size = New System.Drawing.Size(185, 161)
+        Me.TextBox_up_com.Size = New System.Drawing.Size(185, 127)
         Me.TextBox_up_com.TabIndex = 14
         Me.TextBox_up_com.Text = "@echo off" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "echo 正在更新..." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "timeout 2 >nul" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "up_data.exe" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "timeout 2 > nul" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "del up_dat" &
     "a.exe" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "echo 更新完成" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "timeout 1 > nul" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "start 命令与征服纪念版.exe"
@@ -157,10 +159,10 @@ Partial Class Form1
         'TextBox_run_game_com
         '
         Me.TextBox_run_game_com.Enabled = False
-        Me.TextBox_run_game_com.Location = New System.Drawing.Point(205, 14)
+        Me.TextBox_run_game_com.Location = New System.Drawing.Point(237, 157)
         Me.TextBox_run_game_com.Multiline = True
         Me.TextBox_run_game_com.Name = "TextBox_run_game_com"
-        Me.TextBox_run_game_com.Size = New System.Drawing.Size(196, 102)
+        Me.TextBox_run_game_com.Size = New System.Drawing.Size(161, 53)
         Me.TextBox_run_game_com.TabIndex = 15
         Me.TextBox_run_game_com.Text = "start C""&""C95.exe"
         Me.TextBox_run_game_com.Visible = False
@@ -205,11 +207,34 @@ Partial Class Form1
         Me.Button_updata.Text = "强制更新修复"
         Me.Button_updata.UseVisualStyleBackColor = True
         '
+        'CheckBox_up_movies
+        '
+        Me.CheckBox_up_movies.AutoSize = True
+        Me.CheckBox_up_movies.Location = New System.Drawing.Point(384, 223)
+        Me.CheckBox_up_movies.Name = "CheckBox_up_movies"
+        Me.CheckBox_up_movies.Size = New System.Drawing.Size(72, 16)
+        Me.CheckBox_up_movies.TabIndex = 19
+        Me.CheckBox_up_movies.Text = "更新动画"
+        Me.CheckBox_up_movies.UseVisualStyleBackColor = True
+        '
+        'TextBox_up_com_as_movies
+        '
+        Me.TextBox_up_com_as_movies.Enabled = False
+        Me.TextBox_up_com_as_movies.Location = New System.Drawing.Point(25, 24)
+        Me.TextBox_up_com_as_movies.Multiline = True
+        Me.TextBox_up_com_as_movies.Name = "TextBox_up_com_as_movies"
+        Me.TextBox_up_com_as_movies.Size = New System.Drawing.Size(185, 135)
+        Me.TextBox_up_com_as_movies.TabIndex = 20
+        Me.TextBox_up_com_as_movies.Text = resources.GetString("TextBox_up_com_as_movies.Text")
+        Me.TextBox_up_com_as_movies.Visible = False
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(586, 305)
+        Me.Controls.Add(Me.TextBox_up_com_as_movies)
+        Me.Controls.Add(Me.CheckBox_up_movies)
         Me.Controls.Add(Me.Button_updata)
         Me.Controls.Add(Me.Button_new_miss)
         Me.Controls.Add(Me.Button_GDI)
@@ -253,4 +278,6 @@ Partial Class Form1
     Friend WithEvents Button_GDI As Button
     Friend WithEvents Button_new_miss As Button
     Friend WithEvents Button_updata As Button
+    Friend WithEvents CheckBox_up_movies As CheckBox
+    Friend WithEvents TextBox_up_com_as_movies As TextBox
 End Class

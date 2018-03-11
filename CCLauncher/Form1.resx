@@ -123,6 +123,21 @@
   <metadata name="BackgroundWorker_load_uplog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>246, 17</value>
   </metadata>
+  <data name="TextBox_up_com_as_movies.Text" xml:space="preserve">
+    <value>@echo off
+echo 正在更新...
+timeout 2 &gt;nul
+up_data.exe
+echo 开始更新动画包
+cd chi
+wget -ivqalistnb.txt --no-check-certificate -Bhttp://gitee.com/yjfyeyu/cc1_database/raw/master/movies/ -c --no-check-certificate
+cd ..
+timeout 2 &gt; nul
+del up_data.exe
+echo 更新完成
+timeout 1 &gt; nul
+start 命令与征服纪念版.exe</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
