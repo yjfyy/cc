@@ -302,4 +302,21 @@ Public Class Form1
         End If
     End Sub
 
+    Private Sub Button_n64_ps_m_Click(sender As Object, e As EventArgs) Handles Button_n64_ps_m.Click
+        WriteINI("CDControl", "CDPath", "CHI", ".\conquer.ini")
+        WriteINI("Language", "Language", "CHV", ".\conquer.ini")
+
+        'MsgBox(Application.StartupPath & "\C&C95.exe")
+        System.IO.File.WriteAllText("rungame.bat", TextBox_run_game_com.Text, encoding:=System.Text.Encoding.Default)
+        Shell("rungame.bat", Style:=AppWinStyle.MinimizedFocus)
+        Threading.Thread.Sleep(100)
+
+        If My.Computer.FileSystem.FileExists("rungame.bat") Then
+            Try
+                My.Computer.FileSystem.DeleteFile("rungame.bat")
+            Catch ex As Exception
+
+            End Try
+        End If
+    End Sub
 End Class

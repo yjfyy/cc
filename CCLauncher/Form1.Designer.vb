@@ -43,6 +43,7 @@ Partial Class Form1
         Me.Button_updata = New System.Windows.Forms.Button()
         Me.CheckBox_up_movies = New System.Windows.Forms.CheckBox()
         Me.TextBox_up_com_as_movies = New System.Windows.Forms.TextBox()
+        Me.Button_n64_ps_m = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Button_NOD
@@ -52,13 +53,13 @@ Partial Class Form1
         Me.Button_NOD.Name = "Button_NOD"
         Me.Button_NOD.Size = New System.Drawing.Size(110, 23)
         Me.Button_NOD.TabIndex = 1
-        Me.Button_NOD.Text = "NOD任务"
+        Me.Button_NOD.Text = "诺德任务"
         Me.Button_NOD.UseVisualStyleBackColor = True
         '
         'Button_run_ccconfig
         '
         Me.Button_run_ccconfig.Enabled = False
-        Me.Button_run_ccconfig.Location = New System.Drawing.Point(464, 152)
+        Me.Button_run_ccconfig.Location = New System.Drawing.Point(464, 187)
         Me.Button_run_ccconfig.Name = "Button_run_ccconfig"
         Me.Button_run_ccconfig.Size = New System.Drawing.Size(110, 23)
         Me.Button_run_ccconfig.TabIndex = 3
@@ -170,11 +171,11 @@ Partial Class Form1
         'Button_run_cncnet
         '
         Me.Button_run_cncnet.Enabled = False
-        Me.Button_run_cncnet.Location = New System.Drawing.Point(464, 104)
+        Me.Button_run_cncnet.Location = New System.Drawing.Point(464, 133)
         Me.Button_run_cncnet.Name = "Button_run_cncnet"
         Me.Button_run_cncnet.Size = New System.Drawing.Size(110, 23)
         Me.Button_run_cncnet.TabIndex = 2
-        Me.Button_run_cncnet.Text = "多人游戏"
+        Me.Button_run_cncnet.Text = "CnCNet联机"
         Me.Button_run_cncnet.UseVisualStyleBackColor = True
         '
         'Button_GDI
@@ -194,7 +195,7 @@ Partial Class Form1
         Me.Button_new_miss.Name = "Button_new_miss"
         Me.Button_new_miss.Size = New System.Drawing.Size(110, 23)
         Me.Button_new_miss.TabIndex = 17
-        Me.Button_new_miss.Text = "资料片及主机任务"
+        Me.Button_new_miss.Text = "隐秘行动"
         Me.Button_new_miss.UseVisualStyleBackColor = True
         '
         'Button_updata
@@ -228,11 +229,22 @@ Partial Class Form1
         Me.TextBox_up_com_as_movies.Text = resources.GetString("TextBox_up_com_as_movies.Text")
         Me.TextBox_up_com_as_movies.Visible = False
         '
+        'Button_n64_ps_m
+        '
+        Me.Button_n64_ps_m.Enabled = False
+        Me.Button_n64_ps_m.Location = New System.Drawing.Point(464, 103)
+        Me.Button_n64_ps_m.Name = "Button_n64_ps_m"
+        Me.Button_n64_ps_m.Size = New System.Drawing.Size(110, 23)
+        Me.Button_n64_ps_m.TabIndex = 21
+        Me.Button_n64_ps_m.Text = "游戏机独占任务"
+        Me.Button_n64_ps_m.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(586, 305)
+        Me.Controls.Add(Me.Button_n64_ps_m)
         Me.Controls.Add(Me.TextBox_up_com_as_movies)
         Me.Controls.Add(Me.CheckBox_up_movies)
         Me.Controls.Add(Me.Button_updata)
@@ -280,4 +292,5 @@ Partial Class Form1
     Friend WithEvents Button_updata As Button
     Friend WithEvents CheckBox_up_movies As CheckBox
     Friend WithEvents TextBox_up_com_as_movies As TextBox
+    Friend WithEvents Button_n64_ps_m As Button
 End Class
