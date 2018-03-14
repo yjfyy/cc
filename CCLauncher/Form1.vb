@@ -61,7 +61,9 @@ Public Class Form1
             Button_GDI.Enabled = True
             Button_NOD.Enabled = True
             Button_new_miss.Enabled = True
+            Button_n64_ps_m.Enabled = True
             Button_run_cncnet.Enabled = True
+
 
             Button_run_ccconfig.Enabled = True
             Button_updata.Enabled = True
@@ -118,6 +120,7 @@ Public Class Form1
         Button_GDI.Enabled = False
         Button_new_miss.Enabled = False
         Button_run_cncnet.Enabled = False
+        Button_n64_ps_m.Enabled = False
 
         Button_run_ccconfig.Enabled = False
 
