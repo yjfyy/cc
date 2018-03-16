@@ -1,7 +1,7 @@
 bkground.vqa
 bkground.vqp
-burdet.vqa
-burdet.vqp
+burdet1.vqa
+burdet1.vqp
 gdi1.vqa
 gdi1.vqp
 gdi10.vqa
