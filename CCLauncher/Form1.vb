@@ -151,7 +151,8 @@ Public Class Form1
                 System.IO.File.WriteAllText("up_com.bat", TextBox_up_com.Text, encoding:=System.Text.Encoding.Default)
             End If
             Label_status.Text = "升级完成后将自动重启。"
-            Shell("up_com.bat", Style:=AppWinStyle.NormalFocus)
+            'Shell("up_com.bat", Style:=AppWinStyle.NormalFocus)
+            Process.Start("up_com.bat")
             Me.Close()
         Catch ex As Exception
             MsgBox（"升级错误，请手动执行 up_data.exe")
@@ -210,24 +211,19 @@ Public Class Form1
     End Sub
 
     Private Sub Button_run_ccconfig_Click(sender As Object, e As EventArgs) Handles Button_run_ccconfig.Click
-        Shell("CCConfig.exe", Style:=AppWinStyle.NormalFocus)
+        'Shell("CCConfig.exe", Style:=AppWinStyle.NormalFocus)
+        Process.Start("CCConfig.exe")
     End Sub
 
     Private Sub Button_run_cncnet_Click(sender As Object, e As EventArgs) Handles Button_run_cncnet.Click
-        Shell("cncnet5.exe", Style:=AppWinStyle.NormalFocus)
+        'Shell("cncnet5.exe", Style:=AppWinStyle.NormalFocus)
+        Process.Start("cncnet5.exe")
     End Sub
 
     Private Sub Form1_Closed(sender As Object, e As EventArgs) Handles Me.Closed
         If My.Computer.FileSystem.FileExists("lang_chi.ini") Then
             Try
                 My.Computer.FileSystem.DeleteFile("lang_chi.ini")
-            Catch ex As Exception
-
-            End Try
-        End If
-        If My.Computer.FileSystem.FileExists("rungame.bat") Then
-            Try
-                My.Computer.FileSystem.DeleteFile("rungame.bat")
             Catch ex As Exception
 
             End Try
