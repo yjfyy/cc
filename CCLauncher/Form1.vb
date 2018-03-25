@@ -47,28 +47,38 @@ Public Class Form1
 
         If r_version = "0" Then
             Label_status.Text = "检测失败"
-        Else
-            Label_status.Text = "检测完成"
-        End If
-
-        If l_version <> r_version Then
-            Label_status.Text = "有新版,请更新。"
-            BackgroundWorker_load_uplog.RunWorkerAsync()
-            Button_updata.Enabled = True
-            Button_updata.Text = "更新"
-        Else
-            Label_status.Text = "已是最新版!"
             Button_GDI.Enabled = True
             Button_NOD.Enabled = True
             Button_new_miss.Enabled = True
             Button_n64_ps_m.Enabled = True
             Button_run_cncnet.Enabled = True
+            Button_eng.Enabled = True
 
 
             Button_run_ccconfig.Enabled = True
-            Button_updata.Enabled = True
+        Else
+            If l_version <> r_version Then
+                Label_status.Text = "有新版,请更新。"
+                BackgroundWorker_load_uplog.RunWorkerAsync()
+                Button_updata.Enabled = True
+                Button_updata.Text = "更新"
+            Else
+                Label_status.Text = "已是最新版!"
+                Button_GDI.Enabled = True
+                Button_NOD.Enabled = True
+                Button_new_miss.Enabled = True
+                Button_n64_ps_m.Enabled = True
+                Button_run_cncnet.Enabled = True
+                Button_eng.Enabled = True
 
+
+                Button_run_ccconfig.Enabled = True
+                Button_updata.Enabled = True
+
+            End If
         End If
+
+
 
     End Sub
 
@@ -112,6 +122,13 @@ Public Class Form1
         Catch ex As Exception
         End Try
 
+        Dim os As OperatingSystem = Environment.OSVersion
+        If Mid(os.Version.ToString, 1, 3) = "6.2" Then
+            RadioButton_win10.Checked = True
+        Else
+            RadioButton_win7.Checked = True
+        End If
+
 
     End Sub
 
@@ -121,6 +138,7 @@ Public Class Form1
         Button_new_miss.Enabled = False
         Button_run_cncnet.Enabled = False
         Button_n64_ps_m.Enabled = False
+        Button_eng.Enabled = False
 
         Button_run_ccconfig.Enabled = False
 
@@ -252,8 +270,20 @@ Public Class Form1
     Private Sub Button_GDI_Click(sender As Object, e As EventArgs) Handles Button_GDI.Click
         WriteINI("CDControl", "CDPath", "CHI", ".\conquer.ini")
         WriteINI("Language", "Language", "CHG", ".\conquer.ini")
+        jianrongxing()
+
+        If System.Diagnostics.Process.GetProcessesByName("c&c95").Length > 0 Then
+            MsgBox("请勿重复启动")
+        Else
+            If My.Computer.FileSystem.FileExists("ddraw.dll") Then
+                Process.Start("c&c95.exe")
+            Else
+                MsgBox("请在设置中打开ddraw")
+            End If
+
+        End If
         'process.star可以启动带有符号的exe，shell启动不了c&c95.exe
-        Process.Start("c&c95.exe")
+
         'System.IO.File.WriteAllText("rungame.bat", TextBox_run_game_com.Text, encoding:=System.Text.Encoding.Default)
         'Shell("rungame.bat", Style:=AppWinStyle.MinimizedFocus)
         'Threading.Thread.Sleep(100)
@@ -270,18 +300,96 @@ Public Class Form1
     Private Sub Button_NOD_Click(sender As Object, e As EventArgs) Handles Button_NOD.Click
         WriteINI("CDControl", "CDPath", "CHI", ".\conquer.ini")
         WriteINI("Language", "Language", "CHN", ".\conquer.ini")
-        Process.Start("c&c95.exe")
+        jianrongxing()
+        If System.Diagnostics.Process.GetProcessesByName("c&c95").Length > 0 Then
+            MsgBox("请勿重复启动")
+        Else
+            If My.Computer.FileSystem.FileExists("ddraw.dll") Then
+                Process.Start("c&c95.exe")
+            Else
+                MsgBox("请在设置中打开ddraw")
+            End If
+
+        End If
     End Sub
 
     Private Sub Button_new_miss_Click(sender As Object, e As EventArgs) Handles Button_new_miss.Click
         WriteINI("CDControl", "CDPath", "CHI", ".\conquer.ini")
         WriteINI("Language", "Language", "CHM", ".\conquer.ini")
-        Process.Start("c&c95.exe")
+        jianrongxing()
+        If System.Diagnostics.Process.GetProcessesByName("c&c95").Length > 0 Then
+            MsgBox("请勿重复启动")
+        Else
+            If My.Computer.FileSystem.FileExists("ddraw.dll") Then
+                Process.Start("c&c95.exe")
+            Else
+                MsgBox("请在设置中打开ddraw")
+            End If
+
+        End If
     End Sub
 
     Private Sub Button_n64_ps_m_Click(sender As Object, e As EventArgs) Handles Button_n64_ps_m.Click
         WriteINI("CDControl", "CDPath", "CHI", ".\conquer.ini")
         WriteINI("Language", "Language", "CHV", ".\conquer.ini")
-        Process.Start("c&c95.exe")
+        jianrongxing()
+        If System.Diagnostics.Process.GetProcessesByName("c&c95").Length > 0 Then
+            MsgBox("请勿重复启动")
+        Else
+            If My.Computer.FileSystem.FileExists("ddraw.dll") Then
+                Process.Start("c&c95.exe")
+            Else
+                MsgBox("请在设置中打开ddraw")
+            End If
+
+        End If
+    End Sub
+
+    Private Sub Button_eng_Click(sender As Object, e As EventArgs) Handles Button_eng.Click
+        WriteINI("CDControl", "CDPath", ".", ".\conquer.ini")
+        WriteINI("Language", "Language", "eng", ".\conquer.ini")
+        jianrongxing()
+        If System.Diagnostics.Process.GetProcessesByName("c&c95").Length > 0 Then
+            MsgBox("请勿重复启动")
+        Else
+            If My.Computer.FileSystem.FileExists("ddraw.dll") Then
+                Process.Start("c&c95.exe")
+            Else
+                MsgBox("请在设置中打开ddraw")
+            End If
+
+        End If
+    End Sub
+
+    Private Sub jianrongxing()
+        Dim cc1_path As String
+        cc1_path = Application.StartupPath()
+        'MsgBox(cc1_path)
+        If RadioButton_win10.Checked Then
+            'Dim key As Microsoft.Win32.RegistryKey = Microsoft.Win32.Registry.LocalMachine.OpenSubKey("Software/Faxturer", True)
+            Dim key As Microsoft.Win32.RegistryKey = Microsoft.Win32.Registry.CurrentUser.OpenSubKey("Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags", True)
+            '[HKEY_CURRENT_USER\Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers]
+            Dim subkey As Microsoft.Win32.RegistryKey
+            subkey = key.CreateSubKey("Layers")
+            subkey.SetValue(cc1_path & "\C&C95.exe", "~ HIGHDPIAWARE", Microsoft.Win32.RegistryValueKind.String)
+            'reg.SetValue("path", New String() {"d:/software/sdf","dfdf"}, Microsoft.Win32.RegistryValueKind.MultiString)
+            WriteINI("ddraw", "Windowed", "False", ".\ddraw.ini")
+        Else
+            Dim key As Microsoft.Win32.RegistryKey = Microsoft.Win32.Registry.CurrentUser.OpenSubKey("Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags", True)
+            '[HKEY_CURRENT_USER\Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers]
+            Dim subkey As Microsoft.Win32.RegistryKey
+            subkey = key.CreateSubKey("Layers")
+            subkey.SetValue(cc1_path & "\C&C95.exe", "WIN95", Microsoft.Win32.RegistryValueKind.String)
+
+        End If
+        Threading.Thread.Sleep(100)
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim cc1_path As String
+        cc1_path = Application.StartupPath()
+        MsgBox(cc1_path)
+        jianrongxing()
+
     End Sub
 End Class

@@ -44,12 +44,18 @@ Partial Class Form1
         Me.CheckBox_up_movies = New System.Windows.Forms.CheckBox()
         Me.TextBox_up_com_as_movies = New System.Windows.Forms.TextBox()
         Me.Button_n64_ps_m = New System.Windows.Forms.Button()
+        Me.Button_eng = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.RadioButton_win7 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton_win10 = New System.Windows.Forms.RadioButton()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Button_NOD
         '
         Me.Button_NOD.Enabled = False
-        Me.Button_NOD.Location = New System.Drawing.Point(464, 44)
+        Me.Button_NOD.Location = New System.Drawing.Point(464, 41)
         Me.Button_NOD.Name = "Button_NOD"
         Me.Button_NOD.Size = New System.Drawing.Size(110, 23)
         Me.Button_NOD.TabIndex = 1
@@ -59,7 +65,7 @@ Partial Class Form1
         'Button_run_ccconfig
         '
         Me.Button_run_ccconfig.Enabled = False
-        Me.Button_run_ccconfig.Location = New System.Drawing.Point(464, 187)
+        Me.Button_run_ccconfig.Location = New System.Drawing.Point(464, 225)
         Me.Button_run_ccconfig.Name = "Button_run_ccconfig"
         Me.Button_run_ccconfig.Size = New System.Drawing.Size(110, 23)
         Me.Button_run_ccconfig.TabIndex = 3
@@ -70,7 +76,7 @@ Partial Class Form1
         '
         Me.Label_status.AutoSize = True
         Me.Label_status.ForeColor = System.Drawing.Color.Red
-        Me.Label_status.Location = New System.Drawing.Point(12, 261)
+        Me.Label_status.Location = New System.Drawing.Point(12, 289)
         Me.Label_status.Name = "Label_status"
         Me.Label_status.Size = New System.Drawing.Size(29, 12)
         Me.Label_status.TabIndex = 2
@@ -79,7 +85,7 @@ Partial Class Form1
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(340, 260)
+        Me.Label1.Location = New System.Drawing.Point(98, 289)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(65, 12)
         Me.Label1.TabIndex = 3
@@ -88,7 +94,7 @@ Partial Class Form1
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(460, 260)
+        Me.Label2.Location = New System.Drawing.Point(218, 289)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(65, 12)
         Me.Label2.TabIndex = 4
@@ -96,7 +102,7 @@ Partial Class Form1
         '
         'ProgressBar1
         '
-        Me.ProgressBar1.Location = New System.Drawing.Point(14, 219)
+        Me.ProgressBar1.Location = New System.Drawing.Point(12, 254)
         Me.ProgressBar1.Name = "ProgressBar1"
         Me.ProgressBar1.Size = New System.Drawing.Size(364, 23)
         Me.ProgressBar1.TabIndex = 5
@@ -108,13 +114,13 @@ Partial Class Form1
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.ReadOnly = True
         Me.TextBox1.ScrollBars = System.Windows.Forms.ScrollBars.Both
-        Me.TextBox1.Size = New System.Drawing.Size(446, 201)
+        Me.TextBox1.Size = New System.Drawing.Size(446, 236)
         Me.TextBox1.TabIndex = 9
         '
         'Label_l_version
         '
         Me.Label_l_version.AutoSize = True
-        Me.Label_l_version.Location = New System.Drawing.Point(411, 260)
+        Me.Label_l_version.Location = New System.Drawing.Point(169, 289)
         Me.Label_l_version.Name = "Label_l_version"
         Me.Label_l_version.Size = New System.Drawing.Size(11, 12)
         Me.Label_l_version.TabIndex = 7
@@ -123,7 +129,7 @@ Partial Class Form1
         'Label_r_version
         '
         Me.Label_r_version.AutoSize = True
-        Me.Label_r_version.Location = New System.Drawing.Point(531, 260)
+        Me.Label_r_version.Location = New System.Drawing.Point(289, 289)
         Me.Label_r_version.Name = "Label_r_version"
         Me.Label_r_version.Size = New System.Drawing.Size(11, 12)
         Me.Label_r_version.TabIndex = 8
@@ -132,7 +138,7 @@ Partial Class Form1
         'LinkLabel1
         '
         Me.LinkLabel1.AutoSize = True
-        Me.LinkLabel1.Location = New System.Drawing.Point(332, 280)
+        Me.LinkLabel1.Location = New System.Drawing.Point(325, 289)
         Me.LinkLabel1.Name = "LinkLabel1"
         Me.LinkLabel1.Size = New System.Drawing.Size(245, 12)
         Me.LinkLabel1.TabIndex = 4
@@ -171,7 +177,7 @@ Partial Class Form1
         'Button_run_cncnet
         '
         Me.Button_run_cncnet.Enabled = False
-        Me.Button_run_cncnet.Location = New System.Drawing.Point(464, 133)
+        Me.Button_run_cncnet.Location = New System.Drawing.Point(464, 167)
         Me.Button_run_cncnet.Name = "Button_run_cncnet"
         Me.Button_run_cncnet.Size = New System.Drawing.Size(110, 23)
         Me.Button_run_cncnet.TabIndex = 2
@@ -181,7 +187,7 @@ Partial Class Form1
         'Button_GDI
         '
         Me.Button_GDI.Enabled = False
-        Me.Button_GDI.Location = New System.Drawing.Point(464, 14)
+        Me.Button_GDI.Location = New System.Drawing.Point(464, 12)
         Me.Button_GDI.Name = "Button_GDI"
         Me.Button_GDI.Size = New System.Drawing.Size(110, 23)
         Me.Button_GDI.TabIndex = 16
@@ -191,7 +197,7 @@ Partial Class Form1
         'Button_new_miss
         '
         Me.Button_new_miss.Enabled = False
-        Me.Button_new_miss.Location = New System.Drawing.Point(464, 74)
+        Me.Button_new_miss.Location = New System.Drawing.Point(464, 70)
         Me.Button_new_miss.Name = "Button_new_miss"
         Me.Button_new_miss.Size = New System.Drawing.Size(110, 23)
         Me.Button_new_miss.TabIndex = 17
@@ -201,7 +207,7 @@ Partial Class Form1
         'Button_updata
         '
         Me.Button_updata.Enabled = False
-        Me.Button_updata.Location = New System.Drawing.Point(462, 219)
+        Me.Button_updata.Location = New System.Drawing.Point(464, 254)
         Me.Button_updata.Name = "Button_updata"
         Me.Button_updata.Size = New System.Drawing.Size(110, 23)
         Me.Button_updata.TabIndex = 18
@@ -211,7 +217,7 @@ Partial Class Form1
         'CheckBox_up_movies
         '
         Me.CheckBox_up_movies.AutoSize = True
-        Me.CheckBox_up_movies.Location = New System.Drawing.Point(384, 223)
+        Me.CheckBox_up_movies.Location = New System.Drawing.Point(382, 261)
         Me.CheckBox_up_movies.Name = "CheckBox_up_movies"
         Me.CheckBox_up_movies.Size = New System.Drawing.Size(72, 16)
         Me.CheckBox_up_movies.TabIndex = 19
@@ -232,18 +238,74 @@ Partial Class Form1
         'Button_n64_ps_m
         '
         Me.Button_n64_ps_m.Enabled = False
-        Me.Button_n64_ps_m.Location = New System.Drawing.Point(464, 103)
+        Me.Button_n64_ps_m.Location = New System.Drawing.Point(464, 99)
         Me.Button_n64_ps_m.Name = "Button_n64_ps_m"
         Me.Button_n64_ps_m.Size = New System.Drawing.Size(110, 23)
         Me.Button_n64_ps_m.TabIndex = 21
         Me.Button_n64_ps_m.Text = "游戏机独占任务"
         Me.Button_n64_ps_m.UseVisualStyleBackColor = True
         '
+        'Button_eng
+        '
+        Me.Button_eng.Enabled = False
+        Me.Button_eng.Location = New System.Drawing.Point(464, 196)
+        Me.Button_eng.Name = "Button_eng"
+        Me.Button_eng.Size = New System.Drawing.Size(110, 23)
+        Me.Button_eng.TabIndex = 22
+        Me.Button_eng.Text = "英文版"
+        Me.Button_eng.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(186, 284)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 23
+        Me.Button1.Text = "Button1"
+        Me.Button1.UseVisualStyleBackColor = True
+        Me.Button1.Visible = False
+        '
+        'RadioButton_win7
+        '
+        Me.RadioButton_win7.AutoSize = True
+        Me.RadioButton_win7.Location = New System.Drawing.Point(6, 13)
+        Me.RadioButton_win7.Name = "RadioButton_win7"
+        Me.RadioButton_win7.Size = New System.Drawing.Size(47, 16)
+        Me.RadioButton_win7.TabIndex = 24
+        Me.RadioButton_win7.TabStop = True
+        Me.RadioButton_win7.Text = "Win7"
+        Me.RadioButton_win7.UseVisualStyleBackColor = True
+        '
+        'RadioButton_win10
+        '
+        Me.RadioButton_win10.AutoSize = True
+        Me.RadioButton_win10.Location = New System.Drawing.Point(57, 13)
+        Me.RadioButton_win10.Name = "RadioButton_win10"
+        Me.RadioButton_win10.Size = New System.Drawing.Size(53, 16)
+        Me.RadioButton_win10.TabIndex = 25
+        Me.RadioButton_win10.TabStop = True
+        Me.RadioButton_win10.Text = "Win10"
+        Me.RadioButton_win10.UseVisualStyleBackColor = True
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.RadioButton_win7)
+        Me.GroupBox1.Controls.Add(Me.RadioButton_win10)
+        Me.GroupBox1.Location = New System.Drawing.Point(464, 128)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(110, 33)
+        Me.GroupBox1.TabIndex = 26
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "操作系统"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(586, 305)
+        Me.ClientSize = New System.Drawing.Size(586, 313)
+        Me.Controls.Add(Me.GroupBox1)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.Button_eng)
         Me.Controls.Add(Me.Button_n64_ps_m)
         Me.Controls.Add(Me.TextBox_up_com_as_movies)
         Me.Controls.Add(Me.CheckBox_up_movies)
@@ -267,6 +329,8 @@ Partial Class Form1
         Me.Name = "Form1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "命令与征服 纪念版"
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -293,4 +357,9 @@ Partial Class Form1
     Friend WithEvents CheckBox_up_movies As CheckBox
     Friend WithEvents TextBox_up_com_as_movies As TextBox
     Friend WithEvents Button_n64_ps_m As Button
+    Friend WithEvents Button_eng As Button
+    Friend WithEvents Button1 As Button
+    Friend WithEvents RadioButton_win7 As RadioButton
+    Friend WithEvents RadioButton_win10 As RadioButton
+    Friend WithEvents GroupBox1 As GroupBox
 End Class
