@@ -371,9 +371,9 @@ Public Class Form1
             '[HKEY_CURRENT_USER\Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers]
             Dim subkey As Microsoft.Win32.RegistryKey
             subkey = key.CreateSubKey("Layers")
-            subkey.SetValue(cc1_path & "\C&C95.exe", "~ HIGHDPIAWARE", Microsoft.Win32.RegistryValueKind.String)
+            subkey.SetValue(cc1_path & "\C&C95.exe", "~ HIGHDPIAWARE WIN7RTM", Microsoft.Win32.RegistryValueKind.String)
             'reg.SetValue("path", New String() {"d:/software/sdf","dfdf"}, Microsoft.Win32.RegistryValueKind.MultiString)
-            WriteINI("ddraw", "Windowed", "False", ".\ddraw.ini")
+            'WriteINI("ddraw", "Windowed", "False", ".\ddraw.ini")
         Else
             Dim key As Microsoft.Win32.RegistryKey = Microsoft.Win32.Registry.CurrentUser.OpenSubKey("Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags", True)
             '[HKEY_CURRENT_USER\Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers]
