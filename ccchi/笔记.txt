@@ -27,3 +27,7 @@ chm 任务
 wget下载示例
 wget up_data.exe https://gitee.com/yjfyeyu/updatasys/raw/master/cnc1/patch/up_data.exe --no-check-certificate
 wget -ivqalistnb.txt --no-check-certificate -B=http://gitee.com/yjfyeyu/cc1_database/raw/master/movies/ -c --no-check-certificate
+
+
+
+视频 最多17个字
