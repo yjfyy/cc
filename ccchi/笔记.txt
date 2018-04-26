@@ -31,3 +31,8 @@ wget -ivqalistnb.txt --no-check-certificate -B=http://gitee.com/yjfyeyu/cc1_data
 
 
 视频 最多17个字
+
+单行上移13
+双行上移4
+
+字体 18点bold 60高 145宽 犀利
