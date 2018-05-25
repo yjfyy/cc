@@ -130,7 +130,9 @@ timeout 2 &gt;nul
 up_data.exe
 echo 开始更新动画包
 cd chi
-wget -ivqalistnb.txt --no-check-certificate -Bhttp://gitee.com/yjfyeyu/cc1_database/raw/master/movies/ -c --no-check-certificate
+del *.vqa
+del *.vqp
+wget -ivqalist.txt --no-check-certificate -Bhttp://gitee.com/yjfyeyu/cc1_database/raw/master/movies/ -c --no-check-certificate
 cd ..
 timeout 2 &gt; nul
 del up_data.exe

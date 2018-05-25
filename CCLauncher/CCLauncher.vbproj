@@ -142,7 +142,7 @@
     <None Include="lver">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <Content Include="chi\vqalistnb.txt">
+    <Content Include="chi\vqalist.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="chi\wget.exe">
