@@ -1,0 +1,11 @@
+D:\WestWood_Classic\bin\Debug\WestWood_Classic.exe
+D:\WestWood_Classic\bin\Debug\WestWood_Classic.pdb
+D:\WestWood_Classic\bin\Debug\WestWood_Classic.xml
+D:\WestWood_Classic\obj\Debug\WestWood_Classic.Resources.resources
+D:\WestWood_Classic\obj\Debug\WestWood_Classic.vbproj.GenerateResource.cache
+D:\WestWood_Classic\obj\Debug\WestWood_Classic.vbproj.CoreCompileInputs.cache
+D:\WestWood_Classic\obj\Debug\WestWood_Classic.exe
+D:\WestWood_Classic\obj\Debug\WestWood_Classic.xml
+D:\WestWood_Classic\obj\Debug\WestWood_Classic.pdb
+D:\WestWood_Classic\obj\Debug\WestWood_Classic.Form_main.resources
+D:\WestWood_Classic\bin\Debug\lver
