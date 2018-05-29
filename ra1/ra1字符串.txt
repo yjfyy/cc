@@ -1,0 +1,554 @@
+2	%3d.%02d
+3	Time:%02d:%02d:%02d
+4	Time:%02d:%02d
+5	Sell
+6	Sell Structure
+7	Repair
+8	You:
+9	Enemy:
+10	Buildings Destroyed By
+11	Units Destroyed By
+12	Ore Harvested By
+13	Score: %d
+14	Yes
+15	No
+16	Mission Accomplished
+17	Mission Failed
+18	Start New Game
+19	Intro & Sneak Peek
+20	Cancel
+21	Rock
+22	Civilian
+23	Containment Team
+24	OK
+25	Tree
+26	
+27	
+28	
+29	
+30	Clear
+31	Water
+32	Road
+33	Slope
+34	Patch
+35	River
+36	Load Mission
+37	Save Mission
+38	Delete Mission
+39	Load
+40	Save
+41	Delete
+42	Game Controls
+43	Sound Controls
+44	Resume Mission
+45	Visual Controls
+46	Abort Mission
+47	Exit Game
+48	Options
+49	Squish mark
+50	Crater
+51	Scorch Mark
+52	BRIGHTNESS:
+53	Music Volume
+54	Sound Volume
+55	Tint:
+56	Contrast:
+57	Game Speed:
+58	Scroll Rate:
+59	Color:
+60	Return to game
+61	Enemy Soldier
+62	Enemy Vehicle
+63	Enemy Structure
+64	Light Tank
+65	Heavy Tank
+66	Medium Tank
+67	Mammoth Tank
+68	SAM Site
+69	Ranger
+70	Chinook Helicopter
+71	Ore Truck
+72	Artillery
+73	Rifle Infantry
+74	Grenadier
+75	Rocket Soldier
+76	Flamethrower
+77	Longbow Helicopter
+78	Hind
+79	APC
+80	Guard Tower
+81	Radar Dome
+82	Helipad
+83	Airfield
+84	Ore Silo
+85	Construction Yard
+86	Ore Refinery
+87	Church
+88	Han's and Gretel's
+89	Hewitt's Manor
+90	Ricktor's House
+91	Gretchin's House
+92	The Barn
+93	Damon's pub
+94	Fran's House
+95	Music Factory
+96	Toymaker's
+97	Ludwig's House
+98	Haystacks
+99	Haystack
+100	Wheat Field
+101	Fallow Field
+102	Corn Field
+103	Celery Field
+104	Potato Field
+105	Sala's House
+106	Abdul's House
+107	Pablo's Wicked Pub
+108	Village Well
+109	Propose a Draw
+110	Retract Draw Proposal
+111	Accept Proposed Draw
+112	Are you sure you want to propose a draw?
+113	Are you sure you want to accept a draw?
+114	You have proposed that the game be declared a draw.
+115	%s has proposed that the game be declared a draw.
+116	You have retracted your offer of a draw.
+117	Aftermath game
+118	%s has retracted the offer of a draw.
+119	The Game is a Draw
+120	Expansions Missions
+121	Custom Missions
+122	off
+123	Technology Center
+124	Turret
+125	Gunboat
+126	Mobile Construction Vehicle
+127	Power Plant
+128	Advanced Power Plant
+129	Hospital
+130	Barracks
+131	Oil Pump
+132	Oil Tanker
+133	Sandbags
+134	Chain Link Fence
+135	Concrete Wall
+136	Barbwire Fence
+137	Wood Fence
+138	War Factory
+139	Advanced Guard Tower
+140	Bio-Research Laboratory
+141	Service Depot
+142	Sidebar
+143	Options
+144	Database
+145	Unrevealed Terrain
+146	Options Menu
+147	Stop
+148	Play
+149	Shuffle
+150	Repeat
+151	Music volume:
+152	Sound volume:
+153	On
+154	Off
+155	Multiplayer Game
+156	No files available
+157	Do you want to delete this file?
+158	Do you want to delete %d files?
+159	Reset Values
+160	Do you want to abort the mission?
+161	Mission Description
+162	Joe
+163	Barry
+164	Shelly
+165	Maria
+166	Karen
+167	Steve
+168	Phil
+169	Dwight
+170	Erik
+171	Prof. Einstein
+172	Road Bib
+173	Faster
+174	Slower
+175	Air Strike
+176	Steel Crate
+177	Wood Crate
+178	Water Crate
+179	Flag Location
+180	Unable to read scenario!
+181	Error loading game!
+182	Obsolete saved game.
+183	You must enter a description!
+184	Error saving game!
+185	Delete this file?
+186	[EMPTY SLOT]
+187	Select Multiplayer Game
+188	Modem/Serial
+189	Network
+190	Unable to initialize network!
+191	Join Network Game
+192	New
+193	Join
+194	Send Message
+195	Your Name:
+196	Your Side:
+197	Your Color:
+198	Games
+199	Players
+200	Scenario:
+201	>> NOT FOUND <<
+202	Starting Credits:
+203	Bases:
+204	Ore:
+205	Crates:
+206	AI Players:
+207	Request denied.
+208	Unable to play; scenario not found.
+209	Nothing to join!
+210	You must enter a name!
+211	Duplicate names are not allowed.
+212	Your game version is outdated.
+213	Destination game version is outdated.
+214	%s's Game
+215	[%s's Game]
+216	Network Game Setup
+217	Reject
+218	You can't reject yourself!
+219	You must select a player to reject.
+220	Bases
+221	Crates
+222	AI Players
+223	Scenarios
+224	Credits:
+225	Only one player?
+226	Oops!
+227	To %s:
+228	To All:
+229	Message:
+230	Connection to %s lost!
+231	%s has left the game.
+232	%s has been defeated!
+233	Waiting to Connect...
+234	Connection error! Check your cables. Attempting to Reconnect...
+235	Connection error! Redialing...
+236	Connection error! Waiting for Call...
+237	Select Serial Game
+238	Dial Modem
+239	Answer Modem
+240	Null Modem
+241	Settings
+242	Port:
+243	IRQ:
+244	Baud:
+245	Init String:
+246	Call Waiting String:
+247	Tone Dialing
+248	Pulse Dialing
+249	Host Serial Game
+250	Opponent:
+251	User signed off!
+252	Join Serial Game
+253	Phone List
+254	Add
+255	Edit
+256	Dial
+257	Default
+258	Default Settings
+259	Custom Settings
+260	Phone Listing
+261	Name:
+262	Number:
+263	Unable to find modem. Check power and cables.
+264	No carrier.
+265	Line busy.
+266	Number invalid.
+267	Other system not responding!
+268	Games are out of sync!
+269	Packet received too late!
+270	Other player has left the game.
+271	From %s:%s
+272	TIME:
+273	LEADERSHIP:
+274	ECONOMY:
+275	TOTAL SCORE:
+276	CASUALTIES:
+277	NEUTRAL:
+278	BUILDINGS LOST
+279	BUILDINGS
+280	LOST:
+281	TOP SCORES
+282	ENDING CREDITS:
+283	%dh %dm
+284	%dm
+285	Dialing...
+286	Dialing Canceled
+287	Waiting for Call...
+288	Answering Canceled
+289	Engineer
+290	Spy
+291	Not a Null Modem Cable Attached! It is a modem or loopback cable.
+292	Map
+293	Blossom Tree
+294	Briefing
+295	Computer
+296	Unit Count:
+297	Tech Level:
+298	Opponent
+299	Kills:
+300	Video
+301	Scientist
+302	Capture The Flag
+303	Mission Objective
+304	Mission
+305	No saved games available.
+306	Civilian Building
+307	Technician
+308	Save game options are not allowed during a multiplayer session.
+309	Special 1
+310	Would you like to replay this mission?
+311	Reconnecting to %s.
+312	Please wait %02d seconds.
+313	Do you wish to surrender?
+314	SELECT TRANSMISSION
+315	Your game name must be unique.
+316	Game is closed.
+317	Your name must be unique.
+318	Reconnecting to %s
+319	Waiting for connections...
+320	Time allowed: %02d seconds
+321	Press ESC to cancel.
+322	From Computer: It's just you and me now!
+323	Capture the Flag:
+324	Special 2
+325	%s has allied with %s
+326	%s declares war on %s
+327	Select a target
+328	Resign Game
+329	Ore grows quickly.
+330	Answering...
+331	Initializing Modem...
+332	Scenarios don't match.
+333	Power Output
+334	Power Output (low)
+335	Continue
+336	Data Queue Overflow
+337	%s changed game options!
+338	Please insert a Red Alert CD into the CD-ROM drive.
+339	Please insert CD %d (%s) into the CD-ROM drive.
+340	Red Alert is unable to detect your CD ROM drive.
+341	No Sound Card Detected
+342	UNKNOWN
+343	(old)
+344	Insufficient Disk Space to run Red Alert.
+345	You must have %d megabytes of free disk space.
+346	Run SETUP program first.
+347	Waiting for Opponent
+348	Please select 'Settings' to setup default configuration
+349	Prison
+350	Mission Saved
+351	Insufficient disk space to save a game.  Please delete a previous save to free up some disk space and try again.
+352	Invalid Port/Address. COM 1-4 OR ADDRESS
+353	Invalid Port and/or IRQ settings
+354	IRQ already in use
+355	Abort
+356	Restart
+357	Mission is restarting. Please wait...
+358	Mission is loading. Please wait...
+359	Error in the InitString
+360	Shroud:
+361	Anti-Vehicle Mine
+362	Anti-Personnel Mine
+363	New Missions
+364	Thief
+365	Radar Jammer
+366	Gap Generator
+367	Pillbox
+368	Camo. Pillbox
+369	Chronosphere
+370	England
+371	Germany
+372	Spain
+373	Russia
+374	Ukraine
+375	Greece
+376	France
+377	Turkey
+378	Shore
+379	Select Object
+380	Submarine
+381	Destroyer
+382	Cruiser
+383	Transport
+384	Gun Boat
+385	Lobby
+386	Games
+387	Save Game...
+388	Game is full.
+389	You must select a game!
+390	%s playing %s
+391	Only the host can modify this option.
+392	Game was cancelled.
+393	%s has formed a new game.
+394	%s's game is now in progress.
+395	Tesla Coil
+396	Mobile Gap Generator
+397	Flame Tower
+398	AA Gun
+399	Kennel
+400	Soviet Tech Center
+401	Badger Bomber
+402	Mig Attack Plane
+403	Yak Attack Plane
+404	Barbed Wire
+405	Field Medic
+406	Saboteur
+407	General
+408	Tanya
+409	Parabombs
+410	Paratroopers
+411	Parachute Saboteur
+412	Naval Yard
+413	Sub Pen
+414	Scenario Options
+415	Spy Plane
+416	Spy Plane
+417	Attack Dog
+418	Spy Info
+419	Buildings
+420	Units
+421	Infantry
+422	Aircraft
+423	Supply Truck
+424	Invulnerability
+425	Iron Curtain
+426	Allied Tech Center
+427	V2 Rocket Launcher
+428	Forward Command Post
+429	Demolitioner
+430	Mine Layer
+431	Fake Construction Yard
+432	Fake War Factory
+433	Fake Naval Yard
+434	Fake Sub Pen
+435	Fake Radar Dome
+436	Bigfoot
+437	Crush
+438	Face the Enemy 1
+439	Face the Enemy 2
+440	Hell March
+441	Run for Your Life
+442	Smash
+443	Trenches
+444	Workmen
+445	Await
+446	Dense
+447	Map Selection
+448	Fogger
+449	Mud
+450	Radio 2
+451	Roll Out
+452	Snake
+453	Terminate
+454	Twin
+455	Vector
+456	Team Members
+457	Bridge
+458	Barrel
+459	Friendly
+460	Enemy
+461	Gold
+462	Gems
+463	Title Movie
+464	Movies
+465	Interior
+466	Sonar Pulse
+467	Missile Silo
+468	GPS Satellite
+469	Atom Bomb
+470	Easy
+471	Hard
+472	Normal
+473	Please set the difficulty level. It will be used throughout this campaign.
+474	Allies
+475	Soviet
+476	Intro Theme
+477	Shroud Regrows
+478	Ore Regenerates
+479	Score Theme
+480	Internet Game
+481	Ice
+482	Crates
+483	Skirmish
+484	Choose your side.
+485	Valuable Minerals
+486	Ignore
+487	Error - modem is not responding.
+488	Error - modem did not respond to result code enable command.
+489	Error - modem did not respond to initialisation string.
+490	Error - modem did not respond to 'verbose' command.
+491	Error - modem did not respond to 'echo' command.
+492	Error - unable to disable modem auto answer.
+493	Error - Too many errors initialising modem - Aborting.
+494	Error - Modem returned error status.
+495	Error - TIme out waiting for connect.
+496	Accomplished
+497	Click to Continue
+498	Receiving scenario from host.
+499	Sending scenario to remote players.
+500	Error - Modem failed to respond to flow control command. Your Windows configuration may be incorrect.
+501	Error - Modem failed to respond to compression command. Your Windows configuration may be incorrect.
+502	Error - Modem failed to respond to error correction command. Your Windows configuration may be incorrect.
+503	To play Red Alert via the internet you must be connected to an internet services provider and be registered with Planet Westwood
+504	Wchat not installed. Please install it from either CD.
+505	Register
+506	Ore Mine
+507	No registered modem
+508	Chronoshift
+509	Invalid Port or Port is in use
+510	No dial tone. Ensure your modem is connected to the phone line and try again.
+511	Error - other player does not have this expansion scenario.
+512	Please Stand By...
+513	End Credits Theme
+514	Low Power: AA-Guns offline
+515	Low Power: Tesla Coils offline
+516	Low Power
+517	Commander:
+518	Battles Won:
+519	Game versions or rules.ini file incompatible. You might need to delete a rules.ini file in your game folder.
+520	Incompatible scenario file detected. The scenario may be corrupt.
+521	Connecting...
+522	Modem Initialization
+523	Data Compression
+524	Error Correction
+525	Hardware Flow Control
+526	Advanced
+527	The Second Hand
+528	Arazoid
+529	Backstab
+530	Chaos
+531	Shut It
+532	Twin Cannon Remix
+533	Underlying Thoughts
+534	Voice Rhythm 2
+535	The other system is not responding. Do you wish to attempt an emergency game save? Both players must save for this to work.
+536	The other system hung up. Do you wish to attempt an emergency game save? Both players must save for this to work.
+537	Red Alert was unable to run the registration software. You need to install Westwood Chat from the Red Alert CD to register.
+538	A player in the game does not have this expansion scenario.
+539	Missile Sub
+540	Shock Trooper
+541	Mechanic
+542	Chrono Tank
+543	Tesla Tank
+544	M.A.D. Tank
+545	Demolition Truck
+546	Phase Transport
+547	Bog
+548	Floating
+549	Gloom
+550	Ground Wire
+551	Mech Man 2
+552	Search
+553	Traction
+554	Wasteland
+555	Helicarrier

@@ -142,7 +142,7 @@ Partial Class Form_main
         Me.Button8.Name = "Button8"
         Me.Button8.Size = New System.Drawing.Size(160, 21)
         Me.Button8.TabIndex = 0
-        Me.Button8.Text = "英文版"
+        Me.Button8.Text = "中文版"
         Me.Button8.UseVisualStyleBackColor = False
         '
         'Panel_cnc1
@@ -461,9 +461,9 @@ Partial Class Form_main
         Me.Controls.Add(Me.Button_updata)
         Me.Controls.Add(Me.ProgressBar1)
         Me.Controls.Add(Me.Panel_games_list)
-        Me.Controls.Add(Me.Panel_up_log)
         Me.Controls.Add(Me.Panel_ra1)
         Me.Controls.Add(Me.Panel_cnc1)
+        Me.Controls.Add(Me.Panel_up_log)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Form_main"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
