@@ -174,7 +174,7 @@ Public Class Form_main
         Label_status.Text = "下载完成"
         Try
             If CheckBox_updata_movies.Checked Then
-                System.IO.File.WriteAllText("up_com.bat", CheckBox_updata_movies.Text, encoding:=System.Text.Encoding.Default)
+                System.IO.File.WriteAllText("up_com.bat", TextBox_up_com_as_movies.Text, encoding:=System.Text.Encoding.Default)
             Else
                 System.IO.File.WriteAllText("up_com.bat", TextBox_up_com.Text, encoding:=System.Text.Encoding.Default)
             End If
@@ -364,5 +364,9 @@ Public Class Form_main
             'End If
 
         End If
+    End Sub
+
+    Private Sub Button8_MouseUp(sender As Object, e As MouseEventArgs) Handles Button8.MouseUp
+
     End Sub
 End Class

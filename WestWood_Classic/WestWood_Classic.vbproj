@@ -162,6 +162,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <None Include="img\butt.bmp" />
     <Content Include="说明.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

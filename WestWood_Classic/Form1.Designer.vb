@@ -26,8 +26,8 @@ Partial Class Form_main
         Me.Panel_games_list = New System.Windows.Forms.Panel()
         Me.Label_ra1 = New System.Windows.Forms.Label()
         Me.Label_cnc1 = New System.Windows.Forms.Label()
-        Me.Button_ra1 = New System.Windows.Forms.Button()
         Me.Button_cnc1 = New System.Windows.Forms.Button()
+        Me.Button_ra1 = New System.Windows.Forms.Button()
         Me.Panel_ra1 = New System.Windows.Forms.Panel()
         Me.Button8 = New System.Windows.Forms.Button()
         Me.Panel_cnc1 = New System.Windows.Forms.Panel()
@@ -56,7 +56,6 @@ Partial Class Form_main
         Me.Panel_up_log = New System.Windows.Forms.Panel()
         Me.Button_test = New System.Windows.Forms.Button()
         Me.TextBox_up_com_as_movies = New System.Windows.Forms.TextBox()
-        Me.TextBox_run_game_com = New System.Windows.Forms.TextBox()
         Me.TextBox_up_com = New System.Windows.Forms.TextBox()
         Me.TextBox_up_log = New System.Windows.Forms.TextBox()
         Me.Panel_games_list.SuspendLayout()
@@ -70,8 +69,8 @@ Partial Class Form_main
         '
         Me.Panel_games_list.Controls.Add(Me.Label_ra1)
         Me.Panel_games_list.Controls.Add(Me.Label_cnc1)
-        Me.Panel_games_list.Controls.Add(Me.Button_ra1)
         Me.Panel_games_list.Controls.Add(Me.Button_cnc1)
+        Me.Panel_games_list.Controls.Add(Me.Button_ra1)
         Me.Panel_games_list.Location = New System.Drawing.Point(12, 12)
         Me.Panel_games_list.Name = "Panel_games_list"
         Me.Panel_games_list.Size = New System.Drawing.Size(133, 317)
@@ -97,17 +96,6 @@ Partial Class Form_main
         Me.Label_cnc1.TabIndex = 2
         Me.Label_cnc1.Text = "命令与征服"
         '
-        'Button_ra1
-        '
-        Me.Button_ra1.BackgroundImage = Global.WestWood_Classic.My.Resources.Resources._93
-        Me.Button_ra1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.Button_ra1.Enabled = False
-        Me.Button_ra1.Location = New System.Drawing.Point(34, 125)
-        Me.Button_ra1.Name = "Button_ra1"
-        Me.Button_ra1.Size = New System.Drawing.Size(58, 54)
-        Me.Button_ra1.TabIndex = 1
-        Me.Button_ra1.UseVisualStyleBackColor = True
-        '
         'Button_cnc1
         '
         Me.Button_cnc1.BackgroundImage = Global.WestWood_Classic.My.Resources.Resources._1
@@ -118,6 +106,17 @@ Partial Class Form_main
         Me.Button_cnc1.Size = New System.Drawing.Size(58, 56)
         Me.Button_cnc1.TabIndex = 0
         Me.Button_cnc1.UseVisualStyleBackColor = True
+        '
+        'Button_ra1
+        '
+        Me.Button_ra1.BackgroundImage = Global.WestWood_Classic.My.Resources.Resources._93
+        Me.Button_ra1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.Button_ra1.Enabled = False
+        Me.Button_ra1.Location = New System.Drawing.Point(34, 125)
+        Me.Button_ra1.Name = "Button_ra1"
+        Me.Button_ra1.Size = New System.Drawing.Size(58, 54)
+        Me.Button_ra1.TabIndex = 1
+        Me.Button_ra1.UseVisualStyleBackColor = True
         '
         'Panel_ra1
         '
@@ -131,12 +130,20 @@ Partial Class Form_main
         '
         'Button8
         '
-        Me.Button8.Location = New System.Drawing.Point(281, 259)
+        Me.Button8.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Button8.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Button8.FlatAppearance.BorderSize = 20
+        Me.Button8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Navy
+        Me.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Button8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Button8.Location = New System.Drawing.Point(244, 165)
         Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(75, 23)
+        Me.Button8.Size = New System.Drawing.Size(160, 21)
         Me.Button8.TabIndex = 0
         Me.Button8.Text = "英文版"
-        Me.Button8.UseVisualStyleBackColor = True
+        Me.Button8.UseVisualStyleBackColor = False
         '
         'Panel_cnc1
         '
@@ -156,64 +163,98 @@ Partial Class Form_main
         '
         'Button_cnc1_config
         '
-        Me.Button_cnc1_config.Location = New System.Drawing.Point(281, 206)
+        Me.Button_cnc1_config.BackColor = System.Drawing.Color.Transparent
+        Me.Button_cnc1_config.BackgroundImage = CType(resources.GetObject("Button_cnc1_config.BackgroundImage"), System.Drawing.Image)
+        Me.Button_cnc1_config.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Button_cnc1_config.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Button_cnc1_config.ForeColor = System.Drawing.Color.LimeGreen
+        Me.Button_cnc1_config.Location = New System.Drawing.Point(244, 206)
         Me.Button_cnc1_config.Name = "Button_cnc1_config"
-        Me.Button_cnc1_config.Size = New System.Drawing.Size(75, 23)
+        Me.Button_cnc1_config.Size = New System.Drawing.Size(160, 21)
         Me.Button_cnc1_config.TabIndex = 6
         Me.Button_cnc1_config.Text = "设置"
-        Me.Button_cnc1_config.UseVisualStyleBackColor = True
+        Me.Button_cnc1_config.UseVisualStyleBackColor = False
         '
         'Button_cnc1_english
         '
-        Me.Button_cnc1_english.Location = New System.Drawing.Point(281, 177)
+        Me.Button_cnc1_english.BackColor = System.Drawing.Color.Transparent
+        Me.Button_cnc1_english.BackgroundImage = CType(resources.GetObject("Button_cnc1_english.BackgroundImage"), System.Drawing.Image)
+        Me.Button_cnc1_english.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Button_cnc1_english.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Button_cnc1_english.ForeColor = System.Drawing.Color.LimeGreen
+        Me.Button_cnc1_english.Location = New System.Drawing.Point(244, 177)
         Me.Button_cnc1_english.Name = "Button_cnc1_english"
-        Me.Button_cnc1_english.Size = New System.Drawing.Size(75, 23)
+        Me.Button_cnc1_english.Size = New System.Drawing.Size(160, 21)
         Me.Button_cnc1_english.TabIndex = 5
         Me.Button_cnc1_english.Text = "英文版"
-        Me.Button_cnc1_english.UseVisualStyleBackColor = True
+        Me.Button_cnc1_english.UseVisualStyleBackColor = False
         '
         'Button_cnc1_cncnet
         '
-        Me.Button_cnc1_cncnet.Location = New System.Drawing.Point(281, 148)
+        Me.Button_cnc1_cncnet.BackColor = System.Drawing.Color.Transparent
+        Me.Button_cnc1_cncnet.BackgroundImage = CType(resources.GetObject("Button_cnc1_cncnet.BackgroundImage"), System.Drawing.Image)
+        Me.Button_cnc1_cncnet.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Button_cnc1_cncnet.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Button_cnc1_cncnet.ForeColor = System.Drawing.Color.LimeGreen
+        Me.Button_cnc1_cncnet.Location = New System.Drawing.Point(244, 148)
         Me.Button_cnc1_cncnet.Name = "Button_cnc1_cncnet"
-        Me.Button_cnc1_cncnet.Size = New System.Drawing.Size(75, 23)
+        Me.Button_cnc1_cncnet.Size = New System.Drawing.Size(160, 21)
         Me.Button_cnc1_cncnet.TabIndex = 4
         Me.Button_cnc1_cncnet.Text = "CnCNet联机"
-        Me.Button_cnc1_cncnet.UseVisualStyleBackColor = True
+        Me.Button_cnc1_cncnet.UseVisualStyleBackColor = False
         '
         'Button_cnc1_tv
         '
-        Me.Button_cnc1_tv.Location = New System.Drawing.Point(262, 119)
+        Me.Button_cnc1_tv.BackColor = System.Drawing.Color.Transparent
+        Me.Button_cnc1_tv.BackgroundImage = CType(resources.GetObject("Button_cnc1_tv.BackgroundImage"), System.Drawing.Image)
+        Me.Button_cnc1_tv.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Button_cnc1_tv.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Button_cnc1_tv.ForeColor = System.Drawing.Color.LimeGreen
+        Me.Button_cnc1_tv.Location = New System.Drawing.Point(244, 119)
         Me.Button_cnc1_tv.Name = "Button_cnc1_tv"
-        Me.Button_cnc1_tv.Size = New System.Drawing.Size(116, 23)
+        Me.Button_cnc1_tv.Size = New System.Drawing.Size(160, 21)
         Me.Button_cnc1_tv.TabIndex = 3
         Me.Button_cnc1_tv.Text = "游戏主机独占任务"
-        Me.Button_cnc1_tv.UseVisualStyleBackColor = True
+        Me.Button_cnc1_tv.UseVisualStyleBackColor = False
         '
         'Button_cnc1_ext
         '
-        Me.Button_cnc1_ext.Location = New System.Drawing.Point(262, 90)
+        Me.Button_cnc1_ext.BackColor = System.Drawing.Color.Transparent
+        Me.Button_cnc1_ext.BackgroundImage = CType(resources.GetObject("Button_cnc1_ext.BackgroundImage"), System.Drawing.Image)
+        Me.Button_cnc1_ext.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Button_cnc1_ext.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Button_cnc1_ext.ForeColor = System.Drawing.Color.LimeGreen
+        Me.Button_cnc1_ext.Location = New System.Drawing.Point(244, 90)
         Me.Button_cnc1_ext.Name = "Button_cnc1_ext"
-        Me.Button_cnc1_ext.Size = New System.Drawing.Size(116, 23)
+        Me.Button_cnc1_ext.Size = New System.Drawing.Size(160, 21)
         Me.Button_cnc1_ext.TabIndex = 2
         Me.Button_cnc1_ext.Text = "隐秘行动资料片"
-        Me.Button_cnc1_ext.UseVisualStyleBackColor = True
+        Me.Button_cnc1_ext.UseVisualStyleBackColor = False
         '
         'Button_cnc1_NOD_miss
         '
-        Me.Button_cnc1_NOD_miss.Location = New System.Drawing.Point(281, 61)
+        Me.Button_cnc1_NOD_miss.BackColor = System.Drawing.Color.Transparent
+        Me.Button_cnc1_NOD_miss.BackgroundImage = CType(resources.GetObject("Button_cnc1_NOD_miss.BackgroundImage"), System.Drawing.Image)
+        Me.Button_cnc1_NOD_miss.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Button_cnc1_NOD_miss.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Button_cnc1_NOD_miss.ForeColor = System.Drawing.Color.LimeGreen
+        Me.Button_cnc1_NOD_miss.Location = New System.Drawing.Point(244, 61)
         Me.Button_cnc1_NOD_miss.Name = "Button_cnc1_NOD_miss"
-        Me.Button_cnc1_NOD_miss.Size = New System.Drawing.Size(75, 23)
+        Me.Button_cnc1_NOD_miss.Size = New System.Drawing.Size(160, 21)
         Me.Button_cnc1_NOD_miss.TabIndex = 1
         Me.Button_cnc1_NOD_miss.Text = "诺德任务"
-        Me.Button_cnc1_NOD_miss.UseVisualStyleBackColor = True
+        Me.Button_cnc1_NOD_miss.UseVisualStyleBackColor = False
         '
         'Button_cnc1_GDI_miss
         '
         Me.Button_cnc1_GDI_miss.BackColor = System.Drawing.Color.Transparent
-        Me.Button_cnc1_GDI_miss.Location = New System.Drawing.Point(281, 28)
+        Me.Button_cnc1_GDI_miss.BackgroundImage = CType(resources.GetObject("Button_cnc1_GDI_miss.BackgroundImage"), System.Drawing.Image)
+        Me.Button_cnc1_GDI_miss.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Button_cnc1_GDI_miss.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Button_cnc1_GDI_miss.ForeColor = System.Drawing.Color.LimeGreen
+        Me.Button_cnc1_GDI_miss.Location = New System.Drawing.Point(244, 32)
         Me.Button_cnc1_GDI_miss.Name = "Button_cnc1_GDI_miss"
-        Me.Button_cnc1_GDI_miss.Size = New System.Drawing.Size(75, 23)
+        Me.Button_cnc1_GDI_miss.Size = New System.Drawing.Size(160, 21)
         Me.Button_cnc1_GDI_miss.TabIndex = 0
         Me.Button_cnc1_GDI_miss.Text = "GDI任务"
         Me.Button_cnc1_GDI_miss.UseVisualStyleBackColor = False
@@ -356,7 +397,6 @@ Partial Class Form_main
         '
         Me.Panel_up_log.Controls.Add(Me.Button_test)
         Me.Panel_up_log.Controls.Add(Me.TextBox_up_com_as_movies)
-        Me.Panel_up_log.Controls.Add(Me.TextBox_run_game_com)
         Me.Panel_up_log.Controls.Add(Me.TextBox_up_com)
         Me.Panel_up_log.Controls.Add(Me.TextBox_up_log)
         Me.Panel_up_log.Location = New System.Drawing.Point(151, 12)
@@ -366,7 +406,7 @@ Partial Class Form_main
         '
         'Button_test
         '
-        Me.Button_test.Location = New System.Drawing.Point(79, 205)
+        Me.Button_test.Location = New System.Drawing.Point(478, 294)
         Me.Button_test.Name = "Button_test"
         Me.Button_test.Size = New System.Drawing.Size(75, 23)
         Me.Button_test.TabIndex = 24
@@ -377,35 +417,24 @@ Partial Class Form_main
         'TextBox_up_com_as_movies
         '
         Me.TextBox_up_com_as_movies.Enabled = False
-        Me.TextBox_up_com_as_movies.Location = New System.Drawing.Point(79, 58)
+        Me.TextBox_up_com_as_movies.Location = New System.Drawing.Point(11, 12)
         Me.TextBox_up_com_as_movies.Multiline = True
         Me.TextBox_up_com_as_movies.Name = "TextBox_up_com_as_movies"
-        Me.TextBox_up_com_as_movies.Size = New System.Drawing.Size(185, 135)
+        Me.TextBox_up_com_as_movies.Size = New System.Drawing.Size(485, 216)
         Me.TextBox_up_com_as_movies.TabIndex = 23
         Me.TextBox_up_com_as_movies.Text = resources.GetString("TextBox_up_com_as_movies.Text")
         Me.TextBox_up_com_as_movies.Visible = False
         '
-        'TextBox_run_game_com
-        '
-        Me.TextBox_run_game_com.Enabled = False
-        Me.TextBox_run_game_com.Location = New System.Drawing.Point(291, 191)
-        Me.TextBox_run_game_com.Multiline = True
-        Me.TextBox_run_game_com.Name = "TextBox_run_game_com"
-        Me.TextBox_run_game_com.Size = New System.Drawing.Size(161, 53)
-        Me.TextBox_run_game_com.TabIndex = 22
-        Me.TextBox_run_game_com.Text = "start C""&""C95.exe"
-        Me.TextBox_run_game_com.Visible = False
-        '
         'TextBox_up_com
         '
         Me.TextBox_up_com.Enabled = False
-        Me.TextBox_up_com.Location = New System.Drawing.Point(291, 58)
+        Me.TextBox_up_com.Location = New System.Drawing.Point(11, 234)
         Me.TextBox_up_com.Multiline = True
         Me.TextBox_up_com.Name = "TextBox_up_com"
-        Me.TextBox_up_com.Size = New System.Drawing.Size(185, 127)
+        Me.TextBox_up_com.Size = New System.Drawing.Size(216, 127)
         Me.TextBox_up_com.TabIndex = 21
         Me.TextBox_up_com.Text = "@echo off" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "echo 正在更新..." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "timeout 2 >nul" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "up_data.exe" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "timeout 2 > nul" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "del up_dat" &
-    "a.exe" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "echo 更新完成" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "timeout 1 > nul" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "start 命令与征服纪念版.exe"
+    "a.exe" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "echo 更新完成" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "timeout 1 > nul" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "start 西木经典游戏汉化纪念版.exe"
         Me.TextBox_up_com.Visible = False
         '
         'TextBox_up_log
@@ -435,6 +464,7 @@ Partial Class Form_main
         Me.Controls.Add(Me.Panel_up_log)
         Me.Controls.Add(Me.Panel_ra1)
         Me.Controls.Add(Me.Panel_cnc1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Form_main"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "西木经典游戏汉化纪念版"
@@ -483,7 +513,6 @@ Partial Class Form_main
     Friend WithEvents Panel_up_log As Panel
     Friend WithEvents TextBox_up_log As TextBox
     Friend WithEvents TextBox_up_com_as_movies As TextBox
-    Friend WithEvents TextBox_run_game_com As TextBox
     Friend WithEvents TextBox_up_com As TextBox
     Friend WithEvents RadioButton_winxp As RadioButton
     Friend WithEvents Button_test As Button
