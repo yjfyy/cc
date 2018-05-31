@@ -22,3 +22,4 @@ F:\projects\cc\WestWood_Classic\obj\Release\WestWood_Classic.vbproj.CoreCompileI
 F:\projects\cc\WestWood_Classic\obj\Release\西木经典游戏汉化纪念版.exe
 F:\projects\cc\WestWood_Classic\obj\Release\西木经典游戏汉化纪念版.xml
 F:\projects\cc\WestWood_Classic\obj\Release\西木经典游戏汉化纪念版.pdb
+F:\projects\cc\WestWood_Classic\obj\Release\WestWood_Classic.vbprojAssemblyReference.cache

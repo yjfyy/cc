@@ -1,9 +1,9 @@
-﻿#define MyAppName="Command & Conquer Gold 1.06c XXXX language addon"
+﻿#define MyAppName="命令与征服黄金版 1.06c 中文语言包"
 #define MyAppPublisher "Nyerguds"
 #define MyAppURL "http://nyerguds.arsaneus-design.com/cnc95upd/cc95p106/"
 
 [Setup]
-AppId={#REGENERATETHIS}
+AppId={{4F61B281-AC15-4868-97AA-9655839F0A31}
 AppName={cm:AppName}
 AppVerName={#MyAppName}
 VersionInfoDescription={#MyAppName} Setup
@@ -32,27 +32,35 @@ AppendDefaultDirName=no
 
 [Languages]
 Name: eng; MessagesFile: compiler:Default.isl; InfoBeforeFile: readme.rtf
-Name: XXX; MessagesFile: compiler:Languages\XXXX.isl; InfoBeforeFile: readme_XXX.rtf
+Name: chi; MessagesFile: compiler:Languages\ChineseSimplified.isl; InfoBeforeFile: readme_chi.rtf
 
 [Files]
-Source: ccconfigXXX.lan; DestDir: {app}; Flags: ignoreversion
-Source: deseiXXX.mix; DestDir: {app}; Flags: ignoreversion
-Source: tempiXXX.mix; DestDir: {app}; Flags: ignoreversion
-Source: wintiXXX.mix; DestDir: {app}; Flags: ignoreversion
-Source: snowiXXX.mix; DestDir: {app}; Flags: ignoreversion
-Source: speecXXX.mix; DestDir: {app}; Flags: ignoreversion
-Source: talkXXX.mix; DestDir: {app}; Flags: ignoreversion
-Source: lang_XXX.mix; DestDir: {app}; Flags: ignoreversion
+Source: ccconfigchg.lan; DestDir: {app}; Flags: ignoreversion
+Source: ccconfigchm.lan; DestDir: {app}; Flags: ignoreversion
+Source: ccconfigchn.lan; DestDir: {app}; Flags: ignoreversion
+Source: ccconfigchv.lan; DestDir: {app}; Flags: ignoreversion
+Source: deseichi.mix; DestDir: {app}; Flags: ignoreversion
+Source: tempichi.mix; DestDir: {app}; Flags: ignoreversion
+Source: wintichi.mix; DestDir: {app}; Flags: ignoreversion
+Source: snowichi.mix; DestDir: {app}; Flags: ignoreversion
+Source: speecchi.mix; DestDir: {app}; Flags: ignoreversion
+Source: lang_chg.mix; DestDir: {app}; Flags: ignoreversion
+Source: lang_chm.mix; DestDir: {app}; Flags: ignoreversion
+Source: lang_chn.mix; DestDir: {app}; Flags: ignoreversion
+Source: lang_chv.mix; DestDir: {app}; Flags: ignoreversion
+Source: lver; DestDir: {app}; Flags: ignoreversion
+Source: 命令与征服纪念版.exe; DestDir: {app}; Flags: ignoreversion
+Source: 说明.txt; DestDir: {app}; Flags: ignoreversion
 
 [Messages]
 eng.WelcomeLabel1=Welcome to the C&C95 XXXX Language Pack Setup Wizard!
 eng.WelcomeLabel2=This program will install the XXXX language pack on your C&C.
-XXX.WelcomeLabel1=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-XXX.WelcomeLabel2=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+chi.WelcomeLabel1=欢迎来到C&C95中文语言包安装向导！
+chi.WelcomeLabel2=此程序将在您的C&C上安装中文语言包。
 
 [CustomMessages]
 eng.AppName=Command & Conquer Gold 1.06c XXXX language addon
-XXX.AppName=Command & Conquer Gold 1.06c XXXXXXXXXXXXXXXXXX
+chi.AppName=命令与征服黄金版 1.06c 中文语言包
 
 GameReg=SOFTWARE\Westwood\Command & Conquer Windows 95 Edition
 TFDReg=SOFTWARE\Electronic Arts\EA Games\Command and Conquer The First Decade
@@ -61,15 +69,18 @@ DefaultGamePath=C:\Westwood\C&C95
 INIFile=conquer.ini
 CheckFile=update.mix
 eng.nogame=ERROR: The game was not found in the selected directory.%nPlease select the directory where Command & Conquer is installed.
-XXX.nogame=ERROR: XXXXXXXXXXXXXXXXXXXXX%nXXXXXXXXXXXXXXXXXXXXXXXX.
+chi.nogame=ERROR: 在选定目录中找不到游戏%n请选择命令和征服的安装目录。
 eng.EnableLanguage=Enable XXXX language
-XXX.EnableLanguage=XXXXXXXXXXXXXXXXXXXXXXXX
+chi.EnableLanguage=选择中文语言包
 
 [Tasks]
 Name: enablelanguage; Description: {cm:EnableLanguage}
-
+Name: "DesktopIcon"; Description: "创建桌面快捷方式图标"
 [INI]
-Filename: {app}\{cm:INIFile}; Section: Language; Key: Language; String: XXX; Tasks: enablelanguage
+Filename: {app}\{cm:INIFile}; Section: Language; Key: Language; String: chg; Tasks: enablelanguage
+
+[Icons]  
+Name: "{commondesktop}\命令与征服纪念版"; Filename: "{app}\命令与征服纪念版.exe"; WorkingDir: "{app}"; Tasks: DesktopIcon 
 
 [Code]
 ////////////////////////////////////////////////////
