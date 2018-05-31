@@ -9,3 +9,15 @@ D:\WestWood_Classic\obj\Debug\WestWood_Classic.xml
 D:\WestWood_Classic\obj\Debug\WestWood_Classic.pdb
 D:\WestWood_Classic\obj\Debug\WestWood_Classic.Form_main.resources
 D:\WestWood_Classic\bin\Debug\lver
+F:\projects\cc\WestWood_Classic\bin\Debug\说明.txt
+F:\projects\cc\WestWood_Classic\bin\Debug\lver
+F:\projects\cc\WestWood_Classic\bin\Debug\西木经典游戏汉化纪念版.exe
+F:\projects\cc\WestWood_Classic\bin\Debug\西木经典游戏汉化纪念版.pdb
+F:\projects\cc\WestWood_Classic\bin\Debug\西木经典游戏汉化纪念版.xml
+F:\projects\cc\WestWood_Classic\obj\Debug\WestWood_Classic.Form_main.resources
+F:\projects\cc\WestWood_Classic\obj\Debug\WestWood_Classic.Resources.resources
+F:\projects\cc\WestWood_Classic\obj\Debug\WestWood_Classic.vbproj.GenerateResource.cache
+F:\projects\cc\WestWood_Classic\obj\Debug\WestWood_Classic.vbproj.CoreCompileInputs.cache
+F:\projects\cc\WestWood_Classic\obj\Debug\西木经典游戏汉化纪念版.exe
+F:\projects\cc\WestWood_Classic\obj\Debug\西木经典游戏汉化纪念版.xml
+F:\projects\cc\WestWood_Classic\obj\Debug\西木经典游戏汉化纪念版.pdb

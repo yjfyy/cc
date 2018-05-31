@@ -214,8 +214,9 @@ Public Class Form_main
     End Sub
 
     Private Sub jianrongxing()
-        Dim cc1_path As String
-        cc1_path = Application.StartupPath()
+        Dim app_path As String
+
+        app_path = Application.StartupPath()
         'MsgBox(cc1_path)
         If RadioButton_win10.Checked Then
             'Dim key As Microsoft.Win32.RegistryKey = Microsoft.Win32.Registry.LocalMachine.OpenSubKey("Software/Faxturer", True)
@@ -223,15 +224,18 @@ Public Class Form_main
             '[HKEY_CURRENT_USER\Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers]
             Dim subkey As Microsoft.Win32.RegistryKey
             subkey = key.CreateSubKey("Layers")
-            subkey.SetValue(cc1_path & "\CnC95\C&C95.exe", "~ HIGHDPIAWARE WIN7RTM", Microsoft.Win32.RegistryValueKind.String)
+            subkey.SetValue(app_path & "\CnC95\C&C95.exe", "~ HIGHDPIAWARE WIN7RTM", Microsoft.Win32.RegistryValueKind.String)
+            subkey.SetValue(app_path & "\RA\ra95.exe", "~ HIGHDPIAWARE WIN7RTM", Microsoft.Win32.RegistryValueKind.String)
             'reg.SetValue("path", New String() {"d:/software/sdf","dfdf"}, Microsoft.Win32.RegistryValueKind.MultiString)
             'WriteINI("ddraw", "Windowed", "False", ".\ddraw.ini")
-        Else
+        ElseIf RadioButton_win7.Checked Then
             Dim key As Microsoft.Win32.RegistryKey = Microsoft.Win32.Registry.CurrentUser.OpenSubKey("Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags", True)
             '[HKEY_CURRENT_USER\Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers]
             Dim subkey As Microsoft.Win32.RegistryKey
             subkey = key.CreateSubKey("Layers")
-            subkey.SetValue(cc1_path & "\CnC95\C&C95.exe", "WIN95", Microsoft.Win32.RegistryValueKind.String)
+            subkey.SetValue(app_path & "\CnC95\C&C95.exe", "WIN95", Microsoft.Win32.RegistryValueKind.String)
+            subkey.SetValue(app_path & "\RA\ra95.exe", "WIN95", Microsoft.Win32.RegistryValueKind.String)
+        Else
 
         End If
         Threading.Thread.Sleep(100)
@@ -358,6 +362,7 @@ Public Class Form_main
             MsgBox("请勿重复启动")
         Else
             'If My.Computer.FileSystem.FileExists("cnc95\ddraw.dll") Then
+            jianrongxing()
             Process.Start("ra\ra95.exe")
             'Else
             'MsgBox("请在设置中打开ddraw")
@@ -368,5 +373,10 @@ Public Class Form_main
 
     Private Sub Button8_MouseUp(sender As Object, e As MouseEventArgs) Handles Button8.MouseUp
 
+    End Sub
+
+    Private Sub Button_ra1_config_Click(sender As Object, e As EventArgs) Handles Button_ra1_config.Click
+
+        Process.Start("RA\RedAlertConfig")
     End Sub
 End Class

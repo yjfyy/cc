@@ -29,6 +29,7 @@ Partial Class Form_main
         Me.Button_cnc1 = New System.Windows.Forms.Button()
         Me.Button_ra1 = New System.Windows.Forms.Button()
         Me.Panel_ra1 = New System.Windows.Forms.Panel()
+        Me.Button_ra1_config = New System.Windows.Forms.Button()
         Me.Button8 = New System.Windows.Forms.Button()
         Me.Panel_cnc1 = New System.Windows.Forms.Panel()
         Me.Button_cnc1_config = New System.Windows.Forms.Button()
@@ -122,11 +123,29 @@ Partial Class Form_main
         '
         Me.Panel_ra1.BackgroundImage = Global.WestWood_Classic.My.Resources.Resources.title
         Me.Panel_ra1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Panel_ra1.Controls.Add(Me.Button_ra1_config)
         Me.Panel_ra1.Controls.Add(Me.Button8)
         Me.Panel_ra1.Location = New System.Drawing.Point(151, 12)
         Me.Panel_ra1.Name = "Panel_ra1"
         Me.Panel_ra1.Size = New System.Drawing.Size(640, 402)
         Me.Panel_ra1.TabIndex = 2
+        '
+        'Button_ra1_config
+        '
+        Me.Button_ra1_config.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Button_ra1_config.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Button_ra1_config.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Button_ra1_config.FlatAppearance.BorderSize = 20
+        Me.Button_ra1_config.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Button_ra1_config.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Navy
+        Me.Button_ra1_config.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Button_ra1_config.ForeColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Button_ra1_config.Location = New System.Drawing.Point(244, 204)
+        Me.Button_ra1_config.Name = "Button_ra1_config"
+        Me.Button_ra1_config.Size = New System.Drawing.Size(160, 21)
+        Me.Button_ra1_config.TabIndex = 1
+        Me.Button_ra1_config.Text = "设置"
+        Me.Button_ra1_config.UseVisualStyleBackColor = False
         '
         'Button8
         '
@@ -516,4 +535,5 @@ Partial Class Form_main
     Friend WithEvents TextBox_up_com As TextBox
     Friend WithEvents RadioButton_winxp As RadioButton
     Friend WithEvents Button_test As Button
+    Friend WithEvents Button_ra1_config As Button
 End Class
