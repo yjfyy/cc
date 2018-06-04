@@ -1,0 +1,182 @@
+﻿=======================
+Westwood Strings Editor
+======================= Created by Nyerguds
+
+This editor can read the strings file format used in the Command & Conquer
+games Tiberian Dawn, Red Alert and Sole Survivor.
+
+Have fun with it!
+
+
+=================
+Table of Contents
+=================
+> Features list
+> Usage notes
+  1. Buttons
+  2. Shortcuts
+  3. Input filtering
+  3.1 Input substitution
+  4. Mouse wheel zoom
+> Special thanks to
+> Source code license
+> Version history
+
+-------------
+Features list
+-------------
+
+* Can edit Command & Conquer / Red Alert / Sole Survivor strings files.
+* Supports both Drag & Drop and command line for opening files.
+* Treats the underlying data as bytes, meaning the text encoding can be changed
+  at any moment.
+* Offers a list with a large variety of extended-ascii text encodings.
+* The input fields automatically filter out any typed symbols that don't exist
+  in the chosen text encoding.
+* Allows dragging and dropping text from other editors that support it.
+
+
+-----------
+Usage notes
+-----------
+
+..........
+1. Buttons
+''''''''''
+The user interface has three buttons: [+], [-], and [X]. Their functions are:
+
+[+] : Add a string at the bottom of the list.
+[-] : Remove a string from the bottom of the list.
+[X] : Remove the currently selected string. Not advised, since there is
+      currently no "insert string at current position" to do the reverse.
+
+The functions to remove rows will always give warnings, except if you are
+removing an empty string from the end of the list.
+
+............
+2. Shortcuts
+''''''''''''
+These shortcuts can come in handy when editing, for quickly switching between
+the strings list and the text editing field:
+
+-If you have the strings list selected, press [Enter] to switch to the text
+ editing field.
+-If you have the text editing field selected, press [Esc] to go back to the
+ strings list.
+-If you type a character (or backspace) when you have the strings list
+ selected, you will automatically start editing the text field.
+
+..................
+3. Input filtering
+''''''''''''''''''
+To prevent corruption of data, you will only be able to input characters that
+exist in the chosen text encoding. This also applies to the search function.
+
+A sound will alert you when a character was blocked.
+
+The search function normally remembers your last search term, but if it is
+detected that the last used search text contains illegal characters for the
+currently selected text encoding, it will be cleared.
+
+3.1 Input substitution
+**********************
+One problem with editing these files is that the characters in the ASCII range
+of 0x01 to 0x1F don't have symbols in any of the normal Windows fonts.
+
+For the sake of preserving the intended appearance, these symbols are replaced
+by their normal DOS representation in the strings list. However, these symbols
+can conflict with actual symbols available in the available text encodings; the
+symbols •, ¶ and § often appear in the special characters.
+
+Because of this, the text editing field will instead use the Unicode symbols
+for the C0 ASCII control codes they represent. See this page:
+https://en.wikipedia.org/wiki/C0_and_C1_control_codes#NUL
+
+Synbols from both the original 0x01-0x1F range and the DOS symbols will be
+converted as accurately as possible, though in case of conflicts they will
+change to the encoding's actual characters, and not to the control codes.
+
+3.2 Inserting special characters
+********************************
+Using the right mouse click menu in the text field you can insert special
+characters. There are two major ranges: those below the space character
+(range 0 to 32) and those above the ASCII range (128 to 255).
+
+The range below the space character will be shown as control characters
+
+These symbols can't be inserted because they have special functions:
+ 0x00 (NUL): Used internally in the format. Indicates the end of a string.
+ 0x0D (CR):  Indicates a line break. Just use the [Enter] key instead.
+
+Symbol 0x0A (LF; line feed) CAN be used, but it advised not to; like the CR, it
+is a special line break character, and using it can cause strange behaviour in
+the games. In C&C1 I've seen it set the position to draw the rest of the string
+to the left edge of the screen, instead of below the start of the line above.
+
+...................
+4. Mouse wheel zoom
+'''''''''''''''''''
+The text editing field can be zoomed in and out by holding down [Ctrl] and
+using the mouse scroll wheel. You can reset the size to its default (12) by
+holding down [Ctrl] and clicking the middle mouse button.
+
+Zooming in can help to more easily identify the control codes, because they are
+pretty small and can be hard to read.
+
+
+-----------------
+Special thanks to
+-----------------
+
+-夜宇 (yjfyeyu), for giving me the idea to make my own strings editor.
+
+-Andrew West of http://www.babelstone.co.uk/ for creating BabelMap, a really
+ handy tool to check what unicode symbols are available in installed fonts.
+
+--------------------
+Source code licenses
+--------------------
+
+The code in this project is licensed as WTFPL. Meaning, go nuts, do whatever
+the F you want to do with it.
+
+
+---------------
+Version history
+---------------
+
+v1.0.6 (2018/06/02 18:54)
+-Added Drag & Drop support for text from editors that support it.
+-When pasting or dragging in text, the DOS symbols for the control characters
+ range 01-1F (☺☻♥♦♣♠•◘ etc.) will now be converted to the control characters,
+ if the symbols don't exist in the chosen encoding.
+-The Search function's remembered string now adapts to encoding changes.
+
+v1.0.5 (2018/06/02 15:57)
+-Fixed bug where only seven items showed up in each special characters menu.
+-Added support for 0x0A character, though it is not advised to use it.
+
+v1.0.4: (2018/06/02 13:54)
+-Changed the UI font to Lucida Sans Unicode, to ensure the control characters
+ are displayed correctly on all systems.
+-Replaced textbox ContextMenu by ContextMenuStrip to allow setting the font.
+
+v1.0.3: (2018/06/01 22:54)
+-Added character substitution. The editing text field will now use unicode
+ symbols for C0 ASCII control codes to have visible symbols for all characters.
+-Added copy/paste logic that automatically converts these control codes
+-Added character insert options in the text field's right-click context menu.
+-Added full undo/redo logic for the text box.
+
+v1.0.2: (2018/05/31 09:25)
+-Added command line support for opening files.
+-Fixed key handling some more.
+-Cleaned up and refactored code.
+
+v1.0.1: (2018/05/30 23:30)
+-Fixed key handling.
+-Added information on buttons in the readme.
+-Updated icon.
+
+v1.0.0: (2018/05/30 19:36)
+-First version.
