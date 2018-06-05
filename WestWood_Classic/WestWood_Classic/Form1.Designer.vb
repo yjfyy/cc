@@ -44,10 +44,10 @@ Partial Class Form1
         Me.Panel_games_list = New System.Windows.Forms.Panel()
         Me.Label_ra1 = New System.Windows.Forms.Label()
         Me.Label_cnc1 = New System.Windows.Forms.Label()
-        Me.Panel_up_log = New System.Windows.Forms.Panel()
-        Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
         Me.Button_cnc1 = New System.Windows.Forms.Button()
         Me.Button_ra1 = New System.Windows.Forms.Button()
+        Me.Panel_up_log = New System.Windows.Forms.Panel()
+        Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
         Me.Panel_cnc1 = New System.Windows.Forms.Panel()
         Me.Button_cnc1_config = New System.Windows.Forms.Button()
         Me.Button_cnc1_english = New System.Windows.Forms.Button()
@@ -265,24 +265,6 @@ Partial Class Form1
         Me.Label_cnc1.TabIndex = 2
         Me.Label_cnc1.Text = "命令与征服"
         '
-        'Panel_up_log
-        '
-        Me.Panel_up_log.Controls.Add(Me.Button_test)
-        Me.Panel_up_log.Controls.Add(Me.TextBox_up_com_as_movies)
-        Me.Panel_up_log.Controls.Add(Me.TextBox_up_com)
-        Me.Panel_up_log.Controls.Add(Me.TextBox_up_log)
-        Me.Panel_up_log.Location = New System.Drawing.Point(149, 11)
-        Me.Panel_up_log.Name = "Panel_up_log"
-        Me.Panel_up_log.Size = New System.Drawing.Size(640, 402)
-        Me.Panel_up_log.TabIndex = 42
-        '
-        'ProgressBar1
-        '
-        Me.ProgressBar1.Location = New System.Drawing.Point(186, 429)
-        Me.ProgressBar1.Name = "ProgressBar1"
-        Me.ProgressBar1.Size = New System.Drawing.Size(601, 23)
-        Me.ProgressBar1.TabIndex = 32
-        '
         'Button_cnc1
         '
         Me.Button_cnc1.BackgroundImage = Global.WestWood_Classic.My.Resources.Resources._1
@@ -304,6 +286,24 @@ Partial Class Form1
         Me.Button_ra1.Size = New System.Drawing.Size(58, 54)
         Me.Button_ra1.TabIndex = 1
         Me.Button_ra1.UseVisualStyleBackColor = True
+        '
+        'Panel_up_log
+        '
+        Me.Panel_up_log.Controls.Add(Me.Button_test)
+        Me.Panel_up_log.Controls.Add(Me.TextBox_up_com_as_movies)
+        Me.Panel_up_log.Controls.Add(Me.TextBox_up_com)
+        Me.Panel_up_log.Controls.Add(Me.TextBox_up_log)
+        Me.Panel_up_log.Location = New System.Drawing.Point(149, 11)
+        Me.Panel_up_log.Name = "Panel_up_log"
+        Me.Panel_up_log.Size = New System.Drawing.Size(640, 402)
+        Me.Panel_up_log.TabIndex = 42
+        '
+        'ProgressBar1
+        '
+        Me.ProgressBar1.Location = New System.Drawing.Point(186, 429)
+        Me.ProgressBar1.Name = "ProgressBar1"
+        Me.ProgressBar1.Size = New System.Drawing.Size(601, 23)
+        Me.ProgressBar1.TabIndex = 32
         '
         'Panel_cnc1
         '
@@ -479,10 +479,10 @@ Partial Class Form1
         Me.Controls.Add(Me.CheckBox_updata_movies)
         Me.Controls.Add(Me.Button_updata)
         Me.Controls.Add(Me.Panel_games_list)
-        Me.Controls.Add(Me.Panel_cnc1)
         Me.Controls.Add(Me.ProgressBar1)
         Me.Controls.Add(Me.Panel_up_log)
         Me.Controls.Add(Me.Panel_ra1)
+        Me.Controls.Add(Me.Panel_cnc1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Form1"
         Me.Text = "西木经典游戏汉化纪念版"

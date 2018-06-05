@@ -1,0 +1,46 @@
+8fat.fnt用于显示项目名称标签和侧边栏鼠标悬停信息的字体。12green.fnt世界地图和选项栏文本的活动（非淡入淡出）字体。
+12grngrd.fnt 12green字体中比较常用的渐变版本。
+grad6fnt.fnt正常的游戏字体，用于菜单，简报等
+vcr.fnt巨大的“任务完成”/“任务失败”字体。
+
+
+12grdchi 片头选择阵营
+grad6chi 菜单  超过32k以后打不开
+
+ascii x20为空格，别改，任务修改ascii必须2位，可以加一个空格
+
+任务w西e东 a靠左b靠右 没测试？
+
+图标 64宽 48 高
+三个11号字离左边14 离下边2
+
+保存mix可能会出错。
+
+界面用空格20可以占位。
+
+chi 共用
+chg gid
+chn nod
+chm 任务
+
+
+wget下载示例
+wget up_data.exe https://gitee.com/yjfyeyu/updatasys/raw/master/cnc1/patch/up_data.exe --no-check-certificate
+wget -ivqalistnb.txt --no-check-certificate -B=http://gitee.com/yjfyeyu/cc1_database/raw/master/movies/ -c --no-check-certificate
+
+
+
+视频 最多17个字
+
+单行上移13
+双行上移4
+
+字体 18点bold 60高 145宽 犀利
+
+
+红警
+界面字库grad6fnt.fnt 在hires.mix
+悬浮文字help.fnt在 hires.mix
+胜利失败vcr.fnt在local.mix
+左上角选项两个字12metfnt.fnt 在hires.mix
+
