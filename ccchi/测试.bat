@@ -1,0 +1,5 @@
+copy chg\lang_chg.mix "D:\games\CnC95"
+copy chm\lang_chm.mix "D:\games\CnC95"
+copy chn\lang_chn.mix "D:\games\CnC95"
+copy chv\lang_chv.mix "D:\games\CnC95"
+"D:\games\CnC95\ÃüÁîÓëÕ÷·ş¼ÍÄî°æ.exe"
