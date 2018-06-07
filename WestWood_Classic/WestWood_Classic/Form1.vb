@@ -2,11 +2,15 @@
 Imports System.IO
 Imports System.Text
 
+
+
+
 Public Class Form1
     Dim l_version
     Dim r_version
     Dim newuplog As String
     Dim up_root = "https://gitee.com/yjfyeyu/updatasys/raw/master/WestWood_Classic/"
+
 
     '声明INI配置文件读写API函数,lpApplicationName节名称， lpKeyName键名称，lpString是键值
     Private Declare Function GetPrivateProfileString Lib "kernel32" Alias "GetPrivateProfileStringA" (ByVal lpApplicationName As String, ByVal lpKeyName As String, ByVal lpDefault As String, ByVal lpReturnedString As String, ByVal nSize As Int32, ByVal lpFileName As String) As Int32
@@ -60,6 +64,7 @@ Public Class Form1
             RadioButton_win7.Checked = True
         ElseIf Mid(os.Version.ToString, 1, 3) = "5.1" Then
             RadioButton_winxp.Checked = True
+            up_root = "http://code.taobao.org/svn/yxgcsj/trunk/WestWood_Classic/"
         Else
             MsgBox("未能确认操作系统版本，请手动选择")
             GroupBox1.Enabled = True
