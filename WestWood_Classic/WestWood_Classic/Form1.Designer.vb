@@ -222,6 +222,7 @@ Partial Class Form1
         Me.TextBox_up_log.Location = New System.Drawing.Point(0, 0)
         Me.TextBox_up_log.Multiline = True
         Me.TextBox_up_log.Name = "TextBox_up_log"
+        Me.TextBox_up_log.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
         Me.TextBox_up_log.Size = New System.Drawing.Size(629, 402)
         Me.TextBox_up_log.TabIndex = 0
         '
