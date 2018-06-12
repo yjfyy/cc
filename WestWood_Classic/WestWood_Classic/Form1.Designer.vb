@@ -57,9 +57,9 @@ Partial Class Form1
         Me.Button_cnc1_NOD_miss = New System.Windows.Forms.Button()
         Me.Button_cnc1_GDI_miss = New System.Windows.Forms.Button()
         Me.Panel_ra1 = New System.Windows.Forms.Panel()
+        Me.Button_cncnet = New System.Windows.Forms.Button()
         Me.Button_ra1_config = New System.Windows.Forms.Button()
         Me.Button8 = New System.Windows.Forms.Button()
-        Me.Button_cncnet = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.Panel_games_list.SuspendLayout()
         Me.Panel_up_log.SuspendLayout()
@@ -433,6 +433,23 @@ Partial Class Form1
         Me.Panel_ra1.Size = New System.Drawing.Size(640, 402)
         Me.Panel_ra1.TabIndex = 31
         '
+        'Button_cncnet
+        '
+        Me.Button_cncnet.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Button_cncnet.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Button_cncnet.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Button_cncnet.FlatAppearance.BorderSize = 20
+        Me.Button_cncnet.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Button_cncnet.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Navy
+        Me.Button_cncnet.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Button_cncnet.ForeColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Button_cncnet.Location = New System.Drawing.Point(244, 192)
+        Me.Button_cncnet.Name = "Button_cncnet"
+        Me.Button_cncnet.Size = New System.Drawing.Size(160, 21)
+        Me.Button_cncnet.TabIndex = 2
+        Me.Button_cncnet.Text = "CnCNet联机"
+        Me.Button_cncnet.UseVisualStyleBackColor = False
+        '
         'Button_ra1_config
         '
         Me.Button_ra1_config.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
@@ -467,23 +484,6 @@ Partial Class Form1
         Me.Button8.Text = "中文版"
         Me.Button8.UseVisualStyleBackColor = False
         '
-        'Button_cncnet
-        '
-        Me.Button_cncnet.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Button_cncnet.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Button_cncnet.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Button_cncnet.FlatAppearance.BorderSize = 20
-        Me.Button_cncnet.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Button_cncnet.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Navy
-        Me.Button_cncnet.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button_cncnet.ForeColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Button_cncnet.Location = New System.Drawing.Point(244, 192)
-        Me.Button_cncnet.Name = "Button_cncnet"
-        Me.Button_cncnet.Size = New System.Drawing.Size(160, 21)
-        Me.Button_cncnet.TabIndex = 2
-        Me.Button_cncnet.Text = "CnCNet联机"
-        Me.Button_cncnet.UseVisualStyleBackColor = False
-        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
@@ -505,6 +505,7 @@ Partial Class Form1
         Me.Controls.Add(Me.Panel_cnc1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Form1"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "西木经典游戏汉化纪念版"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
