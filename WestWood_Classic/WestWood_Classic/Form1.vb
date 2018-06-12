@@ -376,12 +376,13 @@ Public Class Form1
         End If
     End Sub
 
-    Private Sub Button8_MouseUp(sender As Object, e As MouseEventArgs) Handles Button8.MouseUp
 
-    End Sub
 
     Private Sub Button_ra1_config_Click(sender As Object, e As EventArgs) Handles Button_ra1_config.Click
-
         Process.Start("RA\RedAlertConfig")
+    End Sub
+
+    Private Sub Button_cncnet_Click(sender As Object, e As EventArgs) Handles Button_cncnet.Click
+        Process.Start("ra\cncnet5.exe")
     End Sub
 End Class

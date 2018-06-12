@@ -59,6 +59,7 @@ Partial Class Form1
         Me.Panel_ra1 = New System.Windows.Forms.Panel()
         Me.Button_ra1_config = New System.Windows.Forms.Button()
         Me.Button8 = New System.Windows.Forms.Button()
+        Me.Button_cncnet = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.Panel_games_list.SuspendLayout()
         Me.Panel_up_log.SuspendLayout()
@@ -424,6 +425,7 @@ Partial Class Form1
         '
         Me.Panel_ra1.BackgroundImage = Global.WestWood_Classic.My.Resources.Resources.title
         Me.Panel_ra1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Panel_ra1.Controls.Add(Me.Button_cncnet)
         Me.Panel_ra1.Controls.Add(Me.Button_ra1_config)
         Me.Panel_ra1.Controls.Add(Me.Button8)
         Me.Panel_ra1.Location = New System.Drawing.Point(149, 11)
@@ -441,7 +443,7 @@ Partial Class Form1
         Me.Button_ra1_config.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Navy
         Me.Button_ra1_config.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button_ra1_config.ForeColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Button_ra1_config.Location = New System.Drawing.Point(244, 204)
+        Me.Button_ra1_config.Location = New System.Drawing.Point(244, 272)
         Me.Button_ra1_config.Name = "Button_ra1_config"
         Me.Button_ra1_config.Size = New System.Drawing.Size(160, 21)
         Me.Button_ra1_config.TabIndex = 1
@@ -464,6 +466,23 @@ Partial Class Form1
         Me.Button8.TabIndex = 0
         Me.Button8.Text = "中文版"
         Me.Button8.UseVisualStyleBackColor = False
+        '
+        'Button_cncnet
+        '
+        Me.Button_cncnet.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Button_cncnet.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Button_cncnet.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Button_cncnet.FlatAppearance.BorderSize = 20
+        Me.Button_cncnet.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Button_cncnet.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Navy
+        Me.Button_cncnet.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Button_cncnet.ForeColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Button_cncnet.Location = New System.Drawing.Point(244, 192)
+        Me.Button_cncnet.Name = "Button_cncnet"
+        Me.Button_cncnet.Size = New System.Drawing.Size(160, 21)
+        Me.Button_cncnet.TabIndex = 2
+        Me.Button_cncnet.Text = "CnCNet联机"
+        Me.Button_cncnet.UseVisualStyleBackColor = False
         '
         'Form1
         '
@@ -536,4 +555,5 @@ Partial Class Form1
     Friend WithEvents Button_cnc1_NOD_miss As Button
     Friend WithEvents Button_cnc1_GDI_miss As Button
     Friend WithEvents ProgressBar1 As ProgressBar
+    Friend WithEvents Button_cncnet As Button
 End Class
