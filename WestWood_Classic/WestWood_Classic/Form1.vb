@@ -379,7 +379,7 @@ Public Class Form1
 
 
     Private Sub Button_ra1_config_Click(sender As Object, e As EventArgs) Handles Button_ra1_config.Click
-        Process.Start("RA\RedAlertConfig")
+        Process.Start("RA\RedAlertConfigFull.exe")
     End Sub
 
     Private Sub Button_cncnet_Click(sender As Object, e As EventArgs) Handles Button_cncnet.Click

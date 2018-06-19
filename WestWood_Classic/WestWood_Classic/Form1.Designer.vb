@@ -404,7 +404,7 @@ Partial Class Form1
         Me.Button_cnc1_NOD_miss.Name = "Button_cnc1_NOD_miss"
         Me.Button_cnc1_NOD_miss.Size = New System.Drawing.Size(160, 21)
         Me.Button_cnc1_NOD_miss.TabIndex = 1
-        Me.Button_cnc1_NOD_miss.Text = "诺德任务"
+        Me.Button_cnc1_NOD_miss.Text = "诺德兄弟会任务(NOD)"
         Me.Button_cnc1_NOD_miss.UseVisualStyleBackColor = False
         '
         'Button_cnc1_GDI_miss
@@ -418,7 +418,7 @@ Partial Class Form1
         Me.Button_cnc1_GDI_miss.Name = "Button_cnc1_GDI_miss"
         Me.Button_cnc1_GDI_miss.Size = New System.Drawing.Size(160, 21)
         Me.Button_cnc1_GDI_miss.TabIndex = 0
-        Me.Button_cnc1_GDI_miss.Text = "GDI任务"
+        Me.Button_cnc1_GDI_miss.Text = "全球防御组织任务(GDI)"
         Me.Button_cnc1_GDI_miss.UseVisualStyleBackColor = False
         '
         'Panel_ra1
