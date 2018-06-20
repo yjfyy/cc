@@ -81,6 +81,69 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  查找类似 [Options]
+        '''HardwareFills=0
+        '''VideoBackBuffer=1
+        '''FreeScrolling=0
+        '''AutoScroll=1
+        '''SlowPalette=1
+        '''ScoreVolume=112
+        '''Volume=113
+        '''ScrollRate=3
+        '''GameSpeed=1
+        '''Compatibility=0
+        '''DeathAnnounce=No
+        '''Socket=0
+        '''DestNet=00.00.00.00
+        '''SafeScrolling=Yes
+        '''
+        '''[Video]
+        '''Width=1024
+        '''Height=768
+        '''Brightness=128
+        '''Contrast=128
+        '''Tint=128
+        '''Color=128
+        '''VerticalVideoStretch=i  ; [S]canlines, [D]uplicate, [I]nterpolate
+        '''StretchAttract=Yes
+        '''
+        '''[Music]
+        '''IsScoreShuffle=0
+        '''IsScoreRepeat=0
+        '''UseCreditsMusic=Yes
+        '''RemixScores=Yes         ; Enable music [字符串的其余部分被截断]&quot;; 的本地化字符串。
+        '''</summary>
+        Friend ReadOnly Property conquer() As String
+            Get
+                Return ResourceManager.GetString("conquer", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 [ddraw]
+        '''; width and height of the window, defaults to the size game requests
+        '''Width=0
+        '''Height=0
+        '''; bits per pixel, possible values: 16, 24 and 32, 0 = auto
+        '''bpp=0
+        '''Windowed=True
+        '''; show window borders in windowed mode
+        '''border=True
+        '''; use letter- or windowboxing to make a best fit (GDI only!)
+        '''Boxing=False
+        '''; real rendering rate, -1 = screen rate, 0 = unlimited, n = cap
+        '''Maxfps=120
+        '''; vertical synchronization, enable if you get tearing (OpenGL only)
+        '''vsync=False
+        '''; scaling filter, nearest = sharp, linear =  [字符串的其余部分被截断]&quot;; 的本地化字符串。
+        '''</summary>
+        Friend ReadOnly Property ddraw() As String
+            Get
+                Return ResourceManager.GetString("ddraw", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  查找 System.Drawing.Bitmap 类型的本地化资源。
         '''</summary>
         Friend ReadOnly Property htitle() As System.Drawing.Bitmap

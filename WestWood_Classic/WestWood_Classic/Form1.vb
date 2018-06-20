@@ -359,7 +359,8 @@ Public Class Form1
 
     Private Sub Button_cnc1_config_Click(sender As Object, e As EventArgs) Handles Button_cnc1_config.Click
         'Shell("CCConfig.exe", Style:=AppWinStyle.NormalFocus)
-        Process.Start("CnC95\CCConfig.exe")
+        'Process.Start("CnC95\CCConfig.exe")
+        cnc1cfg.Show()
     End Sub
 
     Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
