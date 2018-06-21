@@ -6,3 +6,4 @@ copy deseichi.mix "F:\projects\updatasys\WestWood_Classic\temp\CnC95"
 copy snowichi.mix "F:\projects\updatasys\WestWood_Classic\temp\CnC95"
 copy tempichi.mix "F:\projects\updatasys\WestWood_Classic\temp\CnC95"
 copy wintichi.mix "F:\projects\updatasys\WestWood_Classic\temp\CnC95"
+pause
