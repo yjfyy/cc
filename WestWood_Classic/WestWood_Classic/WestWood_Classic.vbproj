@@ -126,6 +126,12 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="attach\xtitle.1920">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="attach\xtitle.864">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="attach\speecchi.mix">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
