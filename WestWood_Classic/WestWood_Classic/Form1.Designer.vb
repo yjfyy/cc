@@ -28,7 +28,6 @@ Partial Class Form1
         Me.RadioButton_win7 = New System.Windows.Forms.RadioButton()
         Me.RadioButton_win10 = New System.Windows.Forms.RadioButton()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.BackgroundWorker_load_up_log = New System.ComponentModel.BackgroundWorker()
         Me.Button_test = New System.Windows.Forms.Button()
         Me.TextBox_up_com_as_movies = New System.Windows.Forms.TextBox()
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
@@ -39,7 +38,6 @@ Partial Class Form1
         Me.Label_status = New System.Windows.Forms.Label()
         Me.CheckBox_updata_movies = New System.Windows.Forms.CheckBox()
         Me.BackgroundWorker_check_ver = New System.ComponentModel.BackgroundWorker()
-        Me.TextBox_up_log = New System.Windows.Forms.TextBox()
         Me.Button_updata = New System.Windows.Forms.Button()
         Me.Panel_games_list = New System.Windows.Forms.Panel()
         Me.Label_ra1 = New System.Windows.Forms.Label()
@@ -47,6 +45,7 @@ Partial Class Form1
         Me.Button_cnc1 = New System.Windows.Forms.Button()
         Me.Button_ra1 = New System.Windows.Forms.Button()
         Me.Panel_up_log = New System.Windows.Forms.Panel()
+        Me.WebBrowser1 = New System.Windows.Forms.WebBrowser()
         Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
         Me.Panel_cnc1 = New System.Windows.Forms.Panel()
         Me.Button_cnc1_config = New System.Windows.Forms.Button()
@@ -57,6 +56,9 @@ Partial Class Form1
         Me.Button_cnc1_NOD_miss = New System.Windows.Forms.Button()
         Me.Button_cnc1_GDI_miss = New System.Windows.Forms.Button()
         Me.Panel_ra1 = New System.Windows.Forms.Panel()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.Button_cncnet = New System.Windows.Forms.Button()
         Me.Button_ra1_config = New System.Windows.Forms.Button()
         Me.Button8 = New System.Windows.Forms.Button()
@@ -125,9 +127,6 @@ Partial Class Form1
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "操作系统"
         '
-        'BackgroundWorker_load_up_log
-        '
-        '
         'Button_test
         '
         Me.Button_test.Location = New System.Drawing.Point(478, 294)
@@ -144,7 +143,7 @@ Partial Class Form1
         Me.TextBox_up_com_as_movies.Location = New System.Drawing.Point(11, 12)
         Me.TextBox_up_com_as_movies.Multiline = True
         Me.TextBox_up_com_as_movies.Name = "TextBox_up_com_as_movies"
-        Me.TextBox_up_com_as_movies.Size = New System.Drawing.Size(485, 216)
+        Me.TextBox_up_com_as_movies.Size = New System.Drawing.Size(216, 216)
         Me.TextBox_up_com_as_movies.TabIndex = 23
         Me.TextBox_up_com_as_movies.Text = resources.GetString("TextBox_up_com_as_movies.Text")
         Me.TextBox_up_com_as_movies.Visible = False
@@ -208,6 +207,7 @@ Partial Class Form1
         'CheckBox_updata_movies
         '
         Me.CheckBox_updata_movies.AutoSize = True
+        Me.CheckBox_updata_movies.Enabled = False
         Me.CheckBox_updata_movies.Location = New System.Drawing.Point(108, 433)
         Me.CheckBox_updata_movies.Name = "CheckBox_updata_movies"
         Me.CheckBox_updata_movies.Size = New System.Drawing.Size(72, 16)
@@ -217,15 +217,6 @@ Partial Class Form1
         '
         'BackgroundWorker_check_ver
         '
-        '
-        'TextBox_up_log
-        '
-        Me.TextBox_up_log.Location = New System.Drawing.Point(0, 0)
-        Me.TextBox_up_log.Multiline = True
-        Me.TextBox_up_log.Name = "TextBox_up_log"
-        Me.TextBox_up_log.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.TextBox_up_log.Size = New System.Drawing.Size(629, 402)
-        Me.TextBox_up_log.TabIndex = 0
         '
         'Button_updata
         '
@@ -294,11 +285,20 @@ Partial Class Form1
         Me.Panel_up_log.Controls.Add(Me.Button_test)
         Me.Panel_up_log.Controls.Add(Me.TextBox_up_com_as_movies)
         Me.Panel_up_log.Controls.Add(Me.TextBox_up_com)
-        Me.Panel_up_log.Controls.Add(Me.TextBox_up_log)
+        Me.Panel_up_log.Controls.Add(Me.WebBrowser1)
         Me.Panel_up_log.Location = New System.Drawing.Point(149, 11)
         Me.Panel_up_log.Name = "Panel_up_log"
         Me.Panel_up_log.Size = New System.Drawing.Size(640, 402)
         Me.Panel_up_log.TabIndex = 42
+        '
+        'WebBrowser1
+        '
+        Me.WebBrowser1.Location = New System.Drawing.Point(0, 0)
+        Me.WebBrowser1.MinimumSize = New System.Drawing.Size(20, 20)
+        Me.WebBrowser1.Name = "WebBrowser1"
+        Me.WebBrowser1.Size = New System.Drawing.Size(628, 396)
+        Me.WebBrowser1.TabIndex = 25
+        Me.WebBrowser1.Url = New System.Uri("", System.UriKind.Relative)
         '
         'ProgressBar1
         '
@@ -330,7 +330,7 @@ Partial Class Form1
         Me.Button_cnc1_config.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.Button_cnc1_config.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button_cnc1_config.ForeColor = System.Drawing.Color.LimeGreen
-        Me.Button_cnc1_config.Location = New System.Drawing.Point(244, 206)
+        Me.Button_cnc1_config.Location = New System.Drawing.Point(244, 218)
         Me.Button_cnc1_config.Name = "Button_cnc1_config"
         Me.Button_cnc1_config.Size = New System.Drawing.Size(160, 21)
         Me.Button_cnc1_config.TabIndex = 6
@@ -344,7 +344,7 @@ Partial Class Form1
         Me.Button_cnc1_english.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.Button_cnc1_english.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button_cnc1_english.ForeColor = System.Drawing.Color.LimeGreen
-        Me.Button_cnc1_english.Location = New System.Drawing.Point(244, 177)
+        Me.Button_cnc1_english.Location = New System.Drawing.Point(244, 187)
         Me.Button_cnc1_english.Name = "Button_cnc1_english"
         Me.Button_cnc1_english.Size = New System.Drawing.Size(160, 21)
         Me.Button_cnc1_english.TabIndex = 5
@@ -358,11 +358,11 @@ Partial Class Form1
         Me.Button_cnc1_cncnet.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.Button_cnc1_cncnet.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button_cnc1_cncnet.ForeColor = System.Drawing.Color.LimeGreen
-        Me.Button_cnc1_cncnet.Location = New System.Drawing.Point(244, 148)
+        Me.Button_cnc1_cncnet.Location = New System.Drawing.Point(244, 156)
         Me.Button_cnc1_cncnet.Name = "Button_cnc1_cncnet"
         Me.Button_cnc1_cncnet.Size = New System.Drawing.Size(160, 21)
         Me.Button_cnc1_cncnet.TabIndex = 4
-        Me.Button_cnc1_cncnet.Text = "CnCNet联机"
+        Me.Button_cnc1_cncnet.Text = "CnCNet 联机"
         Me.Button_cnc1_cncnet.UseVisualStyleBackColor = False
         '
         'Button_cnc1_tv
@@ -372,7 +372,7 @@ Partial Class Form1
         Me.Button_cnc1_tv.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.Button_cnc1_tv.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button_cnc1_tv.ForeColor = System.Drawing.Color.LimeGreen
-        Me.Button_cnc1_tv.Location = New System.Drawing.Point(244, 119)
+        Me.Button_cnc1_tv.Location = New System.Drawing.Point(244, 125)
         Me.Button_cnc1_tv.Name = "Button_cnc1_tv"
         Me.Button_cnc1_tv.Size = New System.Drawing.Size(160, 21)
         Me.Button_cnc1_tv.TabIndex = 3
@@ -386,7 +386,7 @@ Partial Class Form1
         Me.Button_cnc1_ext.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.Button_cnc1_ext.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button_cnc1_ext.ForeColor = System.Drawing.Color.LimeGreen
-        Me.Button_cnc1_ext.Location = New System.Drawing.Point(244, 90)
+        Me.Button_cnc1_ext.Location = New System.Drawing.Point(244, 94)
         Me.Button_cnc1_ext.Name = "Button_cnc1_ext"
         Me.Button_cnc1_ext.Size = New System.Drawing.Size(160, 21)
         Me.Button_cnc1_ext.TabIndex = 2
@@ -400,7 +400,7 @@ Partial Class Form1
         Me.Button_cnc1_NOD_miss.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.Button_cnc1_NOD_miss.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button_cnc1_NOD_miss.ForeColor = System.Drawing.Color.LimeGreen
-        Me.Button_cnc1_NOD_miss.Location = New System.Drawing.Point(244, 61)
+        Me.Button_cnc1_NOD_miss.Location = New System.Drawing.Point(244, 63)
         Me.Button_cnc1_NOD_miss.Name = "Button_cnc1_NOD_miss"
         Me.Button_cnc1_NOD_miss.Size = New System.Drawing.Size(160, 21)
         Me.Button_cnc1_NOD_miss.TabIndex = 1
@@ -425,6 +425,9 @@ Partial Class Form1
         '
         Me.Panel_ra1.BackgroundImage = Global.WestWood_Classic.My.Resources.Resources.title
         Me.Panel_ra1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Panel_ra1.Controls.Add(Me.Button3)
+        Me.Panel_ra1.Controls.Add(Me.Button2)
+        Me.Panel_ra1.Controls.Add(Me.Button1)
         Me.Panel_ra1.Controls.Add(Me.Button_cncnet)
         Me.Panel_ra1.Controls.Add(Me.Button_ra1_config)
         Me.Panel_ra1.Controls.Add(Me.Button8)
@@ -432,6 +435,57 @@ Partial Class Form1
         Me.Panel_ra1.Name = "Panel_ra1"
         Me.Panel_ra1.Size = New System.Drawing.Size(640, 402)
         Me.Panel_ra1.TabIndex = 31
+        '
+        'Button3
+        '
+        Me.Button3.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Button3.FlatAppearance.BorderSize = 20
+        Me.Button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Navy
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Button3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Button3.Location = New System.Drawing.Point(244, 258)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(160, 21)
+        Me.Button3.TabIndex = 5
+        Me.Button3.Text = "遭遇战（暂未汉化）"
+        Me.Button3.UseVisualStyleBackColor = False
+        '
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Button2.FlatAppearance.BorderSize = 20
+        Me.Button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Navy
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Button2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Button2.Location = New System.Drawing.Point(244, 227)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(160, 21)
+        Me.Button2.TabIndex = 4
+        Me.Button2.Text = "资料片任务（暂未汉化）"
+        Me.Button2.UseVisualStyleBackColor = False
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Button1.FlatAppearance.BorderSize = 20
+        Me.Button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Navy
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Button1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Button1.Location = New System.Drawing.Point(244, 196)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(160, 21)
+        Me.Button1.TabIndex = 3
+        Me.Button1.Text = "苏军任务（暂未汉化）"
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'Button_cncnet
         '
@@ -443,11 +497,11 @@ Partial Class Form1
         Me.Button_cncnet.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Navy
         Me.Button_cncnet.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button_cncnet.ForeColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Button_cncnet.Location = New System.Drawing.Point(244, 192)
+        Me.Button_cncnet.Location = New System.Drawing.Point(244, 289)
         Me.Button_cncnet.Name = "Button_cncnet"
         Me.Button_cncnet.Size = New System.Drawing.Size(160, 21)
         Me.Button_cncnet.TabIndex = 2
-        Me.Button_cncnet.Text = "CnCNet联机"
+        Me.Button_cncnet.Text = "CnCNet 联机"
         Me.Button_cncnet.UseVisualStyleBackColor = False
         '
         'Button_ra1_config
@@ -460,7 +514,7 @@ Partial Class Form1
         Me.Button_ra1_config.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Navy
         Me.Button_ra1_config.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button_ra1_config.ForeColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Button_ra1_config.Location = New System.Drawing.Point(244, 272)
+        Me.Button_ra1_config.Location = New System.Drawing.Point(244, 320)
         Me.Button_ra1_config.Name = "Button_ra1_config"
         Me.Button_ra1_config.Size = New System.Drawing.Size(160, 21)
         Me.Button_ra1_config.TabIndex = 1
@@ -481,7 +535,7 @@ Partial Class Form1
         Me.Button8.Name = "Button8"
         Me.Button8.Size = New System.Drawing.Size(160, 21)
         Me.Button8.TabIndex = 0
-        Me.Button8.Text = "中文版"
+        Me.Button8.Text = "盟军任务"
         Me.Button8.UseVisualStyleBackColor = False
         '
         'Form1
@@ -525,7 +579,6 @@ Partial Class Form1
     Friend WithEvents RadioButton_win7 As RadioButton
     Friend WithEvents RadioButton_win10 As RadioButton
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents BackgroundWorker_load_up_log As System.ComponentModel.BackgroundWorker
     Friend WithEvents Button_test As Button
     Friend WithEvents TextBox_up_com_as_movies As TextBox
     Friend WithEvents LinkLabel1 As LinkLabel
@@ -536,7 +589,6 @@ Partial Class Form1
     Friend WithEvents Label_status As Label
     Friend WithEvents CheckBox_updata_movies As CheckBox
     Friend WithEvents BackgroundWorker_check_ver As System.ComponentModel.BackgroundWorker
-    Friend WithEvents TextBox_up_log As TextBox
     Friend WithEvents Button_updata As Button
     Friend WithEvents Panel_games_list As Panel
     Friend WithEvents Label_ra1 As Label
@@ -557,4 +609,8 @@ Partial Class Form1
     Friend WithEvents Button_cnc1_GDI_miss As Button
     Friend WithEvents ProgressBar1 As ProgressBar
     Friend WithEvents Button_cncnet As Button
+    Friend WithEvents WebBrowser1 As WebBrowser
+    Friend WithEvents Button3 As Button
+    Friend WithEvents Button2 As Button
+    Friend WithEvents Button1 As Button
 End Class

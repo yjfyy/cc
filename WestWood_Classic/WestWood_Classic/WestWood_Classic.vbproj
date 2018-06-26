@@ -110,6 +110,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="ra1cfg.Designer.vb">
+      <DependentUpon>ra1cfg.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ra1cfg.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="cnc1cfg.resx">
@@ -123,6 +129,9 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ra1cfg.resx">
+      <DependentUpon>ra1cfg.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -140,8 +149,10 @@
     </None>
     <None Include="bin\Release\CnC95\conquer.ini" />
     <None Include="bin\Release\CnC95\ddraw.ini" />
+    <None Include="ini\ddrawra1.ini" />
+    <None Include="ini\redalert.ini" />
     <None Include="ini\conquer.ini" />
-    <None Include="ini\ddraw.ini" />
+    <None Include="ini\ddrawcnc1.ini" />
     <None Include="lver">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -169,10 +180,19 @@
     <None Include="img\htitle.bmp" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="attach\bg.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="attach\ra100.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="attach\cnc100.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="attach\ddraw.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="说明.txt">
+    <Content Include="readme.htm">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

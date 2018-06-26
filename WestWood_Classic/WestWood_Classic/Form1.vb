@@ -40,15 +40,15 @@ Public Class Form1
     End Sub
 
     Private Sub Form_main_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        WebBrowser1.Url = New Uri(Application.StartupPath & "\readme.htm")
         delete_files()
 
-        Try
-            Using sr As New StreamReader("说明.txt")
-                TextBox_up_log.Text = sr.ReadToEnd()
-            End Using
-        Catch ex As Exception
-        End Try
+        'Try
+        '    Using sr As New StreamReader("说明.txt")
+        '        TextBox_up_log.Text = sr.ReadToEnd()
+        '    End Using
+        'Catch ex As Exception
+        'End Try
 
         Try
             Using sr As New StreamReader("lver")
@@ -74,6 +74,12 @@ Public Class Form1
 
 
     Private Sub delete_files()
+        '1.21 使用readme.htm 删除说明.txt
+        Try
+            My.Computer.FileSystem.DeleteFile("说明.txt")
+        Catch ex As Exception
+
+        End Try
 
         '删除更新残留
         If My.Computer.FileSystem.FileExists("up_com.bat") Then
@@ -117,6 +123,12 @@ Public Class Form1
         If r_version = "0" Then
             Label_status.Text = "检测失败"
 
+            Button_cnc1.Enabled = True
+            Label_cnc1.Enabled = True
+
+            Button_ra1.Enabled = True
+            Label_ra1.Enabled = True
+
         Else
             If l_version <> r_version Then
                 Label_status.Text = "有新版,请更新。"
@@ -128,7 +140,8 @@ Public Class Form1
 
                 Button_updata.Text = "更新"
 
-                BackgroundWorker_load_up_log.RunWorkerAsync()
+                WebBrowser1.Url = New Uri(up_root + "newuplog.txt")
+                'BackgroundWorker_load_up_log.RunWorkerAsync()
             Else
                 Label_status.Text = "已是最新版!"
                 Button_cnc1.Enabled = True
@@ -140,21 +153,22 @@ Public Class Form1
         End If
     End Sub
 
-    Private Sub BackgroundWorker_load_uplog_DoWork(sender As Object, e As DoWorkEventArgs) Handles BackgroundWorker_load_up_log.DoWork
-        Dim dFile As New System.Net.WebClient
-        Dim upUri_newuplog As New Uri(up_root + "newuplog.txt")
-        Try
-            dFile.Encoding = Encoding.UTF8
-            newuplog = dFile.DownloadString(upUri_newuplog)
-        Catch ex As Exception
+    'Private Sub BackgroundWorker_load_uplog_DoWork(sender As Object, e As DoWorkEventArgs) Handles BackgroundWorker_load_up_log.DoWork
+    '    Dim dFile As New System.Net.WebClient
+    '    Dim upUri_newuplog As New Uri(up_root + "newuplog.txt")
+    '    Try
+    '        dFile.Encoding = Encoding.UTF8
+    '        newuplog = dFile.DownloadString(upUri_newuplog)
+    '    Catch ex As Exception
 
-        End Try
+    '    End Try
 
-    End Sub
+    'End Sub
 
-    Private Sub BackgroundWorker_load_uplog_RunWorkerCompleted(sender As Object, e As RunWorkerCompletedEventArgs) Handles BackgroundWorker_load_up_log.RunWorkerCompleted
-        TextBox_up_log.Text = Replace(newuplog, vbLf, vbCrLf)
-    End Sub
+    'Private Sub BackgroundWorker_load_uplog_RunWorkerCompleted(sender As Object, e As RunWorkerCompletedEventArgs) Handles BackgroundWorker_load_up_log.RunWorkerCompleted
+    '    WebBrowser1.Url = New Uri(up_root + "newuplog.txt")
+    '    'TextBox_up_log.Text = Replace(newuplog, vbLf, vbCrLf)
+    'End Sub
 
     Private Sub Up_autoupdata()
 
@@ -380,10 +394,15 @@ Public Class Form1
 
 
     Private Sub Button_ra1_config_Click(sender As Object, e As EventArgs) Handles Button_ra1_config.Click
-        Process.Start("RA\RedAlertConfigFull.exe")
+        'Process.Start("RA\RedAlertConfigFull.exe")
+        ra1cfg.Show()
     End Sub
 
     Private Sub Button_cncnet_Click(sender As Object, e As EventArgs) Handles Button_cncnet.Click
         Process.Start("ra\cncnet5.exe")
+    End Sub
+
+    Private Sub Button3_Click_1(sender As Object, e As EventArgs) Handles Button3.Click
+        Process.Start("ra\ra95.exe", "-SKIRMISH")
     End Sub
 End Class

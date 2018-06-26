@@ -95,11 +95,11 @@ Namespace My.Resources
         '''DeathAnnounce=No
         '''Socket=0
         '''DestNet=00.00.00.00
-        '''SafeScrolling=Yes
+        '''SafeScrolling=No
         '''
         '''[Video]
-        '''Width=1024
-        '''Height=768
+        '''Width=864
+        '''Height=540
         '''Brightness=128
         '''Contrast=128
         '''Tint=128
@@ -111,7 +111,7 @@ Namespace My.Resources
         '''IsScoreShuffle=0
         '''IsScoreRepeat=0
         '''UseCreditsMusic=Yes
-        '''RemixScores=Yes         ; Enable music [字符串的其余部分被截断]&quot;; 的本地化字符串。
+        '''RemixScores=Yes         ; Enable music r [字符串的其余部分被截断]&quot;; 的本地化字符串。
         '''</summary>
         Friend ReadOnly Property conquer() As String
             Get
@@ -121,25 +121,51 @@ Namespace My.Resources
         
         '''<summary>
         '''  查找类似 [ddraw]
-        '''; width and height of the window, defaults to the size game requests
-        '''Width=0
-        '''Height=0
+        '''; stretch to custom resolution, 0 = defaults to the size game requests
+        '''width=0
+        '''height=0
+        '''; override width/height and always stretch to fullscreen
+        '''fullscreen=false
         '''; bits per pixel, possible values: 16, 24 and 32, 0 = auto
         '''bpp=0
-        '''Windowed=True
+        '''windowed=false
         '''; show window borders in windowed mode
-        '''border=True
-        '''; use letter- or windowboxing to make a best fit (GDI only!)
-        '''Boxing=False
-        '''; real rendering rate, -1 = screen rate, 0 = unlimited, n = cap
-        '''Maxfps=120
-        '''; vertical synchronization, enable if you get tearing (OpenGL only)
-        '''vsync=False
-        '''; scaling filter, nearest = sharp, linear =  [字符串的其余部分被截断]&quot;; 的本地化字符串。
+        '''border=true
+        '''; maintain aspect ratio
+        '''maintas=true
+        '''; use letter- or windowboxing to make a best fit
+        '''boxing=false
+        '''; real rendering rate, -1 = screen rate, 0 = unlimited (GDI), 0 = 125 (OpenGL), n = cap
+        '''; Note:  [字符串的其余部分被截断]&quot;; 的本地化字符串。
         '''</summary>
-        Friend ReadOnly Property ddraw() As String
+        Friend ReadOnly Property ddrawcnc1() As String
             Get
-                Return ResourceManager.GetString("ddraw", resourceCulture)
+                Return ResourceManager.GetString("ddrawcnc1", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 [ddraw]
+        '''; stretch to custom resolution, 0 = defaults to the size game requests
+        '''width=0
+        '''height=0
+        '''; override width/height and always stretch to fullscreen
+        '''fullscreen=false
+        '''; bits per pixel, possible values: 16, 24 and 32, 0 = auto
+        '''bpp=0
+        '''windowed=false
+        '''; show window borders in windowed mode
+        '''border=true
+        '''; maintain aspect ratio
+        '''maintas=true
+        '''; use letter- or windowboxing to make a best fit
+        '''boxing=false
+        '''; real rendering rate, -1 = screen rate, 0 = unlimited (GDI), 0 = 125 (OpenGL), n = cap
+        '''; Note:  [字符串的其余部分被截断]&quot;; 的本地化字符串。
+        '''</summary>
+        Friend ReadOnly Property ddrawra1() As String
+            Get
+                Return ResourceManager.GetString("ddrawra1", resourceCulture)
             End Get
         End Property
         
@@ -150,6 +176,39 @@ Namespace My.Resources
             Get
                 Dim obj As Object = ResourceManager.GetObject("htitle", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 [Options]
+        '''ScrollFix=Yes
+        '''LimitCpuUsage=Yes
+        '''SlowerScrollrate=No
+        '''HardwareFills=No
+        '''VideoBackBuffer=Yes
+        '''Resolution=0
+        '''Width=640
+        '''Height=400
+        '''ShowAllMusic=Yes
+        '''PlayEnglishIntro=Yes
+        '''VideoInterlaceMode=2
+        '''SkipScoreScreen=No
+        '''RandomStartingSong=No
+        '''GameLanguage=1
+        '''Show640x480BlackBars=false
+        '''MouseWheelScrolling=Yes
+        '''DisplayOriginalMultiplayerMaps=Yes
+        '''DisplayCounterstrikeMultiplayerMaps=Yes
+        '''DisplayAftermathMultiplayerMaps=Yes
+        '''UseSmallInfantry=No
+        '''NoCD=Yes
+        '''CounterstrikeEnabled=Yes
+        '''AftermathEnabled=Yes
+        '''For [字符串的其余部分被截断]&quot;; 的本地化字符串。
+        '''</summary>
+        Friend ReadOnly Property redalert() As String
+            Get
+                Return ResourceManager.GetString("redalert", resourceCulture)
             End Get
         End Property
         
