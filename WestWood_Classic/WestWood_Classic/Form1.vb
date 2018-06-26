@@ -405,4 +405,10 @@ Public Class Form1
     Private Sub Button3_Click_1(sender As Object, e As EventArgs) Handles Button3.Click
         Process.Start("ra\ra95.exe", "-SKIRMISH")
     End Sub
+
+    Private Sub Button4_Click_1(sender As Object, e As EventArgs) Handles Button4.Click
+        Panel_up_log.Visible = True
+        Panel_cnc1.Visible = False
+        Panel_ra1.Visible = False
+    End Sub
 End Class

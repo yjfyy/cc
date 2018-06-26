@@ -62,6 +62,7 @@ Partial Class Form1
         Me.Button_cncnet = New System.Windows.Forms.Button()
         Me.Button_ra1_config = New System.Windows.Forms.Button()
         Me.Button8 = New System.Windows.Forms.Button()
+        Me.Button4 = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.Panel_games_list.SuspendLayout()
         Me.Panel_up_log.SuspendLayout()
@@ -229,6 +230,7 @@ Partial Class Form1
         '
         'Panel_games_list
         '
+        Me.Panel_games_list.Controls.Add(Me.Button4)
         Me.Panel_games_list.Controls.Add(Me.Label_ra1)
         Me.Panel_games_list.Controls.Add(Me.Label_cnc1)
         Me.Panel_games_list.Controls.Add(Me.Button_cnc1)
@@ -242,7 +244,7 @@ Partial Class Form1
         '
         Me.Label_ra1.AutoSize = True
         Me.Label_ra1.Enabled = False
-        Me.Label_ra1.Location = New System.Drawing.Point(36, 182)
+        Me.Label_ra1.Location = New System.Drawing.Point(36, 204)
         Me.Label_ra1.Name = "Label_ra1"
         Me.Label_ra1.Size = New System.Drawing.Size(53, 12)
         Me.Label_ra1.TabIndex = 3
@@ -252,7 +254,7 @@ Partial Class Form1
         '
         Me.Label_cnc1.AutoSize = True
         Me.Label_cnc1.Enabled = False
-        Me.Label_cnc1.Location = New System.Drawing.Point(32, 87)
+        Me.Label_cnc1.Location = New System.Drawing.Point(32, 109)
         Me.Label_cnc1.Name = "Label_cnc1"
         Me.Label_cnc1.Size = New System.Drawing.Size(65, 12)
         Me.Label_cnc1.TabIndex = 2
@@ -263,7 +265,7 @@ Partial Class Form1
         Me.Button_cnc1.BackgroundImage = Global.WestWood_Classic.My.Resources.Resources._1
         Me.Button_cnc1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.Button_cnc1.Enabled = False
-        Me.Button_cnc1.Location = New System.Drawing.Point(34, 28)
+        Me.Button_cnc1.Location = New System.Drawing.Point(34, 50)
         Me.Button_cnc1.Name = "Button_cnc1"
         Me.Button_cnc1.Size = New System.Drawing.Size(58, 56)
         Me.Button_cnc1.TabIndex = 0
@@ -274,7 +276,7 @@ Partial Class Form1
         Me.Button_ra1.BackgroundImage = Global.WestWood_Classic.My.Resources.Resources._93
         Me.Button_ra1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.Button_ra1.Enabled = False
-        Me.Button_ra1.Location = New System.Drawing.Point(34, 125)
+        Me.Button_ra1.Location = New System.Drawing.Point(34, 147)
         Me.Button_ra1.Name = "Button_ra1"
         Me.Button_ra1.Size = New System.Drawing.Size(58, 54)
         Me.Button_ra1.TabIndex = 1
@@ -297,7 +299,7 @@ Partial Class Form1
         Me.WebBrowser1.MinimumSize = New System.Drawing.Size(20, 20)
         Me.WebBrowser1.Name = "WebBrowser1"
         Me.WebBrowser1.Size = New System.Drawing.Size(628, 396)
-        Me.WebBrowser1.TabIndex = 25
+        Me.WebBrowser1.TabIndex = 1
         Me.WebBrowser1.Url = New System.Uri("", System.UriKind.Relative)
         '
         'ProgressBar1
@@ -538,6 +540,15 @@ Partial Class Form1
         Me.Button8.Text = "盟军任务"
         Me.Button8.UseVisualStyleBackColor = False
         '
+        'Button4
+        '
+        Me.Button4.Location = New System.Drawing.Point(34, 12)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(58, 23)
+        Me.Button4.TabIndex = 4
+        Me.Button4.Text = "返回"
+        Me.Button4.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
@@ -613,4 +624,5 @@ Partial Class Form1
     Friend WithEvents Button3 As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents Button1 As Button
+    Friend WithEvents Button4 As Button
 End Class
