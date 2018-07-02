@@ -12,19 +12,19 @@ Public Class Form1
     Dim up_root = "https://gitee.com/yjfyeyu/updatasys/raw/master/WestWood_Classic/"
 
 
-    '声明INI配置文件读写API函数,lpApplicationName节名称， lpKeyName键名称，lpString是键值
-    Private Declare Function GetPrivateProfileString Lib "kernel32" Alias "GetPrivateProfileStringA" (ByVal lpApplicationName As String, ByVal lpKeyName As String, ByVal lpDefault As String, ByVal lpReturnedString As String, ByVal nSize As Int32, ByVal lpFileName As String) As Int32
-    Private Declare Function WritePrivateProfileString Lib "kernel32" Alias "WritePrivateProfileStringA" (ByVal lpApplicationName As String, ByVal lpKeyName As String, ByVal lpString As String, ByVal lpFileName As String) As Int32
-    '定义读取配置文件函数
-    Public Function GetINI(ByVal Section As String, ByVal AppName As String, ByVal lpDefault As String, ByVal FileName As String) As String
-        Dim Str As String = LSet(Str, 256)
-        GetPrivateProfileString(Section, AppName, lpDefault, Str, Len(Str), FileName)
-        Return Microsoft.VisualBasic.Left(Str, InStr(Str, Chr(0)) - 1)
-    End Function
-    '定义写入配置文件函数
-    Public Function WriteINI(ByVal Section As String, ByVal AppName As String, ByVal lpDefault As String, ByVal FileName As String) As Long
-        WriteINI = WritePrivateProfileString(Section, AppName, lpDefault, FileName)
-    End Function
+    ''声明INI配置文件读写API函数,lpApplicationName节名称， lpKeyName键名称，lpString是键值
+    'Private Declare Function GetPrivateProfileString Lib "kernel32" Alias "GetPrivateProfileStringA" (ByVal lpApplicationName As String, ByVal lpKeyName As String, ByVal lpDefault As String, ByVal lpReturnedString As String, ByVal nSize As Int32, ByVal lpFileName As String) As Int32
+    'Private Declare Function WritePrivateProfileString Lib "kernel32" Alias "WritePrivateProfileStringA" (ByVal lpApplicationName As String, ByVal lpKeyName As String, ByVal lpString As String, ByVal lpFileName As String) As Int32
+    ''定义读取配置文件函数
+    'Public Function GetINI(ByVal Section As String, ByVal AppName As String, ByVal lpDefault As String, ByVal FileName As String) As String
+    '    Dim Str As String = LSet(Str, 256)
+    '    GetPrivateProfileString(Section, AppName, lpDefault, Str, Len(Str), FileName)
+    '    Return Microsoft.VisualBasic.Left(Str, InStr(Str, Chr(0)) - 1)
+    'End Function
+    ''定义写入配置文件函数
+    'Public Function WriteINI(ByVal Section As String, ByVal AppName As String, ByVal lpDefault As String, ByVal FileName As String) As Long
+    '    WriteINI = WritePrivateProfileString(Section, AppName, lpDefault, FileName)
+    'End Function
 
 
     Private Sub Button_cnc1_Click(sender As Object, e As EventArgs) Handles Button_cnc1.Click
@@ -192,8 +192,10 @@ Public Class Form1
     Sub wanchen(ByVal sender As Object, ByVal e As System.ComponentModel.AsyncCompletedEventArgs)
         Label_status.Text = "下载完成"
         Try
-            If CheckBox_updata_movies.Checked Then
-                System.IO.File.WriteAllText("up_com.bat", TextBox_up_com_as_movies.Text, encoding:=System.Text.Encoding.Default)
+            If RadioButton_updata_cnc1_movies.Checked Then
+                System.IO.File.WriteAllText("up_com.bat", TextBox_up_com_as_cnc1_movies.Text, encoding:=System.Text.Encoding.Default)
+            ElseIf RadioButton_updata_ra1_movies.Checked Then
+                System.IO.File.WriteAllText("up_com.bat", TextBox_up_com_as_ra1_movies.Text, encoding:=System.Text.Encoding.Default)
             Else
                 System.IO.File.WriteAllText("up_com.bat", TextBox_up_com.Text, encoding:=System.Text.Encoding.Default)
             End If
@@ -217,7 +219,7 @@ Public Class Form1
     End Sub
 
     Private Sub Button_updata_Click(sender As Object, e As EventArgs) Handles Button_updata.Click
-        If CheckBox_updata_movies.Checked Then
+        If RadioButton_updata_cnc1_movies.Checked Or RadioButton_updata_ra1_movies.Checked Then
             Dim message As String = "更新动画包将耗费更长时间，确定更新动画包?"
             Dim caption As String = "警告"
             Dim result = MessageBox.Show(message, caption, MessageBoxButtons.YesNo, MessageBoxIcon.Question)
@@ -411,4 +413,10 @@ Public Class Form1
         Panel_cnc1.Visible = False
         Panel_ra1.Visible = False
     End Sub
+
+    Private Sub RadioButton_updata_cnc1_movies_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton_updata_cnc1_movies.CheckedChanged
+
+    End Sub
+
+
 End Class

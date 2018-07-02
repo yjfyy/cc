@@ -29,17 +29,17 @@ Partial Class Form1
         Me.RadioButton_win10 = New System.Windows.Forms.RadioButton()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Button_test = New System.Windows.Forms.Button()
-        Me.TextBox_up_com_as_movies = New System.Windows.Forms.TextBox()
+        Me.TextBox_up_com_as_cnc1_movies = New System.Windows.Forms.TextBox()
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         Me.Label_r_version = New System.Windows.Forms.Label()
         Me.Label_l_version = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label_status = New System.Windows.Forms.Label()
-        Me.CheckBox_updata_movies = New System.Windows.Forms.CheckBox()
         Me.BackgroundWorker_check_ver = New System.ComponentModel.BackgroundWorker()
         Me.Button_updata = New System.Windows.Forms.Button()
         Me.Panel_games_list = New System.Windows.Forms.Panel()
+        Me.Button4 = New System.Windows.Forms.Button()
         Me.Label_ra1 = New System.Windows.Forms.Label()
         Me.Label_cnc1 = New System.Windows.Forms.Label()
         Me.Button_cnc1 = New System.Windows.Forms.Button()
@@ -62,12 +62,17 @@ Partial Class Form1
         Me.Button_cncnet = New System.Windows.Forms.Button()
         Me.Button_ra1_config = New System.Windows.Forms.Button()
         Me.Button8 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
+        Me.TextBox_up_com_as_ra1_movies = New System.Windows.Forms.TextBox()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.RadioButton_updata_cnc1_movies = New System.Windows.Forms.RadioButton()
+        Me.RadioButton_updata_ra1_movies = New System.Windows.Forms.RadioButton()
+        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
         Me.GroupBox1.SuspendLayout()
         Me.Panel_games_list.SuspendLayout()
         Me.Panel_up_log.SuspendLayout()
         Me.Panel_cnc1.SuspendLayout()
         Me.Panel_ra1.SuspendLayout()
+        Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
         '
         'TextBox_up_com
@@ -138,16 +143,16 @@ Partial Class Form1
         Me.Button_test.UseVisualStyleBackColor = True
         Me.Button_test.Visible = False
         '
-        'TextBox_up_com_as_movies
+        'TextBox_up_com_as_cnc1_movies
         '
-        Me.TextBox_up_com_as_movies.Enabled = False
-        Me.TextBox_up_com_as_movies.Location = New System.Drawing.Point(11, 12)
-        Me.TextBox_up_com_as_movies.Multiline = True
-        Me.TextBox_up_com_as_movies.Name = "TextBox_up_com_as_movies"
-        Me.TextBox_up_com_as_movies.Size = New System.Drawing.Size(216, 216)
-        Me.TextBox_up_com_as_movies.TabIndex = 23
-        Me.TextBox_up_com_as_movies.Text = resources.GetString("TextBox_up_com_as_movies.Text")
-        Me.TextBox_up_com_as_movies.Visible = False
+        Me.TextBox_up_com_as_cnc1_movies.Enabled = False
+        Me.TextBox_up_com_as_cnc1_movies.Location = New System.Drawing.Point(11, 12)
+        Me.TextBox_up_com_as_cnc1_movies.Multiline = True
+        Me.TextBox_up_com_as_cnc1_movies.Name = "TextBox_up_com_as_cnc1_movies"
+        Me.TextBox_up_com_as_cnc1_movies.Size = New System.Drawing.Size(216, 216)
+        Me.TextBox_up_com_as_cnc1_movies.TabIndex = 23
+        Me.TextBox_up_com_as_cnc1_movies.Text = resources.GetString("TextBox_up_com_as_cnc1_movies.Text")
+        Me.TextBox_up_com_as_cnc1_movies.Visible = False
         '
         'LinkLabel1
         '
@@ -205,23 +210,12 @@ Partial Class Form1
         Me.Label_status.TabIndex = 35
         Me.Label_status.Text = "状态"
         '
-        'CheckBox_updata_movies
-        '
-        Me.CheckBox_updata_movies.AutoSize = True
-        Me.CheckBox_updata_movies.Enabled = False
-        Me.CheckBox_updata_movies.Location = New System.Drawing.Point(108, 433)
-        Me.CheckBox_updata_movies.Name = "CheckBox_updata_movies"
-        Me.CheckBox_updata_movies.Size = New System.Drawing.Size(72, 16)
-        Me.CheckBox_updata_movies.TabIndex = 34
-        Me.CheckBox_updata_movies.Text = "更新动画"
-        Me.CheckBox_updata_movies.UseVisualStyleBackColor = True
-        '
         'BackgroundWorker_check_ver
         '
         '
         'Button_updata
         '
-        Me.Button_updata.Location = New System.Drawing.Point(10, 429)
+        Me.Button_updata.Location = New System.Drawing.Point(10, 436)
         Me.Button_updata.Name = "Button_updata"
         Me.Button_updata.Size = New System.Drawing.Size(92, 23)
         Me.Button_updata.TabIndex = 33
@@ -239,6 +233,15 @@ Partial Class Form1
         Me.Panel_games_list.Name = "Panel_games_list"
         Me.Panel_games_list.Size = New System.Drawing.Size(133, 317)
         Me.Panel_games_list.TabIndex = 29
+        '
+        'Button4
+        '
+        Me.Button4.Location = New System.Drawing.Point(34, 12)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(58, 23)
+        Me.Button4.TabIndex = 4
+        Me.Button4.Text = "返回"
+        Me.Button4.UseVisualStyleBackColor = True
         '
         'Label_ra1
         '
@@ -284,8 +287,9 @@ Partial Class Form1
         '
         'Panel_up_log
         '
+        Me.Panel_up_log.Controls.Add(Me.TextBox_up_com_as_ra1_movies)
         Me.Panel_up_log.Controls.Add(Me.Button_test)
-        Me.Panel_up_log.Controls.Add(Me.TextBox_up_com_as_movies)
+        Me.Panel_up_log.Controls.Add(Me.TextBox_up_com_as_cnc1_movies)
         Me.Panel_up_log.Controls.Add(Me.TextBox_up_com)
         Me.Panel_up_log.Controls.Add(Me.WebBrowser1)
         Me.Panel_up_log.Location = New System.Drawing.Point(149, 11)
@@ -304,9 +308,9 @@ Partial Class Form1
         '
         'ProgressBar1
         '
-        Me.ProgressBar1.Location = New System.Drawing.Point(186, 429)
+        Me.ProgressBar1.Location = New System.Drawing.Point(330, 436)
         Me.ProgressBar1.Name = "ProgressBar1"
-        Me.ProgressBar1.Size = New System.Drawing.Size(601, 23)
+        Me.ProgressBar1.Size = New System.Drawing.Size(457, 23)
         Me.ProgressBar1.TabIndex = 32
         '
         'Panel_cnc1
@@ -540,20 +544,68 @@ Partial Class Form1
         Me.Button8.Text = "盟军任务"
         Me.Button8.UseVisualStyleBackColor = False
         '
-        'Button4
+        'TextBox_up_com_as_ra1_movies
         '
-        Me.Button4.Location = New System.Drawing.Point(34, 12)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(58, 23)
-        Me.Button4.TabIndex = 4
-        Me.Button4.Text = "返回"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.TextBox_up_com_as_ra1_movies.Enabled = False
+        Me.TextBox_up_com_as_ra1_movies.Location = New System.Drawing.Point(244, 12)
+        Me.TextBox_up_com_as_ra1_movies.Multiline = True
+        Me.TextBox_up_com_as_ra1_movies.Name = "TextBox_up_com_as_ra1_movies"
+        Me.TextBox_up_com_as_ra1_movies.Size = New System.Drawing.Size(216, 216)
+        Me.TextBox_up_com_as_ra1_movies.TabIndex = 25
+        Me.TextBox_up_com_as_ra1_movies.Text = resources.GetString("TextBox_up_com_as_ra1_movies.Text")
+        Me.TextBox_up_com_as_ra1_movies.Visible = False
+        '
+        'GroupBox2
+        '
+        Me.GroupBox2.Controls.Add(Me.RadioButton1)
+        Me.GroupBox2.Controls.Add(Me.RadioButton_updata_ra1_movies)
+        Me.GroupBox2.Controls.Add(Me.RadioButton_updata_cnc1_movies)
+        Me.GroupBox2.Enabled = False
+        Me.GroupBox2.Location = New System.Drawing.Point(108, 419)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(216, 45)
+        Me.GroupBox2.TabIndex = 44
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "包括动画"
+        '
+        'RadioButton_updata_cnc1_movies
+        '
+        Me.RadioButton_updata_cnc1_movies.AutoSize = True
+        Me.RadioButton_updata_cnc1_movies.Location = New System.Drawing.Point(47, 20)
+        Me.RadioButton_updata_cnc1_movies.Name = "RadioButton_updata_cnc1_movies"
+        Me.RadioButton_updata_cnc1_movies.Size = New System.Drawing.Size(83, 16)
+        Me.RadioButton_updata_cnc1_movies.TabIndex = 0
+        Me.RadioButton_updata_cnc1_movies.Text = "命令与征服"
+        Me.RadioButton_updata_cnc1_movies.UseVisualStyleBackColor = True
+        '
+        'RadioButton_updata_ra1_movies
+        '
+        Me.RadioButton_updata_ra1_movies.AutoSize = True
+        Me.RadioButton_updata_ra1_movies.Location = New System.Drawing.Point(136, 20)
+        Me.RadioButton_updata_ra1_movies.Name = "RadioButton_updata_ra1_movies"
+        Me.RadioButton_updata_ra1_movies.Size = New System.Drawing.Size(71, 16)
+        Me.RadioButton_updata_ra1_movies.TabIndex = 1
+        Me.RadioButton_updata_ra1_movies.Text = "红色警戒"
+        Me.RadioButton_updata_ra1_movies.UseVisualStyleBackColor = True
+        '
+        'RadioButton1
+        '
+        Me.RadioButton1.AutoSize = True
+        Me.RadioButton1.Checked = True
+        Me.RadioButton1.Location = New System.Drawing.Point(6, 20)
+        Me.RadioButton1.Name = "RadioButton1"
+        Me.RadioButton1.Size = New System.Drawing.Size(35, 16)
+        Me.RadioButton1.TabIndex = 2
+        Me.RadioButton1.TabStop = True
+        Me.RadioButton1.Text = "无"
+        Me.RadioButton1.UseVisualStyleBackColor = True
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(801, 496)
+        Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.LinkLabel1)
         Me.Controls.Add(Me.Label_r_version)
@@ -561,7 +613,6 @@ Partial Class Form1
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label_status)
-        Me.Controls.Add(Me.CheckBox_updata_movies)
         Me.Controls.Add(Me.Button_updata)
         Me.Controls.Add(Me.Panel_games_list)
         Me.Controls.Add(Me.ProgressBar1)
@@ -580,6 +631,8 @@ Partial Class Form1
         Me.Panel_up_log.PerformLayout()
         Me.Panel_cnc1.ResumeLayout(False)
         Me.Panel_ra1.ResumeLayout(False)
+        Me.GroupBox2.ResumeLayout(False)
+        Me.GroupBox2.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -591,14 +644,13 @@ Partial Class Form1
     Friend WithEvents RadioButton_win10 As RadioButton
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents Button_test As Button
-    Friend WithEvents TextBox_up_com_as_movies As TextBox
+    Friend WithEvents TextBox_up_com_as_cnc1_movies As TextBox
     Friend WithEvents LinkLabel1 As LinkLabel
     Friend WithEvents Label_r_version As Label
     Friend WithEvents Label_l_version As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label_status As Label
-    Friend WithEvents CheckBox_updata_movies As CheckBox
     Friend WithEvents BackgroundWorker_check_ver As System.ComponentModel.BackgroundWorker
     Friend WithEvents Button_updata As Button
     Friend WithEvents Panel_games_list As Panel
@@ -625,4 +677,9 @@ Partial Class Form1
     Friend WithEvents Button2 As Button
     Friend WithEvents Button1 As Button
     Friend WithEvents Button4 As Button
+    Friend WithEvents TextBox_up_com_as_ra1_movies As TextBox
+    Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents RadioButton_updata_ra1_movies As RadioButton
+    Friend WithEvents RadioButton_updata_cnc1_movies As RadioButton
+    Friend WithEvents RadioButton1 As RadioButton
 End Class

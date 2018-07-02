@@ -117,7 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="TextBox_up_com_as_movies.Text" xml:space="preserve">
+  <data name="TextBox_up_com_as_cnc1_movies.Text" xml:space="preserve">
     <value>@echo off
 echo 正在更新...
 timeout 2 &gt;nul
@@ -7340,6 +7340,23 @@ start 西木经典游戏汉化纪念版.exe</value>
         Mf8xKSH/MTEx/zEpIf8xKSH/MTEx/zEpIf8xKSH/MSkh/zEpIf9CQkL/MTEx/zEpIf8xMTH/MSkh/zEp
         If8xKSH/MSkh/zExMf8xISH/MSEh/zEpIf8xKSH/MTEx/zExMf8xKSH/MSkh/zEpIf8xISH/
 </value>
+  </data>
+  <data name="TextBox_up_com_as_ra1_movies.Text" xml:space="preserve">
+    <value>@echo off
+echo 正在更新...
+timeout 2 &gt;nul
+up_data.exe
+echo 开始更新动画包
+cd cnc95\chi
+del *.vqa
+del *.vqp
+wget -ivqalist.txt --no-check-certificate -Bhttp://gitee.com/yjfyeyu/cc1_database/raw/master/movies/ -c --no-check-certificate
+cd ..\..
+timeout 2 &gt; nul
+del up_data.exe
+echo 更新完成
+timeout 1 &gt; nul
+start 西木经典游戏汉化纪念版.exe</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
