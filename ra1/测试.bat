@@ -1,6 +1,4 @@
-copy conquer.eng "D:\games\WestWood_Classic\RA"
-copy hires.mix "D:\games\WestWood_Classic\RA"
-copy local.mix "D:\games\WestWood_Classic\RA"
-copy tutorial.ini "D:\games\WestWood_Classic\RA"
-copy mission.ini "D:\games\WestWood_Classic\RA"
-"D:\games\WestWood_Classic\RA\ra95.exe"
+copy ".\germanlanguagepack.mix-2-盟军任务\germanlanguagepack.mix" "D:\games\WestWood_Classic\RA"
+cd "D:\games\WestWood_Classic"
+d:
+西木经典游戏汉化纪念版.exe"

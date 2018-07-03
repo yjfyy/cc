@@ -11,6 +11,7 @@ Public Class Form1
     Dim newuplog As String
     Dim up_root = "https://gitee.com/yjfyeyu/updatasys/raw/master/WestWood_Classic/"
 
+    Dim app_path As String = Application.StartupPath()
 
     ''声明INI配置文件读写API函数,lpApplicationName节名称， lpKeyName键名称，lpString是键值
     'Private Declare Function GetPrivateProfileString Lib "kernel32" Alias "GetPrivateProfileStringA" (ByVal lpApplicationName As String, ByVal lpKeyName As String, ByVal lpDefault As String, ByVal lpReturnedString As String, ByVal nSize As Int32, ByVal lpFileName As String) As Int32
@@ -74,6 +75,34 @@ Public Class Form1
 
 
     Private Sub delete_files()
+        '1.27使用语言包方式，删除1.27一下红警汉化文件。
+        Try
+            My.Computer.FileSystem.DeleteFile(app_path & "\RA\conquer.eng")
+        Catch ex As Exception
+
+        End Try
+        Try
+            My.Computer.FileSystem.DeleteFile(app_path & "\RA\hires.mix")
+        Catch ex As Exception
+
+        End Try
+        Try
+            My.Computer.FileSystem.DeleteFile(app_path & "\RA\mission.ini")
+        Catch ex As Exception
+
+        End Try
+        Try
+            My.Computer.FileSystem.DeleteFile(app_path & "\RA\tutorial.ini")
+        Catch ex As Exception
+
+        End Try
+        Try
+            My.Computer.FileSystem.DeleteFile(app_path & "\RA\local.mix")
+        Catch ex As Exception
+
+        End Try
+
+
         '1.21 使用readme.htm 删除说明.txt
         Try
             My.Computer.FileSystem.DeleteFile("说明.txt")
@@ -235,9 +264,7 @@ Public Class Form1
     End Sub
 
     Private Sub jianrongxing()
-        Dim app_path As String
 
-        app_path = Application.StartupPath()
         'MsgBox(cc1_path)
         If RadioButton_win10.Checked Then
             'Dim key As Microsoft.Win32.RegistryKey = Microsoft.Win32.Registry.LocalMachine.OpenSubKey("Software/Faxturer", True)
@@ -379,7 +406,8 @@ Public Class Form1
         cnc1cfg.Show()
     End Sub
 
-    Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
+    Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button_ra1_ally.Click
+        WriteINI("Options", "GameLanguage", "2", "RA\redalert.ini")
         If System.Diagnostics.Process.GetProcessesByName("ra95").Length > 0 Then
             MsgBox("请勿重复启动")
         Else
@@ -416,6 +444,21 @@ Public Class Form1
 
     Private Sub RadioButton_updata_cnc1_movies_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton_updata_cnc1_movies.CheckedChanged
 
+    End Sub
+
+    Private Sub Button_ra1_english_Click(sender As Object, e As EventArgs) Handles Button_ra1_english.Click
+        WriteINI("Options", "GameLanguage", "1", "RA\redalert.ini")
+        If System.Diagnostics.Process.GetProcessesByName("ra95").Length > 0 Then
+            MsgBox("请勿重复启动")
+        Else
+            'If My.Computer.FileSystem.FileExists("cnc95\ddraw.dll") Then
+            jianrongxing()
+            Process.Start("ra\ra95.exe")
+            'Else
+            'MsgBox("请在设置中打开ddraw")
+            'End If
+
+        End If
     End Sub
 
 

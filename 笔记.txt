@@ -44,3 +44,28 @@ wget -ivqalistnb.txt --no-check-certificate -B=http://gitee.com/yjfyeyu/cc1_data
 胜利失败vcr.fnt在local.mix
 左上角选项两个字12metfnt.fnt 在hires.mix
 
+    campaign.MIX
+    aftermath.MIX
+    counterstrike.MIX
+    smallinfantry.MIX
+    oos-fix.MIX
+    movies-tlf.MIX
+    germanlanguagepack.MIX
+    germancensoredlanguagepack.MIX
+    germanuncensoredlanguagepack.MIX
+    spanishlanguagepack.MIX
+    frenchlanguagepack.MIX
+    italianlanguagepack.MIX 13 expand3.MIX until expand10.MIX (in addition to expand.MIX and expand2.MIX)
+    movies-1.MIX until movies-10.MIX
+
+
+
+    (English) - No additional .MIX file is loaded
+    (German) - germanlanguagepack.MIX is loaded
+    (German censored) - germancensoredlanguagepack.MIX is loaded
+    (German uncensored) - germanuncensoredlanguagepack.MIX is loaded
+    (French) - frenchlanguagepack.MIX is loaded
+    (Spanish) - spanishlanguagepack.MIX is loaded
+    (Russian) - russianlanguagepack.MIX is loaded
+
+E.g.: GameLanguage=6 to load a Spanish language pack.
