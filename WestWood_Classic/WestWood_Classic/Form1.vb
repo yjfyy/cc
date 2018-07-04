@@ -10,23 +10,7 @@ Public Class Form1
     Dim r_version
     Dim newuplog As String
     Dim up_root = "https://gitee.com/yjfyeyu/updatasys/raw/master/WestWood_Classic/"
-
     Dim app_path As String = Application.StartupPath()
-
-    ''声明INI配置文件读写API函数,lpApplicationName节名称， lpKeyName键名称，lpString是键值
-    'Private Declare Function GetPrivateProfileString Lib "kernel32" Alias "GetPrivateProfileStringA" (ByVal lpApplicationName As String, ByVal lpKeyName As String, ByVal lpDefault As String, ByVal lpReturnedString As String, ByVal nSize As Int32, ByVal lpFileName As String) As Int32
-    'Private Declare Function WritePrivateProfileString Lib "kernel32" Alias "WritePrivateProfileStringA" (ByVal lpApplicationName As String, ByVal lpKeyName As String, ByVal lpString As String, ByVal lpFileName As String) As Int32
-    ''定义读取配置文件函数
-    'Public Function GetINI(ByVal Section As String, ByVal AppName As String, ByVal lpDefault As String, ByVal FileName As String) As String
-    '    Dim Str As String = LSet(Str, 256)
-    '    GetPrivateProfileString(Section, AppName, lpDefault, Str, Len(Str), FileName)
-    '    Return Microsoft.VisualBasic.Left(Str, InStr(Str, Chr(0)) - 1)
-    'End Function
-    ''定义写入配置文件函数
-    'Public Function WriteINI(ByVal Section As String, ByVal AppName As String, ByVal lpDefault As String, ByVal FileName As String) As Long
-    '    WriteINI = WritePrivateProfileString(Section, AppName, lpDefault, FileName)
-    'End Function
-
 
     Private Sub Button_cnc1_Click(sender As Object, e As EventArgs) Handles Button_cnc1.Click
         Panel_up_log.Visible = False
@@ -44,13 +28,6 @@ Public Class Form1
         WebBrowser1.Url = New Uri(Application.StartupPath & "\readme.htm")
         delete_files()
 
-        'Try
-        '    Using sr As New StreamReader("说明.txt")
-        '        TextBox_up_log.Text = sr.ReadToEnd()
-        '    End Using
-        'Catch ex As Exception
-        'End Try
-
         Try
             Using sr As New StreamReader("lver")
                 Label_l_version.Text = sr.ReadToEnd()
@@ -59,6 +36,7 @@ Public Class Form1
         End Try
 
         Dim os As OperatingSystem = Environment.OSVersion
+
         If Mid(os.Version.ToString, 1, 3) = "6.2" Then
             RadioButton_win10.Checked = True
         ElseIf Mid(os.Version.ToString, 1, 3) = "6.1" Then
@@ -102,7 +80,6 @@ Public Class Form1
 
         End Try
 
-
         '1.21 使用readme.htm 删除说明.txt
         Try
             My.Computer.FileSystem.DeleteFile("说明.txt")
@@ -141,13 +118,12 @@ Public Class Form1
         Try
             r_version = dFile.DownloadString(upUri_version)
         Catch ex As Exception
-
             r_version = "0"
         End Try
     End Sub
     Private Sub BackgroundWorker_check_ver_RunWorkerCompleted(sender As Object, e As RunWorkerCompletedEventArgs) Handles BackgroundWorker_check_ver.RunWorkerCompleted
-        Label_r_version.Text = r_version
 
+        Label_r_version.Text = r_version
 
         If r_version = "0" Then
             Label_status.Text = "检测失败"
@@ -182,30 +158,13 @@ Public Class Form1
         End If
     End Sub
 
-    'Private Sub BackgroundWorker_load_uplog_DoWork(sender As Object, e As DoWorkEventArgs) Handles BackgroundWorker_load_up_log.DoWork
-    '    Dim dFile As New System.Net.WebClient
-    '    Dim upUri_newuplog As New Uri(up_root + "newuplog.txt")
-    '    Try
-    '        dFile.Encoding = Encoding.UTF8
-    '        newuplog = dFile.DownloadString(upUri_newuplog)
-    '    Catch ex As Exception
-
-    '    End Try
-
-    'End Sub
-
-    'Private Sub BackgroundWorker_load_uplog_RunWorkerCompleted(sender As Object, e As RunWorkerCompletedEventArgs) Handles BackgroundWorker_load_up_log.RunWorkerCompleted
-    '    WebBrowser1.Url = New Uri(up_root + "newuplog.txt")
-    '    'TextBox_up_log.Text = Replace(newuplog, vbLf, vbCrLf)
-    'End Sub
-
     Private Sub Up_autoupdata()
 
         Button_updata.Enabled = False
 
         Dim dFile As New System.Net.WebClient
         Dim upUri_up_data As New Uri(up_root & "up_data.exe")
-        AddHandler dFile.DownloadProgressChanged, AddressOf ShowDownProgress '这一句是在网上看到的，用这句来捕获下载进度变化事件，不知道对不对。
+        AddHandler dFile.DownloadProgressChanged, AddressOf ShowDownProgress
         AddHandler dFile.DownloadFileCompleted, AddressOf wanchen
         Label_status.Text = "正在下载..."
 
