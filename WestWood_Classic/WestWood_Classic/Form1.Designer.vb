@@ -348,9 +348,9 @@ Partial Class Form1
         Me.Button_cnc1_config.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.Button_cnc1_config.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button_cnc1_config.ForeColor = System.Drawing.Color.LimeGreen
-        Me.Button_cnc1_config.Location = New System.Drawing.Point(244, 218)
+        Me.Button_cnc1_config.Location = New System.Drawing.Point(239, 218)
         Me.Button_cnc1_config.Name = "Button_cnc1_config"
-        Me.Button_cnc1_config.Size = New System.Drawing.Size(160, 21)
+        Me.Button_cnc1_config.Size = New System.Drawing.Size(170, 21)
         Me.Button_cnc1_config.TabIndex = 6
         Me.Button_cnc1_config.Text = "设置"
         Me.Button_cnc1_config.UseVisualStyleBackColor = False
@@ -362,9 +362,9 @@ Partial Class Form1
         Me.Button_cnc1_english.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.Button_cnc1_english.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button_cnc1_english.ForeColor = System.Drawing.Color.LimeGreen
-        Me.Button_cnc1_english.Location = New System.Drawing.Point(244, 187)
+        Me.Button_cnc1_english.Location = New System.Drawing.Point(239, 187)
         Me.Button_cnc1_english.Name = "Button_cnc1_english"
-        Me.Button_cnc1_english.Size = New System.Drawing.Size(160, 21)
+        Me.Button_cnc1_english.Size = New System.Drawing.Size(170, 21)
         Me.Button_cnc1_english.TabIndex = 5
         Me.Button_cnc1_english.Text = "英文版"
         Me.Button_cnc1_english.UseVisualStyleBackColor = False
@@ -376,9 +376,9 @@ Partial Class Form1
         Me.Button_cnc1_cncnet.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.Button_cnc1_cncnet.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button_cnc1_cncnet.ForeColor = System.Drawing.Color.LimeGreen
-        Me.Button_cnc1_cncnet.Location = New System.Drawing.Point(244, 156)
+        Me.Button_cnc1_cncnet.Location = New System.Drawing.Point(239, 156)
         Me.Button_cnc1_cncnet.Name = "Button_cnc1_cncnet"
-        Me.Button_cnc1_cncnet.Size = New System.Drawing.Size(160, 21)
+        Me.Button_cnc1_cncnet.Size = New System.Drawing.Size(170, 21)
         Me.Button_cnc1_cncnet.TabIndex = 4
         Me.Button_cnc1_cncnet.Text = "CnCNet 联机"
         Me.Button_cnc1_cncnet.UseVisualStyleBackColor = False
@@ -390,9 +390,9 @@ Partial Class Form1
         Me.Button_cnc1_tv.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.Button_cnc1_tv.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button_cnc1_tv.ForeColor = System.Drawing.Color.LimeGreen
-        Me.Button_cnc1_tv.Location = New System.Drawing.Point(244, 125)
+        Me.Button_cnc1_tv.Location = New System.Drawing.Point(239, 125)
         Me.Button_cnc1_tv.Name = "Button_cnc1_tv"
-        Me.Button_cnc1_tv.Size = New System.Drawing.Size(160, 21)
+        Me.Button_cnc1_tv.Size = New System.Drawing.Size(170, 21)
         Me.Button_cnc1_tv.TabIndex = 3
         Me.Button_cnc1_tv.Text = "游戏主机独占任务"
         Me.Button_cnc1_tv.UseVisualStyleBackColor = False
@@ -404,11 +404,11 @@ Partial Class Form1
         Me.Button_cnc1_ext.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.Button_cnc1_ext.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button_cnc1_ext.ForeColor = System.Drawing.Color.LimeGreen
-        Me.Button_cnc1_ext.Location = New System.Drawing.Point(244, 94)
+        Me.Button_cnc1_ext.Location = New System.Drawing.Point(239, 94)
         Me.Button_cnc1_ext.Name = "Button_cnc1_ext"
-        Me.Button_cnc1_ext.Size = New System.Drawing.Size(160, 21)
+        Me.Button_cnc1_ext.Size = New System.Drawing.Size(170, 21)
         Me.Button_cnc1_ext.TabIndex = 2
-        Me.Button_cnc1_ext.Text = "隐秘行动资料片"
+        Me.Button_cnc1_ext.Text = "隐秘行动资料片任务"
         Me.Button_cnc1_ext.UseVisualStyleBackColor = False
         '
         'Button_cnc1_NOD_miss
@@ -418,11 +418,11 @@ Partial Class Form1
         Me.Button_cnc1_NOD_miss.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.Button_cnc1_NOD_miss.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button_cnc1_NOD_miss.ForeColor = System.Drawing.Color.LimeGreen
-        Me.Button_cnc1_NOD_miss.Location = New System.Drawing.Point(244, 63)
+        Me.Button_cnc1_NOD_miss.Location = New System.Drawing.Point(239, 63)
         Me.Button_cnc1_NOD_miss.Name = "Button_cnc1_NOD_miss"
-        Me.Button_cnc1_NOD_miss.Size = New System.Drawing.Size(160, 21)
+        Me.Button_cnc1_NOD_miss.Size = New System.Drawing.Size(170, 21)
         Me.Button_cnc1_NOD_miss.TabIndex = 1
-        Me.Button_cnc1_NOD_miss.Text = "诺德兄弟会任务(NOD)"
+        Me.Button_cnc1_NOD_miss.Text = "诺德兄弟会剧情任务(NOD)"
         Me.Button_cnc1_NOD_miss.UseVisualStyleBackColor = False
         '
         'Button_cnc1_GDI_miss
@@ -432,11 +432,11 @@ Partial Class Form1
         Me.Button_cnc1_GDI_miss.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.Button_cnc1_GDI_miss.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button_cnc1_GDI_miss.ForeColor = System.Drawing.Color.LimeGreen
-        Me.Button_cnc1_GDI_miss.Location = New System.Drawing.Point(244, 32)
+        Me.Button_cnc1_GDI_miss.Location = New System.Drawing.Point(239, 36)
         Me.Button_cnc1_GDI_miss.Name = "Button_cnc1_GDI_miss"
-        Me.Button_cnc1_GDI_miss.Size = New System.Drawing.Size(160, 21)
+        Me.Button_cnc1_GDI_miss.Size = New System.Drawing.Size(170, 21)
         Me.Button_cnc1_GDI_miss.TabIndex = 0
-        Me.Button_cnc1_GDI_miss.Text = "全球防御组织任务(GDI)"
+        Me.Button_cnc1_GDI_miss.Text = "全球防御组织剧情任务(GDI)"
         Me.Button_cnc1_GDI_miss.UseVisualStyleBackColor = False
         '
         'Panel_ra1
@@ -571,7 +571,7 @@ Partial Class Form1
         Me.Button_ra1_ally.Name = "Button_ra1_ally"
         Me.Button_ra1_ally.Size = New System.Drawing.Size(160, 21)
         Me.Button_ra1_ally.TabIndex = 0
-        Me.Button_ra1_ally.Text = "盟军任务"
+        Me.Button_ra1_ally.Text = "盟军剧情任务"
         Me.Button_ra1_ally.UseVisualStyleBackColor = False
         '
         'GroupBox2
