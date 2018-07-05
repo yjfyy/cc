@@ -60,7 +60,7 @@ Partial Class Form1
         Me.Button_ra1_english = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button_ra1_soviet = New System.Windows.Forms.Button()
         Me.Button_cncnet = New System.Windows.Forms.Button()
         Me.Button_ra1_config = New System.Windows.Forms.Button()
         Me.Button_ra1_ally = New System.Windows.Forms.Button()
@@ -446,7 +446,7 @@ Partial Class Form1
         Me.Panel_ra1.Controls.Add(Me.Button_ra1_english)
         Me.Panel_ra1.Controls.Add(Me.Button3)
         Me.Panel_ra1.Controls.Add(Me.Button2)
-        Me.Panel_ra1.Controls.Add(Me.Button1)
+        Me.Panel_ra1.Controls.Add(Me.Button_ra1_soviet)
         Me.Panel_ra1.Controls.Add(Me.Button_cncnet)
         Me.Panel_ra1.Controls.Add(Me.Button_ra1_config)
         Me.Panel_ra1.Controls.Add(Me.Button_ra1_ally)
@@ -506,22 +506,22 @@ Partial Class Form1
         Me.Button2.Text = "资料片任务（暂未汉化）"
         Me.Button2.UseVisualStyleBackColor = False
         '
-        'Button1
+        'Button_ra1_soviet
         '
-        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Button1.FlatAppearance.BorderSize = 20
-        Me.Button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Navy
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Button1.Location = New System.Drawing.Point(244, 182)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(160, 21)
-        Me.Button1.TabIndex = 3
-        Me.Button1.Text = "苏军任务（暂未汉化）"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.Button_ra1_soviet.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Button_ra1_soviet.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Button_ra1_soviet.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Button_ra1_soviet.FlatAppearance.BorderSize = 20
+        Me.Button_ra1_soviet.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Button_ra1_soviet.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Navy
+        Me.Button_ra1_soviet.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Button_ra1_soviet.ForeColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Button_ra1_soviet.Location = New System.Drawing.Point(244, 182)
+        Me.Button_ra1_soviet.Name = "Button_ra1_soviet"
+        Me.Button_ra1_soviet.Size = New System.Drawing.Size(160, 21)
+        Me.Button_ra1_soviet.TabIndex = 3
+        Me.Button_ra1_soviet.Text = "苏军剧情任务"
+        Me.Button_ra1_soviet.UseVisualStyleBackColor = False
         '
         'Button_cncnet
         '
@@ -694,7 +694,7 @@ Partial Class Form1
     Friend WithEvents WebBrowser1 As WebBrowser
     Friend WithEvents Button3 As Button
     Friend WithEvents Button2 As Button
-    Friend WithEvents Button1 As Button
+    Friend WithEvents Button_ra1_soviet As Button
     Friend WithEvents Button4 As Button
     Friend WithEvents TextBox_up_com_as_ra1_movies As TextBox
     Friend WithEvents GroupBox2 As GroupBox
