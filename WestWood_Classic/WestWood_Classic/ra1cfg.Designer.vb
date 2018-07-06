@@ -43,6 +43,7 @@ Partial Class ra1cfg
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Button_reset = New System.Windows.Forms.Button()
+        Me.CheckBox_ra1_compat = New System.Windows.Forms.CheckBox()
         Me.GroupBox4.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -230,7 +231,7 @@ Partial Class ra1cfg
         Me.GroupBox3.Controls.Add(Me.RadioButton_full)
         Me.GroupBox3.Location = New System.Drawing.Point(175, 110)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(95, 129)
+        Me.GroupBox3.Size = New System.Drawing.Size(95, 66)
         Me.GroupBox3.TabIndex = 9
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "显示模式"
@@ -263,11 +264,22 @@ Partial Class ra1cfg
         Me.Button_reset.Text = "重置全部设定"
         Me.Button_reset.UseVisualStyleBackColor = True
         '
+        'CheckBox_ra1_compat
+        '
+        Me.CheckBox_ra1_compat.AutoSize = True
+        Me.CheckBox_ra1_compat.Location = New System.Drawing.Point(178, 182)
+        Me.CheckBox_ra1_compat.Name = "CheckBox_ra1_compat"
+        Me.CheckBox_ra1_compat.Size = New System.Drawing.Size(108, 16)
+        Me.CheckBox_ra1_compat.TabIndex = 7
+        Me.CheckBox_ra1_compat.Text = "自动设置兼容性"
+        Me.CheckBox_ra1_compat.UseVisualStyleBackColor = True
+        '
         'ra1cfg
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(399, 307)
+        Me.Controls.Add(Me.CheckBox_ra1_compat)
         Me.Controls.Add(Me.GroupBox4)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.GroupBox3)
@@ -284,6 +296,7 @@ Partial Class ra1cfg
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents RadioButton_gdi As RadioButton
@@ -306,4 +319,5 @@ Partial Class ra1cfg
     Friend WithEvents GroupBox3 As GroupBox
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents Button_reset As Button
+    Friend WithEvents CheckBox_ra1_compat As CheckBox
 End Class

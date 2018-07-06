@@ -46,6 +46,7 @@ Partial Class cnc1cfg
         Me.RadioButton_opengl = New System.Windows.Forms.RadioButton()
         Me.RadioButton_gdi = New System.Windows.Forms.RadioButton()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.CheckBox_cc1_compat = New System.Windows.Forms.CheckBox()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -186,7 +187,7 @@ Partial Class cnc1cfg
         Me.GroupBox2.Controls.Add(Me.RadioButton_eva_chi)
         Me.GroupBox2.Location = New System.Drawing.Point(285, 110)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(92, 129)
+        Me.GroupBox2.Size = New System.Drawing.Size(92, 66)
         Me.GroupBox2.TabIndex = 2
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "EVA语音"
@@ -219,7 +220,7 @@ Partial Class cnc1cfg
         Me.GroupBox3.Controls.Add(Me.RadioButton_full)
         Me.GroupBox3.Location = New System.Drawing.Point(175, 110)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(95, 129)
+        Me.GroupBox3.Size = New System.Drawing.Size(95, 66)
         Me.GroupBox3.TabIndex = 3
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "显示模式"
@@ -300,11 +301,22 @@ Partial Class cnc1cfg
         Me.Button1.Text = "确定"
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'CheckBox_cc1_compat
+        '
+        Me.CheckBox_cc1_compat.AutoSize = True
+        Me.CheckBox_cc1_compat.Location = New System.Drawing.Point(178, 182)
+        Me.CheckBox_cc1_compat.Name = "CheckBox_cc1_compat"
+        Me.CheckBox_cc1_compat.Size = New System.Drawing.Size(108, 16)
+        Me.CheckBox_cc1_compat.TabIndex = 6
+        Me.CheckBox_cc1_compat.Text = "自动设置兼容性"
+        Me.CheckBox_cc1_compat.UseVisualStyleBackColor = True
+        '
         'cnc1cfg
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(399, 307)
+        Me.Controls.Add(Me.CheckBox_cc1_compat)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.GroupBox4)
         Me.Controls.Add(Me.GroupBox3)
@@ -324,6 +336,7 @@ Partial Class cnc1cfg
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox4.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -350,4 +363,5 @@ Partial Class cnc1cfg
     Friend WithEvents TextBox_height As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
+    Friend WithEvents CheckBox_cc1_compat As CheckBox
 End Class
