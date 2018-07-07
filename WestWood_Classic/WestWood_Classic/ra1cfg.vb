@@ -16,6 +16,7 @@
         System.IO.File.WriteAllText(".\RA\redalert.ini", My.Resources.redalert)
         System.IO.File.WriteAllText(".\RA\ddraw.ini", My.Resources.ddrawra1)
         read_ini()
+        CheckBox_ra1_compat.Checked = True
     End Sub
 
     Private Sub read_ini()

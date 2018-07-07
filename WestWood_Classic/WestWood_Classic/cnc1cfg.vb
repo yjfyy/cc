@@ -36,6 +36,7 @@
         System.IO.File.WriteAllText(".\CnC95\conquer.ini", My.Resources.conquer)
         System.IO.File.WriteAllText(".\CnC95\ddraw.ini", My.Resources.ddrawcnc1)
         Read_ini()
+        CheckBox_cc1_compat.Checked = True
     End Sub
 
     Private Sub Read_ini()
