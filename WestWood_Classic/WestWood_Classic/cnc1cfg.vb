@@ -28,7 +28,16 @@
             FileIO.FileSystem.CopyFile("CnC95\speech.mix", ".\CnC95\speecchi.mix", True)
         End If
         FileIO.FileSystem.CopyFile("attach\ddraw.dll", ".\CnC95\ddraw.dll", True)
+
+        Form1.Button_cnc1_GDI_miss.Enabled = True
+        Form1.Button_cnc1_NOD_miss.Enabled = True
+        Form1.Button_cnc1_ext.Enabled = True
+        Form1.Button_cnc1_tv.Enabled = True
+        Form1.Button_cnc1_cncnet.Enabled = True
+        Form1.Button_cnc1_english.Enabled = True
+
         save_ini()
+
         Me.Close()
     End Sub
 
@@ -141,6 +150,8 @@
             subkey.SetValue(app_path & "\CnC95\C&C95.exe", "", Microsoft.Win32.RegistryValueKind.String)
         End If
 
+        WriteINI("cnc1", "fristrun", "0", ".\config.ini")
+
     End Sub
 
     Private Sub RadioButton_test_resolution_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton_test_resolution.CheckedChanged, RadioButton_test_resolution.Click
@@ -153,6 +164,10 @@
             TextBox_height.Enabled = False
             TextBox_width.Enabled = False
         End If
+    End Sub
+
+    Private Sub cnc1cfg_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
     End Sub
 
     'Private Sub jianrongxing()

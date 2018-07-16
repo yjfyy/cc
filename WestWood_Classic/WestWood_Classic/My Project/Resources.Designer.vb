@@ -98,8 +98,8 @@ Namespace My.Resources
         '''SafeScrolling=No
         '''
         '''[Video]
-        '''Width=864
-        '''Height=540
+        '''Width=640
+        '''Height=480
         '''Brightness=128
         '''Contrast=128
         '''Tint=128
@@ -188,7 +188,7 @@ Namespace My.Resources
         '''VideoBackBuffer=Yes
         '''Resolution=0
         '''Width=640
-        '''Height=400
+        '''Height=480
         '''ShowAllMusic=Yes
         '''PlayEnglishIntro=Yes
         '''VideoInterlaceMode=2
@@ -219,6 +219,57 @@ Namespace My.Resources
             Get
                 Dim obj As Object = ResourceManager.GetObject("title", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 @echo off
+        '''echo 正在更新...
+        '''timeout 2 &gt;nul
+        '''up_data.exe
+        '''timeout 2 &gt; nul
+        '''del up_data.exe
+        '''echo 更新完成
+        '''timeout 1 &gt; nul
+        '''start 西木经典游戏汉化纪念版.exe 的本地化字符串。
+        '''</summary>
+        Friend ReadOnly Property up() As String
+            Get
+                Return ResourceManager.GetString("up", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 @echo off
+        '''echo 正在更新...
+        '''timeout 2 &gt;nul
+        '''up_data.exe
+        '''timeout 2 &gt; nul
+        '''del up_data.exe
+        '''echo 更新完成
+        '''timeout 1 &gt; nul
+        '''start 西木经典游戏汉化纪念版.exe 的本地化字符串。
+        '''</summary>
+        Friend ReadOnly Property up_cnc1_movice() As String
+            Get
+                Return ResourceManager.GetString("up_cnc1_movice", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 @echo off
+        '''echo 正在更新...
+        '''timeout 2 &gt;nul
+        '''up_data.exe
+        '''timeout 2 &gt; nul
+        '''del up_data.exe
+        '''echo 更新完成
+        '''timeout 1 &gt; nul
+        '''start 西木经典游戏汉化纪念版.exe 的本地化字符串。
+        '''</summary>
+        Friend ReadOnly Property up_ra1_movice() As String
+            Get
+                Return ResourceManager.GetString("up_ra1_movice", resourceCulture)
             End Get
         End Property
     End Module

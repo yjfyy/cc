@@ -4,6 +4,14 @@
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         FileIO.FileSystem.CopyFile(".\attach\ddraw.dll", ".\RA\ddraw.dll", True)
+
+        Form1.Button_ra1_ally.Enabled = True
+        Form1.Button_ra1_soviet.Enabled = True
+        Form1.Button_ra1_ext.Enabled = True
+        Form1.Button_ra1_skirmish.Enabled = True
+        Form1.Button_ra1_cncnet.Enabled = True
+        Form1.Button_ra1_english.Enabled = True
+
         save_ini()
         Me.Close()
     End Sub
@@ -119,6 +127,8 @@
             WriteINI("ra1", "compatibility", "0", ".\config.ini")
             subkey.SetValue(app_path & "\RA\RA95.exe", "", Microsoft.Win32.RegistryValueKind.String)
         End If
+
+        WriteINI("ra1", "fristrun", "0", ".\config.ini")
 
     End Sub
 

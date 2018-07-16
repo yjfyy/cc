@@ -193,6 +193,9 @@
     <Content Include="attach\ddraw.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="ini\up_ra1_movice.txt" />
+    <Content Include="ini\up_cnc1_movice.txt" />
+    <Content Include="ini\up.txt" />
     <Content Include="readme.htm">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

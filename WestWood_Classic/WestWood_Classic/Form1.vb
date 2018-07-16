@@ -13,12 +13,35 @@ Public Class Form1
     Dim app_path As String = Application.StartupPath()
 
     Private Sub Button_cnc1_Click(sender As Object, e As EventArgs) Handles Button_cnc1.Click
+        If GetINI("cnc1", "fristrun", "1", ".\config.ini") = "1" Then
+            MsgBox（"第一次启动游戏前必须先设置参数"）
+            Button_cnc1_GDI_miss.Enabled = False
+            Button_cnc1_NOD_miss.Enabled = False
+            Button_cnc1_ext.Enabled = False
+            Button_cnc1_tv.Enabled = False
+            Button_cnc1_cncnet.Enabled = False
+            Button_cnc1_english.Enabled = False
+        End If
+
+
         Panel_up_log.Visible = False
         Panel_cnc1.Visible = True
         Panel_ra1.Visible = False
     End Sub
 
     Private Sub Button_ra1_Click(sender As Object, e As EventArgs) Handles Button_ra1.Click
+        If GetINI("ra1", "fristrun", "1", ".\config.ini") = "1" Then
+            MsgBox（"第一次启动游戏前必须先设置参数"）
+            Button_ra1_ally.Enabled = False
+            Button_ra1_soviet.Enabled = False
+            Button_ra1_ext.Enabled = False
+            Button_ra1_skirmish.Enabled = False
+            Button_ra1_cncnet.Enabled = False
+            Button_ra1_english.Enabled = False
+
+        End If
+
+
         Panel_up_log.Visible = False
         Panel_cnc1.Visible = False
         Panel_ra1.Visible = True
@@ -48,6 +71,7 @@ Public Class Form1
             MsgBox("未能确认操作系统版本，请手动选择")
             GroupBox1.Enabled = True
         End If
+
 
     End Sub
 
@@ -168,7 +192,6 @@ Public Class Form1
         AddHandler dFile.DownloadFileCompleted, AddressOf wanchen
         Label_status.Text = "正在下载..."
 
-        'dFile.DownloadFileAsync(upUri, Environ("AppData") & "\Factorio\mods\" & modslist(8, mods_select))
         dFile.DownloadFileAsync(upUri_up_data, "up_data.exe")
         'BackgroundWorker_download_updata.RunWorkerAsync()
 
@@ -181,11 +204,14 @@ Public Class Form1
         Label_status.Text = "下载完成"
         Try
             If RadioButton_updata_cnc1_movies.Checked Then
-                System.IO.File.WriteAllText("up_com.bat", TextBox_up_com_as_cnc1_movies.Text, encoding:=System.Text.Encoding.Default)
+                'System.IO.File.WriteAllText("up_com.bat", TextBox_up_com_as_cnc1_movies.Text, encoding:=System.Text.Encoding.Default)
+                System.IO.File.WriteAllText("up_com.bat", My.Resources.up_cnc1_movice, encoding:=System.Text.Encoding.Default)
             ElseIf RadioButton_updata_ra1_movies.Checked Then
-                System.IO.File.WriteAllText("up_com.bat", TextBox_up_com_as_ra1_movies.Text, encoding:=System.Text.Encoding.Default)
+                'System.IO.File.WriteAllText("up_com.bat", TextBox_up_com_as_ra1_movies.Text, encoding:=System.Text.Encoding.Default)
+                System.IO.File.WriteAllText("up_com.bat", My.Resources.up_ra1_movice, encoding:=System.Text.Encoding.Default)
             Else
-                System.IO.File.WriteAllText("up_com.bat", TextBox_up_com.Text, encoding:=System.Text.Encoding.Default)
+                'System.IO.File.WriteAllText("up_com.bat", TextBox_up_com.Text, encoding:=System.Text.Encoding.Default)
+                System.IO.File.WriteAllText("up_com.bat", My.Resources.up, encoding:=System.Text.Encoding.Default)
             End If
             Label_status.Text = "升级完成后将自动重启。"
             'Shell("up_com.bat", Style:=AppWinStyle.NormalFocus)
@@ -362,11 +388,11 @@ Public Class Form1
         ra1cfg.Show()
     End Sub
 
-    Private Sub Button_cncnet_Click(sender As Object, e As EventArgs) Handles Button_cncnet.Click
+    Private Sub Button_cncnet_Click(sender As Object, e As EventArgs) Handles Button_ra1_cncnet.Click
         Process.Start("ra\cncnet5.exe")
     End Sub
 
-    Private Sub Button3_Click_1(sender As Object, e As EventArgs) Handles Button3.Click
+    Private Sub Button3_Click_1(sender As Object, e As EventArgs) Handles Button_ra1_skirmish.Click
         Process.Start("ra\ra95.exe", "-SKIRMISH")
     End Sub
 
@@ -410,7 +436,7 @@ Public Class Form1
         End If
     End Sub
 
-    Private Sub Button2_Click_1(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub Button2_Click_1(sender As Object, e As EventArgs) Handles Button_ra1_ext.Click
 
     End Sub
 End Class
