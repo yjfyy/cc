@@ -1,0 +1,9 @@
+﻿@echo off
+echo 正在更新...
+timeout 3 >nul
+up_data.exe
+timeout 3 > nul
+del up_data.exe
+echo 更新完成
+timeout 1 > nul
+start 西木经典游戏汉化纪念版.exe
