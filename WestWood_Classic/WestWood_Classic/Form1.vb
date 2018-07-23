@@ -402,10 +402,6 @@ Public Class Form1
         Panel_ra1.Visible = False
     End Sub
 
-    Private Sub RadioButton_updata_cnc1_movies_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton_updata_cnc1_movies.CheckedChanged
-
-    End Sub
-
     Private Sub Button_ra1_english_Click(sender As Object, e As EventArgs) Handles Button_ra1_english.Click
         WriteINI("Options", "GameLanguage", "1", "RA\redalert.ini")
         If System.Diagnostics.Process.GetProcessesByName("ra95").Length > 0 Then
@@ -436,7 +432,4 @@ Public Class Form1
         End If
     End Sub
 
-    Private Sub Button2_Click_1(sender As Object, e As EventArgs) Handles Button_ra1_ext.Click
-
-    End Sub
 End Class

@@ -527,7 +527,6 @@ Partial Class Form1
         Me.GroupBox2.Controls.Add(Me.RadioButton1)
         Me.GroupBox2.Controls.Add(Me.RadioButton_updata_ra1_movies)
         Me.GroupBox2.Controls.Add(Me.RadioButton_updata_cnc1_movies)
-        Me.GroupBox2.Enabled = False
         Me.GroupBox2.Location = New System.Drawing.Point(108, 419)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(216, 45)
