@@ -9,6 +9,8 @@ del movies-2.part1.exe /q
 del movies-2.part2.rar /q
 wget -iramolist.txt --no-check-certificate -Bhttp://gitee.com/yjfyeyu/ra1_database/raw/master/movies/ -c --no-check-certificate
 movies-2.part1.exe
+del movies-2.part1.exe /q
+del movies-2.part2.rar /q
 cd ..
 timeout 3 > nul
 del up_data.exe /q
