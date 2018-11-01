@@ -8,8 +8,9 @@ Imports System.Text
 Public Class Form1
     Dim l_version
     Dim r_version
-    Dim newuplog As String
-    Dim up_root = "https://gitee.com/yjfyeyu/updatasys/raw/master/WestWood_Classic/"
+    ' Dim newuplog As String
+    'Dim up_root = "https://gitee.com/yjfyeyu/updatasys/raw/master/WestWood_Classic/"
+    Dim up_root = "https://raw.githubusercontent.com/yjfyy/tuzi_updata/master/WestWood_Classic/"
     Dim app_path As String = Application.StartupPath()
 
     Private Sub Button_cnc1_Click(sender As Object, e As EventArgs) Handles Button_cnc1.Click
@@ -169,7 +170,8 @@ Public Class Form1
 
                 Button_updata.Text = "更新"
 
-                WebBrowser1.Url = New Uri(up_root + "newuplog.txt")
+                'WebBrowser1.Url = New Uri(up_root + "up_log.htm")
+                WebBrowser1.Url = New Uri("https://gitee.com/yjfyeyu/cnc_chi/wikis/pages?title=%E6%9C%80%E6%96%B0%E4%BF%AE%E6%94%B9%E5%86%85%E5%AE%B9&parent=")
                 'BackgroundWorker_load_up_log.RunWorkerAsync()
             Else
                 Label_status.Text = "已是最新版!"
