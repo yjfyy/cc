@@ -11,6 +11,8 @@ Public Class Form1
     ' Dim newuplog As String
     'Dim up_root = "https://gitee.com/yjfyeyu/updatasys/raw/master/WestWood_Classic/"
     Dim up_root = "https://raw.githubusercontent.com/yjfyy/tuzi_updata/master/WestWood_Classic/"
+    'Dim up_root = "https://gitlab.com/yjfyy/tuzi_updata/raw/master/WestWood_Classic/"
+
     Dim app_path As String = Application.StartupPath()
 
     Private Sub Button_cnc1_Click(sender As Object, e As EventArgs) Handles Button_cnc1.Click
@@ -139,7 +141,7 @@ Public Class Form1
 
     Private Sub BackgroundWorker_check_ver_DoWork(sender As Object, e As DoWorkEventArgs) Handles BackgroundWorker_check_ver.DoWork
         Dim dFile As New System.Net.WebClient
-        Dim upUri_version As New Uri(up_root + "version.txt")
+        Dim upUri_version As New Uri(up_root & "version.txt")
         Try
             r_version = dFile.DownloadString(upUri_version)
         Catch ex As Exception
