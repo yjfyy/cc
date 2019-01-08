@@ -64,6 +64,7 @@ Partial Class Form1
         Me.RadioButton1 = New System.Windows.Forms.RadioButton()
         Me.RadioButton_updata_ra1_movies = New System.Windows.Forms.RadioButton()
         Me.RadioButton_updata_cnc1_movies = New System.Windows.Forms.RadioButton()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.Panel_games_list.SuspendLayout()
         Me.Panel_up_log.SuspendLayout()
@@ -121,7 +122,7 @@ Partial Class Form1
         'LinkLabel1
         '
         Me.LinkLabel1.AutoSize = True
-        Me.LinkLabel1.Location = New System.Drawing.Point(542, 473)
+        Me.LinkLabel1.Location = New System.Drawing.Point(490, 473)
         Me.LinkLabel1.Name = "LinkLabel1"
         Me.LinkLabel1.Size = New System.Drawing.Size(245, 12)
         Me.LinkLabel1.TabIndex = 37
@@ -527,6 +528,7 @@ Partial Class Form1
         Me.GroupBox2.Controls.Add(Me.RadioButton1)
         Me.GroupBox2.Controls.Add(Me.RadioButton_updata_ra1_movies)
         Me.GroupBox2.Controls.Add(Me.RadioButton_updata_cnc1_movies)
+        Me.GroupBox2.Enabled = False
         Me.GroupBox2.Location = New System.Drawing.Point(108, 419)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(216, 45)
@@ -566,11 +568,21 @@ Partial Class Form1
         Me.RadioButton_updata_cnc1_movies.Text = "命令与征服"
         Me.RadioButton_updata_cnc1_movies.UseVisualStyleBackColor = True
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(741, 468)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(48, 23)
+        Me.Button1.TabIndex = 45
+        Me.Button1.Text = "捐助"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(801, 496)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.LinkLabel1)
@@ -643,4 +655,5 @@ Partial Class Form1
     Friend WithEvents RadioButton_updata_cnc1_movies As RadioButton
     Friend WithEvents RadioButton1 As RadioButton
     Friend WithEvents Button_ra1_english As Button
+    Friend WithEvents Button1 As Button
 End Class

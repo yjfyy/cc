@@ -173,7 +173,7 @@ Public Class Form1
                 Button_updata.Text = "更新"
 
                 'WebBrowser1.Url = New Uri(up_root + "up_log.htm")
-                WebBrowser1.Url = New Uri("https://gitee.com/yjfyeyu/cnc_chi/wikis/pages?title=%E6%9C%80%E6%96%B0%E4%BF%AE%E6%94%B9%E5%86%85%E5%AE%B9&parent=")
+                WebBrowser1.Url = New Uri("https://gitee.com/yjfyeyu/cnc_chi/raw/master/%E6%9C%80%E6%96%B0%E4%BF%AE%E6%94%B9%E5%86%85%E5%AE%B9.txt")
                 'BackgroundWorker_load_up_log.RunWorkerAsync()
             Else
                 Label_status.Text = "已是最新版!"
@@ -436,4 +436,7 @@ Public Class Form1
         End If
     End Sub
 
+    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
+        donate.Show()
+    End Sub
 End Class
