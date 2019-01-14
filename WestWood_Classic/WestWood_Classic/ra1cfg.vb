@@ -108,24 +108,37 @@
             WriteINI("ddraw", "windowed", "true", ".\RA\ddraw.ini")
         End If
 
-        Dim key As Microsoft.Win32.RegistryKey = Microsoft.Win32.Registry.CurrentUser.OpenSubKey("Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags", True)
-        Dim subkey As Microsoft.Win32.RegistryKey
-        subkey = key.CreateSubKey("Layers")
+
         If CheckBox_ra1_compat.Checked = True Then
 
             WriteINI("ra1", "compatibility", "1", ".\config.ini")
 
             If Form1.RadioButton_win10.Checked Then
+                Dim key As Microsoft.Win32.RegistryKey = Microsoft.Win32.Registry.CurrentUser.OpenSubKey("Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags", True)
+                Dim subkey As Microsoft.Win32.RegistryKey
+                subkey = key.CreateSubKey("Layers")
                 subkey.SetValue(app_path & "\RA\RA95.exe", "~ HIGHDPIAWARE WIN7RTM", Microsoft.Win32.RegistryValueKind.String)
 
             ElseIf Form1.RadioButton_win7.Checked Then
+                Dim key As Microsoft.Win32.RegistryKey = Microsoft.Win32.Registry.CurrentUser.OpenSubKey("Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags", True)
+                Dim subkey As Microsoft.Win32.RegistryKey
+                subkey = key.CreateSubKey("Layers")
                 subkey.SetValue(app_path & "\RA\RA95.exe", "WIN98", Microsoft.Win32.RegistryValueKind.String)
             Else
 
             End If
         Else
             WriteINI("ra1", "compatibility", "0", ".\config.ini")
-            subkey.SetValue(app_path & "\RA\RA95.exe", "", Microsoft.Win32.RegistryValueKind.String)
+            If Form1.RadioButton_winxp.Checked = False Then
+
+                Dim key As Microsoft.Win32.RegistryKey = Microsoft.Win32.Registry.CurrentUser.OpenSubKey("Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags", True)
+                Dim subkey As Microsoft.Win32.RegistryKey
+                subkey = key.CreateSubKey("Layers")
+
+                subkey.SetValue(app_path & "\RA\RA95.exe", "", Microsoft.Win32.RegistryValueKind.String)
+            End If
+
+
         End If
 
         WriteINI("ra1", "fristrun", "0", ".\config.ini")

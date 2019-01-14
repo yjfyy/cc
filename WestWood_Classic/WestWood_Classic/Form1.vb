@@ -69,7 +69,7 @@ Public Class Form1
             RadioButton_win7.Checked = True
         ElseIf Mid(os.Version.ToString, 1, 3) = "5.1" Then
             RadioButton_winxp.Checked = True
-            up_root = "http://code.taobao.org/svn/yxgcsj/trunk/WestWood_Classic/"
+            'up_root = "http://code.taobao.org/svn/yxgcsj/trunk/WestWood_Classic/"
         Else
             MsgBox("未能确认操作系统版本，请手动选择")
             GroupBox1.Enabled = True
@@ -172,8 +172,9 @@ Public Class Form1
 
                 Button_updata.Text = "更新"
 
-                'WebBrowser1.Url = New Uri(up_root + "up_log.htm")
-                WebBrowser1.Url = New Uri("https://gitee.com/yjfyeyu/cnc_chi/raw/master/%E6%9C%80%E6%96%B0%E4%BF%AE%E6%94%B9%E5%86%85%E5%AE%B9.txt")
+                WebBrowser1.Url = New Uri(up_root + "up_log.txt")
+
+                'WebBrowser1.Url = New Uri("https://gitee.com/yjfyeyu/cnc_chi/raw/master/%E6%9C%80%E6%96%B0%E4%BF%AE%E6%94%B9%E5%86%85%E5%AE%B9.txt")
                 'BackgroundWorker_load_up_log.RunWorkerAsync()
             Else
                 Label_status.Text = "已是最新版!"
