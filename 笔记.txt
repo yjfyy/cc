@@ -60,10 +60,10 @@ wget -ivqalistnb.txt --no-check-certificate -B=http://gitee.com/yjfyeyu/cc1_data
 
 
 
-    (English) - No additional .MIX file is loaded
-    (German) - germanlanguagepack.MIX is loaded
-    (German censored) - germancensoredlanguagepack.MIX is loaded
-    (German uncensored) - germanuncensoredlanguagepack.MIX is loaded
+1    (English) - No additional .MIX file is loaded
+2    (German) - germanlanguagepack.MIX is loaded
+3    (German censored) - germancensoredlanguagepack.MIX is loaded
+4    (German uncensored) - germanuncensoredlanguagepack.MIX is loaded
     (French) - frenchlanguagepack.MIX is loaded
     (Spanish) - spanishlanguagepack.MIX is loaded
     (Russian) - russianlanguagepack.MIX is loaded
