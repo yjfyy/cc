@@ -398,7 +398,19 @@ Public Class Form1
     End Sub
 
     Private Sub Button3_Click_1(sender As Object, e As EventArgs) Handles Button_ra1_skirmish.Click
-        Process.Start("ra\ra95.exe", "-SKIRMISH")
+        WriteINI("Options", "GameLanguage", "4", "RA\redalert.ini")
+        If System.Diagnostics.Process.GetProcessesByName("ra95").Length > 0 Then
+            MsgBox("请勿重复启动")
+        Else
+            'If My.Computer.FileSystem.FileExists("cnc95\ddraw.dll") Then
+
+            Process.Start("ra\ra95.exe", "-SKIRMISH")
+            'Else
+            'MsgBox("请在设置中打开ddraw")
+            'End If
+
+        End If
+        'Process.Start("ra\ra95.exe", "-SKIRMISH")
     End Sub
 
     Private Sub Button4_Click_1(sender As Object, e As EventArgs) Handles Button4.Click
