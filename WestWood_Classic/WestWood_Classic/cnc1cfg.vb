@@ -43,9 +43,9 @@
 
     Private Sub Button_reset_Click(sender As Object, e As EventArgs) Handles Button_reset.Click
         System.IO.File.WriteAllText(".\CnC95\conquer.ini", My.Resources.conquer)
-        System.IO.File.WriteAllText(".\CnC95\ddraw.ini", My.Resources.ddrawcnc1)
+        System.IO.File.WriteAllText(".\CnC95\ddraw.ini", My.Resources.ddraw)
         Read_ini()
-        CheckBox_cc1_compat.Checked = True
+        CheckBox_cc1_compat.Checked = False
     End Sub
 
     Private Sub Read_ini()
@@ -75,7 +75,13 @@
 
 
         If GetINI("ddraw", "windowed", "false", ".\CnC95\ddraw.ini") = "true" Then
-            RadioButton_windows.Checked = True
+            If GetINI("ddraw", "fullscreen", "true", ".\CnC95\ddraw.ini") = "true" Then
+                RadioButton_full_win.Checked = True
+            Else
+                RadioButton_windows.Checked = True
+            End If
+
+
         Else
             RadioButton_full.Checked = True
         End If
@@ -125,7 +131,15 @@
 
         If RadioButton_full.Checked = True Then
             WriteINI("ddraw", "windowed", "false", ".\CnC95\ddraw.ini")
-        Else
+        End If
+
+        If RadioButton_full_win.Checked = True Then
+            WriteINI("ddraw", "fullscreen", "true", ".\CnC95\ddraw.ini")
+            WriteINI("ddraw", "windowed", "true", ".\CnC95\ddraw.ini")
+        End If
+
+        If RadioButton_windows.Checked = True Then
+            WriteINI("ddraw", "fullscreen", "false", ".\CnC95\ddraw.ini")
             WriteINI("ddraw", "windowed", "true", ".\CnC95\ddraw.ini")
         End If
 
@@ -177,6 +191,10 @@
     End Sub
 
     Private Sub cnc1cfg_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
+
+    Private Sub CheckBox_cc1_compat_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox_cc1_compat.CheckedChanged
 
     End Sub
 

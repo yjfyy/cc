@@ -44,6 +44,7 @@ Partial Class ra1cfg
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Button_reset = New System.Windows.Forms.Button()
         Me.CheckBox_ra1_compat = New System.Windows.Forms.CheckBox()
+        Me.RadioButton_full_win = New System.Windows.Forms.RadioButton()
         Me.GroupBox4.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -186,7 +187,7 @@ Partial Class ra1cfg
         'RadioButton_windows
         '
         Me.RadioButton_windows.AutoSize = True
-        Me.RadioButton_windows.Location = New System.Drawing.Point(3, 39)
+        Me.RadioButton_windows.Location = New System.Drawing.Point(3, 61)
         Me.RadioButton_windows.Name = "RadioButton_windows"
         Me.RadioButton_windows.Size = New System.Drawing.Size(47, 16)
         Me.RadioButton_windows.TabIndex = 1
@@ -227,11 +228,12 @@ Partial Class ra1cfg
         '
         'GroupBox3
         '
+        Me.GroupBox3.Controls.Add(Me.RadioButton_full_win)
         Me.GroupBox3.Controls.Add(Me.RadioButton_windows)
         Me.GroupBox3.Controls.Add(Me.RadioButton_full)
         Me.GroupBox3.Location = New System.Drawing.Point(175, 110)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(95, 66)
+        Me.GroupBox3.Size = New System.Drawing.Size(95, 93)
         Me.GroupBox3.TabIndex = 9
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "显示模式"
@@ -267,12 +269,23 @@ Partial Class ra1cfg
         'CheckBox_ra1_compat
         '
         Me.CheckBox_ra1_compat.AutoSize = True
-        Me.CheckBox_ra1_compat.Location = New System.Drawing.Point(178, 182)
+        Me.CheckBox_ra1_compat.Location = New System.Drawing.Point(178, 213)
         Me.CheckBox_ra1_compat.Name = "CheckBox_ra1_compat"
         Me.CheckBox_ra1_compat.Size = New System.Drawing.Size(108, 16)
         Me.CheckBox_ra1_compat.TabIndex = 7
         Me.CheckBox_ra1_compat.Text = "自动设置兼容性"
         Me.CheckBox_ra1_compat.UseVisualStyleBackColor = True
+        '
+        'RadioButton_full_win
+        '
+        Me.RadioButton_full_win.AutoSize = True
+        Me.RadioButton_full_win.Location = New System.Drawing.Point(3, 39)
+        Me.RadioButton_full_win.Name = "RadioButton_full_win"
+        Me.RadioButton_full_win.Size = New System.Drawing.Size(71, 16)
+        Me.RadioButton_full_win.TabIndex = 2
+        Me.RadioButton_full_win.TabStop = True
+        Me.RadioButton_full_win.Text = "全屏窗口"
+        Me.RadioButton_full_win.UseVisualStyleBackColor = True
         '
         'ra1cfg
         '
@@ -320,4 +333,5 @@ Partial Class ra1cfg
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents Button_reset As Button
     Friend WithEvents CheckBox_ra1_compat As CheckBox
+    Friend WithEvents RadioButton_full_win As RadioButton
 End Class

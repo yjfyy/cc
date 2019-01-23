@@ -159,10 +159,9 @@
     </None>
     <None Include="bin\Release\CnC95\conquer.ini" />
     <None Include="bin\Release\CnC95\ddraw.ini" />
-    <None Include="ini\ddrawra1.ini" />
     <None Include="ini\redalert.ini" />
     <None Include="ini\conquer.ini" />
-    <None Include="ini\ddrawcnc1.ini" />
+    <None Include="ini\ddraw.ini" />
     <None Include="lver">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

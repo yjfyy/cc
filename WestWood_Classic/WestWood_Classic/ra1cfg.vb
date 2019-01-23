@@ -22,7 +22,7 @@
 
     Private Sub Button_reset_Click(sender As Object, e As EventArgs) Handles Button_reset.Click
         System.IO.File.WriteAllText(".\RA\redalert.ini", My.Resources.redalert)
-        System.IO.File.WriteAllText(".\RA\ddraw.ini", My.Resources.ddrawra1)
+        System.IO.File.WriteAllText(".\RA\ddraw.ini", My.Resources.ddraw)
         read_ini()
         CheckBox_ra1_compat.Checked = True
     End Sub
@@ -54,7 +54,12 @@
 
 
         If GetINI("ddraw", "windowed", "false", ".\RA\ddraw.ini") = "true" Then
-            RadioButton_windows.Checked = True
+            If GetINI("ddraw", "fullscreen", "true", ".\RA\ddraw.ini") = "true" Then
+                RadioButton_full_win.Checked = True
+            Else
+                RadioButton_windows.Checked = True
+            End If
+
         Else
             RadioButton_full.Checked = True
         End If
@@ -104,7 +109,15 @@
 
         If RadioButton_full.Checked = True Then
             WriteINI("ddraw", "windowed", "false", ".\RA\ddraw.ini")
-        Else
+        End If
+
+        If RadioButton_full_win.Checked = True Then
+            WriteINI("ddraw", "fullscreen", "true", ".\RA\ddraw.ini")
+            WriteINI("ddraw", "windowed", "true", ".\RA\ddraw.ini")
+        End If
+
+        If RadioButton_windows.Checked = True Then
+            WriteINI("ddraw", "fullscreen", "false", ".\RA\ddraw.ini")
             WriteINI("ddraw", "windowed", "true", ".\RA\ddraw.ini")
         End If
 
@@ -117,13 +130,13 @@
                 Dim key As Microsoft.Win32.RegistryKey = Microsoft.Win32.Registry.CurrentUser.OpenSubKey("Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags", True)
                 Dim subkey As Microsoft.Win32.RegistryKey
                 subkey = key.CreateSubKey("Layers")
-                subkey.SetValue(app_path & "\RA\RA95.exe", "~ HIGHDPIAWARE WIN7RTM", Microsoft.Win32.RegistryValueKind.String)
+                subkey.SetValue(app_path & "\RA\RA95.exe", "~ WIN7RTM", Microsoft.Win32.RegistryValueKind.String)
 
             ElseIf Form1.RadioButton_win7.Checked Then
                 Dim key As Microsoft.Win32.RegistryKey = Microsoft.Win32.Registry.CurrentUser.OpenSubKey("Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags", True)
                 Dim subkey As Microsoft.Win32.RegistryKey
                 subkey = key.CreateSubKey("Layers")
-                subkey.SetValue(app_path & "\RA\RA95.exe", "WIN98", Microsoft.Win32.RegistryValueKind.String)
+                subkey.SetValue(app_path & "\RA\RA95.exe", "", Microsoft.Win32.RegistryValueKind.String)
             Else
 
             End If

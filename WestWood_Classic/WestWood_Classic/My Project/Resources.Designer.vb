@@ -120,52 +120,26 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  查找类似 [ddraw]
-        '''; stretch to custom resolution, 0 = defaults to the size game requests
+        '''  查找类似 ; cnc-ddraw - https://github.com/CnCNet/cnc-ddraw - https://cncnet.org
+        '''
+        '''[ddraw]
+        '''; ### Optional settings ###
+        '''; Use the following settings to adjust the look and feel to your liking
+        '''
+        '''
+        '''; Stretch to custom resolution, 0 = defaults to the size game requests
         '''width=0
         '''height=0
-        '''; override width/height and always stretch to fullscreen
-        '''fullscreen=false
-        '''; bits per pixel, possible values: 16, 24 and 32, 0 = auto
-        '''bpp=0
-        '''windowed=false
-        '''; show window borders in windowed mode
-        '''border=true
-        '''; maintain aspect ratio
-        '''maintas=true
-        '''; use letter- or windowboxing to make a best fit
-        '''boxing=false
-        '''; real rendering rate, -1 = screen rate, 0 = unlimited (GDI), 0 = 125 (OpenGL), n = cap
-        '''; Note:  [字符串的其余部分被截断]&quot;; 的本地化字符串。
+        '''
+        '''; Override the width/height settings shown above and always stretch to fullscreen
+        '''; Note: Can be combined with &apos;windowed=true&apos; to get windowed-fullscreen aka borderless mode
+        '''fullscreen=true
+        '''
+        '''; Run in windowed mode rather than  [字符串的其余部分被截断]&quot;; 的本地化字符串。
         '''</summary>
-        Friend ReadOnly Property ddrawcnc1() As String
+        Friend ReadOnly Property ddraw() As String
             Get
-                Return ResourceManager.GetString("ddrawcnc1", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  查找类似 [ddraw]
-        '''; stretch to custom resolution, 0 = defaults to the size game requests
-        '''width=0
-        '''height=0
-        '''; override width/height and always stretch to fullscreen
-        '''fullscreen=false
-        '''; bits per pixel, possible values: 16, 24 and 32, 0 = auto
-        '''bpp=0
-        '''windowed=false
-        '''; show window borders in windowed mode
-        '''border=true
-        '''; maintain aspect ratio
-        '''maintas=true
-        '''; use letter- or windowboxing to make a best fit
-        '''boxing=false
-        '''; real rendering rate, -1 = screen rate, 0 = unlimited (GDI), 0 = 125 (OpenGL), n = cap
-        '''; Note:  [字符串的其余部分被截断]&quot;; 的本地化字符串。
-        '''</summary>
-        Friend ReadOnly Property ddrawra1() As String
-            Get
-                Return ResourceManager.GetString("ddrawra1", resourceCulture)
+                Return ResourceManager.GetString("ddraw", resourceCulture)
             End Get
         End Property
         
@@ -225,12 +199,12 @@ Namespace My.Resources
         '''<summary>
         '''  查找类似 @echo off
         '''echo 正在更新...
-        '''timeout 2 &gt;nul
+        '''ping -n 4 127.0.0.1&gt;nul
         '''up_data.exe
-        '''timeout 2 &gt; nul
-        '''del up_data.exe
+        '''ping -n 4 127.0.0.1&gt;nul
+        '''del up_data.exe /q
         '''echo 更新完成
-        '''timeout 1 &gt; nul
+        '''ping -n 2 127.0.0.1&gt;nul
         '''start 西木经典游戏汉化纪念版.exe 的本地化字符串。
         '''</summary>
         Friend ReadOnly Property up() As String
@@ -244,8 +218,14 @@ Namespace My.Resources
         '''echo 正在更新...
         '''timeout 2 &gt;nul
         '''up_data.exe
+        '''echo 开始更新动画包
+        '''cd cnc95\chi
+        '''del *.vqa /q
+        '''del *.vqp /q
+        '''wget -ivqalist.txt --no-check-certificate -Bhttps://github.com/yjfyy/cc1_database/raw/master/movies/ -c --no-check-certificate
+        '''cd ..\..
         '''timeout 2 &gt; nul
-        '''del up_data.exe
+        '''del up_data.exe /q
         '''echo 更新完成
         '''timeout 1 &gt; nul
         '''start 西木经典游戏汉化纪念版.exe 的本地化字符串。
@@ -259,10 +239,22 @@ Namespace My.Resources
         '''<summary>
         '''  查找类似 @echo off
         '''echo 正在更新...
-        '''timeout 2 &gt;nul
+        '''timeout 3 &gt;nul
         '''up_data.exe
-        '''timeout 2 &gt; nul
-        '''del up_data.exe
+        '''echo 开始更新动画包
+        '''cd RA
+        '''del movies-2.mix /q
+        '''del movies-2.part1.exe /q
+        '''del movies-2.part2.rar /q
+        '''del movies-2.part3.rar /q
+        '''wget -iramolist.txt --no-check-certificate -Bhttps://github.com/yjfyy/ra1_database/raw/master/movies/ -c --no-check-certificate
+        '''movies-2.part1.exe
+        '''del movies-2.part1.exe /q
+        '''del movies-2.part2.rar /q
+        '''del movies-2.part3.rar /q
+        '''cd ..
+        '''timeout 3 &gt; nul
+        '''del up_data.exe /q
         '''echo 更新完成
         '''timeout 1 &gt; nul
         '''start 西木经典游戏汉化纪念版.exe 的本地化字符串。
