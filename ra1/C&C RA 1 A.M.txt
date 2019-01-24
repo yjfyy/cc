@@ -1,0 +1,1025 @@
+http://cnc.wikia.com/wiki/
+
+http://www.myra2.com/ra2miji/20150804/11094_8.html
+
+https://megagames.com/download-ready/330972/0
+
+Command and Conquer Red Alert
+
+A.M = The Aftermath  劫后余生
+C.S = CountersStrike 反戈一击
+
+【A.M】【 Ailles / 盟军 】
+ 
+01 Harbor Reclamation     / 开拓港
+
+02 In the Nick of Time    / 紧要关头
+
+03 Caught In the Act      / 被抓现行
+
+04 Production Disruption  / 破坏生产
+
+05 Negotiations           / 谈判行动
+
+06 Monster Tank Madness   / 疯狂坦克
+
+07 Time Flies             / 时刻穿越
+
+08 Absolute M.A.D.ness    / 同归于尽 (？)
+
+09 PAWN                   / 棋局
+
+========================
+
+[01] 简报
+General Stavros has elected you to lead
+an attack on a strategic harbor the 
+Soviets have overrun and fortified.
+
+You will have to move quickly, for the 
+minute that the Soviets realize that you 
+are in the area, all hell will break loose.
+
+The nearby town is somewhat sympathetic 
+to the Soviet cause so you may want to 
+keep close watch on them. If any of them
+try to inform the Soviets of your 
+presence, you have permission to 
+terminate the informants.
+
+[*] 任务提示
+You'er been detected
+Kill the enemy spy
+
+=====译文=====
+
+[01] 简报
+“斯塔夫罗斯”将军推举你，
+指挥攻击一处苏军戒备森严的战略港口。
+
+
+
+
+
+你须速战速决，一旦苏军发现你，
+将对你进行疯狂反扑。
+
+附近镇子里有亲敌份子，密切监视他们。
+如果他们向苏军告发你，你有权干掉告密者。
+
+（Stavros = 斯塔夫罗斯 ，即 Nikos Stavros  = 尼克斯 斯塔夫罗斯）
+
+[*] 任务提示
+
+========================
+
+[02] 简报
+The situation is critical! The Soviets have 
+taken over a small research base in the 
+north. During the conflict, a chronosphere 
+was badly damaged. We fear it could 
+explode.
+
+Inside the base is a group of scientists 
+that were captured during the takeover. 
+They must be rescued before the 
+chronosphere explode. Fight your way 
+back into the base and retrieve them.
+
+Be careful -- there is only one way in and 
+out of the base, a long bridge. It must be 
+protected to ensure evacuation.
+
+[*] 任务提示
+Prisoners freed.
+
+=====译文=====
+
+[02] 简报
+形势危急！苏军占领了北方的一处小型研究基地。
+交火时，“超时空传送器”受到严重破坏。
+我们担心它会爆炸。
+
+
+
+
+
+基地内有一群在研究过程中被俘的科学家。
+他们必须在“超时空传送器”爆炸前获救。
+杀回基地解救他们。
+
+
+
+
+
+留神 -- 进出基地唯大桥一条路。
+必须保护大桥完成疏散。
+
+[*] 任务提示
+俘虏获释.
+
+========================
+
+[03] 简报
+TO: FIELD COMMANDER A9
+RE: TANYA COVERT OP.
+
+SOVIETS HAVE DISCOVERED OUR 
+ATTEMPT TO HINDER NEW WEAPON 
+DEVELOPMENT. TANYA IN JEOPARDY. 
+HOWEVER, MISSION MUST BE 
+COMPLETED. ALL SOVIET RESEARCH
+CENTERS MUST BE DESTROYED.
+
+REINFORCEMENTS WILL BE PROVIDED 
+WHEN POSSIBLE. EXPECT SOME HELP 
+FROM FORCES AMONG THE LOCALS.
+
+COMPLETE THE MISSION, AND GET TANYA 
+BACK IN ONE PIECE.
+
+[*] 任务提示
+Soviet forces approaching.
+Destroy all technology centers.
+Prisoners freed.
+
+=====译文=====
+
+[03] 简报
+发给：A9战区指挥官A9
+
+转发：谭雅隐蔽点
+
+苏军已发现我们尝试阻碍其新武器的研发。
+谭雅身处险境。然而，任务必须完成。
+必须摧毁所有苏军的研发中心。
+
+
+可能时将有增援到达。
+当地部队预计会有援助。
+
+
+完成任务，让谭雅平安归来。
+
+( RE = Retransmit/转发 , OP = Observation Post/观察哨 ?)
+
+[*] 任务提示
+苏军逼近
+摧毁所有科技中心
+俘虏获释.
+
+========================
+
+[04] 简报
+The Soviets are beginning construction of 
+a new class of submarine capable of 
+launching sea-to-ground missiles. We don't 
+have to tell you the amount of 
+devastation these could cause.
+
+Take a small squad of troops and 
+infiltrate their power grid. When it is 
+down, additional reinforcements will be 
+sent in.
+
+When ready, head north and destroy their 
+Sub pen, preventing further construction 
+of these subs. If any are built, they must 
+not be allowed to escape!
+
+[*] 任务提示
+Destroy power to Tesla Coils.
+Prisoners freed.
+
+=====译文=====
+
+[04] 简报
+苏军开始制造一种能发射海地导弹的新型潜艇。
+我们不必告诉你他们可能造成的破坏。
+
+
+
+
+
+带一小队部队，渗透他们的电力网。
+断电后，将有援军到达。
+
+
+
+
+
+准备好后，摧毁苏军北方的潜艇船坞，阻止新潜艇的建造。
+如有建成，必须予以摧毁！
+
+[*] 任务提示
+切断磁暴线圈的电力
+
+========================
+
+[05] 简报
+A Soviet force has holed up in a small 
+town, threatening to kill a hostage every 5 
+minutes until their demands are met. We 
+do not negotiate with terrorists -- explain 
+this to them.
+
+Locate the hostages, free as many of 
+them as you can, and get them safely to 
+a nearby abandoned Church. Once done, 
+return to your drop-off point, signal for 
+reinforcements, and finish off the Soviet 
+forces.
+
+[*] 任务提示
+Locate & free hostages.
+Thank you! I'll help you get into town!
+Follow me!
+Uh no, a patrol is coming this way.
+Come this way! Hurry!
+It's safe to move now. Let's go.
+Get hostages to church
+Signal for reinforcements
+
+=====译文=====
+
+[05] 简报
+一支苏军部队藏在一处小镇，
+威胁每5分钟处死一名人质，
+直到他们的要求被满足。
+我们不与恐怖分子谈判
+—— 向他们表明这点。
+
+
+
+找到人质，尽可能解救他们，
+并安全送到附近的废教堂。
+一旦完成，返回降落点，
+给援军发信号，围歼敌人。
+
+[*] 任务提示
+找到并解救人质。
+谢谢你！ 我来帮你进镇！
+不，巡逻队过来了。
+快，这边走。
+安全了，出发。
+把人质带到教堂
+给援军发信号
+
+========================
+
+[06] 简报
+Dr. Demitri, creator of the new Soviet 
+Super Tank, wants to defect. We planned 
+to extract him while the Soviets were 
+testing their new weapon, but something 
+has gone wrong.
+
+The Super Tanks are out of control, and 
+Demitri is missing -- likely hiding in the 
+village to the far south. Find our outpost 
+and start repairs on it, then find and 
+evacuate Demitri.
+
+As for the tanks, we can reprogram them. 
+Send a spy into the Soviet radar dome in 
+the NE, turning the tanks on their 
+creators.
+
+[*] 任务提示
+Find and repair Allied outpost.
+Find and evacuate Dr.Demetri.
+
+=====译文=====
+
+[06] 简报
+苏军超级坦克发明者迪米特里博士想要投诚。
+我们计划苏军测试新坦克时解救他，但出了岔子。
+
+
+坦克失控，博士失踪 —— 可能藏于南头村庄里。
+找到我军哨所并修复，然后找到并疏散博士。
+
+
+
+
+
+至于坦克，我们可将其再编程。
+派特工潜入北方的苏军雷达站，让坦克对付苏军。
+                
+（ Demitri = 迪米特里 ）
+
+[*] 任务提示
+找到修复盟军哨所
+找到疏散博士
+
+========================
+
+[07] 简报
+The Soviets are planning an A-bomb strike 
+on London. Their silos are located on an 
+island that has only one beach access 
+point, which is guarded. We could air lift 
+in units, but SAM sites on nearby islands 
+prevent this. Our only option is the 
+Chronotank.
+
+Use the tank's ability to chronoshift itself 
+to destroy the radar domes that control 
+the SAM sites. Once dealt with, Tanya 
+will arrive to soften the large island's 
+defenses. With power down, an MCV will 
+arrive to help you destroy the missile 
+site.
+
+
+[*] 任务提示
+Destroy the Rader Domes that control the SAM Sites.
+
+=====译文=====
+
+[07] 简报
+苏军正计划对伦敦进行核打击。
+
+核弹井设在一个只有一处登陆滩的岛上，并被把守着。
+
+
+临岛上的防空导弹阻止我们空投部队。
+
+
+我们唯一的选择是超时空坦克。
+
+
+
+
+
+用坦克的传送能力摧毁控制导弹的雷达站。
+
+
+一旦拿下，谭雅将前来重创敌人的防御。
+
+
+断其供电，基地车将前来助你摧毁导弹。
+                
+[*] 任务提示
+摧毁控制导弹的雷达站。
+
+
+========================
+
+[08] 简报
+Covert Order 24-H:
+
+The Soviets are developing a new tanks 
+that sends shockwaves throughout the 
+area, damaging everything around it. We 
+must halt development of this weapon.
+
+Direct your spy into all 3 Soviet Intel 
+centers, which will reveal the location of 
+the tank's remote control station. Once 
+found, destroy it. This will stop 
+production of the tanks, allowing you to 
+destroy the facility.
+
+The Soviet tank's are protected by the 
+Iron Curtain -- be sure to destroy it.
+
+
+[*] 任务提示
+Mad Tank detonation imminent!
+Intruder Alert! Release the dogs!
+Data recieved & Triangulation complete. 
+Location of control center is in the
+southeast. Look for the flares & 
+destroy the center ! 
+
+=====译文=====
+
+[08] 简报
+机密命令 24-H：
+
+
+
+
+苏军正在研发新型坦克，它发射冲的击波遍及这个区域，破坏四周的一切。
+我们必须阻止坦克的研发。
+
+
+
+
+
+指挥特工入潜入全部3处苏军网络中心，找到坦克控制站所在。
+一旦找到，加以消灭。摧毁所有设施，这将终止坦克的建造。
+
+
+坦克被
+
+
+苏军铁幕装甲保护 —— 务必摧毁。
+
+（ M.A.D Tank = Mutually Assured Destruction Tank / 同归于尽坦克/地震坦克 ）
+                
+[*] 任务提示
+地震坦克爆震袭来！
+入侵者，放出军犬！
+数据已接收，三角定位成功。
+锁定控制中心在东南方向。
+寻找标记位置，予以摧毁！
+
+========================
+
+[09] 简报
+Acting on misinformation we've provided, 
+the Soviets have sent a division into our 
+area to deal with what they think is a 
+heavy weapons facility. It's not -- it's a 
+fake, but we want them to be believe it's 
+real.
+
+Defend our fake base until reinforcements 
+can arrive to assist you. When they 
+arrive, destroy their Radar Dome to 
+prevent further reinforcements, then finish them 
+off.
+
+
+[*] 任务提示
+Defend base until reinforcements arrive.
+Destroy all Soviet units and structures
+
+=====译文=====
+
+[09] 简报
+经我们假情报的引诱，苏军派了一个师进入我们的领域，
+摧毁他们以为的重武器设施。它不是 —— 但我们希望敌人相信。
+
+
+
+
+
+防守假基地，直到援军到达。援军到后，摧毁苏军雷达站防止其求援，
+然后围歼敌人。
+                
+[*] 任务提示
+防守基地直到援军到达。
+消灭所有苏军部队和建筑
+
+========================
+
+
+【A.M】【 Soviet / 苏军 】
+
+01 Testing Grounds           /   测试场
+
+02 Shock Therapy             /   电击治疗
+
+03 Let's Make a Steal        /   渗透行动
+ 
+04 Test Drive                /   试驾
+
+05 Don't Drink The Water     /   别喝水   
+
+06 Situation Critical        /   十万火急
+
+07 Brothers in Arms          /   兄弟连 
+ 
+08 Deus Ex Machina           /   解救人质  
+ 
+09 Grunyev Revolution        /   格伦耶夫(省)革命
+
+========================
+
+[01] 简报
+The Allied pigs have developed a new 
+weapon called the Chronotank. This 
+weapon appears to share technology with 
+their despised Chronosphere, allowing it to 
+chronoshift by itself.
+
+They are testing this new weapon on an 
+island that rightfully belongs to the Soviet 
+Empire. New weapon or not, this island 
+will be ours.
+
+Establish a base and deploy your troops 
+accordingly. The Allies have the advantage 
+of a natural ridge barrier, but do not let 
+it stop you. Let no trace of the allies 
+remain on our island.
+
+[*] 任务提示
+Build your base
+
+=====译文=====
+
+[01] 简报
+盟军畜生研制出种新武器，叫“超时空坦克”。
+
+
+这种武器似乎使用他们卑劣的超时空传送技术，可以自行传送。
+
+
+
+
+
+他们正在一个应属于苏联帝国的岛上测试新武器。
+确实与否，这岛都将是我们的。
+
+
+
+
+
+建立基地并部署你的部队。盟军的优势是山地屏障，不要被它阻挡。
+清除岛上所有的盟军痕迹。
+
+[*] 任务提示
+建立你的基地
+
+========================
+
+[02] 简报
+A small border town has been voicing 
+support for the Allied cause. These people 
+are no longer Soviets, but enemies to our 
+great empire. As enemies, they must be 
+destroyed.
+
+Take Stalin's elite Shock Troopers and 
+show them the iron might of the Soviet 
+army. No doubt, the rabble will seek help 
+from the minute Allied influence in the 
+area.
+
+Whatever pathetic support they can
+muster, it will not be enough. Crush them 
+all--let nothing stop you.
+
+[*] 任务提示
+Clear the area of all opposition.
+DESTROY THE TOWN! KILL EVERYTHING!
+
+=====译文=====
+
+[02] 简报
+一个边陲小镇一直在支持盟军。
+他们不再是苏联人，是我们伟大帝国的敌人。
+作为敌人，必须消灭。
+
+
+
+带着斯大林的精英电击兵，向他们展示苏军的铁腕。
+毫无疑问，叛徒将向该地贫弱的盟军寻求援助。
+
+
+
+
+
+无论盟军能给以何种微弱援助，这都是不够的。
+碾碎他们，不被任何事物所阻挡。
+
+[*] 任务提示
+清除所有敌对势力。
+摧毁小镇！消灭一切！
+
+========================
+
+[03] 简报
+Our spy has informed us of a new 
+technology the Allied forces are 
+developing. Stalin wishes to acquire it.
+
+Use Volkov to steal this prototype 
+vehicle, and make sure they will not be 
+able to reproduce it. Destroy the 
+production facility after stealing the plans 
+for the vehicle, and then bring Stalin his 
+new toy.
+
+Do not fail us.
+
+[*] 任务提示
+Infiltrate the research center
+Plans stolen...erasing all data.
+Powering up vehicle
+You've been detected
+Hurry and leave!
+
+=====译文=====
+
+[03] 简报
+我们的特工报告盟军研发的新技术。
+斯大林希望得到它。
+
+
+让沃尔科夫俘获原型车，并确保他们不能再造。
+获取武器计划后摧毁研发设施，并把原型车带回给斯大林。
+
+
+
+
+
+不要辜负我们。
+
+（Volkow = 沃尔科夫）
+
+[*] 任务提示
+渗透进研究中心
+计划被盗...销毁所有资料
+车辆已充能
+
+你被发现了
+
+
+快走！
+
+========================
+
+[04] 简报
+Stalin wishes to field-test a newly 
+acquired vehicle against the Allied dogs. 
+This vehicle is capable of bending light 
+around its hull, "phasing" out of the 
+visible spectrum.
+
+Take this vehicle, and infiltrate the Allied 
+base. For this test, destroy their radar 
+dome and tech center, bringing their 
+communications down. Once you have done this, 
+reinforcements will be sent in to 
+wipe out the base.
+
+If you do not return with the vehicle 
+intact, do not return at all.
+
+[*] 任务提示
+Clear the way!
+Reinforcements arrive in 10 minutes.
+Destroy all remaining forces
+
+=====译文=====
+
+[04] 简报
+斯大林希望现场测试新俘获的原型车对抗盟军狗。
+这辆车能够扭曲周身光线，“反射”可见光。
+
+
+
+
+
+用原型车，渗透到盟军基地。
+为了测试成功，摧毁盟军的雷达站和技术中心，
+切断他们的通讯。一旦完成，将派援军摧毁基地。
+
+
+
+
+
+如不能带回原型车，就不用回来了。
+
+[*] 任务提示
+清出道路
+增援10分后到达
+消灭残余敌人
+
+========================
+
+[05] 简报
+The Allies are developing a new 
+Chrono-based weapon at a nearby facility. 
+Crushing them would be a simple matter, 
+but they are well defended, and all our 
+attempts at assault have met with 
+defeat. Time for a new approach.
+
+Capture the chronosphere, and use it to
+ send an MCV to the large island. Once 
+there, capture the research facility, and 
+destroy the base.
+
+Use the supply truck to poison the water 
+supply via the waterfalls above the town. 
+With the base dead, it will be easy to 
+capture the chronosphere.
+
+[*] 任务提示
+Poison Allied water supply.
+Capture Allied chronosphere
+Destroy Research Center
+
+=====译文=====
+
+[05] 简报
+盟军正在附近设施研发新的超时空武器。
+粉碎他们将是一件简单的事情，但他们防御完备，我们的进攻受挫。
+是时候用新方法了。
+
+
+
+
+
+俘获超时空传送器，并用它把基地车传送到对面大岛。
+一旦到达，占领研究设施，并摧毁基地。
+
+
+
+
+
+用补给车给自村庄旁流过的瀑布水下毒。
+随着基地驻军被毒死，将会轻易占领超时空传送器。
+
+
+
+
+
+[*] 任务提示
+给盟军供水下毒。
+
+占领盟军超时空传送器
+破坏研究中心
+
+========================
+
+[06] 简报
+A radical faction of our forces has stolen 
+a biological weapon, threatening to use it 
+on Allied emplacements. Since the weapon
+is highly unstable, it could destroy us all 
+if released.
+
+The facility must be destroyed, but the 
+weapon must be neutralized first. Destroy 
+the island's defenses, then use Volkov to 
+assist our scientist in reaching the bio-
+research center. If either are killed before 
+the weapon is neutralized, the mission is 
+a failure.
+
+Once the scientist completes his mission, 
+destroy the base.
+
+[*] 任务提示
+Destroy power to Tesla Coils
+Infiltrate Bio-Research facility.
+Plans stolen...erasing all data.
+Destroy all SAM sites.
+RUN FOR IT!
+
+=====译文=====
+
+[06] 简报
+我们军的激进派别偷走了一种生物武器，
+威胁要在盟军炮台上使用。武器极度不稳定，
+如泄漏它可把我们和敌人一起摧毁。
+
+
+
+
+
+该设施必须销毁，但必须先中和生武。
+摧毁海岛防御，让沃尔科夫送我军科学家到生物研究中心。
+生武中和前科学家必须存活。
+
+
+
+
+
+一旦科学家中和完毕，摧毁基地。
+
+
+
+
+
+（Volkow = 沃尔科夫）
+
+[*] 任务提示
+切断“磁爆线圈”电力来源。
+渗透进生物研究设施。
+计划被盗...销毁所有资料。
+摧毁所有防空导弹。
+躲避空袭！
+
+========================
+
+[07] 简报
+The Molotov brothers, prominent arms 
+dealers for our comrades in foreign lands, 
+are suspected of having dealings with the 
+Allies. Such an idea is preposterous, but 
+the Molotov brothers have access to 
+sensitive information, and we must know 
+the truth of the matter.
+
+Use your spy to infiltrate the compound 
+and observe the brothers activities.
+
+If they are indeed involved with the 
+Allies, return to your drop-off point, 
+signal for reinforcements, and deal with 
+them as all traitors are. Kill them.
+
+[*] 任务提示
+Eavesdrop on the Molotov Brothers.
+Brother! Come here! Guards report. 
+a plane passed by recently!
+Planes "passing by"don't concern me.
+Have you heard from our customers?
+They're asking for more information.
+They are getting too demanding!
+Hmm. You may be right. Let's discuss
+this somewhere a bit more private. Come.
+So Yuri. what did they want now? More
+information on troop movements?
+Yes. They're getting nervous about the
+troop massings on the eastern borders.
+Hey! Who's that?! He's not one of ours!
+Signal for reinforcements!
+Stop him! Release the dogs!
+Daniel, you idiot! You killed the dogs!
+Stop him! Release the dogs!
+Destroy the Molotov Brothers' base.
+
+=====译文=====
+
+[07] 简报
+莫洛托夫兄弟是我们外国战友的重要军火商，
+他们涉嫌与盟军交易。这想法是荒谬的，
+但莫洛托夫兄弟有权获得敏感情报，
+我们必须知道真相。
+
+
+
+
+
+让你的特工潜入基地，监视兄弟俩的活动。
+
+
+
+
+
+如他们真的通敌，返回你的撤离点，给增援发信号，
+像对所有叛徒一样，干掉他们。
+
+[*] 任务提示
+窃听摩洛托夫兄弟。
+
+
+兄弟！过来！警卫报告。
+
+
+不久前有架飞机飞过！
+
+
+我不关心飞机“经过”。
+
+
+你从客户那听说了吗？
+
+
+他们索要更多情报。
+
+
+他们太苛求了！
+嗯，你可能是对的。
+让我们在私密点的地方讨论这个。来吧。
+
+
+所以尤里。他们现在想要什么？
+更多部队调动的情报？
+
+
+对。他们对部队在东部边境集结感到紧张。
+
+
+嘿！谁在那？他不是我们的人！
+
+呼叫增援！
+
+
+拦住他！放军犬！
+
+
+丹尼尔，你这白痴！你错杀了军犬！
+
+拦住他！放军犬！
+
+（Molotov brothers = 摩洛托夫兄弟 Yuri = 尤里  Daniel = 
+丹尼尔）
+
+========================
+
+[08] 简报
+The Allies have captured Volkov in an 
+attempt to learn the secrets of his
+construction. This is not allowed.
+
+Destroy the four Allied radar sites in the 
+area, allowing us to reactivate our 
+tracking devices and locate Volkov. Once 
+located, send a scientist into the structure 
+to reactivate him. Guide him to our 
+chinook, where he will be airlifted out of
+the area. Once safe, destroy all Allied 
+forces in the area.
+
+Hurry. If the Allies discover Volkov's 
+control codes, he will have to be 
+destroyed as well.
+
+[*] 任务提示
+Volkov Contacted! His location is in a 
+Fake Factory in the East! Look for the 
+Flares & infiltrate it with scientists!
+
+=====译文=====
+
+[08] 简报
+盟军逮捕了沃尔科夫，试图获知他的建造秘密。
+这是不允许的。
+
+
+
+
+
+摧毁该地区的四个盟军雷达站，
+让我们重新追踪并定位沃尔科夫。
+一旦定位，派科学家进入设施重新激活他。
+引导他到登上奇努克直升机安全撤离。
+之后摧毁该地区所有盟军。
+
+
+
+
+
+赶快。若盟军发现沃尔科夫的控制码，他也必须被摧毁。
+
+
+
+
+
+（Volkow = 沃尔科夫）
+
+[*] 任务提示
+连接到沃尔科夫！他在东北一处假军工厂里。
+寻找标记并让科学家潜入那里。
+
+========================
+
+[09] 简报
+Citizens within the Grunyev province have 
+been speaking out against Soviet 
+involvement in Western Europe. Silence 
+them.
+
+Take a force into the area and eliminate 
+any dissidents. We have received reports 
+that the civilians may be armed, but 
+against the might of the Soviet Empire, no 
+force they can muster will protect them.
+
+See to it that they serve as an example 
+to others. Eliminate them all -- men,
+women, and children.
+
+[*] 任务提示
+This war is wrong! Down with Stalin!
+Red Alert! Civilian heavy weaponry 
+detected. Head Northeast immediately 
+for reinforcements. Repeat!  Head north-
+east immediately for reinforcements!
+We wish freedom from the Regime!
+
+=====译文=====
+
+[09] 简报
+格伦耶夫省的居民一直反对苏军进入西欧。
+肃清他们。
+
+
+
+
+
+向该地区派遣一支部队，消灭任何反对者。
+我们接到报告说，平民可能有武装，
+但和苏联帝国对抗，没有力量可以保护他们。
+
+
+
+
+
+把他们杀鸡儆猴。
+全部肃清 -- 男人、女人、孩子。
+
+（Grunyev = 格伦耶夫）
+
+[*] 任务提示
+这场战争是错的！打倒斯大林！
+
+
+红色警报！平民拥有重武器。
+立即向东北方增援。重复！
+立即向东北方增援！
+
+
+我们渴望自由独立！
+
+========================

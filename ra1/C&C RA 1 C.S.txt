@@ -1,0 +1,763 @@
+http://cnc.wikia.com/wiki/
+
+http://www.myra2.com/ra2miji/20150804/11094_8.html
+
+https://megagames.com/download-ready/330972/0
+
+Command and Conquer Red Alert
+
+C.S = CountersStrike 反戈一击
+A.M = The Aftermath  劫后余生
+
+【C.S】【 Ailles / 盟军 】
+
+01 Sarin Gas : Crackdown       / 沙林毒气：镇压行动
+
+02 Sarin Gas : Down Under      / 沙林毒气：地下深处
+
+03 Sarin Gas : Controlled Burn / 沙林毒气：焚烧净化
+
+04 Fall of Greece 1 : Personal War / 希腊陷落 1 ：一个人的抗争
+
+05 Fall of Greece 2 : Evacuation   / 希腊陷落 2 ：紧急撤离(疏散)
+
+06 Siberian Conflict 1 : Fresh Tracks / 西伯利亚冲突 1 ：轨迹追踪
+
+07 Siberian Conflict 2 : Trapped      / 西伯利亚冲突 2 ：收网围歼
+
+08 Siberian Conflict 3 : Wasteland    / 西伯利亚冲突 3 ：荒原决战
+
+========================
+
+[01] 简报
+A Soviet convoy of Sarin nerve gas has 
+stopped at a riverside outpost for 
+refuelling. This is a perfect opportunity to 
+destroy the Sarin shipment, and remove 
+the Soviet threat in the area.
+
+Use your forces to destroy the convoy 
+trucks and the base. It is imperative that 
+none of the convoy trucks escape.
+
+The Soviets keep their convoy information 
+in their rader center. If a spy was to 
+infiltrate the facility, it may help us locate 
+the convoy escape routes.
+
+[*] 任务提示
+Deatroy all Soviet forces（猜的）
+Destroy all convoy turcks
+
+=====译文=====
+
+[01] 简报
+苏军的沙林神经毒气车队在河边的前哨停下来加油。
+这是摧毁这批沙林毒气和该地区苏军威胁的绝佳机会。
+
+
+
+用你的部队全歼运输卡车和前哨基地。运输卡车决不能有漏网之鱼。
+
+
+
+苏军将的运输车队情报保存着他们的雷达站里。
+如果让特工渗透到该设施，就可以帮助我们掌握车队的行进路线。
+
+[*] 任务提示
+全歼敌军
+消灭所有运输卡车
+
+========================
+
+[02] 简报
+We've traced the convoy's route to this 
+underground facility. We suspect that this 
+is a hidden access to the Soviet's main 
+Sarin plant.
+
+Lead your troops through the tunnels and 
+remove any opposition you may find. Be 
+careful -- the Soviets are conducting all 
+kinds of research in this facility, and we 
+don't know what they may throw at you.
+
+Use spies to scout and infiltrate factories 
+where they can steal vehicles. 
+
+The mission is complete when your forces 
+reach the far exit of the facility. 
+
+[*] 任务提示
+Got to other side of facility
+
+=====译文=====
+
+[02] 简报
+我们通过追踪运输车队的路线找到了这个地下设施。
+我们怀疑这通往苏军沙林毒气工厂的隐秘通道。
+
+
+指挥你的部队通过通道，清除任何你看到的抵抗。
+小心，苏军在这个设施里进行着各类研究，我们不知道他们会用什么对付你。
+
+
+指挥特工侦察并渗透进军工厂，便可俘获载具。
+
+
+
+
+
+当你的部队到达设施另一头的出口时，任务完成。
+
+[*] 任务提示
+到达地下设施的另一头
+
+========================
+
+
+[03] 简报
+We have infiltrated the Soviet's Sarin 
+facility. However, the main entrance is 
+guarded by wail of Tesla coils. We 
+can't move a large force in until they are
+taken down.
+
+Infiltrate the power grid to the east and 
+destroy the power plants. Once done, 
+reinforcements will arrive.
+
+Destroy the Soviet compound, but capture 
+all the Sarin processor buildings intact
+-- we can't have a chemical spill.
+
+[*] 任务提示
+Destroy power to Tesla Coils
+
+=====译文=====
+
+[03] 简报
+我们潜入了苏军的沙林毒气设施。
+然而，设施正门有“磁爆线圈”把守。
+在它们被拿下前，我们不能派遣大部队。
+
+渗透进东面的电力网，摧毁发电厂。
+一旦完成，增援部队将抵达。
+
+
+
+
+
+摧毁苏军的沙林毒气生产基地，完好占领所有的毒气工厂
+——决不能发生毒气泄漏。
+
+[*] 任务提示
+切断“磁爆线圈”电力来源
+
+========================
+
+[04] 简报
+With the fighting fast approaching
+Athens. Stavros has insisted that he be 
+allowed to survey the damage in his own 
+hometown in Greece.
+
+You must escort Stavros through the town 
+and to a nearby friendly outpost. Once 
+you reach it, evacuate Stavros to safety.
+
+If anything should happen, get Stavros to 
+safety any way possible. He must be 
+kept alive.
+
+[*] 任务提示
+Escort Stavros to Allied base
+Get Stavros to evac point
+Evacuate the base !
+
+=====译文=====
+
+[04] 简报
+随着战火迅速逼近至雅典。
+“斯塔夫罗斯”坚持允许他调查故乡希腊的损失。
+
+
+
+
+
+你必须护送“斯塔夫罗斯”通过小镇，前往附近的友军哨基地。
+一旦到达它，安全疏散“斯塔夫罗斯”。
+
+
+如果事情有变，尽一切可能保证“斯塔夫罗斯”的安全。
+“斯塔夫罗斯”决不能阵亡。
+
+（Stavros = 斯塔夫罗斯 ，即 Nikos Stavros  = 尼克斯 斯塔夫罗斯）
+
+[*] 任务提示
+护送“斯塔夫罗斯”到达盟军基地
+让“斯塔夫罗斯”到达撤离地点
+从基地撤出 ！
+
+========================
+
+[05] 简报
+Soviet forces are moving into rural 
+Athens, threatening the civilian population. 
+Evacuate at last one person from each 
+of the four towns to the island in the 
+northeast of the map.
+
+The civilians are hiding in the town 
+churches, and will only come out when you 
+enter the town. Get in, get them out of 
+the town, and to the island.
+
+The civilians are your primay objective 
+here -- removing the Soviet threat is 
+optional.
+
+[*] 任务提示
+Evac civilians to island
+
+=====译文=====
+
+[05] 简报
+苏军正向雅典郊区逼近，已威胁到当地平民的人身安全。
+将四个镇子里的每一个人，疏散到位于地图东北部的岛上。
+
+
+
+
+
+平民藏在镇上的教堂里，只有当你进镇时才会出来。
+火速前往，把平民转移到岛上。
+
+
+
+
+
+保证平民安全是你的第一要务——是否阻击苏军由你决定。
+
+[*] 任务提示
+把平民疏散到岛上
+
+========================
+
+[06] 简报
+Soviet activity in Siberia is increasing. A
+large shipment of atomic material is on its 
+way through this area, and we need it 
+stopped. Destroy all of the Soviet convoy 
+furthering their atomic testing.
+
+Be careful of the convoy truck cargo -- 
+atomic material is highly unstable.
+
+The mission is complete when all the 
+convoy trucks from each of the seven 
+convoys have been destroyed.
+
+=====译文=====
+
+[06] 简报
+苏军在西伯利亚的活动越发频繁。
+大量的核原料正经过这个地区，我们要将其截获。
+消灭所有的原料运输车队，推迟苏军的核子实验。
+
+
+留神运输卡车的货物 -- 核原料极度不稳定。
+
+
+
+
+
+当七支运输车队里所有的运输卡车都被摧毁，任务完成。
+
+========================
+
+[07] 简报
+The convoys have been traced back to a 
+Soviet atomic processing station. We need 
+this facility destroyed, and all of the 
+nuclear cargo safely neutralized.
+
+Establish your base, and destroy the 
+Soviet processing center. In addition, no 
+Soviet convoy trucks must be allowed to 
+leave the area -- we can't have our 
+operations into Moscow threatened by 
+nuclear attack.
+
+[*] 任务提示
+Deatroy all Soviet forces（猜的）
+Destroy all convoy turcks
+
+=====译文=====
+
+[07] 简报
+运输车队来自苏军的核原料处理厂。
+我们需要摧毁这处设施，安全处理掉所有核原料。
+
+
+
+部署你的基地，摧毁苏军的处理中心。
+此外，不放过苏军的任何一辆运输卡车，
+—— 我们对莫斯科的攻势决不能受到核打击的威胁。
+
+[*] 任务提示
+全歼敌军
+消灭所有运输卡车
+
+========================
+
+[08] 简报
+The last of the Soviet's Siberian forces 
+have wandered out onto ice wastes, 
+where they've established a base. Finish 
+off their fortifications so our Allied forces 
+will have on trouble moving through this 
+area on their way to Moscow.
+
+The mission is complete when all Soviet 
+forces and structures are destroyed.
+
+[*] 任务提示
+Deatroy all Soviet forces（猜的）
+
+=====译文=====
+
+[08] 简报
+最后的苏军西伯利亚军团，在冰原上建立了基地。
+击溃他们的防线，扫清我们盟友进军莫斯科的最后障碍。
+
+扫清所有苏军，任务完成。
+
+
+[*] 任务提示
+全歼敌军
+
+
+========================
+
+【C.S】【 Soviet / 苏军 】
+
+01 Proving Grounds                    / 测试场
+
+02 Besieged                           / 围困
+
+03 Mousetrap                          / 捕鼠器
+
+04 Legacy of Tesla                    / 特斯拉遗产
+
+05 Soviet Soidier Volkow & Chitzkoi   / 苏军超级战士“沃尔科夫”&“奇茨科伊”
+
+06 Top o' The World                   / 零度世界
+
+07 Paradox Equation                   / 悖论方程
+
+08 Nuclear Escalation                 / 核武扩张
+
+========================
+
+[01] 简报
+Information on our new Advanced Tactical 
+Submarine was leaked to the Allies. and 
+they have invaded our territory, 
+determined to stop us.
+
+You must stop them. Regain control of 
+our bases as they are revealed by the 
+signal flares. Do not let any Allied attacks 
+stop you.
+
+We have received word that a detachment 
+of cruisers is on its way here. Once you 
+recover the sub pen, use the new ATS to 
+prevent the cruisers from destroying our 
+operation.
+
+[*] 任务提示
+Move to waypoint A. Shown by flare
+Move to waypoint C. Shown by flare
+Move to waypoint D. Shown by flare
+Alert!!! Alert!!!
+Unauthorized units have ebtered the area!!!
+
+=====译文=====
+
+[01] 简报
+我们的“新型战术潜艇”情报被泄露给了盟军。
+并且他们入侵了我们的领土，决心阻止我们。
+
+
+
+
+
+你必须阻止他们。
+遵循信号指引，重获我们对基地的控制。
+不要让盟军的进攻的阻碍你。
+
+
+
+
+
+我们收到情报，一支巡洋舰特遣队朝这里来了。
+一旦你重新获得潜艇船坞的控制权，
+使用“新型战术潜艇”来阻止巡洋舰破坏我们的军事行动。
+
+[*] 任务提示
+遵循信号指引, 前往 A 点
+遵循信号指引, 前往 C 点
+遵循信号指引, 前往 D 点
+警报!!! 警报!!! 
+未经授权的单位已入本地区!!!
+
+========================
+
+[02] 简报
+Once of our key European command centers 
+had been sabotaged. The Saboteur has 
+planted charges in key structures, and can 
+detonate them at will.
+
+If the charges are detonated, our base 
+will be rendered defenseless to the Allied 
+presence in the area, and our command 
+center will fall. You must prevent this.
+
+Track down the saboteur and eliminate 
+him. Once done, remove the nearby Allied 
+threat and ensure our command center 
+remains intact.
+
+[*] 任务提示
+
+
+=====译文=====
+
+[02] 简报
+我们欧洲的一处关键指挥中心遭到破坏。
+破坏者在关键建筑中设置了炸药，并可以随意引爆它们。
+
+
+
+
+
+如果这些建筑被炸毁，我们的基地将面对该地区的盟军将会无可奈何，
+指挥中心将会失守。你必须阻止这一切的发生。
+
+
+
+
+
+追踪破坏者并消灭他。
+一旦完成，清除周边盟军的威胁，同时确保指挥中心的完好。
+
+[*] 任务提示
+
+========================
+
+[03] 简报
+A longtime thorn in our side, the Greek 
+commander Stavros, has finally been 
+cornered. He has taken refuge in an 
+underground bunker full of his 
+Chronosphere technology. Prove to him 
+that no Allied tricks can stop the wrath 
+of the Soviet Union. Track him down, and 
+eliminate him.
+
+Return with results -- we do not want to 
+hear of his escape... only the creative 
+manner of his demise.
+
+We have provided you with engineers 
+that, given the opportunity, can use 
+Chronosphere technology. Do not squander 
+them.
+
+[*] 任务提示
+
+
+=====译文=====
+
+[03] 简报
+希腊司令官“斯塔夫罗斯”长期安插在我们身边的威胁，终于被拔除了。
+“斯塔夫罗斯”藏入了一个充满他的“超时空传送”科技的地下掩体内。
+向他证明盟军的诡计花招永远不能阻止苏军的怒火。
+追踪并终结他。
+
+
+
+我们不想听到“斯塔夫罗斯”逃跑的消息...
+
+
+唯有他具有新意的死亡方式 ，才是我们能够接受的结果。 
+
+我们已向你派遣了工程师，抓住机会，获取使用“超时空传送”技术。
+不要浪费他们。
+
+（Stavros = 斯塔夫罗斯 ，即 Nikos Stavros  = 尼克斯 斯塔夫罗斯）
+PS：Nikos Stavros 本人的军衔是“General / 将军(上将)”，在这里“commander”可以翻为“司令官”。
+
+[*] 任务提示
+
+
+========================
+
+[04] 简报
+Command Directive : 543-Prochnov
+
+Authorization : Moscow Premier
+
+Directive : The Allies have stolen vital
+data on the design of our MIG aircraft. 
+We have learned that the Allies are 
+constructing a Mig of their own with a 
+nuclear payload. We have eatablished a 
+base in the area, now it is up to you to 
+destroy their prototype aircraft and the 
+base defending it.
+
+You have been given a group of our new 
+Tesla tanks to facilitate your task. They 
+are irreplacable, so do not waste them.
+
+
+[*] 任务提示
+
+
+=====译文=====
+
+[04] 简报
+命令指令：543-普罗诺夫
+
+
+
+
+授    权：莫斯科总理
+
+
+
+
+指    令：盟军窃取了我们米格飞机的重要设计数据。
+我们已得知盟军正在建造他们自己的一款具有核打击能力的米格。
+我们已在这个地区建立了一个基地，现在由你来摧毁他们的原型机
+和保卫它基地。
+
+
+你已被分配到一队我们的新型“磁能坦克”来协助你的任务。
+它们是不可替代的，所以不要浪费它们。
+（Prochnov = 普罗诺夫）
+
+[*] 任务提示
+
+
+========================
+
+[05] 简报
+The Allies have stolen a new armor 
+plating from us. With it, they can make 
+structures nearly invulnerable. Their 
+processing plant must be destroyed.
+
+For this critical a mission, we are allowing 
+you access to Soldier Volkov. Use him and 
+his cybernetic dog to sabotage the Allied 
+control center, allowing our units in the 
+southeast access to the alloy facility.
+
+The mission is a success when Volkov 
+destroys the control center, and our units 
+destroy the alloy facility.
+
+
+[*] 任务提示
+
+
+=====译文=====
+
+[05] 简报
+盟军窃取了一块我们的新型装甲。
+
+
+利用它，盟军可以造出坚不可摧的构造物。
+
+
+他们的加工厂必须被摧毁。
+
+
+
+
+为了这次的关键任务，我们允许你调遣超级士兵“沃尔科夫”。
+使用他和他的赛博生化狗破坏盟军指挥中心，
+让我们在东南方的部队进入合金设施。
+
+
+
+
+
+当“沃尔科夫”摧毁盟军指挥中心，然后我们的部队摧毁合金设施时，
+任务完成。
+（Volkow = 沃尔科夫 , Chitzkoi = 奇茨科伊）
+
+[*] 任务提示
+
+
+========================
+
+[06] 简报
+A critical cargo held in this supply truck 
+must reach the waystation atop this 
+mountain. The way is blocked by Allied 
+squads, but do not let that deter you -- 
+The cargo must reach its destination.
+
+In addition, the onset of nightfall has 
+brought sub-zero temperatures with it. 
+The Allies are prepared for this -- our 
+units are not. The life expectancy of your 
+troops in these extremes is limited. 
+Infantry may last 20 minutes, while 
+vehicles could survive for up to an hour. 
+You have little time. GO.
+
+
+[*] 任务提示
+
+
+=====译文=====
+
+[06] 简报
+装载着关键货物的补给卡车必须到达山顶上的驿站。
+行进路线被盟军部队封锁了，但不要因此让它阻碍你
+——货物必须到达目的地。
+
+
+
+
+
+此外，黄昏的到来也带来了零下极寒。
+盟军为此做好了准备，-- 我们的部队却没有。
+在这极端情况下，你的部队的活动时间极其有限。
+步兵单位只能坚持20分钟，而装甲车辆也只能坚持一个小时。
+你的时间已不多。出发！
+
+[*] 任务提示
+
+
+========================
+
+[07] 简报
+TO: Field Commander S7
+
+FROM: Soviet Command
+
+PRIORITY ONE
+
+We received this garbled transmission from 
+a scout group sent into a suspected Allied 
+test site:
+
+<TRANSMISSION BEGINS>
+All... te.t area di..overed! Chronos... test 
+g... crazy! Weapons... effected by... air 
+units inop... Area unst.able! Ch...osphere 
+must be affect...
+<TRANSMISSION LOST>
+
+You are to investigate this. If the 
+Chronosphere is indeed behind it, this is a 
+perfect opportunity to capture it. See that 
+it happens.
+
+
+[*] 任务提示
+
+
+=====译文=====
+
+[07] 简报
+发  给：第七战区指挥官
+
+来  自：苏军总部
+
+最高优先权
+
+我们收到的这条混乱讯息，是派往一个疑似的盟军试验场的侦察部队发来的：
+
+<讯息传送开始>
+所有...测.试区域,发...现！超时空...试验
+...离奇！武器...受到影响...空军无法打击...区域不.稳定！超...空传送器，
+造成的影响...
+<讯息传送断开>
+
+你要去调查这件事。
+如果超时空传送器确实在那里，
+这是个极好俘获它的机会。
+找到并俘获它。
+
+[*] 任务提示
+
+
+========================
+
+[08] 简报
+The Allies are testing a new air-fuel bomb 
+in this area. Terminate their tests.
+
+Destroy the Allied presence in the area, 
+but be wary of their test-runs.
+
+The target coordinates for the tests are 
+kept in their relay station in the western 
+base. If you take control of the station, 
+the location of the tests will be revealed 
+to you.
+
+The runs themselves can be stopped by 
+destroying the tech center in the 
+northeast base.
+
+Do not fail us.
+
+
+[*] 任务提示
+
+
+=====译文=====
+
+[08] 简报
+盟军正在这个区域测试新型“云爆弹”。
+终止他们的测试。
+
+
+清除盟军在该地区的存在，但要警惕他们的测试。
+
+
+
+
+
+测试投掷点坐标，保存在盟军西部基地的雷达站。
+如果你控制了雷达站，投掷点坐标将向你显示出来。
+
+
+
+
+
+通过摧毁盟军位于东北部基地里的科技中心，
+可以阻止测试的进行。
+
+
+
+
+
+不要辜负我们。
+（ Air-fuel bomb = 云爆弹 ）
+
+[*] 任务提示
+
+
+========================
+
