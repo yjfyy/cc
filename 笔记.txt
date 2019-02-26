@@ -69,3 +69,5 @@ wget -ivqalistnb.txt --no-check-certificate -B=http://gitee.com/yjfyeyu/cc1_data
     (Russian) - russianlanguagepack.MIX is loaded
 
 E.g.: GameLanguage=6 to load a Spanish language pack.
+
+红警图标导入，png game 选择ra1 type选择cameos
