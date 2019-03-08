@@ -594,9 +594,9 @@ Partial Class Form1
         Me.Controls.Add(Me.Button_updata)
         Me.Controls.Add(Me.Panel_games_list)
         Me.Controls.Add(Me.ProgressBar1)
-        Me.Controls.Add(Me.Panel_up_log)
         Me.Controls.Add(Me.Panel_ra1)
         Me.Controls.Add(Me.Panel_cnc1)
+        Me.Controls.Add(Me.Panel_up_log)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Form1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
