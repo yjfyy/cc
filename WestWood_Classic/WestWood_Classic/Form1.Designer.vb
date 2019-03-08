@@ -452,7 +452,7 @@ Partial Class Form1
         Me.Button_ra1_ext.Name = "Button_ra1_ext"
         Me.Button_ra1_ext.Size = New System.Drawing.Size(160, 21)
         Me.Button_ra1_ext.TabIndex = 4
-        Me.Button_ra1_ext.Text = "资料片任务（暂未汉化）"
+        Me.Button_ra1_ext.Text = "资料片任务(汉化中)"
         Me.Button_ra1_ext.UseVisualStyleBackColor = False
         '
         'Button_ra1_soviet
@@ -594,9 +594,9 @@ Partial Class Form1
         Me.Controls.Add(Me.Button_updata)
         Me.Controls.Add(Me.Panel_games_list)
         Me.Controls.Add(Me.ProgressBar1)
+        Me.Controls.Add(Me.Panel_up_log)
         Me.Controls.Add(Me.Panel_ra1)
         Me.Controls.Add(Me.Panel_cnc1)
-        Me.Controls.Add(Me.Panel_up_log)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Form1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
