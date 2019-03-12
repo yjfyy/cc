@@ -7,7 +7,7 @@
 
         Form1.Button_ra1_ally.Enabled = True
         Form1.Button_ra1_soviet.Enabled = True
-        Form1.Button_ra1_ext.Enabled = True
+        Form1.Button_ra1_ext_cs.Enabled = True
         Form1.Button_ra1_skirmish.Enabled = True
         Form1.Button_ra1_cncnet.Enabled = True
         Form1.Button_ra1_english.Enabled = True

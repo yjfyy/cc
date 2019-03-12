@@ -37,7 +37,7 @@ Public Class Form1
             MsgBox（"第一次启动游戏前必须先设置参数"）
             Button_ra1_ally.Enabled = False
             Button_ra1_soviet.Enabled = False
-            Button_ra1_ext.Enabled = False
+            Button_ra1_ext_cs.Enabled = False
             Button_ra1_skirmish.Enabled = False
             Button_ra1_cncnet.Enabled = False
             Button_ra1_english.Enabled = False
@@ -453,7 +453,7 @@ Public Class Form1
         donate.Show()
     End Sub
 
-    Private Sub Button_ra1_ext_Click(sender As Object, e As EventArgs) Handles Button_ra1_ext.Click
+    Private Sub Button_ra1_ext_Click(sender As Object, e As EventArgs) Handles Button_ra1_ext_cs.Click
         WriteINI("Options", "GameLanguage", "5", "RA\redalert.ini")
         If System.Diagnostics.Process.GetProcessesByName("ra95").Length > 0 Then
             MsgBox("请勿重复启动")
@@ -466,5 +466,9 @@ Public Class Form1
             'End If
 
         End If
+    End Sub
+
+    Private Sub Button_ra1_ext_af_Click(sender As Object, e As EventArgs) Handles Button_ra1_ext_af.Click
+
     End Sub
 End Class
