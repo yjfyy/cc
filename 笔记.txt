@@ -64,8 +64,8 @@ wget -ivqalistnb.txt --no-check-certificate -B=http://gitee.com/yjfyeyu/cc1_data
 2    (German) - germanlanguagepack.MIX is loaded
 3    (German censored) - germancensoredlanguagepack.MIX is loaded
 4    (German uncensored) - germanuncensoredlanguagepack.MIX is loaded
-    (French) - frenchlanguagepack.MIX is loaded
-    (Spanish) - spanishlanguagepack.MIX is loaded
+5    (French) - frenchlanguagepack.MIX is loaded
+6    (Spanish) - spanishlanguagepack.MIX is loaded
     (Russian) - russianlanguagepack.MIX is loaded
 
 E.g.: GameLanguage=6 to load a Spanish language pack.
