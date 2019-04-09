@@ -469,6 +469,17 @@ Public Class Form1
     End Sub
 
     Private Sub Button_ra1_ext_af_Click(sender As Object, e As EventArgs) Handles Button_ra1_ext_af.Click
+        WriteINI("Options", "GameLanguage", "6", "RA\redalert.ini")
+        If System.Diagnostics.Process.GetProcessesByName("ra95").Length > 0 Then
+            MsgBox("请勿重复启动")
+        Else
+            'If My.Computer.FileSystem.FileExists("cnc95\ddraw.dll") Then
 
+            Process.Start("ra\ra95.exe")
+            'Else
+            'MsgBox("请在设置中打开ddraw")
+            'End If
+
+        End If
     End Sub
 End Class

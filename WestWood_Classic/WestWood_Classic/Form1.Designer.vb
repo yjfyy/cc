@@ -53,6 +53,7 @@ Partial Class Form1
         Me.Button_cnc1_NOD_miss = New System.Windows.Forms.Button()
         Me.Button_cnc1_GDI_miss = New System.Windows.Forms.Button()
         Me.Panel_ra1 = New System.Windows.Forms.Panel()
+        Me.Button_ra1_ext_af = New System.Windows.Forms.Button()
         Me.Button_ra1_english = New System.Windows.Forms.Button()
         Me.Button_ra1_skirmish = New System.Windows.Forms.Button()
         Me.Button_ra1_ext_cs = New System.Windows.Forms.Button()
@@ -65,7 +66,6 @@ Partial Class Form1
         Me.RadioButton_updata_ra1_movies = New System.Windows.Forms.RadioButton()
         Me.RadioButton_updata_cnc1_movies = New System.Windows.Forms.RadioButton()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button_ra1_ext_af = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.Panel_games_list.SuspendLayout()
         Me.Panel_up_log.SuspendLayout()
@@ -406,6 +406,24 @@ Partial Class Form1
         Me.Panel_ra1.Size = New System.Drawing.Size(640, 402)
         Me.Panel_ra1.TabIndex = 31
         '
+        'Button_ra1_ext_af
+        '
+        Me.Button_ra1_ext_af.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Button_ra1_ext_af.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Button_ra1_ext_af.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Button_ra1_ext_af.FlatAppearance.BorderSize = 20
+        Me.Button_ra1_ext_af.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Button_ra1_ext_af.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Navy
+        Me.Button_ra1_ext_af.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Button_ra1_ext_af.ForeColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Button_ra1_ext_af.Location = New System.Drawing.Point(244, 231)
+        Me.Button_ra1_ext_af.Name = "Button_ra1_ext_af"
+        Me.Button_ra1_ext_af.Size = New System.Drawing.Size(160, 21)
+        Me.Button_ra1_ext_af.TabIndex = 7
+        Me.Button_ra1_ext_af.Text = "余生资料片任务(汉化中)"
+        Me.Button_ra1_ext_af.TextAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.Button_ra1_ext_af.UseVisualStyleBackColor = False
+        '
         'Button_ra1_english
         '
         Me.Button_ra1_english.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
@@ -578,24 +596,6 @@ Partial Class Form1
         Me.Button1.TabIndex = 45
         Me.Button1.Text = "捐助"
         Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Button_ra1_ext_af
-        '
-        Me.Button_ra1_ext_af.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Button_ra1_ext_af.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Button_ra1_ext_af.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Button_ra1_ext_af.FlatAppearance.BorderSize = 20
-        Me.Button_ra1_ext_af.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Button_ra1_ext_af.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Navy
-        Me.Button_ra1_ext_af.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button_ra1_ext_af.ForeColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Button_ra1_ext_af.Location = New System.Drawing.Point(244, 231)
-        Me.Button_ra1_ext_af.Name = "Button_ra1_ext_af"
-        Me.Button_ra1_ext_af.Size = New System.Drawing.Size(160, 21)
-        Me.Button_ra1_ext_af.TabIndex = 7
-        Me.Button_ra1_ext_af.Text = "余生资料片任务(暂未汉化)"
-        Me.Button_ra1_ext_af.TextAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.Button_ra1_ext_af.UseVisualStyleBackColor = False
         '
         'Form1
         '
