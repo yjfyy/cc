@@ -39,6 +39,7 @@ Partial Class cnc1cfg
         Me.RadioButton_eva_eng = New System.Windows.Forms.RadioButton()
         Me.RadioButton_eva_chi = New System.Windows.Forms.RadioButton()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.RadioButton_full_win = New System.Windows.Forms.RadioButton()
         Me.RadioButton_windows = New System.Windows.Forms.RadioButton()
         Me.RadioButton_full = New System.Windows.Forms.RadioButton()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
@@ -47,7 +48,7 @@ Partial Class cnc1cfg
         Me.RadioButton_gdi = New System.Windows.Forms.RadioButton()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.CheckBox_cc1_compat = New System.Windows.Forms.CheckBox()
-        Me.RadioButton_full_win = New System.Windows.Forms.RadioButton()
+        Me.CheckBox_106old_ddraw = New System.Windows.Forms.CheckBox()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -227,6 +228,17 @@ Partial Class cnc1cfg
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "显示模式"
         '
+        'RadioButton_full_win
+        '
+        Me.RadioButton_full_win.AutoSize = True
+        Me.RadioButton_full_win.Location = New System.Drawing.Point(3, 39)
+        Me.RadioButton_full_win.Name = "RadioButton_full_win"
+        Me.RadioButton_full_win.Size = New System.Drawing.Size(71, 16)
+        Me.RadioButton_full_win.TabIndex = 2
+        Me.RadioButton_full_win.TabStop = True
+        Me.RadioButton_full_win.Text = "窗口全屏"
+        Me.RadioButton_full_win.UseVisualStyleBackColor = True
+        '
         'RadioButton_windows
         '
         Me.RadioButton_windows.AutoSize = True
@@ -314,22 +326,22 @@ Partial Class cnc1cfg
         Me.CheckBox_cc1_compat.Text = "自动设置兼容性"
         Me.CheckBox_cc1_compat.UseVisualStyleBackColor = True
         '
-        'RadioButton_full_win
+        'CheckBox_106old_ddraw
         '
-        Me.RadioButton_full_win.AutoSize = True
-        Me.RadioButton_full_win.Location = New System.Drawing.Point(3, 39)
-        Me.RadioButton_full_win.Name = "RadioButton_full_win"
-        Me.RadioButton_full_win.Size = New System.Drawing.Size(71, 16)
-        Me.RadioButton_full_win.TabIndex = 2
-        Me.RadioButton_full_win.TabStop = True
-        Me.RadioButton_full_win.Text = "窗口全屏"
-        Me.RadioButton_full_win.UseVisualStyleBackColor = True
+        Me.CheckBox_106old_ddraw.AutoSize = True
+        Me.CheckBox_106old_ddraw.Location = New System.Drawing.Point(178, 232)
+        Me.CheckBox_106old_ddraw.Name = "CheckBox_106old_ddraw"
+        Me.CheckBox_106old_ddraw.Size = New System.Drawing.Size(90, 16)
+        Me.CheckBox_106old_ddraw.TabIndex = 7
+        Me.CheckBox_106old_ddraw.Text = "老版本DDRAW"
+        Me.CheckBox_106old_ddraw.UseVisualStyleBackColor = True
         '
         'cnc1cfg
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(399, 307)
+        Me.Controls.Add(Me.CheckBox_106old_ddraw)
         Me.Controls.Add(Me.CheckBox_cc1_compat)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.GroupBox4)
@@ -379,4 +391,5 @@ Partial Class cnc1cfg
     Friend WithEvents Label3 As Label
     Friend WithEvents CheckBox_cc1_compat As CheckBox
     Friend WithEvents RadioButton_full_win As RadioButton
+    Friend WithEvents CheckBox_106old_ddraw As CheckBox
 End Class

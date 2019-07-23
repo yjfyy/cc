@@ -11,6 +11,8 @@
         Form1.Button_ra1_skirmish.Enabled = True
         Form1.Button_ra1_cncnet.Enabled = True
         Form1.Button_ra1_english.Enabled = True
+        Form1.Button_ra1_ext_af.Enabled = True
+        Form1.Button_ra1_ext_af_su.Enabled = True
 
         save_ini()
         Me.Close()

@@ -27,7 +27,12 @@
         Else
             FileIO.FileSystem.CopyFile("CnC95\speech.mix", ".\CnC95\speecchi.mix", True)
         End If
-        FileIO.FileSystem.CopyFile("attach\ddraw.dll", ".\CnC95\ddraw.dll", True)
+
+        If CheckBox_106old_ddraw.Checked = True Then
+            FileIO.FileSystem.CopyFile("attach\ddraw.dll.cnc106", ".\CnC95\ddraw.dll", True)
+        Else
+            FileIO.FileSystem.CopyFile("attach\ddraw.dll", ".\CnC95\ddraw.dll", True)
+        End If
 
         Form1.Button_cnc1_GDI_miss.Enabled = True
         Form1.Button_cnc1_NOD_miss.Enabled = True
@@ -86,10 +91,16 @@
             RadioButton_full.Checked = True
         End If
 
-        If GetINI("cnc1", "compatibility", "1", ".\config.ini") = "1" Then
-            CheckBox_cc1_compat.Checked = True
-        Else
+        If GetINI("cnc1", "compatibility", "0", ".\config.ini") = "0" Then
             CheckBox_cc1_compat.Checked = False
+        Else
+            CheckBox_cc1_compat.Checked = True
+        End If
+
+        If GetINI("cnc1", "106old_ddraw", "0", ".\config.ini") = "0" Then
+            CheckBox_106old_ddraw.Checked = False
+        Else
+            CheckBox_106old_ddraw.Checked = True
         End If
 
     End Sub
@@ -174,7 +185,13 @@
             End If
         End If
 
-            WriteINI("cnc1", "fristrun", "0", ".\config.ini")
+        If CheckBox_106old_ddraw.Checked = True Then
+            WriteINI("cnc1", "106old_ddraw", "1", ".\config.ini")
+        Else
+            WriteINI("cnc1", "106old_ddraw", "0", ".\config.ini")
+        End If
+
+        WriteINI("cnc1", "fristrun", "0", ".\config.ini")
 
     End Sub
 
@@ -190,11 +207,11 @@
         End If
     End Sub
 
-    Private Sub cnc1cfg_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub CheckBox_cc1_compat_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox_cc1_compat.CheckedChanged
 
     End Sub
 
-    Private Sub CheckBox_cc1_compat_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox_cc1_compat.CheckedChanged
+    Private Sub cnc1cfg_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
 

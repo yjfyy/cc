@@ -41,9 +41,9 @@ Public Class Form1
             Button_ra1_skirmish.Enabled = False
             Button_ra1_cncnet.Enabled = False
             Button_ra1_english.Enabled = False
-
+            Button_ra1_ext_af.Enabled = False
+            Button_ra1_ext_af_su.Enabled = False
         End If
-
 
         Panel_up_log.Visible = False
         Panel_cnc1.Visible = False
@@ -394,6 +394,7 @@ Public Class Form1
     End Sub
 
     Private Sub Button_cncnet_Click(sender As Object, e As EventArgs) Handles Button_ra1_cncnet.Click
+        WriteINI("Options", "GameLanguage", "4", "RA\redalert.ini")
         Process.Start("ra\cncnet5.exe")
     End Sub
 
@@ -470,6 +471,21 @@ Public Class Form1
 
     Private Sub Button_ra1_ext_af_Click(sender As Object, e As EventArgs) Handles Button_ra1_ext_af.Click
         WriteINI("Options", "GameLanguage", "6", "RA\redalert.ini")
+        If System.Diagnostics.Process.GetProcessesByName("ra95").Length > 0 Then
+            MsgBox("请勿重复启动")
+        Else
+            'If My.Computer.FileSystem.FileExists("cnc95\ddraw.dll") Then
+
+            Process.Start("ra\ra95.exe")
+            'Else
+            'MsgBox("请在设置中打开ddraw")
+            'End If
+
+        End If
+    End Sub
+
+    Private Sub Button_ra1_ext_af_su_Click(sender As Object, e As EventArgs) Handles Button_ra1_ext_af_su.Click
+        WriteINI("Options", "GameLanguage", "7", "RA\redalert.ini")
         If System.Diagnostics.Process.GetProcessesByName("ra95").Length > 0 Then
             MsgBox("请勿重复启动")
         Else
