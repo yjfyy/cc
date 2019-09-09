@@ -422,7 +422,7 @@ Partial Class Form1
         Me.Button_ra1_ext_af_su.Name = "Button_ra1_ext_af_su"
         Me.Button_ra1_ext_af_su.Size = New System.Drawing.Size(173, 21)
         Me.Button_ra1_ext_af_su.TabIndex = 8
-        Me.Button_ra1_ext_af_su.Text = "余生资料片苏军任务(汉化中)"
+        Me.Button_ra1_ext_af_su.Text = "余生资料片苏军任务"
         Me.Button_ra1_ext_af_su.UseVisualStyleBackColor = False
         '
         'Button_ra1_ext_af
