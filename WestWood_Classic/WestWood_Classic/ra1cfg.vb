@@ -142,16 +142,16 @@
             Else
 
             End If
-        Else
-            WriteINI("ra1", "compatibility", "0", ".\config.ini")
-            If Form1.RadioButton_winxp.Checked = False Then
+            'Else
+            '  WriteINI("ra1", "compatibility", "0", ".\config.ini")
+            'If Form1.RadioButton_winxp.Checked = False Then
+            '
+            'Dim key As Microsoft.Win32.RegistryKey = Microsoft.Win32.Registry.CurrentUser.OpenSubKey("Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags", True)
+            '  Dim subkey As Microsoft.Win32.RegistryKey
+            '    subkey = key.CreateSubKey("Layers")
 
-                Dim key As Microsoft.Win32.RegistryKey = Microsoft.Win32.Registry.CurrentUser.OpenSubKey("Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags", True)
-                Dim subkey As Microsoft.Win32.RegistryKey
-                subkey = key.CreateSubKey("Layers")
-
-                subkey.SetValue(app_path & "\RA\RA95.exe", "", Microsoft.Win32.RegistryValueKind.String)
-            End If
+            'subkey.SetValue(app_path & "\RA\RA95.exe", "", Microsoft.Win32.RegistryValueKind.String)
+            'End If
 
 
         End If

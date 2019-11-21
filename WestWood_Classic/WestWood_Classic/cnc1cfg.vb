@@ -171,18 +171,17 @@
                 Dim subkey As Microsoft.Win32.RegistryKey
                 subkey = key.CreateSubKey("Layers")
                 subkey.SetValue(app_path & "\CnC95\C&C95.exe", "WIN98", Microsoft.Win32.RegistryValueKind.String)
-            Else
 
             End If
-        Else
-            WriteINI("cnc1", "compatibility", "0", ".\config.ini")
-            If Form1.RadioButton_winxp.Checked = False Then
-                Dim key As Microsoft.Win32.RegistryKey = Microsoft.Win32.Registry.CurrentUser.OpenSubKey("Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags", True)
-                Dim subkey As Microsoft.Win32.RegistryKey
-                subkey = key.CreateSubKey("Layers")
+            'Else
+            '  WriteINI("cnc1", "compatibility", "0", ".\config.ini")
+            'If Form1.RadioButton_winxp.Checked = False Then
+            '  Dim key As Microsoft.Win32.RegistryKey = Microsoft.Win32.Registry.CurrentUser.OpenSubKey("Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags", True)
+            '    Dim subkey As Microsoft.Win32.RegistryKey
+            '      subkey = key.CreateSubKey("Layers")
 
-                subkey.SetValue(app_path & "\CnC95\C&C95.exe", "", Microsoft.Win32.RegistryValueKind.String)
-            End If
+            'subkey.SetValue(app_path & "\CnC95\C&C95.exe", "", Microsoft.Win32.RegistryValueKind.String)
+            'End If
         End If
 
         If CheckBox_106old_ddraw.Checked = True Then

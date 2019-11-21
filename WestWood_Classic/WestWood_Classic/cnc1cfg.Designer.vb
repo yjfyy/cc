@@ -318,7 +318,6 @@ Partial Class cnc1cfg
         'CheckBox_cc1_compat
         '
         Me.CheckBox_cc1_compat.AutoSize = True
-        Me.CheckBox_cc1_compat.Enabled = False
         Me.CheckBox_cc1_compat.Location = New System.Drawing.Point(178, 210)
         Me.CheckBox_cc1_compat.Name = "CheckBox_cc1_compat"
         Me.CheckBox_cc1_compat.Size = New System.Drawing.Size(108, 16)
