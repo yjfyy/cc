@@ -41,10 +41,10 @@ Partial Class ra1cfg
         Me.RadioButton_640 = New System.Windows.Forms.RadioButton()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.RadioButton_full_win = New System.Windows.Forms.RadioButton()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Button_reset = New System.Windows.Forms.Button()
         Me.CheckBox_ra1_compat = New System.Windows.Forms.CheckBox()
-        Me.RadioButton_full_win = New System.Windows.Forms.RadioButton()
         Me.GroupBox4.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -238,6 +238,17 @@ Partial Class ra1cfg
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "显示模式"
         '
+        'RadioButton_full_win
+        '
+        Me.RadioButton_full_win.AutoSize = True
+        Me.RadioButton_full_win.Location = New System.Drawing.Point(3, 39)
+        Me.RadioButton_full_win.Name = "RadioButton_full_win"
+        Me.RadioButton_full_win.Size = New System.Drawing.Size(71, 16)
+        Me.RadioButton_full_win.TabIndex = 2
+        Me.RadioButton_full_win.TabStop = True
+        Me.RadioButton_full_win.Text = "全屏窗口"
+        Me.RadioButton_full_win.UseVisualStyleBackColor = True
+        '
         'GroupBox1
         '
         Me.GroupBox1.Controls.Add(Me.Label3)
@@ -275,17 +286,6 @@ Partial Class ra1cfg
         Me.CheckBox_ra1_compat.TabIndex = 7
         Me.CheckBox_ra1_compat.Text = "自动设置兼容性"
         Me.CheckBox_ra1_compat.UseVisualStyleBackColor = True
-        '
-        'RadioButton_full_win
-        '
-        Me.RadioButton_full_win.AutoSize = True
-        Me.RadioButton_full_win.Location = New System.Drawing.Point(3, 39)
-        Me.RadioButton_full_win.Name = "RadioButton_full_win"
-        Me.RadioButton_full_win.Size = New System.Drawing.Size(71, 16)
-        Me.RadioButton_full_win.TabIndex = 2
-        Me.RadioButton_full_win.TabStop = True
-        Me.RadioButton_full_win.Text = "全屏窗口"
-        Me.RadioButton_full_win.UseVisualStyleBackColor = True
         '
         'ra1cfg
         '

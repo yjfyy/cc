@@ -26,7 +26,7 @@
         System.IO.File.WriteAllText(".\RA\redalert.ini", My.Resources.redalert)
         System.IO.File.WriteAllText(".\RA\ddraw.ini", My.Resources.ddraw)
         read_ini()
-        CheckBox_ra1_compat.Checked = True
+        CheckBox_ra1_compat.Checked = False
     End Sub
 
     Private Sub read_ini()
@@ -76,13 +76,13 @@
 
     Private Sub save_ini()
 
-        If RadioButton_full.Checked = True Then
-            WriteINI("ddraw", "width", Screen.PrimaryScreen.Bounds.Width.ToString, ".\RA\ddraw.ini")
-            WriteINI("ddraw", "height", Screen.PrimaryScreen.Bounds.Height.ToString, ".\RA\ddraw.ini")
-        Else
-            WriteINI("ddraw", "width", "0", ".\RA\ddraw.ini")
-            WriteINI("ddraw", "height", "0", ".\RA\ddraw.ini")
-        End If
+        'If RadioButton_full.Checked = True Then
+        'WriteINI("ddraw", "width", Screen.PrimaryScreen.Bounds.Width.ToString, ".\RA\ddraw.ini")
+        'WriteINI("ddraw", "height", Screen.PrimaryScreen.Bounds.Height.ToString, ".\RA\ddraw.ini")
+        'Else
+        'WriteINI("ddraw", "width", "0", ".\RA\ddraw.ini")
+        'WriteINI("ddraw", "height", "0", ".\RA\ddraw.ini")
+        'End If
 
         If RadioButton_864.Checked = True Then
             WriteINI("Options", "Width", "864", ".\RA\redalert.ini")
@@ -124,37 +124,7 @@
         End If
 
 
-        If CheckBox_ra1_compat.Checked = True Then
 
-            WriteINI("ra1", "compatibility", "1", ".\config.ini")
-
-            If Form1.RadioButton_win10.Checked Then
-                Dim key As Microsoft.Win32.RegistryKey = Microsoft.Win32.Registry.CurrentUser.OpenSubKey("Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags", True)
-                Dim subkey As Microsoft.Win32.RegistryKey
-                subkey = key.CreateSubKey("Layers")
-                subkey.SetValue(app_path & "\RA\RA95.exe", "~ WIN7RTM", Microsoft.Win32.RegistryValueKind.String)
-
-            ElseIf Form1.RadioButton_win7.Checked Then
-                Dim key As Microsoft.Win32.RegistryKey = Microsoft.Win32.Registry.CurrentUser.OpenSubKey("Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags", True)
-                Dim subkey As Microsoft.Win32.RegistryKey
-                subkey = key.CreateSubKey("Layers")
-                subkey.SetValue(app_path & "\RA\RA95.exe", "", Microsoft.Win32.RegistryValueKind.String)
-            Else
-
-            End If
-            'Else
-            '  WriteINI("ra1", "compatibility", "0", ".\config.ini")
-            'If Form1.RadioButton_winxp.Checked = False Then
-            '
-            'Dim key As Microsoft.Win32.RegistryKey = Microsoft.Win32.Registry.CurrentUser.OpenSubKey("Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags", True)
-            '  Dim subkey As Microsoft.Win32.RegistryKey
-            '    subkey = key.CreateSubKey("Layers")
-
-            'subkey.SetValue(app_path & "\RA\RA95.exe", "", Microsoft.Win32.RegistryValueKind.String)
-            'End If
-
-
-        End If
 
         WriteINI("ra1", "fristrun", "0", ".\config.ini")
 
@@ -174,5 +144,39 @@
 
     Private Sub ra1cfg_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+    End Sub
+
+    Private Sub CheckBox_ra1_compat_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox_ra1_compat.CheckedChanged
+        If CheckBox_ra1_compat.Checked = True Then
+
+            WriteINI("ra1", "compatibility", "1", ".\config.ini")
+
+            If Form1.RadioButton_win10.Checked Then
+                Dim key As Microsoft.Win32.RegistryKey = Microsoft.Win32.Registry.CurrentUser.OpenSubKey("Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags", True)
+                Dim subkey As Microsoft.Win32.RegistryKey
+                subkey = key.CreateSubKey("Layers")
+                subkey.SetValue(app_path & "\RA\RA95.exe", "~ WIN7RTM", Microsoft.Win32.RegistryValueKind.String)
+
+            ElseIf Form1.RadioButton_win7.Checked Then
+                Dim key As Microsoft.Win32.RegistryKey = Microsoft.Win32.Registry.CurrentUser.OpenSubKey("Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags", True)
+                Dim subkey As Microsoft.Win32.RegistryKey
+                subkey = key.CreateSubKey("Layers")
+                subkey.SetValue(app_path & "\RA\RA95.exe", "", Microsoft.Win32.RegistryValueKind.String)
+            Else
+
+            End If
+        Else
+            WriteINI("ra1", "compatibility", "0", ".\config.ini")
+            If Form1.RadioButton_winxp.Checked = False Then
+
+                Dim key As Microsoft.Win32.RegistryKey = Microsoft.Win32.Registry.CurrentUser.OpenSubKey("Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags", True)
+                Dim subkey As Microsoft.Win32.RegistryKey
+                subkey = key.CreateSubKey("Layers")
+
+                subkey.SetValue(app_path & "\RA\RA95.exe", "", Microsoft.Win32.RegistryValueKind.String)
+            End If
+
+
+        End If
     End Sub
 End Class

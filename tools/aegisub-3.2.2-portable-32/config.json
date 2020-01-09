@@ -303,9 +303,9 @@
 			"Audio" : "",
 			"Automation" : "",
 			"Keyframes" : "",
-			"Subtitles" : "F:\\projects\\gitee\\ra1_video_sinization\\字幕",
+			"Subtitles" : "E:\\projects\\cc1_video_sinization\\字幕",
 			"Timecodes" : "",
-			"Video" : "F:\\projects\\gitee\\ra1_video_sinization\\原始avi"
+			"Video" : "E:\\projects\\cc1_video_sinization\\原始avi"
 		},
 		"Screenshot" : "?video"
 	},
@@ -609,7 +609,7 @@
 	},
 	"Version" : {
 		"Last Version" : 8635,
-		"Next Check" : 1548240897
+		"Next Check" : 1578461897
 	},
 	"Video" : {
 		"Default Zoom" : 7,

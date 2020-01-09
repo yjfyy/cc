@@ -67,12 +67,16 @@ Partial Class Form1
         Me.RadioButton_updata_ra1_movies = New System.Windows.Forms.RadioButton()
         Me.RadioButton_updata_cnc1_movies = New System.Windows.Forms.RadioButton()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.RadioButton_updata_main_web = New System.Windows.Forms.RadioButton()
+        Me.RadioButton_updata_2_web = New System.Windows.Forms.RadioButton()
+        Me.GroupBox_updata = New System.Windows.Forms.GroupBox()
         Me.GroupBox1.SuspendLayout()
         Me.Panel_games_list.SuspendLayout()
         Me.Panel_up_log.SuspendLayout()
         Me.Panel_cnc1.SuspendLayout()
         Me.Panel_ra1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
+        Me.GroupBox_updata.SuspendLayout()
         Me.SuspendLayout()
         '
         'RadioButton_winxp
@@ -182,7 +186,8 @@ Partial Class Form1
         '
         'Button_updata
         '
-        Me.Button_updata.Location = New System.Drawing.Point(10, 436)
+        Me.Button_updata.Enabled = False
+        Me.Button_updata.Location = New System.Drawing.Point(12, 433)
         Me.Button_updata.Name = "Button_updata"
         Me.Button_updata.Size = New System.Drawing.Size(92, 23)
         Me.Button_updata.TabIndex = 33
@@ -271,9 +276,9 @@ Partial Class Form1
         '
         'ProgressBar1
         '
-        Me.ProgressBar1.Location = New System.Drawing.Point(330, 436)
+        Me.ProgressBar1.Location = New System.Drawing.Point(519, 436)
         Me.ProgressBar1.Name = "ProgressBar1"
-        Me.ProgressBar1.Size = New System.Drawing.Size(457, 23)
+        Me.ProgressBar1.Size = New System.Drawing.Size(268, 23)
         Me.ProgressBar1.TabIndex = 32
         '
         'Panel_cnc1
@@ -567,7 +572,7 @@ Partial Class Form1
         Me.GroupBox2.Controls.Add(Me.RadioButton_updata_ra1_movies)
         Me.GroupBox2.Controls.Add(Me.RadioButton_updata_cnc1_movies)
         Me.GroupBox2.Enabled = False
-        Me.GroupBox2.Location = New System.Drawing.Point(108, 419)
+        Me.GroupBox2.Location = New System.Drawing.Point(297, 420)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(216, 45)
         Me.GroupBox2.TabIndex = 44
@@ -615,11 +620,46 @@ Partial Class Form1
         Me.Button1.Text = "捐助"
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'RadioButton_updata_main_web
+        '
+        Me.RadioButton_updata_main_web.AutoSize = True
+        Me.RadioButton_updata_main_web.Checked = True
+        Me.RadioButton_updata_main_web.Location = New System.Drawing.Point(6, 20)
+        Me.RadioButton_updata_main_web.Name = "RadioButton_updata_main_web"
+        Me.RadioButton_updata_main_web.Size = New System.Drawing.Size(71, 16)
+        Me.RadioButton_updata_main_web.TabIndex = 46
+        Me.RadioButton_updata_main_web.TabStop = True
+        Me.RadioButton_updata_main_web.Text = "主更新点"
+        Me.RadioButton_updata_main_web.UseVisualStyleBackColor = True
+        '
+        'RadioButton_updata_2_web
+        '
+        Me.RadioButton_updata_2_web.AutoSize = True
+        Me.RadioButton_updata_2_web.Location = New System.Drawing.Point(83, 20)
+        Me.RadioButton_updata_2_web.Name = "RadioButton_updata_2_web"
+        Me.RadioButton_updata_2_web.Size = New System.Drawing.Size(71, 16)
+        Me.RadioButton_updata_2_web.TabIndex = 47
+        Me.RadioButton_updata_2_web.Text = "备更新点"
+        Me.RadioButton_updata_2_web.UseVisualStyleBackColor = True
+        '
+        'GroupBox_updata
+        '
+        Me.GroupBox_updata.Controls.Add(Me.RadioButton_updata_2_web)
+        Me.GroupBox_updata.Controls.Add(Me.RadioButton_updata_main_web)
+        Me.GroupBox_updata.Enabled = False
+        Me.GroupBox_updata.Location = New System.Drawing.Point(114, 420)
+        Me.GroupBox_updata.Name = "GroupBox_updata"
+        Me.GroupBox_updata.Size = New System.Drawing.Size(161, 45)
+        Me.GroupBox_updata.TabIndex = 48
+        Me.GroupBox_updata.TabStop = False
+        Me.GroupBox_updata.Text = "更新站点"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(801, 496)
+        Me.Controls.Add(Me.GroupBox_updata)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
@@ -648,6 +688,8 @@ Partial Class Form1
         Me.Panel_ra1.ResumeLayout(False)
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
+        Me.GroupBox_updata.ResumeLayout(False)
+        Me.GroupBox_updata.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -696,4 +738,7 @@ Partial Class Form1
     Friend WithEvents Button1 As Button
     Friend WithEvents Button_ra1_ext_af As Button
     Friend WithEvents Button_ra1_ext_af_su As Button
+    Friend WithEvents RadioButton_updata_main_web As RadioButton
+    Friend WithEvents RadioButton_updata_2_web As RadioButton
+    Friend WithEvents GroupBox_updata As GroupBox
 End Class

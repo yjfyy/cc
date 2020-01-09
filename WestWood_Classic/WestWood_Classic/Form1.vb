@@ -11,6 +11,7 @@ Public Class Form1
     ' Dim newuplog As String
     'Dim up_root = "https://gitee.com/yjfyeyu/updatasys/raw/master/WestWood_Classic/"
     Dim up_root = "https://raw.githubusercontent.com/yjfyy/tuzi_updata/master/WestWood_Classic/"
+    'Dim up_root = "http://butwhy.vicp.net:82/tuzi_updata/WestWood_Classic/"
     'Dim up_root = "https://gitlab.com/yjfyy/tuzi_updata/raw/master/WestWood_Classic/"
 
     Dim app_path As String = Application.StartupPath()
@@ -79,7 +80,7 @@ Public Class Form1
     End Sub
 
 
-    Private Sub delete_files()
+    Private Sub Delete_files()
         '1.27使用语言包方式，删除1.27一下红警汉化文件。
         Try
             My.Computer.FileSystem.DeleteFile(app_path & "\RA\conquer.eng")
@@ -147,11 +148,12 @@ Public Class Form1
         Catch ex As Exception
             r_version = "0"
         End Try
+        'MsgBox(upUri_version.ToString)
     End Sub
     Private Sub BackgroundWorker_check_ver_RunWorkerCompleted(sender As Object, e As RunWorkerCompletedEventArgs) Handles BackgroundWorker_check_ver.RunWorkerCompleted
 
         Label_r_version.Text = r_version
-
+        GroupBox_updata.Enabled = True
         If r_version = "0" Then
             Label_status.Text = "检测失败"
 
@@ -160,6 +162,9 @@ Public Class Form1
 
             Button_ra1.Enabled = True
             Label_ra1.Enabled = True
+
+            GroupBox_updata.Enabled = True
+
 
         Else
             If l_version <> r_version Then
@@ -174,6 +179,8 @@ Public Class Form1
 
                 WebBrowser1.Url = New Uri(up_root + "newuplog.txt")
 
+                Button_updata.Enabled = True
+
                 'WebBrowser1.Url = New Uri("https://gitee.com/yjfyeyu/cnc_chi/raw/master/%E6%9C%80%E6%96%B0%E4%BF%AE%E6%94%B9%E5%86%85%E5%AE%B9.txt")
                 'BackgroundWorker_load_up_log.RunWorkerAsync()
             Else
@@ -183,6 +190,8 @@ Public Class Form1
 
                 Button_ra1.Enabled = True
                 Label_ra1.Enabled = True
+
+                Button_updata.Enabled = True
             End If
         End If
     End Sub
@@ -205,7 +214,7 @@ Public Class Form1
     Private Sub ShowDownProgress(ByVal sender As Object, ByVal e As System.Net.DownloadProgressChangedEventArgs)
         Invoke(New Action(Of Integer)(Sub(i) ProgressBar1.Value = i), e.ProgressPercentage)
     End Sub
-    Sub wanchen(ByVal sender As Object, ByVal e As System.ComponentModel.AsyncCompletedEventArgs)
+    Sub Wanchen(ByVal sender As Object, ByVal e As System.ComponentModel.AsyncCompletedEventArgs)
         Label_status.Text = "下载完成"
         Try
             If RadioButton_updata_cnc1_movies.Checked Then
@@ -497,5 +506,18 @@ Public Class Form1
             'End If
 
         End If
+    End Sub
+
+    Private Sub RadioButton_updata_2_web_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton_updata_2_web.CheckedChanged
+        GroupBox_updata.Enabled = False
+        Button_updata.Enabled = False
+        If RadioButton_updata_main_web.Checked = False Then
+            up_root = "http://butwhy.vicp.net:82/tuzi_updata/WestWood_Classic/"
+            BackgroundWorker_check_ver.RunWorkerAsync()
+        Else
+            up_root = "https://raw.githubusercontent.com/yjfyy/tuzi_updata/master/WestWood_Classic/"
+            BackgroundWorker_check_ver.RunWorkerAsync()
+        End If
+
     End Sub
 End Class
