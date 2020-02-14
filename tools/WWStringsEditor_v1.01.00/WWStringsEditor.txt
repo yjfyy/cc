@@ -22,6 +22,7 @@ Table of Contents
 > Source code license
 > Version history
 
+
 -------------
 Features list
 -------------
@@ -133,6 +134,7 @@ Special thanks to
 -Andrew West of http://www.babelstone.co.uk/ for creating BabelMap, a really
  handy tool to check what unicode symbols are available in installed fonts.
 
+
 --------------------
 Source code licenses
 --------------------
@@ -144,6 +146,10 @@ the F you want to do with it.
 ---------------
 Version history
 ---------------
+
+v1.1.0 (2019/07/40 12:15)
+-Added support for different file types, with automatic type detection.
+-Added new types: Plain text, and Cover Girl Strip Poker.
 
 v1.0.6 (2018/06/02 18:54)
 -Added Drag & Drop support for text from editors that support it.

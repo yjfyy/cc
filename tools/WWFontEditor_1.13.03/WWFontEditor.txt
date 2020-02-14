@@ -14,6 +14,10 @@ there's already an editor for that, anyway ;)
 Have fun with it!
 
 
+If you like what I'm doing, and you have too much money, feel free to donate:
+https://www.paypal.com/donate/?token=ATYlH9LdfgV3n-LXbIKxJh20H9NUwt85u3TECWCY-rvrECEGZ26wqf6sREWk9Cejao9-pG
+
+
 =================
 Table of Contents
 =================
@@ -147,14 +151,20 @@ WWFont v3
 -Lands of Lore III
 
 WWFont v4
--Tiberian Sun
--Tiberian Sun Installer
--Tiberian Sun Firestorm
--Tiberian Sun Firestorm Installer
+-Command & Conquer Tiberian Sun
+-Command & Conquer Tiberian Sun Installer
+-Command & Conquer Tiberian Sun Firestorm
+-Command & Conquer Tiberian Sun Firestorm Installer
 -Lands of Lore III Installer
 
 IGFont (Dune 2000 was made by Intelligent Games, not by Westwood)
 -Dune 2000
+
+Westwood BitFont
+-Command & Conquer Red Alert 2 (unused editor fonts)
+
+Westwood Unicode BitFont
+-Command & Conquer Red Alert 2
 
 Dynamix Font v1 a/b (2bpp and 4bpp version)
 -Pete Rose Pennant Fever
@@ -259,6 +269,7 @@ Special thanks to
 -Moon Flower for the help with the design of the palettes manager.
 -The people of the oldgamesitalia.net forum for getting me interested in game
  fonts beyond the scope of Westwood Studios.
+-夜宇 (yjfyeyu) for helping me test clipboard problems.
 
 
 --------------------
@@ -297,15 +308,58 @@ The Dynamix v4 format was figured out thanks to code from ScummVM. ScummVM is
 licensed under the GNU General Public License, but I only used it as reference
 and didn't copy or use their actual code.
 
-The Dynamix decompression code was converted from the C++ code of VOGONS.org
-user tikalat's Midi Tools. It contains no license but I assume the fact he
-included the code implies that he doesn't mind it being useful to more people.
+The Dynamix LZW and Huffman decompression code was converted from the C++ code
+of the Midi Tools created by VOGONS.org user 'tikalat'. The code contains no
+license, but I assume the fact he included the code implies that tikalat
+doesn't mind it being useful to more people.
 https://www.vogons.org/viewtopic.php?p=273448#p273448
 
 
 ---------------
 Version history
 ---------------
+
+v1.13.3: (2019/03/21 16:28)
+-Optimised saving of WW Unicode BitFont to make it roughly four times faster.
+-Fixed bug: not all of the UI got unlocked if an error occurred while saving.
+-Start of the unicode range can now be substituted with a different encoding.
+-Added setting to show/hide DOS symbols
+-Added setting to control unicode 00-FF range encoding substitution.
+-Added setting to change the symbol preview font.
+-Fixed descriptions of symbols that were only defined as range start and end.
+-Fixed issues with the palette revert button.
+-Using "Save as" will no longer replace the loaded font.
+
+v1.13.2: (2019/03/19 16:07)
+-Renamed "WWFont v5" to "WW BitFont (Unicode)" and "WWFont v6" to "WW BitFont".
+
+v1.13.1: (2019/03/19 14:05)
+-Added support for the Red Alert 2 "FoNt" format.
+-Added multithread support to prevent the UI from freezing while saving.
+
+v1.13.0: (2019/03/17 15:25)
+-Added support for the Red Alert 2 "fonT" format (game.fnt).
+ Note: Saving takes long (> 20 sec), and the UI will freeze while saving.
+-Added popup tooltips with symbol info in the sidebar list.
+
+v1.12.7: (2019/03/14 11:26)
+-Fixed pasting of 24-bit DIB images from clipboard.
+
+v1.12.6: (2019/01/25 11:15)
+-Fixed Mythos font support: fixed saving bugs, added compression support.
+
+v1.12.5: (2018/09/17 18:30)
+-Fixed Dune 2000 font saving so empty symbols can't get negative widths.
+
+v1.12.4: (2018/07/31 17:00)
+-Fixed drop shadow options box so its controls properly adjust to resizing.
+-Fixed tab order and shortcuts in shadow options box.
+-Fixed bugs in the calculation of the preview's wrapping width.
+-Adapted wrapping width calculation to compensate for drop shadow.
+-Fixed preview wrapping on types that have padding between symbols.
+-Added one pixel of line padding to the Kings of the Beach font.
+-Pressing shortcuts with Ctrl that cause a pôpup box to appear will no longer
+ make the fast colour picker get stuck.
 
 v1.12.3: (2018/07/30 21:00)
 -Added an option that allows enhancing the preview with a dropped shadow.
