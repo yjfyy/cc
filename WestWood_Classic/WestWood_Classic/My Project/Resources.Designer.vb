@@ -22,7 +22,7 @@ Namespace My.Resources
     '''<summary>
     '''  一个强类型的资源类，用于查找本地化的字符串等。
     '''</summary>
-    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0"),  _
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0"),  _
      Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.Runtime.CompilerServices.CompilerGeneratedAttribute(),  _
      Global.Microsoft.VisualBasic.HideModuleNameAttribute()>  _
@@ -47,7 +47,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  使用此强类型资源类，为所有资源查找
+        '''  重写当前线程的 CurrentUICulture 属性
         '''  重写当前线程的 CurrentUICulture 属性。
         '''</summary>
         <Global.System.ComponentModel.EditorBrowsableAttribute(Global.System.ComponentModel.EditorBrowsableState.Advanced)>  _
@@ -77,6 +77,16 @@ Namespace My.Resources
             Get
                 Dim obj As Object = ResourceManager.GetObject("93", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找 System.Byte[] 类型的本地化资源。
+        '''</summary>
+        Friend ReadOnly Property C_C95exe() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("C_C95exe", resourceCulture)
+                Return CType(obj,Byte())
             End Get
         End Property
         
@@ -125,17 +135,17 @@ Namespace My.Resources
         '''[ddraw]
         '''; ### Optional settings ###
         '''; Use the following settings to adjust the look and feel to your liking
-        '''
+        '''; 设置
+        '''; 使用下面的设置调整图像
         '''
         '''; Stretch to custom resolution, 0 = defaults to the size game requests
+        '''; 拉伸到指定分辨率，0为游戏设定的分辨率
         '''width=0
         '''height=0
         '''
         '''; Override the width/height settings shown above and always stretch to fullscreen
         '''; Note: Can be combined with &apos;windowed=true&apos; to get windowed-fullscreen aka borderless mode
-        '''fullscreen=true
-        '''
-        '''; Run in windowed mode rather than  [字符串的其余部分被截断]&quot;; 的本地化字符串。
+        '''; 覆盖上面的宽/高设置 [字符串的其余部分被截断]&quot;; 的本地化字符串。
         '''</summary>
         Friend ReadOnly Property ddraw() As String
             Get
@@ -150,6 +160,16 @@ Namespace My.Resources
             Get
                 Dim obj As Object = ResourceManager.GetObject("htitle", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找 System.Byte[] 类型的本地化资源。
+        '''</summary>
+        Friend ReadOnly Property ra95exe() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("ra95exe", resourceCulture)
+                Return CType(obj,Byte())
             End Get
         End Property
         

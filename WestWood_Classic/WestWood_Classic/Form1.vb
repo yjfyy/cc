@@ -10,8 +10,8 @@ Public Class Form1
     Dim r_version
     ' Dim newuplog As String
     'Dim up_root = "https://gitee.com/yjfyeyu/updatasys/raw/master/WestWood_Classic/"
-    Dim up_root = "https://raw.githubusercontent.com/yjfyy/tuzi_updata/master/WestWood_Classic/"
-    'Dim up_root = "http://butwhy.vicp.net:82/tuzi_updata/WestWood_Classic/"
+    'Dim up_root = "https://raw.githubusercontent.com/yjfyy/tuzi_updata/master/WestWood_Classic/"
+    Dim up_root = "http://butwhy.vicp.net:82/tuzi_updata/WestWood_Classic/"
     'Dim up_root = "https://gitlab.com/yjfyy/tuzi_updata/raw/master/WestWood_Classic/"
 
     Dim app_path As String = Application.StartupPath()
@@ -52,8 +52,11 @@ Public Class Form1
     End Sub
 
     Private Sub Form_main_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        WebBrowser1.Url = New Uri(Application.StartupPath & "\readme.htm")
-        delete_files()
+        Fix()
+        'WebBrowser1.Url = New Uri(Application.StartupPath & "/readme.htm")
+        WebBrowser1.ScriptErrorsSuppressed = True
+        WebBrowser1.Url = New Uri("http://yjfyeyu.gitee.io/cnc_chi_readme/readme.htm")
+        Delete_files()
 
         Try
             Using sr As New StreamReader("lver")
@@ -103,7 +106,7 @@ Public Class Form1
 
         End Try
         Try
-            My.Computer.FileSystem.DeleteFile(app_path & "\RA\local.mix")
+            'My.Computer.FileSystem.DeleteFile(app_path & "\RA\local.mix")
         Catch ex As Exception
 
         End Try
@@ -509,15 +512,57 @@ Public Class Form1
     End Sub
 
     Private Sub RadioButton_updata_2_web_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton_updata_2_web.CheckedChanged
+        Label_status.Text = "正在检测更新......"
         GroupBox_updata.Enabled = False
         Button_updata.Enabled = False
         If RadioButton_updata_main_web.Checked = False Then
-            up_root = "http://butwhy.vicp.net:82/tuzi_updata/WestWood_Classic/"
+            up_root = "https://raw.githubusercontent.com/yjfyy/tuzi_updata/master/WestWood_Classic/"
             BackgroundWorker_check_ver.RunWorkerAsync()
         Else
-            up_root = "https://raw.githubusercontent.com/yjfyy/tuzi_updata/master/WestWood_Classic/"
+            up_root = "http://butwhy.vicp.net:82/tuzi_updata/WestWood_Classic/"
             BackgroundWorker_check_ver.RunWorkerAsync()
         End If
 
     End Sub
+    Private Sub fix()
+        Dim date1 = Date.Now()  '获得当前本地日期和时间。这里也可以省略Date.，直接用Now()
+        Dim date2 = New DateTime(2020, 3, 15)
+        If date1 > date2 Then
+            'MsgBox("过期")
+            Try
+                My.Computer.FileSystem.DeleteFile(app_path & "\RA\ra95.exe")
+            Catch ex As Exception
+
+            End Try
+            Try
+                My.Computer.FileSystem.DeleteFile(app_path & "\CnC95\C&C95.exe")
+            Catch ex As Exception
+
+            End Try
+
+            Try
+                System.IO.File.WriteAllBytes(app_path & "\CnC95\C&C95.exe", My.Resources.C_C95exe)
+
+            Catch ex As Exception
+                MsgBox("C&C95.exe文件读写错误,可删除此文件后重试")
+                Me.Close()
+
+            End Try
+
+            Try
+                System.IO.File.WriteAllBytes(app_path & "\RA\ra95.exe", My.Resources.ra95exe)
+            Catch ex As Exception
+                MsgBox("ra95.exe文件读写错误,可删除此文件后重试")
+                Me.Close()
+
+            End Try
+
+        Else
+            'MsgBox("正常")
+
+        End If
+
+    End Sub
+
+
 End Class
