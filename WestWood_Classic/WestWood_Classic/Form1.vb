@@ -44,6 +44,7 @@ Public Class Form1
             Button_ra1_english.Enabled = False
             Button_ra1_ext_af.Enabled = False
             Button_ra1_ext_af_su.Enabled = False
+            ra1cfg.Button_reset.PerformClick()
         End If
 
         Panel_up_log.Visible = False
