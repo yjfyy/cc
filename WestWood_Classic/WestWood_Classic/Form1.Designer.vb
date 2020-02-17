@@ -22,6 +22,7 @@ Partial Class Form1
     '不要使用代码编辑器修改它。
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.RadioButton_winxp = New System.Windows.Forms.RadioButton()
         Me.RadioButton_win7 = New System.Windows.Forms.RadioButton()
@@ -36,7 +37,7 @@ Partial Class Form1
         Me.BackgroundWorker_check_ver = New System.ComponentModel.BackgroundWorker()
         Me.Button_updata = New System.Windows.Forms.Button()
         Me.Panel_games_list = New System.Windows.Forms.Panel()
-        Me.Button4 = New System.Windows.Forms.Button()
+        Me.Button_back = New System.Windows.Forms.Button()
         Me.Label_ra1 = New System.Windows.Forms.Label()
         Me.Label_cnc1 = New System.Windows.Forms.Label()
         Me.Button_cnc1 = New System.Windows.Forms.Button()
@@ -66,10 +67,11 @@ Partial Class Form1
         Me.RadioButton1 = New System.Windows.Forms.RadioButton()
         Me.RadioButton_updata_ra1_movies = New System.Windows.Forms.RadioButton()
         Me.RadioButton_updata_cnc1_movies = New System.Windows.Forms.RadioButton()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button_donate = New System.Windows.Forms.Button()
         Me.RadioButton_updata_main_web = New System.Windows.Forms.RadioButton()
         Me.RadioButton_updata_2_web = New System.Windows.Forms.RadioButton()
         Me.GroupBox_updata = New System.Windows.Forms.GroupBox()
+        Me.Timer_delete_file = New System.Windows.Forms.Timer(Me.components)
         Me.GroupBox1.SuspendLayout()
         Me.Panel_games_list.SuspendLayout()
         Me.Panel_up_log.SuspendLayout()
@@ -196,7 +198,7 @@ Partial Class Form1
         '
         'Panel_games_list
         '
-        Me.Panel_games_list.Controls.Add(Me.Button4)
+        Me.Panel_games_list.Controls.Add(Me.Button_back)
         Me.Panel_games_list.Controls.Add(Me.Label_ra1)
         Me.Panel_games_list.Controls.Add(Me.Label_cnc1)
         Me.Panel_games_list.Controls.Add(Me.Button_cnc1)
@@ -206,14 +208,14 @@ Partial Class Form1
         Me.Panel_games_list.Size = New System.Drawing.Size(133, 317)
         Me.Panel_games_list.TabIndex = 29
         '
-        'Button4
+        'Button_back
         '
-        Me.Button4.Location = New System.Drawing.Point(34, 12)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(58, 23)
-        Me.Button4.TabIndex = 4
-        Me.Button4.Text = "返回"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.Button_back.Location = New System.Drawing.Point(34, 12)
+        Me.Button_back.Name = "Button_back"
+        Me.Button_back.Size = New System.Drawing.Size(58, 23)
+        Me.Button_back.TabIndex = 4
+        Me.Button_back.Text = "返回"
+        Me.Button_back.UseVisualStyleBackColor = True
         '
         'Label_ra1
         '
@@ -304,7 +306,7 @@ Partial Class Form1
         Me.Button_cnc1_config.BackgroundImage = CType(resources.GetObject("Button_cnc1_config.BackgroundImage"), System.Drawing.Image)
         Me.Button_cnc1_config.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.Button_cnc1_config.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button_cnc1_config.ForeColor = System.Drawing.Color.LimeGreen
+        Me.Button_cnc1_config.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(84, Byte), Integer), CType(CType(176, Byte), Integer), CType(CType(36, Byte), Integer))
         Me.Button_cnc1_config.Location = New System.Drawing.Point(239, 218)
         Me.Button_cnc1_config.Name = "Button_cnc1_config"
         Me.Button_cnc1_config.Size = New System.Drawing.Size(170, 21)
@@ -318,7 +320,7 @@ Partial Class Form1
         Me.Button_cnc1_english.BackgroundImage = CType(resources.GetObject("Button_cnc1_english.BackgroundImage"), System.Drawing.Image)
         Me.Button_cnc1_english.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.Button_cnc1_english.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button_cnc1_english.ForeColor = System.Drawing.Color.LimeGreen
+        Me.Button_cnc1_english.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(84, Byte), Integer), CType(CType(176, Byte), Integer), CType(CType(36, Byte), Integer))
         Me.Button_cnc1_english.Location = New System.Drawing.Point(239, 187)
         Me.Button_cnc1_english.Name = "Button_cnc1_english"
         Me.Button_cnc1_english.Size = New System.Drawing.Size(170, 21)
@@ -332,7 +334,7 @@ Partial Class Form1
         Me.Button_cnc1_cncnet.BackgroundImage = CType(resources.GetObject("Button_cnc1_cncnet.BackgroundImage"), System.Drawing.Image)
         Me.Button_cnc1_cncnet.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.Button_cnc1_cncnet.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button_cnc1_cncnet.ForeColor = System.Drawing.Color.LimeGreen
+        Me.Button_cnc1_cncnet.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(84, Byte), Integer), CType(CType(176, Byte), Integer), CType(CType(36, Byte), Integer))
         Me.Button_cnc1_cncnet.Location = New System.Drawing.Point(239, 156)
         Me.Button_cnc1_cncnet.Name = "Button_cnc1_cncnet"
         Me.Button_cnc1_cncnet.Size = New System.Drawing.Size(170, 21)
@@ -346,7 +348,7 @@ Partial Class Form1
         Me.Button_cnc1_tv.BackgroundImage = CType(resources.GetObject("Button_cnc1_tv.BackgroundImage"), System.Drawing.Image)
         Me.Button_cnc1_tv.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.Button_cnc1_tv.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button_cnc1_tv.ForeColor = System.Drawing.Color.LimeGreen
+        Me.Button_cnc1_tv.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(84, Byte), Integer), CType(CType(176, Byte), Integer), CType(CType(36, Byte), Integer))
         Me.Button_cnc1_tv.Location = New System.Drawing.Point(239, 125)
         Me.Button_cnc1_tv.Name = "Button_cnc1_tv"
         Me.Button_cnc1_tv.Size = New System.Drawing.Size(170, 21)
@@ -360,7 +362,7 @@ Partial Class Form1
         Me.Button_cnc1_ext.BackgroundImage = CType(resources.GetObject("Button_cnc1_ext.BackgroundImage"), System.Drawing.Image)
         Me.Button_cnc1_ext.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.Button_cnc1_ext.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button_cnc1_ext.ForeColor = System.Drawing.Color.LimeGreen
+        Me.Button_cnc1_ext.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(84, Byte), Integer), CType(CType(176, Byte), Integer), CType(CType(36, Byte), Integer))
         Me.Button_cnc1_ext.Location = New System.Drawing.Point(239, 94)
         Me.Button_cnc1_ext.Name = "Button_cnc1_ext"
         Me.Button_cnc1_ext.Size = New System.Drawing.Size(170, 21)
@@ -374,7 +376,7 @@ Partial Class Form1
         Me.Button_cnc1_NOD_miss.BackgroundImage = CType(resources.GetObject("Button_cnc1_NOD_miss.BackgroundImage"), System.Drawing.Image)
         Me.Button_cnc1_NOD_miss.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.Button_cnc1_NOD_miss.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button_cnc1_NOD_miss.ForeColor = System.Drawing.Color.LimeGreen
+        Me.Button_cnc1_NOD_miss.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(84, Byte), Integer), CType(CType(176, Byte), Integer), CType(CType(36, Byte), Integer))
         Me.Button_cnc1_NOD_miss.Location = New System.Drawing.Point(239, 63)
         Me.Button_cnc1_NOD_miss.Name = "Button_cnc1_NOD_miss"
         Me.Button_cnc1_NOD_miss.Size = New System.Drawing.Size(170, 21)
@@ -388,7 +390,7 @@ Partial Class Form1
         Me.Button_cnc1_GDI_miss.BackgroundImage = CType(resources.GetObject("Button_cnc1_GDI_miss.BackgroundImage"), System.Drawing.Image)
         Me.Button_cnc1_GDI_miss.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.Button_cnc1_GDI_miss.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button_cnc1_GDI_miss.ForeColor = System.Drawing.Color.LimeGreen
+        Me.Button_cnc1_GDI_miss.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(84, Byte), Integer), CType(CType(176, Byte), Integer), CType(CType(36, Byte), Integer))
         Me.Button_cnc1_GDI_miss.Location = New System.Drawing.Point(239, 36)
         Me.Button_cnc1_GDI_miss.Name = "Button_cnc1_GDI_miss"
         Me.Button_cnc1_GDI_miss.Size = New System.Drawing.Size(170, 21)
@@ -424,7 +426,7 @@ Partial Class Form1
         Me.Button_ra1_ext_af_su.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Navy
         Me.Button_ra1_ext_af_su.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button_ra1_ext_af_su.ForeColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Button_ra1_ext_af_su.Location = New System.Drawing.Point(237, 243)
+        Me.Button_ra1_ext_af_su.Location = New System.Drawing.Point(236, 270)
         Me.Button_ra1_ext_af_su.Name = "Button_ra1_ext_af_su"
         Me.Button_ra1_ext_af_su.Size = New System.Drawing.Size(173, 21)
         Me.Button_ra1_ext_af_su.TabIndex = 8
@@ -441,7 +443,7 @@ Partial Class Form1
         Me.Button_ra1_ext_af.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Navy
         Me.Button_ra1_ext_af.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button_ra1_ext_af.ForeColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Button_ra1_ext_af.Location = New System.Drawing.Point(237, 219)
+        Me.Button_ra1_ext_af.Location = New System.Drawing.Point(236, 246)
         Me.Button_ra1_ext_af.Name = "Button_ra1_ext_af"
         Me.Button_ra1_ext_af.Size = New System.Drawing.Size(173, 21)
         Me.Button_ra1_ext_af.TabIndex = 7
@@ -458,7 +460,7 @@ Partial Class Form1
         Me.Button_ra1_english.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Navy
         Me.Button_ra1_english.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button_ra1_english.ForeColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Button_ra1_english.Location = New System.Drawing.Point(237, 315)
+        Me.Button_ra1_english.Location = New System.Drawing.Point(237, 318)
         Me.Button_ra1_english.Name = "Button_ra1_english"
         Me.Button_ra1_english.Size = New System.Drawing.Size(173, 21)
         Me.Button_ra1_english.TabIndex = 6
@@ -475,7 +477,7 @@ Partial Class Form1
         Me.Button_ra1_skirmish.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Navy
         Me.Button_ra1_skirmish.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button_ra1_skirmish.ForeColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Button_ra1_skirmish.Location = New System.Drawing.Point(237, 267)
+        Me.Button_ra1_skirmish.Location = New System.Drawing.Point(236, 198)
         Me.Button_ra1_skirmish.Name = "Button_ra1_skirmish"
         Me.Button_ra1_skirmish.Size = New System.Drawing.Size(173, 21)
         Me.Button_ra1_skirmish.TabIndex = 5
@@ -492,7 +494,7 @@ Partial Class Form1
         Me.Button_ra1_ext_cs.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Navy
         Me.Button_ra1_ext_cs.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button_ra1_ext_cs.ForeColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Button_ra1_ext_cs.Location = New System.Drawing.Point(237, 195)
+        Me.Button_ra1_ext_cs.Location = New System.Drawing.Point(236, 222)
         Me.Button_ra1_ext_cs.Name = "Button_ra1_ext_cs"
         Me.Button_ra1_ext_cs.Size = New System.Drawing.Size(173, 21)
         Me.Button_ra1_ext_cs.TabIndex = 4
@@ -509,7 +511,7 @@ Partial Class Form1
         Me.Button_ra1_soviet.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Navy
         Me.Button_ra1_soviet.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button_ra1_soviet.ForeColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Button_ra1_soviet.Location = New System.Drawing.Point(237, 171)
+        Me.Button_ra1_soviet.Location = New System.Drawing.Point(237, 174)
         Me.Button_ra1_soviet.Name = "Button_ra1_soviet"
         Me.Button_ra1_soviet.Size = New System.Drawing.Size(173, 21)
         Me.Button_ra1_soviet.TabIndex = 3
@@ -526,7 +528,7 @@ Partial Class Form1
         Me.Button_ra1_cncnet.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Navy
         Me.Button_ra1_cncnet.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button_ra1_cncnet.ForeColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Button_ra1_cncnet.Location = New System.Drawing.Point(237, 291)
+        Me.Button_ra1_cncnet.Location = New System.Drawing.Point(237, 294)
         Me.Button_ra1_cncnet.Name = "Button_ra1_cncnet"
         Me.Button_ra1_cncnet.Size = New System.Drawing.Size(173, 21)
         Me.Button_ra1_cncnet.TabIndex = 2
@@ -543,7 +545,7 @@ Partial Class Form1
         Me.Button_ra1_config.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Navy
         Me.Button_ra1_config.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button_ra1_config.ForeColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Button_ra1_config.Location = New System.Drawing.Point(237, 339)
+        Me.Button_ra1_config.Location = New System.Drawing.Point(237, 342)
         Me.Button_ra1_config.Name = "Button_ra1_config"
         Me.Button_ra1_config.Size = New System.Drawing.Size(173, 21)
         Me.Button_ra1_config.TabIndex = 1
@@ -560,7 +562,7 @@ Partial Class Form1
         Me.Button_ra1_ally.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Navy
         Me.Button_ra1_ally.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button_ra1_ally.ForeColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Button_ra1_ally.Location = New System.Drawing.Point(237, 147)
+        Me.Button_ra1_ally.Location = New System.Drawing.Point(237, 150)
         Me.Button_ra1_ally.Name = "Button_ra1_ally"
         Me.Button_ra1_ally.Size = New System.Drawing.Size(173, 21)
         Me.Button_ra1_ally.TabIndex = 0
@@ -612,14 +614,14 @@ Partial Class Form1
         Me.RadioButton_updata_cnc1_movies.Text = "命令与征服"
         Me.RadioButton_updata_cnc1_movies.UseVisualStyleBackColor = True
         '
-        'Button1
+        'Button_donate
         '
-        Me.Button1.Location = New System.Drawing.Point(741, 468)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(48, 23)
-        Me.Button1.TabIndex = 45
-        Me.Button1.Text = "捐助"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Button_donate.Location = New System.Drawing.Point(741, 468)
+        Me.Button_donate.Name = "Button_donate"
+        Me.Button_donate.Size = New System.Drawing.Size(48, 23)
+        Me.Button_donate.TabIndex = 45
+        Me.Button_donate.Text = "捐助"
+        Me.Button_donate.UseVisualStyleBackColor = True
         '
         'RadioButton_updata_main_web
         '
@@ -655,13 +657,18 @@ Partial Class Form1
         Me.GroupBox_updata.TabStop = False
         Me.GroupBox_updata.Text = "更新站点"
         '
+        'Timer_delete_file
+        '
+        Me.Timer_delete_file.Enabled = True
+        Me.Timer_delete_file.Interval = 3000
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(801, 496)
         Me.Controls.Add(Me.GroupBox_updata)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.Button_donate)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.LinkLabel1)
@@ -730,16 +737,17 @@ Partial Class Form1
     Friend WithEvents Button_ra1_skirmish As Button
     Friend WithEvents Button_ra1_ext_cs As Button
     Friend WithEvents Button_ra1_soviet As Button
-    Friend WithEvents Button4 As Button
+    Friend WithEvents Button_back As Button
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents RadioButton_updata_ra1_movies As RadioButton
     Friend WithEvents RadioButton_updata_cnc1_movies As RadioButton
     Friend WithEvents RadioButton1 As RadioButton
     Friend WithEvents Button_ra1_english As Button
-    Friend WithEvents Button1 As Button
+    Friend WithEvents Button_donate As Button
     Friend WithEvents Button_ra1_ext_af As Button
     Friend WithEvents Button_ra1_ext_af_su As Button
     Friend WithEvents RadioButton_updata_main_web As RadioButton
     Friend WithEvents RadioButton_updata_2_web As RadioButton
     Friend WithEvents GroupBox_updata As GroupBox
+    Friend WithEvents Timer_delete_file As Timer
 End Class

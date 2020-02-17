@@ -6,49 +6,11 @@
         Read_ini()
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
-        If RadioButton_1728.Checked Then
-            FileIO.FileSystem.CopyFile("attach\xtitle.1728", ".\CnC95\xtitle.pcx", True)
-        ElseIf RadioButton_864.Checked Then
-            FileIO.FileSystem.CopyFile("attach\xtitle.864", ".\CnC95\xtitle.pcx", True)
-        ElseIf RadioButton_1920.Checked Then
-            FileIO.FileSystem.CopyFile("attach\xtitle.1920", ".\CnC95\xtitle.pcx", True)
-        Else
-            Try
-                FileIO.FileSystem.DeleteFile(".\CnC95\xtitle.pcx")
-            Catch ex As Exception
-
-            End Try
-        End If
-
-        If RadioButton_eva_chi.Checked = True Then
-            FileIO.FileSystem.CopyFile("attach\speecchi.mix", ".\CnC95\speecchi.mix", True)
-        Else
-            FileIO.FileSystem.CopyFile("CnC95\speech.mix", ".\CnC95\speecchi.mix", True)
-        End If
-
-        If CheckBox_106old_ddraw.Checked = True Then
-            FileIO.FileSystem.CopyFile("attach\ddraw.dll.cnc106", ".\CnC95\ddraw.dll", True)
-        Else
-            FileIO.FileSystem.CopyFile("attach\ddraw.dll", ".\CnC95\ddraw.dll", True)
-        End If
-
-        Form1.Button_cnc1_GDI_miss.Enabled = True
-        Form1.Button_cnc1_NOD_miss.Enabled = True
-        Form1.Button_cnc1_ext.Enabled = True
-        Form1.Button_cnc1_tv.Enabled = True
-        Form1.Button_cnc1_cncnet.Enabled = True
-        Form1.Button_cnc1_english.Enabled = True
-
-        save_ini()
-
-        Me.Close()
-    End Sub
 
     Private Sub Button_reset_Click(sender As Object, e As EventArgs) Handles Button_reset.Click
         System.IO.File.WriteAllText(".\CnC95\conquer.ini", My.Resources.conquer)
-        System.IO.File.WriteAllText(".\CnC95\ddraw.ini", My.Resources.ddraw)
+        System.IO.File.WriteAllText(".\CnC95\ddraw.ini", My.Resources.ddraw_ini)
         Read_ini()
         CheckBox_cc1_compat.Checked = False
     End Sub
@@ -158,11 +120,11 @@
 
 
 
-        If CheckBox_106old_ddraw.Checked = True Then
-            WriteINI("cnc1", "106old_ddraw", "1", ".\config.ini")
-        Else
-            WriteINI("cnc1", "106old_ddraw", "0", ".\config.ini")
-        End If
+        'If CheckBox_106old_ddraw.Checked = True Then
+        '  WriteINI("cnc1", "106old_ddraw", "1", ".\config.ini")
+        'Else
+        '  WriteINI("cnc1", "106old_ddraw", "0", ".\config.ini")
+        'End If
 
         WriteINI("cnc1", "fristrun", "0", ".\config.ini")
 
@@ -210,34 +172,54 @@
         End If
     End Sub
 
-    Private Sub cnc1cfg_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+
+    Private Sub Button_ok_Click(sender As Object, e As EventArgs) Handles Button_ok.Click
+
+        If RadioButton_1728.Checked Then
+            'FileIO.FileSystem.CopyFile("attach\xtitle.1728", ".\CnC95\xtitle.pcx", True)
+            System.IO.File.WriteAllBytes(app_path & "\CnC95\xtitle.pcx", My.Resources.xtitle_1728)
+
+        ElseIf RadioButton_864.Checked Then
+            'FileIO.FileSystem.CopyFile("attach\xtitle.864", ".\CnC95\xtitle.pcx", True)
+            System.IO.File.WriteAllBytes(app_path & "\CnC95\xtitle.pcx", My.Resources.xtitle_864)
+        ElseIf RadioButton_1920.Checked Then
+            'FileIO.FileSystem.CopyFile("attach\xtitle.1920", ".\CnC95\xtitle.pcx", True)
+            System.IO.File.WriteAllBytes(app_path & "\CnC95\xtitle.pcx", My.Resources.xtitle_1920)
+
+        Else
+            Try
+                FileIO.FileSystem.DeleteFile(".\CnC95\xtitle.pcx")
+            Catch ex As Exception
+
+            End Try
+        End If
+
+        If RadioButton_eva_chi.Checked = True Then
+            'FileIO.FileSystem.CopyFile("attach\speecchi.mix", ".\CnC95\speecchi.mix", True)
+            System.IO.File.WriteAllBytes(app_path & "\CnC95\speecchi.mix", My.Resources.speecchi)
+        Else
+            FileIO.FileSystem.CopyFile("CnC95\speech.mix", ".\CnC95\speecchi.mix", True)
+        End If
+
+        System.IO.File.WriteAllBytes(app_path & "\CnC95\ddraw.dll", My.Resources.ddraw_dll)
+        'If CheckBox_106old_ddraw.Checked = True Then
+        ' FileIO.FileSystem.CopyFile("attach\ddraw.dll.cnc106", ".\CnC95\ddraw.dll", True)
+
+        ' Else
+        '   FileIO.FileSystem.CopyFile("attach\ddraw.dll", ".\CnC95\ddraw.dll", True)
+        'End If
+
+        Form1.Button_cnc1_GDI_miss.Enabled = True
+        Form1.Button_cnc1_NOD_miss.Enabled = True
+        Form1.Button_cnc1_ext.Enabled = True
+        Form1.Button_cnc1_tv.Enabled = True
+        Form1.Button_cnc1_cncnet.Enabled = True
+        Form1.Button_cnc1_english.Enabled = True
+
+        save_ini()
+
+        Me.Close()
     End Sub
-
-    'Private Sub jianrongxing()
-
-    '    'MsgBox(cc1_path)
-    '    If Form1.RadioButton_win10.Checked Then
-    '        'Dim key As Microsoft.Win32.RegistryKey = Microsoft.Win32.Registry.LocalMachine.OpenSubKey("Software/Faxturer", True)
-    '        Dim key As Microsoft.Win32.RegistryKey = Microsoft.Win32.Registry.CurrentUser.OpenSubKey("Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags", True)
-    '        '[HKEY_CURRENT_USER\Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers]
-    '        Dim subkey As Microsoft.Win32.RegistryKey
-    '        subkey = key.CreateSubKey("Layers")
-    '        subkey.SetValue(app_path & "\CnC95\C&C95.exe", "~ HIGHDPIAWARE WIN7RTM", Microsoft.Win32.RegistryValueKind.String)
-    '        'subkey.SetValue(app_path & "\RA\ra95.exe", "~ HIGHDPIAWARE WIN7RTM", Microsoft.Win32.RegistryValueKind.String)
-    '        'reg.SetValue("path", New String() {"d:/software/sdf","dfdf"}, Microsoft.Win32.RegistryValueKind.MultiString)
-    '        'WriteINI("ddraw", "Windowed", "False", ".\ddraw.ini")
-    '    ElseIf form1.RadioButton_win7.Checked Then
-    '        Dim key As Microsoft.Win32.RegistryKey = Microsoft.Win32.Registry.CurrentUser.OpenSubKey("Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags", True)
-    '        '[HKEY_CURRENT_USER\Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers]
-    '        Dim subkey As Microsoft.Win32.RegistryKey
-    '        subkey = key.CreateSubKey("Layers")
-    '        subkey.SetValue(app_path & "\CnC95\C&C95.exe", "WIN95", Microsoft.Win32.RegistryValueKind.String)
-    '        'subkey.SetValue(app_path & "\RA\ra95.exe", "WIN95", Microsoft.Win32.RegistryValueKind.String)
-    '    Else
-
-    '    End If
-    '    Threading.Thread.Sleep(100)
-    'End Sub
 
 End Class

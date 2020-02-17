@@ -3,7 +3,7 @@
     Dim app_path As String = Application.StartupPath()
 
     Private Sub Button_ok_Click(sender As Object, e As EventArgs) Handles Button_ok.Click
-        FileIO.FileSystem.CopyFile(".\attach\ddraw.dll", ".\RA\ddraw.dll", True)
+        'FileIO.FileSystem.CopyFile(".\attach\ddraw.dll", ".\RA\ddraw.dll", True)
 
         Form1.Button_ra1_ally.Enabled = True
         Form1.Button_ra1_soviet.Enabled = True
@@ -30,8 +30,7 @@
         End Try
         System.IO.File.WriteAllText(".\RA\redalert.ini", My.Resources.redalert)
         'System.IO.File.WriteAllText(".\RA\ddraw.ini", My.Resources.ddraw, System.Text.Encoding.UTF8)
-        System.IO.File.WriteAllText(".\RA\ddraw.ini", My.Resources.ddraw)
-
+        System.IO.File.WriteAllText(".\RA\ddraw.ini", My.Resources.ddraw_ini)
         read_ini()
         CheckBox_ra1_compat.Checked = False
     End Sub
@@ -329,25 +328,7 @@
         End If
     End Sub
 
-    Private Sub RadioButton1_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton_1728.CheckedChanged
 
-    End Sub
-
-    Private Sub Label7_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub Label8_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub Label6_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub GroupBox1_Enter(sender As Object, e As EventArgs) Handles GroupBox1.Enter
-
-    End Sub
 
     Private Sub CheckBox_dos_ratio_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox_dos_ratio.CheckedChanged
         If CheckBox_dos_ratio.Checked = True Then
@@ -410,5 +391,6 @@
             ComboBox_shader.Enabled = False
         End If
     End Sub
+
 
 End Class

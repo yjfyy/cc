@@ -1,5 +1,6 @@
 ﻿Imports System.ComponentModel
 Imports System.IO
+Imports System.Runtime.Remoting.Channels
 Imports System.Text
 
 
@@ -17,6 +18,7 @@ Public Class Form1
     Dim app_path As String = Application.StartupPath()
 
     Private Sub Button_cnc1_Click(sender As Object, e As EventArgs) Handles Button_cnc1.Click
+
         If GetINI("cnc1", "fristrun", "1", ".\config.ini") = "1" Then
             MsgBox（"第一次启动游戏前必须先设置参数"）
             Button_cnc1_GDI_miss.Enabled = False
@@ -53,7 +55,8 @@ Public Class Form1
     End Sub
 
     Private Sub Form_main_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Fix()
+        fix()
+        'show_game_logo()
         'WebBrowser1.Url = New Uri(Application.StartupPath & "/readme.htm")
         WebBrowser1.ScriptErrorsSuppressed = True
         WebBrowser1.Url = New Uri("http://yjfyeyu.gitee.io/cnc_chi_readme/readme.htm")
@@ -85,7 +88,151 @@ Public Class Form1
 
 
     Private Sub Delete_files()
-        '1.27使用语言包方式，删除1.27一下红警汉化文件。
+
+        Try
+            System.IO.File.Delete(app_path & "\RA\EXPAND9.MIX")
+        Catch ex As Exception
+
+        End Try
+
+        '到期删除旧汉化
+        '删除原来的汉化文件
+        '1.56删除原始汉化文件，使用新版
+        Dim date1 = Date.Now()  '获得当前本地日期和时间。这里也可以省略Date.，直接用Now()
+        Dim date2 = New DateTime(2020, 3, 5)
+        If date1 > date2 Then
+
+            Try
+                System.IO.File.Delete(app_path & "\attach\ddraw.dll")
+            Catch ex As Exception
+
+            End Try
+
+            Try
+                System.IO.File.Delete(app_path & "\attach\ddraw.dll.cnc106")
+            Catch ex As Exception
+
+            End Try
+
+            Try
+                System.IO.File.Delete(app_path & "\attach\speecchi.mix")
+            Catch ex As Exception
+
+            End Try
+
+            Try
+                System.IO.File.Delete(app_path & "\attach\xtitle.864")
+            Catch ex As Exception
+
+            End Try
+
+            Try
+                System.IO.File.Delete(app_path & "\attach\xtitle.1728")
+            Catch ex As Exception
+
+            End Try
+
+            Try
+                System.IO.File.Delete(app_path & "\attach\xtitle.1920")
+            Catch ex As Exception
+
+            End Try
+
+
+
+            Try
+                My.Computer.FileSystem.DeleteFile(app_path & "\RA\movies-3.mix")
+            Catch ex As Exception
+            End Try
+
+            Try
+                My.Computer.FileSystem.DeleteFile(app_path & "\RA\movies-4.mix")
+            Catch ex As Exception
+            End Try
+
+            Try
+                My.Computer.FileSystem.DeleteFile(app_path & "\RA\movies-5.mix")
+            Catch ex As Exception
+            End Try
+
+            Try
+                My.Computer.FileSystem.DeleteFile(app_path & "\RA\russianlanguagepack.mix")
+            Catch ex As Exception
+            End Try
+
+            Try
+                My.Computer.FileSystem.DeleteFile(app_path & "\RA\germanuncensoredlanguagepack.mix")
+            Catch ex As Exception
+            End Try
+
+            Try
+                My.Computer.FileSystem.DeleteFile(app_path & "\RA\spanishlanguagepack.mix")
+            Catch ex As Exception
+            End Try
+
+            Try
+                My.Computer.FileSystem.DeleteFile(app_path & "\RA\frenchlanguagepack.mix")
+            Catch ex As Exception
+            End Try
+
+            Try
+                My.Computer.FileSystem.DeleteFile(app_path & "\RA\germancensoredlanguagepack.mix")
+            Catch ex As Exception
+            End Try
+
+            Try
+                My.Computer.FileSystem.DeleteFile(app_path & "\RA\germanlanguagepack.mix")
+            Catch ex As Exception
+            End Try
+
+            Try
+                ' My.Computer.FileSystem.DeleteDirectory(app_path & "\CnC95\chi", onDirectoryNotEmpty:=FileIO.DeleteDirectoryOption.DeleteAllContents)
+            Catch ex As Exception
+            End Try
+
+            Try
+                My.Computer.FileSystem.DeleteFile(app_path & "\CnC95\lang_chn.mix")
+            Catch ex As Exception
+            End Try
+
+            Try
+                My.Computer.FileSystem.DeleteFile(app_path & "\CnC95\lang_chg.mix")
+            Catch ex As Exception
+            End Try
+
+            Try
+                My.Computer.FileSystem.DeleteFile(app_path & "\CnC95\lang_chv.mix")
+            Catch ex As Exception
+            End Try
+
+            Try
+                My.Computer.FileSystem.DeleteFile(app_path & "\CnC95\lang_chm.mix")
+            Catch ex As Exception
+            End Try
+
+            Try
+                My.Computer.FileSystem.DeleteFile(app_path & "\CnC95\ccconfigchg.lan")
+            Catch ex As Exception
+            End Try
+
+            Try
+                My.Computer.FileSystem.DeleteFile(app_path & "\CnC95\ccconfigchm.lan")
+            Catch ex As Exception
+            End Try
+
+            Try
+                My.Computer.FileSystem.DeleteFile(app_path & "\CnC95\ccconfigchn.lan")
+            Catch ex As Exception
+            End Try
+
+            Try
+                My.Computer.FileSystem.DeleteFile(app_path & "\CnC95\ccconfigchv.lan")
+            Catch ex As Exception
+            End Try
+
+        End If
+
+        '1.27使用语言包方式，删除1.27以下红警汉化文件。
         Try
             My.Computer.FileSystem.DeleteFile(app_path & "\RA\conquer.eng")
         Catch ex As Exception
@@ -107,7 +254,7 @@ Public Class Form1
 
         End Try
         Try
-            'My.Computer.FileSystem.DeleteFile(app_path & "\RA\local.mix")
+            My.Computer.FileSystem.DeleteFile(app_path & "\RA\local.mix")
         Catch ex As Exception
 
         End Try
@@ -161,11 +308,13 @@ Public Class Form1
         If r_version = "0" Then
             Label_status.Text = "检测失败"
 
-            Button_cnc1.Enabled = True
-            Label_cnc1.Enabled = True
+            'Button_cnc1.Enabled = True
+            'Label_cnc1.Enabled = True
 
-            Button_ra1.Enabled = True
-            Label_ra1.Enabled = True
+            ' Button_ra1.Enabled = True
+            'Label_ra1.Enabled = True
+            show_game_logo()
+
 
             GroupBox_updata.Enabled = True
 
@@ -189,11 +338,12 @@ Public Class Form1
                 'BackgroundWorker_load_up_log.RunWorkerAsync()
             Else
                 Label_status.Text = "已是最新版!"
-                Button_cnc1.Enabled = True
-                Label_cnc1.Enabled = True
+                show_game_logo()
+                'Button_cnc1.Enabled = True
+                'Label_cnc1.Enabled = True
 
-                Button_ra1.Enabled = True
-                Label_ra1.Enabled = True
+                'Button_ra1.Enabled = True
+                'Label_ra1.Enabled = True
 
                 Button_updata.Enabled = True
             End If
@@ -207,7 +357,7 @@ Public Class Form1
         Dim dFile As New System.Net.WebClient
         Dim upUri_up_data As New Uri(up_root & "up_data.exe")
         AddHandler dFile.DownloadProgressChanged, AddressOf ShowDownProgress
-        AddHandler dFile.DownloadFileCompleted, AddressOf wanchen
+        AddHandler dFile.DownloadFileCompleted, AddressOf Wanchen
         Label_status.Text = "正在下载..."
 
         dFile.DownloadFileAsync(upUri_up_data, "up_data.exe")
@@ -295,7 +445,7 @@ Public Class Form1
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button_cnc1_GDI_miss.Click
         WriteINI("CDControl", "CDPath", "CHI", "CnC95\conquer.ini")
         WriteINI("Language", "Language", "CHG", "CnC95\conquer.ini")
-
+        System.IO.File.WriteAllBytes(app_path & "\CnC95\lang_chg.mix", My.Resources.lang_chg)
         If System.Diagnostics.Process.GetProcessesByName("c&c95").Length > 0 Then
             MsgBox("请勿重复启动")
         Else
@@ -312,7 +462,7 @@ Public Class Form1
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button_cnc1_NOD_miss.Click
         WriteINI("CDControl", "CDPath", "CHI", "CnC95\conquer.ini")
         WriteINI("Language", "Language", "CHN", "CnC95\conquer.ini")
-
+        System.IO.File.WriteAllBytes(app_path & "\CnC95\lang_chn.mix", My.Resources.lang_chn)
         If System.Diagnostics.Process.GetProcessesByName("c&c95").Length > 0 Then
             MsgBox("请勿重复启动")
         Else
@@ -328,7 +478,7 @@ Public Class Form1
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button_cnc1_ext.Click
         WriteINI("CDControl", "CDPath", "CHI", "CnC95\conquer.ini")
         WriteINI("Language", "Language", "CHM", "CnC95\conquer.ini")
-
+        System.IO.File.WriteAllBytes(app_path & "\CnC95\lang_chm.mix", My.Resources.lang_chm)
         If System.Diagnostics.Process.GetProcessesByName("c&c95").Length > 0 Then
             MsgBox("请勿重复启动")
         Else
@@ -344,7 +494,7 @@ Public Class Form1
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button_cnc1_tv.Click
         WriteINI("CDControl", "CDPath", "CHI", "CnC95\conquer.ini")
         WriteINI("Language", "Language", "CHV", "CnC95\conquer.ini")
-
+        System.IO.File.WriteAllBytes(app_path & "\CnC95\lang_chv.mix", My.Resources.lang_chv)
         If System.Diagnostics.Process.GetProcessesByName("c&c95").Length > 0 Then
             MsgBox("请勿重复启动")
         Else
@@ -385,12 +535,17 @@ Public Class Form1
     End Sub
 
     Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button_ra1_ally.Click
+        System.IO.File.WriteAllBytes(".\RA\ddraw.dll", My.Resources.ddraw_dll)
         WriteINI("Options", "GameLanguage", "2", "RA\redalert.ini")
         If System.Diagnostics.Process.GetProcessesByName("ra95").Length > 0 Then
             MsgBox("请勿重复启动")
         Else
             'If My.Computer.FileSystem.FileExists("cnc95\ddraw.dll") Then
+            Try
+                System.IO.File.WriteAllBytes(app_path & "\RA\EXPAND9.MIX", My.Resources.allied)
+            Catch ex As Exception
 
+            End Try
             Process.Start("ra\ra95.exe")
             'Else
             'MsgBox("请在设置中打开ddraw")
@@ -399,24 +554,38 @@ Public Class Form1
         End If
     End Sub
 
+    Private Sub Button_ra1_soviet_Click(sender As Object, e As EventArgs) Handles Button_ra1_soviet.Click
+        System.IO.File.WriteAllBytes(".\RA\ddraw.dll", My.Resources.ddraw_dll)
+        WriteINI("Options", "GameLanguage", "3", "RA\redalert.ini")
+        If System.Diagnostics.Process.GetProcessesByName("ra95").Length > 0 Then
+            MsgBox("请勿重复启动")
+        Else
+            'If My.Computer.FileSystem.FileExists("cnc95\ddraw.dll") Then
+            Try
+                System.IO.File.WriteAllBytes(app_path & "\RA\EXPAND9.MIX", My.Resources.soviet)
+            Catch ex As Exception
 
+            End Try
+            Process.Start("ra\ra95.exe")
+            'Else
+            'MsgBox("请在设置中打开ddraw")
+            'End If
 
-    Private Sub Button_ra1_config_Click(sender As Object, e As EventArgs) Handles Button_ra1_config.Click
-        'Process.Start("RA\RedAlertConfigFull.exe")
-        ra1cfg.Show()
-    End Sub
-
-    Private Sub Button_cncnet_Click(sender As Object, e As EventArgs) Handles Button_ra1_cncnet.Click
-        WriteINI("Options", "GameLanguage", "4", "RA\redalert.ini")
-        Process.Start("ra\cncnet5.exe")
+        End If
     End Sub
 
     Private Sub Button3_Click_1(sender As Object, e As EventArgs) Handles Button_ra1_skirmish.Click
+        System.IO.File.WriteAllBytes(".\RA\ddraw.dll", My.Resources.ddraw_dll)
         WriteINI("Options", "GameLanguage", "4", "RA\redalert.ini")
         If System.Diagnostics.Process.GetProcessesByName("ra95").Length > 0 Then
             MsgBox("请勿重复启动")
         Else
             'If My.Computer.FileSystem.FileExists("cnc95\ddraw.dll") Then
+            Try
+                System.IO.File.WriteAllBytes(app_path & "\RA\EXPAND9.MIX", My.Resources.skirmish)
+            Catch ex As Exception
+
+            End Try
 
             Process.Start("ra\ra95.exe", "-SKIRMISH")
             'Else
@@ -427,52 +596,18 @@ Public Class Form1
         'Process.Start("ra\ra95.exe", "-SKIRMISH")
     End Sub
 
-    Private Sub Button4_Click_1(sender As Object, e As EventArgs) Handles Button4.Click
-        Panel_up_log.Visible = True
-        Panel_cnc1.Visible = False
-        Panel_ra1.Visible = False
-    End Sub
-
-    Private Sub Button_ra1_english_Click(sender As Object, e As EventArgs) Handles Button_ra1_english.Click
-        WriteINI("Options", "GameLanguage", "1", "RA\redalert.ini")
-        If System.Diagnostics.Process.GetProcessesByName("ra95").Length > 0 Then
-            MsgBox("请勿重复启动")
-        Else
-            'If My.Computer.FileSystem.FileExists("cnc95\ddraw.dll") Then
-
-            Process.Start("ra\ra95.exe")
-            'Else
-            'MsgBox("请在设置中打开ddraw")
-            'End If
-
-        End If
-    End Sub
-
-    Private Sub Button_ra1_soviet_Click(sender As Object, e As EventArgs) Handles Button_ra1_soviet.Click
-        WriteINI("Options", "GameLanguage", "3", "RA\redalert.ini")
-        If System.Diagnostics.Process.GetProcessesByName("ra95").Length > 0 Then
-            MsgBox("请勿重复启动")
-        Else
-            'If My.Computer.FileSystem.FileExists("cnc95\ddraw.dll") Then
-
-            Process.Start("ra\ra95.exe")
-            'Else
-            'MsgBox("请在设置中打开ddraw")
-            'End If
-
-        End If
-    End Sub
-
-    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
-        donate.Show()
-    End Sub
-
     Private Sub Button_ra1_ext_Click(sender As Object, e As EventArgs) Handles Button_ra1_ext_cs.Click
+        System.IO.File.WriteAllBytes(".\RA\ddraw.dll", My.Resources.ddraw_dll)
         WriteINI("Options", "GameLanguage", "5", "RA\redalert.ini")
         If System.Diagnostics.Process.GetProcessesByName("ra95").Length > 0 Then
             MsgBox("请勿重复启动")
         Else
             'If My.Computer.FileSystem.FileExists("cnc95\ddraw.dll") Then
+            Try
+                System.IO.File.WriteAllBytes(app_path & "\RA\EXPAND9.MIX", My.Resources.cs)
+            Catch ex As Exception
+
+            End Try
 
             Process.Start("ra\ra95.exe")
             'Else
@@ -483,11 +618,17 @@ Public Class Form1
     End Sub
 
     Private Sub Button_ra1_ext_af_Click(sender As Object, e As EventArgs) Handles Button_ra1_ext_af.Click
+        System.IO.File.WriteAllBytes(".\RA\ddraw.dll", My.Resources.ddraw_dll)
         WriteINI("Options", "GameLanguage", "6", "RA\redalert.ini")
         If System.Diagnostics.Process.GetProcessesByName("ra95").Length > 0 Then
             MsgBox("请勿重复启动")
         Else
             'If My.Computer.FileSystem.FileExists("cnc95\ddraw.dll") Then
+            Try
+                System.IO.File.WriteAllBytes(app_path & "\RA\EXPAND9.MIX", My.Resources.am_allied)
+            Catch ex As Exception
+
+            End Try
 
             Process.Start("ra\ra95.exe")
             'Else
@@ -498,11 +639,17 @@ Public Class Form1
     End Sub
 
     Private Sub Button_ra1_ext_af_su_Click(sender As Object, e As EventArgs) Handles Button_ra1_ext_af_su.Click
+        System.IO.File.WriteAllBytes(".\RA\ddraw.dll", My.Resources.ddraw_dll)
         WriteINI("Options", "GameLanguage", "7", "RA\redalert.ini")
         If System.Diagnostics.Process.GetProcessesByName("ra95").Length > 0 Then
             MsgBox("请勿重复启动")
         Else
             'If My.Computer.FileSystem.FileExists("cnc95\ddraw.dll") Then
+            Try
+                System.IO.File.WriteAllBytes(app_path & "\RA\EXPAND9.MIX", My.Resources.am_soviet)
+            Catch ex As Exception
+
+            End Try
 
             Process.Start("ra\ra95.exe")
             'Else
@@ -511,6 +658,48 @@ Public Class Form1
 
         End If
     End Sub
+
+    Private Sub Button_cncnet_Click(sender As Object, e As EventArgs) Handles Button_ra1_cncnet.Click
+        System.IO.File.WriteAllBytes(".\RA\ddraw.dll", My.Resources.ddraw_dll)
+        WriteINI("Options", "GameLanguage", "4", "RA\redalert.ini")
+        Try
+            System.IO.File.WriteAllBytes(app_path & "\RA\EXPAND9.MIX", My.Resources.skirmish)
+        Catch ex As Exception
+
+        End Try
+        Process.Start("ra\cncnet5.exe")
+    End Sub
+
+
+
+    Private Sub Button_ra1_english_Click(sender As Object, e As EventArgs) Handles Button_ra1_english.Click
+        System.IO.File.WriteAllBytes(".\RA\ddraw.dll", My.Resources.ddraw_dll)
+        WriteINI("Options", "GameLanguage", "1", "RA\redalert.ini")
+        If System.Diagnostics.Process.GetProcessesByName("ra95").Length > 0 Then
+            MsgBox("请勿重复启动")
+        Else
+            Try
+                System.IO.File.Delete(app_path & "\RA\EXPAND9.MIX")
+            Catch ex As Exception
+
+            End Try
+
+            Process.Start("ra\ra95.exe")
+
+        End If
+    End Sub
+
+    Private Sub Button_ra1_config_Click(sender As Object, e As EventArgs) Handles Button_ra1_config.Click
+        'Process.Start("RA\RedAlertConfigFull.exe")
+        ra1cfg.Show()
+    End Sub
+
+    Private Sub Button_back_Click(sender As Object, e As EventArgs) Handles Button_back.Click
+        Panel_up_log.Visible = True
+        Panel_cnc1.Visible = False
+        Panel_ra1.Visible = False
+    End Sub
+
 
     Private Sub RadioButton_updata_2_web_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton_updata_2_web.CheckedChanged
         Label_status.Text = "正在检测更新......"
@@ -527,8 +716,21 @@ Public Class Form1
     End Sub
     Private Sub fix()
         Dim date1 = Date.Now()  '获得当前本地日期和时间。这里也可以省略Date.，直接用Now()
-        Dim date2 = New DateTime(2020, 3, 15)
+        Dim date2 = New DateTime(2020, 3, 5)
         If date1 > date2 Then
+            Try
+                My.Computer.FileSystem.CreateDirectory(app_path & "\CnC95")
+            Catch ex As Exception
+
+            End Try
+
+            Try
+                My.Computer.FileSystem.CreateDirectory(app_path & "\RA")
+            Catch ex As Exception
+
+            End Try
+
+
             'MsgBox("过期")
             Try
                 My.Computer.FileSystem.DeleteFile(app_path & "\RA\ra95.exe")
@@ -560,10 +762,74 @@ Public Class Form1
 
         Else
             'MsgBox("正常")
-
         End If
 
     End Sub
 
+    Private Sub Timer_delete_file_Tick(sender As Object, e As EventArgs) Handles Timer_delete_file.Tick
+        If (System.Diagnostics.Process.GetProcessesByName("ra95").Length > 0) Or
+                (System.Diagnostics.Process.GetProcessesByName("c&c95").Length > 0) Or
+            (System.Diagnostics.Process.GetProcessesByName("ra95-spawn").Length > 0) Or
+            (System.Diagnostics.Process.GetProcessesByName("cnc95").Length > 0) Or
+            (System.Diagnostics.Process.GetProcessesByName("cncnet5").Length > 0) _
+            Then
+        Else
+            Delete_files()
+        End If
+    End Sub
+
+
+
+    Private Sub Button_donate_Click(sender As Object, e As EventArgs) Handles Button_donate.Click
+        donate.Show()
+    End Sub
+
+    Private Sub show_game_logo()
+
+        If My.Computer.FileSystem.FileExists(app_path & "\CnC95\conquer.mix") Then
+            Button_cnc1.Enabled = True
+            Label_cnc1.Enabled = True
+        Else
+            Button_cnc1.Enabled = False
+            Label_cnc1.Enabled = False
+        End If
+
+        If My.Computer.FileSystem.FileExists(app_path & "\RA\REDALERT.MIX") Then
+            Button_ra1.Enabled = True
+            Label_ra1.Enabled = True
+        Else
+            Button_ra1.Enabled = False
+            Label_ra1.Enabled = False
+        End If
+
+    End Sub
+
+    Private Sub Button_cnc1_GDI_miss_MouseMove(sender As Object, e As MouseEventArgs) Handles Button_cnc1_GDI_miss.MouseMove, Button_cnc1_NOD_miss.MouseMove,
+              Button_cnc1_ext.MouseMove, Button_cnc1_tv.MouseMove, Button_cnc1_cncnet.MouseMove, Button_cnc1_english.MouseMove, Button_cnc1_config.MouseMove
+
+        sender.ForeColor = Color.FromArgb(84， 252， 84)
+    End Sub
+
+    Private Sub Button_cnc1_GDI_miss_MouseLeave(sender As Object, e As EventArgs) Handles Button_cnc1_GDI_miss.MouseLeave, Button_cnc1_NOD_miss.MouseLeave,
+            Button_cnc1_ext.MouseLeave, Button_cnc1_tv.MouseLeave, Button_cnc1_cncnet.MouseLeave, Button_cnc1_config.MouseLeave, Button_cnc1_english.MouseLeave
+
+        sender.ForeColor = Color.FromArgb(84， 176， 36)
+    End Sub
+
+    Private Sub Button_ra1_ally_MouseMove(sender As Object, e As MouseEventArgs) Handles Button_ra1_ally.MouseMove, Button_ra1_soviet.MouseMove,
+    Button_ra1_ext_cs.MouseMove, Button_ra1_ext_af.MouseMove, Button_ra1_ext_af_su.MouseMove, Button_ra1_skirmish.MouseMove, Button_ra1_cncnet.MouseMove,
+    Button_ra1_english.MouseMove, Button_ra1_config.MouseMove
+
+        sender.ForeColor = Color.FromArgb(252， 244， 220)
+
+    End Sub
+
+    Private Sub Button_ra1_ally_Mouseleave(sender As Object, e As EventArgs) Handles Button_ra1_ally.MouseLeave, Button_ra1_soviet.MouseLeave,
+    Button_ra1_ext_cs.MouseLeave, Button_ra1_ext_af.MouseLeave, Button_ra1_ext_af_su.MouseLeave, Button_ra1_skirmish.MouseLeave, Button_ra1_cncnet.MouseLeave,
+    Button_ra1_english.MouseLeave, Button_ra1_config.MouseLeave
+
+        sender.ForeColor = Color.FromArgb(204， 0， 0)
+
+    End Sub
 
 End Class

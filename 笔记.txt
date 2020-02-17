@@ -71,3 +71,6 @@ wget -ivqalistnb.txt --no-check-certificate -B=http://gitee.com/yjfyeyu/cc1_data
 E.g.: GameLanguage=6 to load a Spanish language pack.
 
 红警图标导入，png game 选择ra1 type选择cameos
+
+
+vqp文件路径 REDALERT.mix\nchires.mix

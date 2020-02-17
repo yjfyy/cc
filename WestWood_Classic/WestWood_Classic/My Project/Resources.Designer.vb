@@ -83,6 +83,36 @@ Namespace My.Resources
         '''<summary>
         '''  查找 System.Byte[] 类型的本地化资源。
         '''</summary>
+        Friend ReadOnly Property allied() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("allied", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找 System.Byte[] 类型的本地化资源。
+        '''</summary>
+        Friend ReadOnly Property am_allied() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("am_allied", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找 System.Byte[] 类型的本地化资源。
+        '''</summary>
+        Friend ReadOnly Property am_soviet() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("am_soviet", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找 System.Byte[] 类型的本地化资源。
+        '''</summary>
         Friend ReadOnly Property C_C95exe() As Byte()
             Get
                 Dim obj As Object = ResourceManager.GetObject("C_C95exe", resourceCulture)
@@ -130,26 +160,56 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  查找 System.Byte[] 类型的本地化资源。
+        '''</summary>
+        Friend ReadOnly Property cs() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("cs", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找 System.Byte[] 类型的本地化资源。
+        '''</summary>
+        Friend ReadOnly Property ddraw_dll() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("ddraw_dll", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
         '''  查找类似 ; cnc-ddraw - https://github.com/CnCNet/cnc-ddraw - https://cncnet.org
         '''
         '''[ddraw]
         '''; ### Optional settings ###
         '''; Use the following settings to adjust the look and feel to your liking
-        '''; 设置
-        '''; 使用下面的设置调整图像
+        '''
         '''
         '''; Stretch to custom resolution, 0 = defaults to the size game requests
-        '''; 拉伸到指定分辨率，0为游戏设定的分辨率
         '''width=0
         '''height=0
         '''
         '''; Override the width/height settings shown above and always stretch to fullscreen
         '''; Note: Can be combined with &apos;windowed=true&apos; to get windowed-fullscreen aka borderless mode
-        '''; 覆盖上面的宽/高设置 [字符串的其余部分被截断]&quot;; 的本地化字符串。
+        '''fullscreen=false
+        '''
+        '''; Run in windowed mode rather than [字符串的其余部分被截断]&quot;; 的本地化字符串。
         '''</summary>
-        Friend ReadOnly Property ddraw() As String
+        Friend ReadOnly Property ddraw_ini() As String
             Get
-                Return ResourceManager.GetString("ddraw", resourceCulture)
+                Return ResourceManager.GetString("ddraw_ini", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找 System.Byte[] 类型的本地化资源。
+        '''</summary>
+        Friend ReadOnly Property deseichi() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("deseichi", resourceCulture)
+                Return CType(obj,Byte())
             End Get
         End Property
         
@@ -160,6 +220,46 @@ Namespace My.Resources
             Get
                 Dim obj As Object = ResourceManager.GetObject("htitle", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找 System.Byte[] 类型的本地化资源。
+        '''</summary>
+        Friend ReadOnly Property lang_chg() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("lang_chg", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找 System.Byte[] 类型的本地化资源。
+        '''</summary>
+        Friend ReadOnly Property lang_chm() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("lang_chm", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找 System.Byte[] 类型的本地化资源。
+        '''</summary>
+        Friend ReadOnly Property lang_chn() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("lang_chn", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找 System.Byte[] 类型的本地化资源。
+        '''</summary>
+        Friend ReadOnly Property lang_chv() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("lang_chv", resourceCulture)
+                Return CType(obj,Byte())
             End Get
         End Property
         
@@ -203,6 +303,56 @@ Namespace My.Resources
         Friend ReadOnly Property redalert() As String
             Get
                 Return ResourceManager.GetString("redalert", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找 System.Byte[] 类型的本地化资源。
+        '''</summary>
+        Friend ReadOnly Property skirmish() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("skirmish", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找 System.Byte[] 类型的本地化资源。
+        '''</summary>
+        Friend ReadOnly Property snowichi() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("snowichi", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找 System.Byte[] 类型的本地化资源。
+        '''</summary>
+        Friend ReadOnly Property soviet() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("soviet", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找 System.Byte[] 类型的本地化资源。
+        '''</summary>
+        Friend ReadOnly Property speecchi() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("speecchi", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找 System.Byte[] 类型的本地化资源。
+        '''</summary>
+        Friend ReadOnly Property tempichi() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("tempichi", resourceCulture)
+                Return CType(obj,Byte())
             End Get
         End Property
         
@@ -282,6 +432,46 @@ Namespace My.Resources
         Friend ReadOnly Property up_ra1_movice() As String
             Get
                 Return ResourceManager.GetString("up_ra1_movice", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找 System.Byte[] 类型的本地化资源。
+        '''</summary>
+        Friend ReadOnly Property wintichi() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("wintichi", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找 System.Byte[] 类型的本地化资源。
+        '''</summary>
+        Friend ReadOnly Property xtitle_1728() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("xtitle_1728", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找 System.Byte[] 类型的本地化资源。
+        '''</summary>
+        Friend ReadOnly Property xtitle_1920() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("xtitle_1920", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找 System.Byte[] 类型的本地化资源。
+        '''</summary>
+        Friend ReadOnly Property xtitle_864() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("xtitle_864", resourceCulture)
+                Return CType(obj,Byte())
             End Get
         End Property
     End Module

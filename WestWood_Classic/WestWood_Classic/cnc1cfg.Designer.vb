@@ -46,7 +46,7 @@ Partial Class cnc1cfg
         Me.RadioButton_auto = New System.Windows.Forms.RadioButton()
         Me.RadioButton_opengl = New System.Windows.Forms.RadioButton()
         Me.RadioButton_gdi = New System.Windows.Forms.RadioButton()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button_ok = New System.Windows.Forms.Button()
         Me.CheckBox_cc1_compat = New System.Windows.Forms.CheckBox()
         Me.CheckBox_106old_ddraw = New System.Windows.Forms.CheckBox()
         Me.GroupBox1.SuspendLayout()
@@ -61,7 +61,7 @@ Partial Class cnc1cfg
         Me.Button_reset.Name = "Button_reset"
         Me.Button_reset.Size = New System.Drawing.Size(93, 23)
         Me.Button_reset.TabIndex = 0
-        Me.Button_reset.Text = "重置全部设定"
+        Me.Button_reset.Text = "修复并重置设定"
         Me.Button_reset.UseVisualStyleBackColor = True
         '
         'GroupBox1
@@ -306,14 +306,14 @@ Partial Class cnc1cfg
         Me.RadioButton_gdi.Text = "软件（GDI,可避免滚屏过快）"
         Me.RadioButton_gdi.UseVisualStyleBackColor = True
         '
-        'Button1
+        'Button_ok
         '
-        Me.Button1.Location = New System.Drawing.Point(165, 260)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 5
-        Me.Button1.Text = "确定"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Button_ok.Location = New System.Drawing.Point(165, 260)
+        Me.Button_ok.Name = "Button_ok"
+        Me.Button_ok.Size = New System.Drawing.Size(75, 23)
+        Me.Button_ok.TabIndex = 5
+        Me.Button_ok.Text = "确定"
+        Me.Button_ok.UseVisualStyleBackColor = True
         '
         'CheckBox_cc1_compat
         '
@@ -328,12 +328,14 @@ Partial Class cnc1cfg
         'CheckBox_106old_ddraw
         '
         Me.CheckBox_106old_ddraw.AutoSize = True
+        Me.CheckBox_106old_ddraw.Enabled = False
         Me.CheckBox_106old_ddraw.Location = New System.Drawing.Point(178, 232)
         Me.CheckBox_106old_ddraw.Name = "CheckBox_106old_ddraw"
         Me.CheckBox_106old_ddraw.Size = New System.Drawing.Size(90, 16)
         Me.CheckBox_106old_ddraw.TabIndex = 7
         Me.CheckBox_106old_ddraw.Text = "老版本DDRAW"
         Me.CheckBox_106old_ddraw.UseVisualStyleBackColor = True
+        Me.CheckBox_106old_ddraw.Visible = False
         '
         'cnc1cfg
         '
@@ -342,7 +344,7 @@ Partial Class cnc1cfg
         Me.ClientSize = New System.Drawing.Size(399, 307)
         Me.Controls.Add(Me.CheckBox_106old_ddraw)
         Me.Controls.Add(Me.CheckBox_cc1_compat)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.Button_ok)
         Me.Controls.Add(Me.GroupBox4)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
@@ -381,7 +383,7 @@ Partial Class cnc1cfg
     Friend WithEvents RadioButton_auto As RadioButton
     Friend WithEvents RadioButton_opengl As RadioButton
     Friend WithEvents RadioButton_gdi As RadioButton
-    Friend WithEvents Button1 As Button
+    Friend WithEvents Button_ok As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents TextBox_width As TextBox
     Friend WithEvents RadioButton_test_resolution As RadioButton
