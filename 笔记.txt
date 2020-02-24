@@ -74,3 +74,106 @@ E.g.: GameLanguage=6 to load a Spanish language pack.
 
 
 vqp文件路径 REDALERT.mix\nchires.mix
+
+ddarw.ini
+选项
+fullscreen=true并且maintas= true 显示窗口实际分辨率将等同于桌面分辨率，游戏内分辨率自己定义，等原始比例
+他俩有一个false 未看出不同，都是满屏，显示窗口应该和和游戏相等
+
+1920 1080下 都是true ，点对点满屏
+1920 1080  maintas true 相同
+1920 1080  都是false  相同
+1920 1080  fullscreen true 相同
+
+1728 1080下 都是true ，点对点 原比例
+1728 1080  maintas true  相同
+1728 1080  都是false  相同
+1728 1080  fullscreen true 拉伸全屏
+
+1728 1080下 都是true ，点对点 原比例
+1728 1080  maintas true  相同
+1728 1080  都是false  相同
+1728 1080  fullscreen true 拉伸全屏
+
+864 540下 都是true  点对点 原比例
+864 540  maintas true 拉伸全屏
+864 540  都是false  拉伸全屏
+864 540  fullscreen true  全屏 像点对点 显示窗为1080
+
+1280x800 下 都是true  拉伸，显示窗1080
+1280x800  maintas true  拉伸全屏
+1280x800 都是false   拉伸全屏
+1280x800 fullscreen true   拉伸全屏
+ 
+
+windowed 为窗口模式，无影响上面的设置
+
+ra95mix文件结构
+
+redalert.mix
+	包含 	editor.mix	编辑工具语言及图片
+		hires.mix	字库、建筑，武器图标、游戏内图片
+		local.mix	字库、本地语言
+		lores.mix	dos下、字库建筑图标、游戏内图片
+		nchires.mix	进游戏动画、vpq
+		speech.mix	游戏内语音提示
+main.mix
+	包含	allies.mix	盟军部队反馈语音
+		conquer.mix	游戏内音效、建筑，单位动画shp
+		edhi.mix	编辑器内shp
+		edlo.mix	dos编辑器内shp
+		general.mix	单人任务，图片，tutorial.ini scg01ea.ini mission.in等
+		interior.mix	室内关的资源
+		movies1.mix	盟军动画
+		russian.mix	苏军部队反馈语音
+		scores.mix	音乐21首
+		snow.mix	雪地资源
+		sounds.mix	公用游戏单位反馈语音、游戏内音效
+		temperat.mix	草地资源
+movie-10.min就是游戏cd2的main.mix
+	包含	allies.mix	盟军部队反馈语音
+		conquer.mix	游戏内音效、建筑，单位动画shp
+		edhi.mix	编辑器内shp
+		edlo.mix	dos编辑器内shp
+		general.mix	单人任务，图片，tutorial.ini scg01ea.ini mission.in等
+		interior.mix	室内关的资源
+		movies2.mix	苏军动画
+		russian.mix	苏军部队反馈语音
+		scores.mix	音乐21首
+		snow.mix	雪地资源
+		sounds.mix	公用游戏单位反馈语音、游戏内音效
+		temperat.mix	草地资源
+aftermath.mix	推测为余生资料片任务 scg40ea scu40ea
+barren.mix	荒地资源
+cave.mix	洞穴资源
+counterstrike.mix	反击资料片任务 sca01ea	scu31ea
+desert.mix	沙漠资源
+EXPAND2.mix	资料片资源 包括蚂蚁音效动画地震车时空传送车电兵资源等 antend.vqp antintro.vpq bmap.vpq mission.ini 包括scg01-scg14 scu01-scu14 tutorial.ini
+expand3.mix	资料片任务 conquer.eng scm01ea-scm25ea bmap.vpq 
+interior.mix	游戏内资源 比main.mix内多了一点
+jungle.mix	丛林资源
+raed.mix	
+	包含	barren
+		cave
+		conquer
+		desert
+		edhi
+		general
+		interior
+		jugle
+		snow
+		temperat
+		winter
+raed1.mix
+	包含	editor
+		hires
+		local
+		
+raed2.mix
+	包含
+		ant1 ant2 ant3 carr ctnk dtrk msub qtnk stnk ttnk 等shp
+sc-flamedancers
+定制任务 cmu108ea-cmu126ea
+spawn1.mix	蚂蚁 c&c1等资源
+winter.mix	冬天资源
+wolapi		联机资源

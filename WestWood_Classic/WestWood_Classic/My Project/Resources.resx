@@ -202,13 +202,25 @@
   <data name="wintichi" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\wintichi.mix;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="speech" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\speech.mix;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="xtitle_1280" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\xtitle_1280.pcx;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="xtitle_1280x960" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\xtitle_1280x960.pcx;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="xtitle_1728" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\xtitle.1728;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>..\Resources\xtitle_1728.pcx;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="xtitle_1920" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\xtitle.1920;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>..\Resources\xtitle_1920.pcx;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="xtitle_864" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\xtitle.864;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>..\Resources\xtitle_864.pcx;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="xtitle_960" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\xtitle_960.pcx;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>

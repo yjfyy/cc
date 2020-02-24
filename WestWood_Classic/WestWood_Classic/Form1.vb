@@ -89,10 +89,17 @@ Public Class Form1
 
     Private Sub Delete_files()
 
+        '清理释放的汉化
         Try
             System.IO.File.Delete(app_path & "\RA\EXPAND9.MIX")
         Catch ex As Exception
 
+        End Try
+
+        '清理旧版本视频
+        Try
+            My.Computer.FileSystem.DeleteDirectory(app_path & "\CnC95\chi", onDirectoryNotEmpty:=FileIO.DeleteDirectoryOption.DeleteAllContents)
+        Catch ex As Exception
         End Try
 
         '到期删除旧汉化
@@ -185,10 +192,7 @@ Public Class Form1
             Catch ex As Exception
             End Try
 
-            Try
-                ' My.Computer.FileSystem.DeleteDirectory(app_path & "\CnC95\chi", onDirectoryNotEmpty:=FileIO.DeleteDirectoryOption.DeleteAllContents)
-            Catch ex As Exception
-            End Try
+
 
             Try
                 My.Computer.FileSystem.DeleteFile(app_path & "\CnC95\lang_chn.mix")
@@ -229,6 +233,17 @@ Public Class Form1
                 My.Computer.FileSystem.DeleteFile(app_path & "\CnC95\ccconfigchv.lan")
             Catch ex As Exception
             End Try
+            Try
+                My.Computer.FileSystem.DeleteFile("lang_chi.ini")
+            Catch ex As Exception
+
+            End Try
+
+            Try
+                My.Computer.FileSystem.DeleteFile("\CnC95\lang_chi.ini")
+            Catch ex As Exception
+
+            End Try
 
         End If
 
@@ -265,6 +280,10 @@ Public Class Form1
         Catch ex As Exception
 
         End Try
+
+
+
+
 
         '删除更新残留
         If My.Computer.FileSystem.FileExists("up_com.bat") Then
@@ -391,13 +410,7 @@ Public Class Form1
     End Sub
 
     Private Sub Form_main_Closed(sender As Object, e As EventArgs) Handles Me.Closed
-        If My.Computer.FileSystem.FileExists("lang_chi.ini") Then
-            Try
-                My.Computer.FileSystem.DeleteFile("lang_chi.ini")
-            Catch ex As Exception
 
-            End Try
-        End If
     End Sub
 
     Private Sub Button_updata_Click(sender As Object, e As EventArgs) Handles Button_updata.Click

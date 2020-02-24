@@ -36,7 +36,7 @@
 	},
 	"Audio" : {
 		"Auto" : {
-			"Commit" : false,
+			"Commit" : true,
 			"Focus" : false,
 			"Scroll" : true
 		},
@@ -81,7 +81,7 @@
 		"Link" : true,
 		"Lock Scroll on Cursor" : false,
 		"Medusa Timing Hotkeys" : false,
-		"Next Line on Commit" : true,
+		"Next Line on Commit" : false,
 		"Player" : "DirectSound",
 		"Plays When Stepping Video" : false,
 		"Provider" : "ffmpegsource",
@@ -96,7 +96,7 @@
 			"Distance" : 10,
 			"Enable" : false
 		},
-		"Spectrum" : true,
+		"Spectrum" : false,
 		"Start Drag Sensitivity" : 3,
 		"Track Cursor" : {
 			"Font Face" : ""
@@ -303,9 +303,9 @@
 			"Audio" : "",
 			"Automation" : "",
 			"Keyframes" : "",
-			"Subtitles" : "E:\\Projects\\cc_new\\ra1_video_sinization\\字幕",
+			"Subtitles" : "E:\\Projects\\cc_new\\cc_video_chinese_version\\cc1\\字幕",
 			"Timecodes" : "",
-			"Video" : "E:\\Projects\\cc_new\\ra1_video_sinization\\图像帧序列\\antbrf"
+			"Video" : "E:\\"
 		},
 		"Screenshot" : "?video"
 	},

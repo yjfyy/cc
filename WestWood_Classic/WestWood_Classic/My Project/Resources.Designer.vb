@@ -349,6 +349,16 @@ Namespace My.Resources
         '''<summary>
         '''  查找 System.Byte[] 类型的本地化资源。
         '''</summary>
+        Friend ReadOnly Property speech() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("speech", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找 System.Byte[] 类型的本地化资源。
+        '''</summary>
         Friend ReadOnly Property tempichi() As Byte()
             Get
                 Dim obj As Object = ResourceManager.GetObject("tempichi", resourceCulture)
@@ -448,6 +458,26 @@ Namespace My.Resources
         '''<summary>
         '''  查找 System.Byte[] 类型的本地化资源。
         '''</summary>
+        Friend ReadOnly Property xtitle_1280() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("xtitle_1280", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找 System.Byte[] 类型的本地化资源。
+        '''</summary>
+        Friend ReadOnly Property xtitle_1280x960() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("xtitle_1280x960", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找 System.Byte[] 类型的本地化资源。
+        '''</summary>
         Friend ReadOnly Property xtitle_1728() As Byte()
             Get
                 Dim obj As Object = ResourceManager.GetObject("xtitle_1728", resourceCulture)
@@ -471,6 +501,16 @@ Namespace My.Resources
         Friend ReadOnly Property xtitle_864() As Byte()
             Get
                 Dim obj As Object = ResourceManager.GetObject("xtitle_864", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找 System.Byte[] 类型的本地化资源。
+        '''</summary>
+        Friend ReadOnly Property xtitle_960() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("xtitle_960", resourceCulture)
                 Return CType(obj,Byte())
             End Get
         End Property

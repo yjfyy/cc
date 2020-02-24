@@ -150,6 +150,7 @@ Partial Class ra1cfg
         'RadioButton_opengl
         '
         Me.RadioButton_opengl.AutoSize = True
+        Me.RadioButton_opengl.ForeColor = System.Drawing.Color.Red
         Me.RadioButton_opengl.Location = New System.Drawing.Point(6, 75)
         Me.RadioButton_opengl.Name = "RadioButton_opengl"
         Me.RadioButton_opengl.Size = New System.Drawing.Size(107, 16)
@@ -177,6 +178,7 @@ Partial Class ra1cfg
         'Label8
         '
         Me.Label8.AutoSize = True
+        Me.Label8.ForeColor = System.Drawing.Color.Red
         Me.Label8.Location = New System.Drawing.Point(6, 122)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(179, 12)
@@ -186,6 +188,7 @@ Partial Class ra1cfg
         'Label7
         '
         Me.Label7.AutoSize = True
+        Me.Label7.ForeColor = System.Drawing.Color.Red
         Me.Label7.Location = New System.Drawing.Point(6, 100)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(29, 12)
@@ -196,7 +199,7 @@ Partial Class ra1cfg
         '
         Me.ComboBox_shader.Enabled = False
         Me.ComboBox_shader.FormattingEnabled = True
-        Me.ComboBox_shader.Items.AddRange(New Object() {"双线插值", "三线插值", "高亮", "模拟显像管", "模拟纯平显像管", "模拟扫描线", "xbr柔化", "xbrz柔化"})
+        Me.ComboBox_shader.Items.AddRange(New Object() {"无", "双线插值", "三线插值", "高亮", "模拟显像管", "模拟纯平显像管", "模拟扫描线", "xbr柔化", "xbrz柔化"})
         Me.ComboBox_shader.Location = New System.Drawing.Point(41, 97)
         Me.ComboBox_shader.Name = "ComboBox_shader"
         Me.ComboBox_shader.Size = New System.Drawing.Size(138, 20)
@@ -305,7 +308,7 @@ Partial Class ra1cfg
         '
         Me.Label18.AutoSize = True
         Me.Label18.ForeColor = System.Drawing.Color.Red
-        Me.Label18.Location = New System.Drawing.Point(127, 137)
+        Me.Label18.Location = New System.Drawing.Point(131, 137)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(95, 12)
         Me.Label18.TabIndex = 30
@@ -315,7 +318,7 @@ Partial Class ra1cfg
         '
         Me.Label16.AutoSize = True
         Me.Label16.ForeColor = System.Drawing.Color.Red
-        Me.Label16.Location = New System.Drawing.Point(127, 108)
+        Me.Label16.Location = New System.Drawing.Point(131, 108)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(95, 12)
         Me.Label16.TabIndex = 28
@@ -324,7 +327,7 @@ Partial Class ra1cfg
         'Label15
         '
         Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(127, 79)
+        Me.Label15.Location = New System.Drawing.Point(113, 77)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(113, 12)
         Me.Label15.TabIndex = 27
@@ -333,7 +336,7 @@ Partial Class ra1cfg
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(127, 50)
+        Me.Label3.Location = New System.Drawing.Point(137, 48)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(89, 12)
         Me.Label3.TabIndex = 26
@@ -342,7 +345,7 @@ Partial Class ra1cfg
         'RadioButton_1280
         '
         Me.RadioButton_1280.AutoSize = True
-        Me.RadioButton_1280.Location = New System.Drawing.Point(10, 77)
+        Me.RadioButton_1280.Location = New System.Drawing.Point(10, 75)
         Me.RadioButton_1280.Name = "RadioButton_1280"
         Me.RadioButton_1280.Size = New System.Drawing.Size(71, 16)
         Me.RadioButton_1280.TabIndex = 22
@@ -483,6 +486,7 @@ Partial Class ra1cfg
         'CheckBox_ra1_compat
         '
         Me.CheckBox_ra1_compat.AutoSize = True
+        Me.CheckBox_ra1_compat.Enabled = False
         Me.CheckBox_ra1_compat.Location = New System.Drawing.Point(417, 209)
         Me.CheckBox_ra1_compat.Name = "CheckBox_ra1_compat"
         Me.CheckBox_ra1_compat.Size = New System.Drawing.Size(108, 16)
@@ -573,13 +577,13 @@ Partial Class ra1cfg
         Me.TabPage1.Controls.Add(Me.Label_width_640)
         Me.TabPage1.Controls.Add(Me.Button_ok)
         Me.TabPage1.Controls.Add(Me.Label_height_1080)
-        Me.TabPage1.Controls.Add(Me.GroupBox4)
         Me.TabPage1.Controls.Add(Me.Label_height_540)
         Me.TabPage1.Controls.Add(Me.CheckBox_ra1_compat)
         Me.TabPage1.Controls.Add(Me.Label_width_864)
         Me.TabPage1.Controls.Add(Me.GroupBox_ddraw_resolution)
         Me.TabPage1.Controls.Add(Me.Label_height_400)
         Me.TabPage1.Controls.Add(Me.Label_width_1280)
+        Me.TabPage1.Controls.Add(Me.GroupBox4)
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
@@ -593,7 +597,7 @@ Partial Class ra1cfg
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(526, 377)
+        Me.TabPage2.Size = New System.Drawing.Size(526, 326)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "游戏内置选项"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -602,7 +606,7 @@ Partial Class ra1cfg
         '
         Me.TabPage3.Location = New System.Drawing.Point(4, 22)
         Me.TabPage3.Name = "TabPage3"
-        Me.TabPage3.Size = New System.Drawing.Size(526, 377)
+        Me.TabPage3.Size = New System.Drawing.Size(526, 326)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "快捷键"
         Me.TabPage3.UseVisualStyleBackColor = True

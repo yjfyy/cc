@@ -109,8 +109,8 @@
         'ddraw分辨率框架
         Dim ddraw_width As String, ddraw_height As String
 
-        ddraw_width = GetINI("ddraw", "width", "0", ".\RA\ddraw.ini")
-        ddraw_height = GetINI("ddraw", "height", "0", ".\RA\ddraw.ini")
+        ddraw_width = GetINI("ra95", "width", "0", ".\RA\ddraw.ini")
+        ddraw_height = GetINI("ra95", "height", "0", ".\RA\ddraw.ini")
 
         If (ddraw_width = "0") And (ddraw_height = "0") Then
             CheckBox_ddraw_resolution.Checked = True
@@ -135,24 +135,26 @@
         End Select
 
         Dim shader As String
-        shader = GetINI("ddraw", "shader", "Shaders\bilinear.glsl", ".\RA\ddraw.ini")
+        shader = GetINI("ddraw", "shader", " ", ".\RA\ddraw.ini")
         Select Case shader
             Case "Shaders\bilinear.glsl"
-                ComboBox_shader.SelectedIndex = 0
-            Case "Shaders\bright.glsl"
-                ComboBox_shader.SelectedIndex = 2
-            Case "Shaders\crt-lottes-fast.glsl"
-                ComboBox_shader.SelectedIndex = 3
-            Case "Shaders\crt-lottes-fast-no-warp.glsl"
-                ComboBox_shader.SelectedIndex = 4
-            Case "Shaders\cubic.glsl"
                 ComboBox_shader.SelectedIndex = 1
-            Case "Shaders\scanline.glsl"
+            Case "Shaders\bright.glsl"
+                ComboBox_shader.SelectedIndex = 3
+            Case "Shaders\crt-lottes-fast.glsl"
+                ComboBox_shader.SelectedIndex = 4
+            Case "Shaders\crt-lottes-fast-no-warp.glsl"
                 ComboBox_shader.SelectedIndex = 5
-            Case "Shaders\xbr-lv2.glsl"
+            Case "Shaders\cubic.glsl"
+                ComboBox_shader.SelectedIndex = 2
+            Case "Shaders\scanline.glsl"
                 ComboBox_shader.SelectedIndex = 6
-            Case "Shaders\xbrz-freescale.glsl"
+            Case "Shaders\xbr-lv2.glsl"
                 ComboBox_shader.SelectedIndex = 7
+            Case "Shaders\xbrz-freescale.glsl"
+                ComboBox_shader.SelectedIndex = 8
+            Case Else
+                ComboBox_shader.SelectedIndex = 0
         End Select
 
         '显示模式
@@ -205,8 +207,8 @@
 
         '保存ddraw分辨率
 
-        WriteINI("ddraw", "width", TextBox_ddraw_width.Text, ".\RA\ddraw.ini")
-        WriteINI("ddraw", "height", TextBox_ddraw_height.Text, ".\RA\ddraw.ini")
+        WriteINI("ra95", "width", TextBox_ddraw_width.Text, ".\RA\ddraw.ini")
+        WriteINI("ra95", "height", TextBox_ddraw_height.Text, ".\RA\ddraw.ini")
 
         '渲染模式
         If RadioButton_auto.Checked = True Then
@@ -226,29 +228,32 @@
         End If
 
         Select Case ComboBox_shader.SelectedIndex
-            Case 0
-                WriteINI("ddraw", "shader", "Shaders\bilinear.glsl", ".\RA\ddraw.ini")
             Case 1
-                WriteINI("ddraw", "shader", "Shaders\cubic.glsl", ".\RA\ddraw.ini")
+                WriteINI("ddraw", "shader", "Shaders\bilinear.glsl", ".\RA\ddraw.ini")
             Case 2
-                WriteINI("ddraw", "shader", "Shaders\bright.glsl", ".\RA\ddraw.ini")
+                WriteINI("ddraw", "shader", "Shaders\cubic.glsl", ".\RA\ddraw.ini")
             Case 3
-                WriteINI("ddraw", "shader", "Shaders\crt-lottes-fast.glsl", ".\RA\ddraw.ini")
+                WriteINI("ddraw", "shader", "Shaders\bright.glsl", ".\RA\ddraw.ini")
             Case 4
-                WriteINI("ddraw", "shader", "Shaders\crt-lottes-fast-no-warp.glsl", ".\RA\ddraw.ini")
+                WriteINI("ddraw", "shader", "Shaders\crt-lottes-fast.glsl", ".\RA\ddraw.ini")
             Case 5
-                WriteINI("ddraw", "shader", "Shaders\scanline.glsl", ".\RA\ddraw.ini")
+                WriteINI("ddraw", "shader", "Shaders\crt-lottes-fast-no-warp.glsl", ".\RA\ddraw.ini")
             Case 6
-                WriteINI("ddraw", "shader", "Shaders\xbr-lv2.glsl", ".\RA\ddraw.ini")
+                WriteINI("ddraw", "shader", "Shaders\scanline.glsl", ".\RA\ddraw.ini")
             Case 7
+                WriteINI("ddraw", "shader", "Shaders\xbr-lv2.glsl", ".\RA\ddraw.ini")
+            Case 8
                 WriteINI("ddraw", "shader", "Shaders\xbrz-freescale.glsl", ".\RA\ddraw.ini")
+            Case Else
+                WriteINI("ddraw", "shader", "", ".\RA\ddraw.ini")
         End Select
+
 
         '显示模式
 
         If RadioButton_full.Checked = True Then
             WriteINI("ddraw", "windowed", "false", ".\RA\ddraw.ini")
-            WriteINI("ddraw", "fullscreen", "false", ".\RA\ddraw.ini")
+            WriteINI("ddraw", "fullscreen", "true", ".\RA\ddraw.ini")
         End If
 
         If RadioButton_full_win.Checked = True Then
@@ -331,7 +336,9 @@
 
 
     Private Sub CheckBox_dos_ratio_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox_dos_ratio.CheckedChanged
+
         If CheckBox_dos_ratio.Checked = True Then
+            '    CheckBox_ddraw_resolution.Checked = False
             RadioButton_640.Text = "640x400"
             Label_width_640.Text = 640
             Label_height_400.Text = 400
@@ -349,6 +356,7 @@
             Label_height_1080.Text = 1080
 
         Else
+            '   CheckBox_ddraw_resolution.Checked = True
             RadioButton_640.Text = "640x480"
             Label_width_640.Text = 640
             Label_height_400.Text = 480

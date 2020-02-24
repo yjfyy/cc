@@ -130,7 +130,7 @@ Partial Class Form1
         'LinkLabel1
         '
         Me.LinkLabel1.AutoSize = True
-        Me.LinkLabel1.Location = New System.Drawing.Point(490, 473)
+        Me.LinkLabel1.Location = New System.Drawing.Point(468, 473)
         Me.LinkLabel1.Name = "LinkLabel1"
         Me.LinkLabel1.Size = New System.Drawing.Size(245, 12)
         Me.LinkLabel1.TabIndex = 37
@@ -264,7 +264,7 @@ Partial Class Form1
         Me.Panel_up_log.Controls.Add(Me.WebBrowser1)
         Me.Panel_up_log.Location = New System.Drawing.Point(149, 11)
         Me.Panel_up_log.Name = "Panel_up_log"
-        Me.Panel_up_log.Size = New System.Drawing.Size(640, 402)
+        Me.Panel_up_log.Size = New System.Drawing.Size(640, 400)
         Me.Panel_up_log.TabIndex = 42
         '
         'WebBrowser1
@@ -275,7 +275,7 @@ Partial Class Form1
         Me.WebBrowser1.ScriptErrorsSuppressed = True
         Me.WebBrowser1.Size = New System.Drawing.Size(628, 396)
         Me.WebBrowser1.TabIndex = 1
-        Me.WebBrowser1.Url = New System.Uri("", System.UriKind.Relative)
+        Me.WebBrowser1.Url = New System.Uri("http://yjfyeyu.gitee.io/cnc_chi_readme/readme.htm", System.UriKind.Absolute)
         '
         'ProgressBar1
         '
@@ -287,7 +287,7 @@ Partial Class Form1
         'Panel_cnc1
         '
         Me.Panel_cnc1.BackgroundImage = Global.WestWood_Classic.My.Resources.Resources.htitle
-        Me.Panel_cnc1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Panel_cnc1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.Panel_cnc1.Controls.Add(Me.Button_cnc1_config)
         Me.Panel_cnc1.Controls.Add(Me.Button_cnc1_english)
         Me.Panel_cnc1.Controls.Add(Me.Button_cnc1_cncnet)
@@ -297,11 +297,14 @@ Partial Class Form1
         Me.Panel_cnc1.Controls.Add(Me.Button_cnc1_GDI_miss)
         Me.Panel_cnc1.Location = New System.Drawing.Point(149, 11)
         Me.Panel_cnc1.Name = "Panel_cnc1"
-        Me.Panel_cnc1.Size = New System.Drawing.Size(643, 402)
+        Me.Panel_cnc1.Size = New System.Drawing.Size(640, 400)
         Me.Panel_cnc1.TabIndex = 30
         '
         'Button_cnc1_config
         '
+        Me.Button_cnc1_config.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Button_cnc1_config.BackColor = System.Drawing.Color.Transparent
         Me.Button_cnc1_config.BackgroundImage = CType(resources.GetObject("Button_cnc1_config.BackgroundImage"), System.Drawing.Image)
         Me.Button_cnc1_config.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
@@ -309,13 +312,16 @@ Partial Class Form1
         Me.Button_cnc1_config.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(84, Byte), Integer), CType(CType(176, Byte), Integer), CType(CType(36, Byte), Integer))
         Me.Button_cnc1_config.Location = New System.Drawing.Point(239, 218)
         Me.Button_cnc1_config.Name = "Button_cnc1_config"
-        Me.Button_cnc1_config.Size = New System.Drawing.Size(170, 21)
+        Me.Button_cnc1_config.Size = New System.Drawing.Size(167, 22)
         Me.Button_cnc1_config.TabIndex = 6
         Me.Button_cnc1_config.Text = "设置"
         Me.Button_cnc1_config.UseVisualStyleBackColor = False
         '
         'Button_cnc1_english
         '
+        Me.Button_cnc1_english.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Button_cnc1_english.BackColor = System.Drawing.Color.Transparent
         Me.Button_cnc1_english.BackgroundImage = CType(resources.GetObject("Button_cnc1_english.BackgroundImage"), System.Drawing.Image)
         Me.Button_cnc1_english.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
@@ -323,13 +329,16 @@ Partial Class Form1
         Me.Button_cnc1_english.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(84, Byte), Integer), CType(CType(176, Byte), Integer), CType(CType(36, Byte), Integer))
         Me.Button_cnc1_english.Location = New System.Drawing.Point(239, 187)
         Me.Button_cnc1_english.Name = "Button_cnc1_english"
-        Me.Button_cnc1_english.Size = New System.Drawing.Size(170, 21)
+        Me.Button_cnc1_english.Size = New System.Drawing.Size(167, 22)
         Me.Button_cnc1_english.TabIndex = 5
         Me.Button_cnc1_english.Text = "英文版"
         Me.Button_cnc1_english.UseVisualStyleBackColor = False
         '
         'Button_cnc1_cncnet
         '
+        Me.Button_cnc1_cncnet.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Button_cnc1_cncnet.BackColor = System.Drawing.Color.Transparent
         Me.Button_cnc1_cncnet.BackgroundImage = CType(resources.GetObject("Button_cnc1_cncnet.BackgroundImage"), System.Drawing.Image)
         Me.Button_cnc1_cncnet.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
@@ -337,13 +346,16 @@ Partial Class Form1
         Me.Button_cnc1_cncnet.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(84, Byte), Integer), CType(CType(176, Byte), Integer), CType(CType(36, Byte), Integer))
         Me.Button_cnc1_cncnet.Location = New System.Drawing.Point(239, 156)
         Me.Button_cnc1_cncnet.Name = "Button_cnc1_cncnet"
-        Me.Button_cnc1_cncnet.Size = New System.Drawing.Size(170, 21)
+        Me.Button_cnc1_cncnet.Size = New System.Drawing.Size(167, 22)
         Me.Button_cnc1_cncnet.TabIndex = 4
         Me.Button_cnc1_cncnet.Text = "CnCNet 联机"
         Me.Button_cnc1_cncnet.UseVisualStyleBackColor = False
         '
         'Button_cnc1_tv
         '
+        Me.Button_cnc1_tv.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Button_cnc1_tv.BackColor = System.Drawing.Color.Transparent
         Me.Button_cnc1_tv.BackgroundImage = CType(resources.GetObject("Button_cnc1_tv.BackgroundImage"), System.Drawing.Image)
         Me.Button_cnc1_tv.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
@@ -351,13 +363,16 @@ Partial Class Form1
         Me.Button_cnc1_tv.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(84, Byte), Integer), CType(CType(176, Byte), Integer), CType(CType(36, Byte), Integer))
         Me.Button_cnc1_tv.Location = New System.Drawing.Point(239, 125)
         Me.Button_cnc1_tv.Name = "Button_cnc1_tv"
-        Me.Button_cnc1_tv.Size = New System.Drawing.Size(170, 21)
+        Me.Button_cnc1_tv.Size = New System.Drawing.Size(167, 22)
         Me.Button_cnc1_tv.TabIndex = 3
         Me.Button_cnc1_tv.Text = "游戏主机独占任务"
         Me.Button_cnc1_tv.UseVisualStyleBackColor = False
         '
         'Button_cnc1_ext
         '
+        Me.Button_cnc1_ext.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Button_cnc1_ext.BackColor = System.Drawing.Color.Transparent
         Me.Button_cnc1_ext.BackgroundImage = CType(resources.GetObject("Button_cnc1_ext.BackgroundImage"), System.Drawing.Image)
         Me.Button_cnc1_ext.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
@@ -365,13 +380,16 @@ Partial Class Form1
         Me.Button_cnc1_ext.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(84, Byte), Integer), CType(CType(176, Byte), Integer), CType(CType(36, Byte), Integer))
         Me.Button_cnc1_ext.Location = New System.Drawing.Point(239, 94)
         Me.Button_cnc1_ext.Name = "Button_cnc1_ext"
-        Me.Button_cnc1_ext.Size = New System.Drawing.Size(170, 21)
+        Me.Button_cnc1_ext.Size = New System.Drawing.Size(167, 22)
         Me.Button_cnc1_ext.TabIndex = 2
         Me.Button_cnc1_ext.Text = "隐秘行动资料片任务"
         Me.Button_cnc1_ext.UseVisualStyleBackColor = False
         '
         'Button_cnc1_NOD_miss
         '
+        Me.Button_cnc1_NOD_miss.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Button_cnc1_NOD_miss.BackColor = System.Drawing.Color.Transparent
         Me.Button_cnc1_NOD_miss.BackgroundImage = CType(resources.GetObject("Button_cnc1_NOD_miss.BackgroundImage"), System.Drawing.Image)
         Me.Button_cnc1_NOD_miss.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
@@ -379,13 +397,16 @@ Partial Class Form1
         Me.Button_cnc1_NOD_miss.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(84, Byte), Integer), CType(CType(176, Byte), Integer), CType(CType(36, Byte), Integer))
         Me.Button_cnc1_NOD_miss.Location = New System.Drawing.Point(239, 63)
         Me.Button_cnc1_NOD_miss.Name = "Button_cnc1_NOD_miss"
-        Me.Button_cnc1_NOD_miss.Size = New System.Drawing.Size(170, 21)
+        Me.Button_cnc1_NOD_miss.Size = New System.Drawing.Size(167, 22)
         Me.Button_cnc1_NOD_miss.TabIndex = 1
         Me.Button_cnc1_NOD_miss.Text = "诺德兄弟会剧情任务(NOD)"
         Me.Button_cnc1_NOD_miss.UseVisualStyleBackColor = False
         '
         'Button_cnc1_GDI_miss
         '
+        Me.Button_cnc1_GDI_miss.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Button_cnc1_GDI_miss.BackColor = System.Drawing.Color.Transparent
         Me.Button_cnc1_GDI_miss.BackgroundImage = CType(resources.GetObject("Button_cnc1_GDI_miss.BackgroundImage"), System.Drawing.Image)
         Me.Button_cnc1_GDI_miss.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
@@ -393,15 +414,16 @@ Partial Class Form1
         Me.Button_cnc1_GDI_miss.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(84, Byte), Integer), CType(CType(176, Byte), Integer), CType(CType(36, Byte), Integer))
         Me.Button_cnc1_GDI_miss.Location = New System.Drawing.Point(239, 36)
         Me.Button_cnc1_GDI_miss.Name = "Button_cnc1_GDI_miss"
-        Me.Button_cnc1_GDI_miss.Size = New System.Drawing.Size(170, 21)
+        Me.Button_cnc1_GDI_miss.Size = New System.Drawing.Size(167, 22)
         Me.Button_cnc1_GDI_miss.TabIndex = 0
         Me.Button_cnc1_GDI_miss.Text = "全球防御组织剧情任务(GDI)"
         Me.Button_cnc1_GDI_miss.UseVisualStyleBackColor = False
         '
         'Panel_ra1
         '
+        Me.Panel_ra1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.Panel_ra1.BackgroundImage = Global.WestWood_Classic.My.Resources.Resources.title
-        Me.Panel_ra1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Panel_ra1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.Panel_ra1.Controls.Add(Me.Button_ra1_ext_af_su)
         Me.Panel_ra1.Controls.Add(Me.Button_ra1_ext_af)
         Me.Panel_ra1.Controls.Add(Me.Button_ra1_english)
@@ -413,11 +435,14 @@ Partial Class Form1
         Me.Panel_ra1.Controls.Add(Me.Button_ra1_ally)
         Me.Panel_ra1.Location = New System.Drawing.Point(149, 11)
         Me.Panel_ra1.Name = "Panel_ra1"
-        Me.Panel_ra1.Size = New System.Drawing.Size(640, 402)
+        Me.Panel_ra1.Size = New System.Drawing.Size(640, 400)
         Me.Panel_ra1.TabIndex = 31
         '
         'Button_ra1_ext_af_su
         '
+        Me.Button_ra1_ext_af_su.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Button_ra1_ext_af_su.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Button_ra1_ext_af_su.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.Button_ra1_ext_af_su.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
@@ -428,13 +453,16 @@ Partial Class Form1
         Me.Button_ra1_ext_af_su.ForeColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Button_ra1_ext_af_su.Location = New System.Drawing.Point(236, 270)
         Me.Button_ra1_ext_af_su.Name = "Button_ra1_ext_af_su"
-        Me.Button_ra1_ext_af_su.Size = New System.Drawing.Size(173, 21)
+        Me.Button_ra1_ext_af_su.Size = New System.Drawing.Size(170, 22)
         Me.Button_ra1_ext_af_su.TabIndex = 8
         Me.Button_ra1_ext_af_su.Text = "余生资料片苏军任务"
         Me.Button_ra1_ext_af_su.UseVisualStyleBackColor = False
         '
         'Button_ra1_ext_af
         '
+        Me.Button_ra1_ext_af.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Button_ra1_ext_af.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Button_ra1_ext_af.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.Button_ra1_ext_af.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
@@ -445,13 +473,16 @@ Partial Class Form1
         Me.Button_ra1_ext_af.ForeColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Button_ra1_ext_af.Location = New System.Drawing.Point(236, 246)
         Me.Button_ra1_ext_af.Name = "Button_ra1_ext_af"
-        Me.Button_ra1_ext_af.Size = New System.Drawing.Size(173, 21)
+        Me.Button_ra1_ext_af.Size = New System.Drawing.Size(170, 22)
         Me.Button_ra1_ext_af.TabIndex = 7
         Me.Button_ra1_ext_af.Text = "余生资料片盟军任务"
         Me.Button_ra1_ext_af.UseVisualStyleBackColor = False
         '
         'Button_ra1_english
         '
+        Me.Button_ra1_english.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Button_ra1_english.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Button_ra1_english.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.Button_ra1_english.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
@@ -462,13 +493,16 @@ Partial Class Form1
         Me.Button_ra1_english.ForeColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Button_ra1_english.Location = New System.Drawing.Point(237, 318)
         Me.Button_ra1_english.Name = "Button_ra1_english"
-        Me.Button_ra1_english.Size = New System.Drawing.Size(173, 21)
+        Me.Button_ra1_english.Size = New System.Drawing.Size(170, 22)
         Me.Button_ra1_english.TabIndex = 6
         Me.Button_ra1_english.Text = "英文版"
         Me.Button_ra1_english.UseVisualStyleBackColor = False
         '
         'Button_ra1_skirmish
         '
+        Me.Button_ra1_skirmish.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Button_ra1_skirmish.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Button_ra1_skirmish.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.Button_ra1_skirmish.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
@@ -479,13 +513,16 @@ Partial Class Form1
         Me.Button_ra1_skirmish.ForeColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Button_ra1_skirmish.Location = New System.Drawing.Point(236, 198)
         Me.Button_ra1_skirmish.Name = "Button_ra1_skirmish"
-        Me.Button_ra1_skirmish.Size = New System.Drawing.Size(173, 21)
+        Me.Button_ra1_skirmish.Size = New System.Drawing.Size(170, 22)
         Me.Button_ra1_skirmish.TabIndex = 5
         Me.Button_ra1_skirmish.Text = "遭遇战"
         Me.Button_ra1_skirmish.UseVisualStyleBackColor = False
         '
         'Button_ra1_ext_cs
         '
+        Me.Button_ra1_ext_cs.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Button_ra1_ext_cs.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Button_ra1_ext_cs.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.Button_ra1_ext_cs.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
@@ -496,13 +533,16 @@ Partial Class Form1
         Me.Button_ra1_ext_cs.ForeColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Button_ra1_ext_cs.Location = New System.Drawing.Point(236, 222)
         Me.Button_ra1_ext_cs.Name = "Button_ra1_ext_cs"
-        Me.Button_ra1_ext_cs.Size = New System.Drawing.Size(173, 21)
+        Me.Button_ra1_ext_cs.Size = New System.Drawing.Size(170, 22)
         Me.Button_ra1_ext_cs.TabIndex = 4
         Me.Button_ra1_ext_cs.Text = "反击资料片任务"
         Me.Button_ra1_ext_cs.UseVisualStyleBackColor = False
         '
         'Button_ra1_soviet
         '
+        Me.Button_ra1_soviet.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Button_ra1_soviet.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Button_ra1_soviet.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.Button_ra1_soviet.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
@@ -513,13 +553,16 @@ Partial Class Form1
         Me.Button_ra1_soviet.ForeColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Button_ra1_soviet.Location = New System.Drawing.Point(237, 174)
         Me.Button_ra1_soviet.Name = "Button_ra1_soviet"
-        Me.Button_ra1_soviet.Size = New System.Drawing.Size(173, 21)
+        Me.Button_ra1_soviet.Size = New System.Drawing.Size(170, 22)
         Me.Button_ra1_soviet.TabIndex = 3
         Me.Button_ra1_soviet.Text = "苏军剧情任务"
         Me.Button_ra1_soviet.UseVisualStyleBackColor = False
         '
         'Button_ra1_cncnet
         '
+        Me.Button_ra1_cncnet.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Button_ra1_cncnet.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Button_ra1_cncnet.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.Button_ra1_cncnet.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
@@ -530,13 +573,16 @@ Partial Class Form1
         Me.Button_ra1_cncnet.ForeColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Button_ra1_cncnet.Location = New System.Drawing.Point(237, 294)
         Me.Button_ra1_cncnet.Name = "Button_ra1_cncnet"
-        Me.Button_ra1_cncnet.Size = New System.Drawing.Size(173, 21)
+        Me.Button_ra1_cncnet.Size = New System.Drawing.Size(170, 22)
         Me.Button_ra1_cncnet.TabIndex = 2
         Me.Button_ra1_cncnet.Text = "CnCNet 联机"
         Me.Button_ra1_cncnet.UseVisualStyleBackColor = False
         '
         'Button_ra1_config
         '
+        Me.Button_ra1_config.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Button_ra1_config.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Button_ra1_config.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.Button_ra1_config.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
@@ -547,13 +593,16 @@ Partial Class Form1
         Me.Button_ra1_config.ForeColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Button_ra1_config.Location = New System.Drawing.Point(237, 342)
         Me.Button_ra1_config.Name = "Button_ra1_config"
-        Me.Button_ra1_config.Size = New System.Drawing.Size(173, 21)
+        Me.Button_ra1_config.Size = New System.Drawing.Size(170, 22)
         Me.Button_ra1_config.TabIndex = 1
         Me.Button_ra1_config.Text = "设置"
         Me.Button_ra1_config.UseVisualStyleBackColor = False
         '
         'Button_ra1_ally
         '
+        Me.Button_ra1_ally.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Button_ra1_ally.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Button_ra1_ally.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.Button_ra1_ally.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
@@ -564,7 +613,7 @@ Partial Class Form1
         Me.Button_ra1_ally.ForeColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Button_ra1_ally.Location = New System.Drawing.Point(237, 150)
         Me.Button_ra1_ally.Name = "Button_ra1_ally"
-        Me.Button_ra1_ally.Size = New System.Drawing.Size(173, 21)
+        Me.Button_ra1_ally.Size = New System.Drawing.Size(170, 22)
         Me.Button_ra1_ally.TabIndex = 0
         Me.Button_ra1_ally.Text = "盟军剧情任务"
         Me.Button_ra1_ally.UseVisualStyleBackColor = False
@@ -671,7 +720,6 @@ Partial Class Form1
         Me.Controls.Add(Me.Button_donate)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Controls.Add(Me.LinkLabel1)
         Me.Controls.Add(Me.Label_r_version)
         Me.Controls.Add(Me.Label_l_version)
         Me.Controls.Add(Me.Label3)
@@ -680,6 +728,7 @@ Partial Class Form1
         Me.Controls.Add(Me.Button_updata)
         Me.Controls.Add(Me.Panel_games_list)
         Me.Controls.Add(Me.ProgressBar1)
+        Me.Controls.Add(Me.LinkLabel1)
         Me.Controls.Add(Me.Panel_up_log)
         Me.Controls.Add(Me.Panel_ra1)
         Me.Controls.Add(Me.Panel_cnc1)

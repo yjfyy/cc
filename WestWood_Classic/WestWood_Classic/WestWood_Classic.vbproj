@@ -187,11 +187,15 @@
     <None Include="Resources\snowichi.mix" />
     <None Include="Resources\soviet.mix" />
     <None Include="Resources\speecchi.mix" />
+    <None Include="Resources\speech.mix" />
     <None Include="Resources\tempichi.mix" />
     <None Include="Resources\wintichi.mix" />
-    <None Include="Resources\xtitle.1728" />
-    <None Include="Resources\xtitle.1920" />
-    <None Include="Resources\xtitle.864" />
+    <None Include="Resources\xtitle_1280.pcx" />
+    <None Include="Resources\xtitle_1280x960.pcx" />
+    <None Include="Resources\xtitle_1728.pcx" />
+    <None Include="Resources\xtitle_1920.pcx" />
+    <None Include="Resources\xtitle_864.pcx" />
+    <None Include="Resources\xtitle_960.pcx" />
   </ItemGroup>
   <ItemGroup>
     <None Include="img\1.ico" />
@@ -221,9 +225,15 @@
     <Content Include="ini\up_ra1_movice.txt" />
     <Content Include="ini\up_cnc1_movice.txt" />
     <Content Include="ini\up.txt" />
-    <Content Include="readme.htm">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+    <Content Include="web\attach\bg.gif" />
+    <Content Include="web\attach\cnc100.gif" />
+    <Content Include="web\attach\ra100.gif" />
+    <Content Include="web\faq.files\faq102.png" />
+    <Content Include="web\faq.files\faq363.png" />
+    <Content Include="web\faq.htm" />
+    <Content Include="web\readme.htm" />
+    <Content Include="web\thank_list.htm" />
+    <Content Include="web\up_log.htm" />
     <None Include="Resources\ddraw.dll" />
     <None Include="Resources\allied.mix" />
     <None Include="Resources\ra95.exe" />
