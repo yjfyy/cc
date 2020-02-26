@@ -98,6 +98,12 @@ Public Class Form1
         End Try
 
         Try
+            System.IO.File.Delete(app_path & "\RA\campaign.mix")
+        Catch ex As Exception
+
+        End Try
+
+        Try
             System.IO.File.Delete(app_path & " \CnC95\lang_chi.mix")
         Catch ex As Exception
 
@@ -469,8 +475,8 @@ Public Class Form1
     'End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button_cnc1_GDI_miss.Click
-        WriteINI("CDControl", "CDPath", "CHI", "CnC95\conquer.ini")
-        WriteINI("Language", "Language", "CHI", "CnC95\conquer.ini")
+        'WriteINI("CDControl", "CDPath", "CHI", "CnC95\conquer.ini")
+        'WriteINI("Language", "Language", "CHI", "CnC95\conquer.ini")
 
         If System.Diagnostics.Process.GetProcessesByName("c&c95").Length > 0 Then
             MsgBox("请勿重复启动")
@@ -504,8 +510,8 @@ Public Class Form1
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button_cnc1_NOD_miss.Click
-        WriteINI("CDControl", "CDPath", "CHI", "CnC95\conquer.ini")
-        WriteINI("Language", "Language", "CHI", "CnC95\conquer.ini")
+        'WriteINI("CDControl", "CDPath", "CHI", "CnC95\conquer.ini")
+        'WriteINI("Language", "Language", "CHI", "CnC95\conquer.ini")
 
 
         If System.Diagnostics.Process.GetProcessesByName("c&c95").Length > 0 Then
@@ -539,8 +545,8 @@ Public Class Form1
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button_cnc1_ext.Click
-        WriteINI("CDControl", "CDPath", "CHI", "CnC95\conquer.ini")
-        WriteINI("Language", "Language", "CHI", "CnC95\conquer.ini")
+        'WriteINI("CDControl", "CDPath", "CHI", "CnC95\conquer.ini")
+        ' WriteINI("Language", "Language", "CHI", "CnC95\conquer.ini")
 
         If System.Diagnostics.Process.GetProcessesByName("c&c95").Length > 0 Then
             MsgBox("请勿重复启动")
@@ -573,8 +579,8 @@ Public Class Form1
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button_cnc1_tv.Click
-        WriteINI("CDControl", "CDPath", "CHI", "CnC95\conquer.ini")
-        WriteINI("Language", "Language", "CHI", "CnC95\conquer.ini")
+        'WriteINI("CDControl", "CDPath", "CHI", "CnC95\conquer.ini")
+        ' WriteINI("Language", "Language", "CHI", "CnC95\conquer.ini")
 
         If System.Diagnostics.Process.GetProcessesByName("c&c95").Length > 0 Then
             MsgBox("请勿重复启动")
@@ -607,8 +613,8 @@ Public Class Form1
     End Sub
 
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button_cnc1_english.Click
-        WriteINI("CDControl", "CDPath", ".", "CnC95\conquer.ini")
-        WriteINI("Language", "Language", "eng", "CnC95\conquer.ini")
+        'WriteINI("CDControl", "CDPath", ".", "CnC95\conquer.ini")
+        'WriteINI("Language", "Language", "eng", "CnC95\conquer.ini")
 
         If System.Diagnostics.Process.GetProcessesByName("c&c95").Length > 0 Then
 
@@ -723,9 +729,9 @@ Public Class Form1
         Else
             'If My.Computer.FileSystem.FileExists("cnc95\ddraw.dll") Then
             Try
-                System.IO.File.WriteAllBytes(app_path & "\RA\EXPAND9.MIX", My.Resources.cs)
-                System.IO.File.SetCreationTime(app_path & "\RA\EXPAND9.MIX", New DateTime(2013, 1, 30, 4, 16, 0))
-                System.IO.File.SetLastWriteTime(app_path & "\RA\EXPAND9.MIX", New DateTime(2013, 1, 30, 4, 16, 0))
+                System.IO.File.WriteAllBytes(app_path & "\RA\campaign.mix", My.Resources.cs)
+                System.IO.File.SetCreationTime(app_path & "\RA\campaign.mix", New DateTime(2013, 1, 30, 4, 16, 0))
+                System.IO.File.SetLastWriteTime(app_path & "\RA\campaign.mix", New DateTime(2013, 1, 30, 4, 16, 0))
             Catch ex As Exception
                 MsgBox("汉化异常,关闭杀毒软件后重试")
                 Exit Sub
@@ -747,9 +753,9 @@ Public Class Form1
         Else
             'If My.Computer.FileSystem.FileExists("cnc95\ddraw.dll") Then
             Try
-                System.IO.File.WriteAllBytes(app_path & "\RA\EXPAND9.MIX", My.Resources.am_allied)
-                System.IO.File.SetCreationTime(app_path & "\RA\EXPAND9.MIX", New DateTime(2013, 1, 30, 4, 16, 0))
-                System.IO.File.SetLastWriteTime(app_path & "\RA\EXPAND9.MIX", New DateTime(2013, 1, 30, 4, 16, 0))
+                System.IO.File.WriteAllBytes(app_path & "\RA\campaign.mix", My.Resources.am_allied)
+                System.IO.File.SetCreationTime(app_path & "\RA\campaign.mix", New DateTime(2013, 1, 30, 4, 16, 0))
+                System.IO.File.SetLastWriteTime(app_path & "\RA\campaign.mix", New DateTime(2013, 1, 30, 4, 16, 0))
             Catch ex As Exception
                 MsgBox("汉化异常,关闭杀毒软件后重试")
                 Exit Sub
@@ -771,9 +777,9 @@ Public Class Form1
         Else
             'If My.Computer.FileSystem.FileExists("cnc95\ddraw.dll") Then
             Try
-                System.IO.File.WriteAllBytes(app_path & "\RA\EXPAND9.MIX", My.Resources.am_soviet)
-                System.IO.File.SetCreationTime(app_path & "\RA\EXPAND9.MIX", New DateTime(2013, 1, 30, 4, 16, 0))
-                System.IO.File.SetLastWriteTime(app_path & "\RA\EXPAND9.MIX", New DateTime(2013, 1, 30, 4, 16, 0))
+                System.IO.File.WriteAllBytes(app_path & "\RA\campaign.mix", My.Resources.am_soviet)
+                System.IO.File.SetCreationTime(app_path & "\RA\campaign.mix", New DateTime(2013, 1, 30, 4, 16, 0))
+                System.IO.File.SetLastWriteTime(app_path & "\RA\campaign.mix", New DateTime(2013, 1, 30, 4, 16, 0))
             Catch ex As Exception
                 MsgBox("汉化异常,关闭杀毒软件后重试")
                 Exit Sub
@@ -811,6 +817,7 @@ Public Class Form1
         Else
             Try
                 System.IO.File.Delete(app_path & "\RA\EXPAND9.MIX")
+                System.IO.File.Delete(app_path & "\RA\campaign.mix")
             Catch ex As Exception
 
             End Try
@@ -912,9 +919,7 @@ Public Class Form1
                     System.IO.File.SetLastWriteTime(app_path & "\CnC95\cclocal.mix", New DateTime(2012, 4, 4, 16, 26, 0))
                 End If
             Catch ex As Exception
-                System.IO.File.WriteAllBytes(app_path & "\CnC95\cclocal.mix", My.Resources.cclocal_e)
-                System.IO.File.SetCreationTime(app_path & "\CnC95\cclocal.mix", New DateTime(2012, 4, 4, 16, 26, 0))
-                System.IO.File.SetLastWriteTime(app_path & "\CnC95\cclocal.mix", New DateTime(2012, 4, 4, 16, 26, 0))
+
             End Try
             Delete_files()
         End If
@@ -976,6 +981,6 @@ Public Class Form1
     End Sub
 
     Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
-        MsgBox(My.Computer.FileSystem.GetFileInfo(app_path & "\CnC95\cclocal.mix").Length)
+        ' MsgBox(My.Computer.FileSystem.GetFileInfo(app_path & "\CnC95\cclocal.mix").Length)
     End Sub
 End Class

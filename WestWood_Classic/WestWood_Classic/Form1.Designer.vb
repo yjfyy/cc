@@ -721,7 +721,7 @@ Partial Class Form1
         'Timer_delete_file
         '
         Me.Timer_delete_file.Enabled = True
-        Me.Timer_delete_file.Interval = 2000
+        Me.Timer_delete_file.Interval = 1000
         '
         'Form1
         '
