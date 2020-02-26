@@ -177,19 +177,17 @@
     </None>
     <None Include="Resources\am_allied.mix" />
     <None Include="Resources\am_soviet.mix" />
+    <None Include="Resources\cclocal_e.mix" />
+    <None Include="Resources\cclocal_g.mix" />
+    <None Include="Resources\cclocal_m.mix" />
+    <None Include="Resources\cclocal_n.mix" />
+    <None Include="Resources\cclocal_v.mix" />
     <None Include="Resources\cs.mix" />
-    <None Include="Resources\deseichi.mix" />
-    <None Include="Resources\lang_chg.mix" />
-    <None Include="Resources\lang_chm.mix" />
-    <None Include="Resources\lang_chn.mix" />
-    <None Include="Resources\lang_chv.mix" />
     <None Include="Resources\skirmish.mix" />
-    <None Include="Resources\snowichi.mix" />
     <None Include="Resources\soviet.mix" />
     <None Include="Resources\speecchi.mix" />
     <None Include="Resources\speech.mix" />
-    <None Include="Resources\tempichi.mix" />
-    <None Include="Resources\wintichi.mix" />
+    <None Include="Resources\updated_公用.mix" />
     <None Include="Resources\xtitle_1280.pcx" />
     <None Include="Resources\xtitle_1280x960.pcx" />
     <None Include="Resources\xtitle_1728.pcx" />

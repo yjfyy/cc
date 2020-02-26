@@ -1,0 +1,44 @@
+{
+	"Audio" : [
+		"E:\\ally10b.avi",
+		"E:\\Projects\\cc_new\\cc1_video_sinizationb\\原始avi\\nod2.avi",
+		"E:\\Projects\\cc_new\\cc1_video_sinizationb\\原始avi\\nod9.avi",
+		"E:\\Projects\\cc_new\\cc1_video_sinization\\原始avi\\tiberfx.avi",
+		"E:\\Projects\\cc_new\\cc1_video_sinization\\原始avi\\tbrinfo3.avi",
+		"E:\\Projects\\cc_new\\cc1_video_sinization\\原始avi\\kanepre.avi",
+		"E:\\Projects\\cc_new\\cc1_video_sinization\\原始avi\\tbrinfo2.avi",
+		"E:\\Projects\\cc_new\\ra1_video_sinization\\图像帧序列\\antbrf\\antbrf.avi"
+	],
+	"Find" : [],
+	"Keyframes" : [],
+	"Replace" : [],
+	"Subtitle" : [
+		"E:\\Projects\\cc_new\\cc_video_chinese_version\\cc1\\字幕\\nod1.srt",
+		"E:\\Projects\\cc_new\\cc_video_chinese_version\\ra1\\字幕\\countdwn.srt",
+		"E:\\Projects\\cc_new\\cc_video_chinese_version\\ra1\\字幕\\ally10b.srt",
+		"E:\\Projects\\cc_new\\cc_video_chinese_version\\ra1\\字幕\\ally10b.ass",
+		"E:\\Projects\\cc_new\\cc1_video_sinization\\字幕\\nod2.srt",
+		"E:\\Projects\\cc_new\\cc1_video_sinization\\字幕\\nod9.srt",
+		"E:\\Projects\\cc_new\\cc1_video_sinization\\字幕\\ass\\NOD09.ass",
+		"E:\\Projects\\cc_new\\cc1_video_sinization\\字幕\\tbrinfo3.srt",
+		"E:\\Projects\\cc_new\\cc1_video_sinization\\字幕\\tiberfx.srt",
+		"E:\\Projects\\cc_new\\cc1_video_sinization\\字幕\\ass\\tiberfx.ass",
+		"E:\\Projects\\cc_new\\cc1_video_sinization\\字幕\\ass\\tbrinfo3.ass",
+		"E:\\Projects\\cc_new\\cc1_video_sinization\\字幕\\kanepre.srt",
+		"E:\\Projects\\cc_new\\cc1_video_sinization\\字幕\\tbrinfo2.srt",
+		"E:\\Projects\\cc_new\\cc1_video_sinization\\字幕\\intro2.srt",
+		"E:\\Projects\\cc_new\\cc1_video_sinization\\字幕\\generic.srt",
+		"E:\\Projects\\cc_new\\cc1_video_sinization\\字幕\\gdifina.srt"
+	],
+	"Timecodes" : [],
+	"Video" : [
+		"E:\\ally10b.avi",
+		"E:\\Projects\\cc_new\\cc1_video_sinizationb\\原始avi\\nod2.avi",
+		"E:\\Projects\\cc_new\\cc1_video_sinizationb\\原始avi\\nod9.avi",
+		"E:\\Projects\\cc_new\\cc1_video_sinization\\原始avi\\tiberfx.avi",
+		"E:\\Projects\\cc_new\\cc1_video_sinization\\原始avi\\tbrinfo3.avi",
+		"E:\\Projects\\cc_new\\cc1_video_sinization\\原始avi\\kanepre.avi",
+		"E:\\Projects\\cc_new\\cc1_video_sinization\\原始avi\\tbrinfo2.avi",
+		"E:\\Projects\\cc_new\\ra1_video_sinization\\图像帧序列\\antbrf\\antbrf.avi"
+	]
+}

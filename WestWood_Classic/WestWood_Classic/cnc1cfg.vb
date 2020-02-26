@@ -9,18 +9,18 @@
 
 
     Private Sub Button_reset_Click(sender As Object, e As EventArgs) Handles Button_reset.Click
-
         Try
             FileSystem.MkDir("CnC95")
         Catch ex As Exception
 
         End Try
+        System.IO.File.WriteAllBytes(app_path & "\CnC95\ddraw.dll", My.Resources.ddraw_dll)
         System.IO.File.WriteAllText(".\CnC95\conquer.ini", My.Resources.conquer)
         'System.IO.File.WriteAllText(".\CnC95\ddraw.ini", My.Resources.ddraw, System.Text.Encoding.UTF8)
         System.IO.File.WriteAllText(".\CnC95\ddraw.ini", My.Resources.ddraw_ini)
         Read_ini()
         CheckBox_cc1_compat.Checked = False
-
+        RadioButton_eva_chi.Checked = True
     End Sub
 
     Private Sub Read_ini()
@@ -163,6 +163,13 @@
             CheckBox_cc1_compat.Checked = True
         End If
 
+        'eva语音
+        If GetINI("cnc1", "eva", "chi", ".\config.ini") = "chi" Then
+            RadioButton_eva_chi.Checked = True
+        Else
+            RadioButton_eva_eng.Checked = True
+        End If
+
     End Sub
 
     Private Sub save_ini()
@@ -249,6 +256,12 @@
         If RadioButton_windows.Checked = True Then
             WriteINI("ddraw", "fullscreen", "false", ".\CnC95\ddraw.ini")
             WriteINI("ddraw", "windowed", "true", ".\CnC95\ddraw.ini")
+        End If
+
+        If RadioButton_eva_chi.Checked = True Then
+            WriteINI("cnc1", "eva", "chi", ".\config.ini")
+        Else
+            WriteINI("cnc1", "eva", "eng", ".\config.ini")
         End If
 
         '已运行过
@@ -342,7 +355,7 @@
         '输出中文或英文语音
         If RadioButton_eva_chi.Checked = True Then
             'FileIO.FileSystem.CopyFile("attach\speecchi.mix", ".\CnC95\speecchi.mix", True)
-            System.IO.File.WriteAllBytes(app_path & "\CnC95\speecchi.mix", My.Resources.speecchi)
+            System.IO.File.WriteAllBytes(app_path & "\CnC95\speech.mix", My.Resources.speecchi)
         Else
             System.IO.File.WriteAllBytes(app_path & "\CnC95\speech.mix", My.Resources.speech)
             'FileIO.FileSystem.CopyFile("CnC95\speech.mix", ".\CnC95\speecchi.mix", True)
@@ -436,5 +449,11 @@
         End If
     End Sub
 
+    Private Sub RadioButton_eva_eng_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton_eva_eng.CheckedChanged
 
+    End Sub
+
+    Private Sub RadioButton_eva_chi_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton_eva_chi.CheckedChanged
+
+    End Sub
 End Class

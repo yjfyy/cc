@@ -175,32 +175,8 @@
   <data name="ddraw_dll" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ddraw.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="deseichi" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\deseichi.mix;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lang_chg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\lang_chg.mix;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lang_chm" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\lang_chm.mix;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lang_chn" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\lang_chn.mix;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lang_chv" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\lang_chv.mix;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="snowichi" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\snowichi.mix;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="speecchi" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\speecchi.mix;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="tempichi" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tempichi.mix;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="wintichi" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\wintichi.mix;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="speech" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\speech.mix;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -222,5 +198,23 @@
   </data>
   <data name="xtitle_960" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\xtitle_960.pcx;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="cclocal_e" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cclocal_e.mix;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="cclocal_g" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cclocal_g.mix;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="cclocal_m" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cclocal_m.mix;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="cclocal_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cclocal_n.mix;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="cclocal_v" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cclocal_v.mix;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="updated_公用" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\updated_公用.mix;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>

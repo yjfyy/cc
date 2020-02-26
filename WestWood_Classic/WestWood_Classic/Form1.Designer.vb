@@ -37,6 +37,7 @@ Partial Class Form1
         Me.BackgroundWorker_check_ver = New System.ComponentModel.BackgroundWorker()
         Me.Button_updata = New System.Windows.Forms.Button()
         Me.Panel_games_list = New System.Windows.Forms.Panel()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.Button_back = New System.Windows.Forms.Button()
         Me.Label_ra1 = New System.Windows.Forms.Label()
         Me.Label_cnc1 = New System.Windows.Forms.Label()
@@ -198,6 +199,7 @@ Partial Class Form1
         '
         'Panel_games_list
         '
+        Me.Panel_games_list.Controls.Add(Me.Button1)
         Me.Panel_games_list.Controls.Add(Me.Button_back)
         Me.Panel_games_list.Controls.Add(Me.Label_ra1)
         Me.Panel_games_list.Controls.Add(Me.Label_cnc1)
@@ -207,6 +209,16 @@ Partial Class Form1
         Me.Panel_games_list.Name = "Panel_games_list"
         Me.Panel_games_list.Size = New System.Drawing.Size(133, 317)
         Me.Panel_games_list.TabIndex = 29
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(22, 255)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 49
+        Me.Button1.Text = "test"
+        Me.Button1.UseVisualStyleBackColor = True
+        Me.Button1.Visible = False
         '
         'Button_back
         '
@@ -709,7 +721,7 @@ Partial Class Form1
         'Timer_delete_file
         '
         Me.Timer_delete_file.Enabled = True
-        Me.Timer_delete_file.Interval = 3000
+        Me.Timer_delete_file.Interval = 2000
         '
         'Form1
         '
@@ -799,4 +811,5 @@ Partial Class Form1
     Friend WithEvents RadioButton_updata_2_web As RadioButton
     Friend WithEvents GroupBox_updata As GroupBox
     Friend WithEvents Timer_delete_file As Timer
+    Friend WithEvents Button1 As Button
 End Class

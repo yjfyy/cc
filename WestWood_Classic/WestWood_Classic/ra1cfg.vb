@@ -4,7 +4,7 @@
 
     Private Sub Button_ok_Click(sender As Object, e As EventArgs) Handles Button_ok.Click
         'FileIO.FileSystem.CopyFile(".\attach\ddraw.dll", ".\RA\ddraw.dll", True)
-
+        System.IO.File.WriteAllBytes(app_path & "\RA\ddraw.dll", My.Resources.ddraw_dll)
         Form1.Button_ra1_ally.Enabled = True
         Form1.Button_ra1_soviet.Enabled = True
         Form1.Button_ra1_ext_cs.Enabled = True
@@ -28,6 +28,7 @@
         Catch ex As Exception
 
         End Try
+        System.IO.File.WriteAllBytes(app_path & "\RA\ddraw.dll", My.Resources.ddraw_dll)
         System.IO.File.WriteAllText(".\RA\redalert.ini", My.Resources.redalert)
         'System.IO.File.WriteAllText(".\RA\ddraw.ini", My.Resources.ddraw, System.Text.Encoding.UTF8)
         System.IO.File.WriteAllText(".\RA\ddraw.ini", My.Resources.ddraw_ini)

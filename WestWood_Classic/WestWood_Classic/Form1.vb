@@ -16,6 +16,7 @@ Public Class Form1
     'Dim up_root = "https://gitlab.com/yjfyy/tuzi_updata/raw/master/WestWood_Classic/"
 
     Dim app_path As String = Application.StartupPath()
+    Dim date2 = New DateTime(2020, 3, 5)
 
     Private Sub Button_cnc1_Click(sender As Object, e As EventArgs) Handles Button_cnc1.Click
 
@@ -96,6 +97,18 @@ Public Class Form1
 
         End Try
 
+        Try
+            System.IO.File.Delete(app_path & " \CnC95\lang_chi.mix")
+        Catch ex As Exception
+
+        End Try
+
+        Try
+            System.IO.File.Delete(app_path & " \CnC95\updated.mix")
+        Catch ex As Exception
+
+        End Try
+
         '清理旧版本视频
         Try
             My.Computer.FileSystem.DeleteDirectory(app_path & "\CnC95\chi", onDirectoryNotEmpty:=FileIO.DeleteDirectoryOption.DeleteAllContents)
@@ -106,7 +119,7 @@ Public Class Form1
         '删除原来的汉化文件
         '1.56删除原始汉化文件，使用新版
         Dim date1 = Date.Now()  '获得当前本地日期和时间。这里也可以省略Date.，直接用Now()
-        Dim date2 = New DateTime(2020, 3, 5)
+        Dim date2 = New DateTime(2020, 3, 1)
         If date1 > date2 Then
 
             Try
@@ -457,16 +470,34 @@ Public Class Form1
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button_cnc1_GDI_miss.Click
         WriteINI("CDControl", "CDPath", "CHI", "CnC95\conquer.ini")
-        WriteINI("Language", "Language", "CHG", "CnC95\conquer.ini")
-        System.IO.File.WriteAllBytes(app_path & "\CnC95\lang_chg.mix", My.Resources.lang_chg)
+        WriteINI("Language", "Language", "CHI", "CnC95\conquer.ini")
+
         If System.Diagnostics.Process.GetProcessesByName("c&c95").Length > 0 Then
             MsgBox("请勿重复启动")
         Else
-            If My.Computer.FileSystem.FileExists("cnc95\ddraw.dll") Then
-                Process.Start("cnc95\c&c95.exe") 'process.star可以启动带有符号的exe，shell启动不了c&c95.exe
-            Else
-                MsgBox("请在设置中打开ddraw")
-            End If
+            Try
+                System.IO.File.WriteAllBytes(app_path & "\CnC95\cclocal.mix", My.Resources.cclocal_g)
+                System.IO.File.SetCreationTime(app_path & "\CnC95\cclocal.mix", New DateTime(2012, 4, 4, 16, 26, 0))
+                System.IO.File.SetLastWriteTime(app_path & "\CnC95\cclocal.mix", New DateTime(2012, 4, 4, 16, 26, 0))
+            Catch ex As Exception
+                MsgBox("汉化异常,关闭杀毒软件后重试")
+                Exit Sub
+            End Try
+
+            Try
+                System.IO.File.WriteAllBytes(app_path & "\CnC95\updated.mix", My.Resources.updated_公用)
+                System.IO.File.SetCreationTime(app_path & "\CnC95\updated.mix", New DateTime(2011, 3, 26, 19, 18, 0))
+                System.IO.File.SetLastWriteTime(app_path & "\CnC95\updated.mix", New DateTime(2011, 3, 26, 19, 18, 0))
+            Catch ex As Exception
+                MsgBox("汉化异常,关闭杀毒软件后重试")
+                Exit Sub
+            End Try
+
+            ' If My.Computer.FileSystem.FileExists("cnc95\ddraw.dll") Then
+            Process.Start("cnc95\c&c95.exe") 'process.star可以启动带有符号的exe，shell启动不了c&c95.exe
+            'Else
+            'MsgBox("请在设置中点""修复并重置""按钮")
+            'End If
 
         End If
 
@@ -474,48 +505,103 @@ Public Class Form1
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button_cnc1_NOD_miss.Click
         WriteINI("CDControl", "CDPath", "CHI", "CnC95\conquer.ini")
-        WriteINI("Language", "Language", "CHN", "CnC95\conquer.ini")
-        System.IO.File.WriteAllBytes(app_path & "\CnC95\lang_chn.mix", My.Resources.lang_chn)
+        WriteINI("Language", "Language", "CHI", "CnC95\conquer.ini")
+
+
         If System.Diagnostics.Process.GetProcessesByName("c&c95").Length > 0 Then
             MsgBox("请勿重复启动")
         Else
-            If My.Computer.FileSystem.FileExists("CnC95\ddraw.dll") Then
-                Process.Start("cnc95\c&c95.exe")
-            Else
-                MsgBox("请在设置中打开ddraw")
-            End If
+            Try
+                System.IO.File.WriteAllBytes(app_path & "\CnC95\cclocal.mix", My.Resources.cclocal_n)
+                System.IO.File.SetCreationTime(app_path & "\CnC95\cclocal.mix", New DateTime(2012, 4, 4, 16, 26, 0))
+                System.IO.File.SetLastWriteTime(app_path & "\CnC95\cclocal.mix", New DateTime(2012, 4, 4, 16, 26, 0))
+            Catch ex As Exception
+                MsgBox("汉化异常,关闭杀毒软件后重试")
+                Exit Sub
+            End Try
+
+            Try
+                System.IO.File.WriteAllBytes(app_path & "\CnC95\updated.mix", My.Resources.updated_公用)
+                System.IO.File.SetCreationTime(app_path & "\CnC95\updated.mix", New DateTime(2011, 3, 26, 19, 18, 0))
+                System.IO.File.SetLastWriteTime(app_path & "\CnC95\updated.mix", New DateTime(2011, 3, 26, 19, 18, 0))
+            Catch ex As Exception
+                MsgBox("汉化异常,关闭杀毒软件后重试")
+                Exit Sub
+            End Try
+
+            ' If My.Computer.FileSystem.FileExists("cnc95\ddraw.dll") Then
+            Process.Start("cnc95\c&c95.exe") 'process.star可以启动带有符号的exe，shell启动不了c&c95.exe
+            'Else
+            'MsgBox("请在设置中点""修复并重置""按钮")
+            'End If
 
         End If
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button_cnc1_ext.Click
         WriteINI("CDControl", "CDPath", "CHI", "CnC95\conquer.ini")
-        WriteINI("Language", "Language", "CHM", "CnC95\conquer.ini")
-        System.IO.File.WriteAllBytes(app_path & "\CnC95\lang_chm.mix", My.Resources.lang_chm)
+        WriteINI("Language", "Language", "CHI", "CnC95\conquer.ini")
+
         If System.Diagnostics.Process.GetProcessesByName("c&c95").Length > 0 Then
             MsgBox("请勿重复启动")
         Else
-            If My.Computer.FileSystem.FileExists("CnC95\ddraw.dll") Then
-                Process.Start("cnc95\c&c95.exe")
-            Else
-                MsgBox("请在设置中打开ddraw")
-            End If
+            Try
+                System.IO.File.WriteAllBytes(app_path & "\CnC95\cclocal.mix", My.Resources.cclocal_m)
+                System.IO.File.SetCreationTime(app_path & "\CnC95\cclocal.mix", New DateTime(2012, 4, 4, 16, 26, 0))
+                System.IO.File.SetLastWriteTime(app_path & "\CnC95\cclocal.mix", New DateTime(2012, 4, 4, 16, 26, 0))
+            Catch ex As Exception
+                MsgBox("汉化异常,关闭杀毒软件后重试")
+                Exit Sub
+            End Try
+
+            Try
+                System.IO.File.WriteAllBytes(app_path & "\CnC95\updated.mix", My.Resources.updated_公用)
+                System.IO.File.SetCreationTime(app_path & "\CnC95\updated.mix", New DateTime(2011, 3, 26, 19, 18, 0))
+                System.IO.File.SetLastWriteTime(app_path & "\CnC95\updated.mix", New DateTime(2011, 3, 26, 19, 18, 0))
+            Catch ex As Exception
+                MsgBox("汉化异常,关闭杀毒软件后重试")
+                Exit Sub
+            End Try
+
+            ' If My.Computer.FileSystem.FileExists("cnc95\ddraw.dll") Then
+            Process.Start("cnc95\c&c95.exe") 'process.star可以启动带有符号的exe，shell启动不了c&c95.exe
+            'Else
+            'MsgBox("请在设置中点""修复并重置""按钮")
+            'End If
 
         End If
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button_cnc1_tv.Click
         WriteINI("CDControl", "CDPath", "CHI", "CnC95\conquer.ini")
-        WriteINI("Language", "Language", "CHV", "CnC95\conquer.ini")
-        System.IO.File.WriteAllBytes(app_path & "\CnC95\lang_chv.mix", My.Resources.lang_chv)
+        WriteINI("Language", "Language", "CHI", "CnC95\conquer.ini")
+
         If System.Diagnostics.Process.GetProcessesByName("c&c95").Length > 0 Then
             MsgBox("请勿重复启动")
         Else
-            If My.Computer.FileSystem.FileExists("CnC95\ddraw.dll") Then
-                Process.Start("cnc95\c&c95.exe")
-            Else
-                MsgBox("请在设置中打开ddraw")
-            End If
+            Try
+                System.IO.File.WriteAllBytes(app_path & "\CnC95\cclocal.mix", My.Resources.cclocal_v)
+                System.IO.File.SetCreationTime(app_path & "\CnC95\cclocal.mix", New DateTime(2012, 4, 4, 16, 26, 0))
+                System.IO.File.SetLastWriteTime(app_path & "\CnC95\cclocal.mix", New DateTime(2012, 4, 4, 16, 26, 0))
+            Catch ex As Exception
+                MsgBox("汉化异常,关闭杀毒软件后重试")
+                Exit Sub
+            End Try
+
+            Try
+                System.IO.File.WriteAllBytes(app_path & "\CnC95\updated.mix", My.Resources.updated_公用)
+                System.IO.File.SetCreationTime(app_path & "\CnC95\updated.mix", New DateTime(2011, 3, 26, 19, 18, 0))
+                System.IO.File.SetLastWriteTime(app_path & "\CnC95\updated.mix", New DateTime(2011, 3, 26, 19, 18, 0))
+            Catch ex As Exception
+                MsgBox("汉化异常,关闭杀毒软件后重试")
+                Exit Sub
+            End Try
+
+            ' If My.Computer.FileSystem.FileExists("cnc95\ddraw.dll") Then
+            Process.Start("cnc95\c&c95.exe") 'process.star可以启动带有符号的exe，shell启动不了c&c95.exe
+            'Else
+            'MsgBox("请在设置中点""修复并重置""按钮")
+            'End If
 
         End If
     End Sub
@@ -525,13 +611,28 @@ Public Class Form1
         WriteINI("Language", "Language", "eng", "CnC95\conquer.ini")
 
         If System.Diagnostics.Process.GetProcessesByName("c&c95").Length > 0 Then
+
             MsgBox("请勿重复启动")
         Else
-            If My.Computer.FileSystem.FileExists("cnc95\ddraw.dll") Then
-                Process.Start("cnc95\c&c95.exe")
-            Else
-                MsgBox("请在设置中打开ddraw")
-            End If
+            Try
+                System.IO.File.WriteAllBytes(app_path & "\CnC95\cclocal.mix", My.Resources.cclocal_e)
+                System.IO.File.SetCreationTime(app_path & "\CnC95\cclocal.mix", New DateTime(2012, 4, 4, 16, 26, 0))
+                System.IO.File.SetLastWriteTime(app_path & "\CnC95\cclocal.mix", New DateTime(2012, 4, 4, 16, 26, 0))
+            Catch ex As Exception
+
+            End Try
+
+            Try
+                My.Computer.FileSystem.DeleteFile(app_path & "\CnC95\updated.mix")
+            Catch ex As Exception
+
+            End Try
+
+            ' If My.Computer.FileSystem.FileExists("cnc95\ddraw.dll") Then
+            Process.Start("cnc95\c&c95.exe") 'process.star可以启动带有符号的exe，shell启动不了c&c95.exe
+            'Else
+            'MsgBox("请在设置中点""修复并重置""按钮")
+            'End If
 
         End If
     End Sub
@@ -548,36 +649,38 @@ Public Class Form1
     End Sub
 
     Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button_ra1_ally.Click
-        System.IO.File.WriteAllBytes(".\RA\ddraw.dll", My.Resources.ddraw_dll)
-        WriteINI("Options", "GameLanguage", "2", "RA\redalert.ini")
+        'System.IO.File.WriteAllBytes(".\RA\ddraw.dll", My.Resources.ddraw_dll)
+        'WriteINI("Options", "GameLanguage", "2", "RA\redalert.ini")
         If System.Diagnostics.Process.GetProcessesByName("ra95").Length > 0 Then
             MsgBox("请勿重复启动")
         Else
             'If My.Computer.FileSystem.FileExists("cnc95\ddraw.dll") Then
             Try
                 System.IO.File.WriteAllBytes(app_path & "\RA\EXPAND9.MIX", My.Resources.allied)
+                System.IO.File.SetCreationTime(app_path & "\RA\EXPAND9.MIX", New DateTime(2013, 1, 30, 4, 16, 0))
+                System.IO.File.SetLastWriteTime(app_path & "\RA\EXPAND9.MIX", New DateTime(2013, 1, 30, 4, 16, 0))
             Catch ex As Exception
-
+                MsgBox("汉化异常,关闭杀毒软件后重试")
+                Exit Sub
             End Try
             Process.Start("ra\ra95.exe")
-            'Else
-            'MsgBox("请在设置中打开ddraw")
-            'End If
-
         End If
     End Sub
 
     Private Sub Button_ra1_soviet_Click(sender As Object, e As EventArgs) Handles Button_ra1_soviet.Click
-        System.IO.File.WriteAllBytes(".\RA\ddraw.dll", My.Resources.ddraw_dll)
-        WriteINI("Options", "GameLanguage", "3", "RA\redalert.ini")
+        'System.IO.File.WriteAllBytes(".\RA\ddraw.dll", My.Resources.ddraw_dll)
+        'WriteINI("Options", "GameLanguage", "3", "RA\redalert.ini")
         If System.Diagnostics.Process.GetProcessesByName("ra95").Length > 0 Then
             MsgBox("请勿重复启动")
         Else
             'If My.Computer.FileSystem.FileExists("cnc95\ddraw.dll") Then
             Try
                 System.IO.File.WriteAllBytes(app_path & "\RA\EXPAND9.MIX", My.Resources.soviet)
+                System.IO.File.SetCreationTime(app_path & "\RA\EXPAND9.MIX", New DateTime(2013, 1, 30, 4, 16, 0))
+                System.IO.File.SetLastWriteTime(app_path & "\RA\EXPAND9.MIX", New DateTime(2013, 1, 30, 4, 16, 0))
             Catch ex As Exception
-
+                MsgBox("汉化异常,关闭杀毒软件后重试")
+                Exit Sub
             End Try
             Process.Start("ra\ra95.exe")
             'Else
@@ -588,16 +691,19 @@ Public Class Form1
     End Sub
 
     Private Sub Button3_Click_1(sender As Object, e As EventArgs) Handles Button_ra1_skirmish.Click
-        System.IO.File.WriteAllBytes(".\RA\ddraw.dll", My.Resources.ddraw_dll)
-        WriteINI("Options", "GameLanguage", "4", "RA\redalert.ini")
+        'System.IO.File.WriteAllBytes(".\RA\ddraw.dll", My.Resources.ddraw_dll)
+        'WriteINI("Options", "GameLanguage", "4", "RA\redalert.ini")
         If System.Diagnostics.Process.GetProcessesByName("ra95").Length > 0 Then
             MsgBox("请勿重复启动")
         Else
             'If My.Computer.FileSystem.FileExists("cnc95\ddraw.dll") Then
             Try
                 System.IO.File.WriteAllBytes(app_path & "\RA\EXPAND9.MIX", My.Resources.skirmish)
+                System.IO.File.SetCreationTime(app_path & "\RA\EXPAND9.MIX", New DateTime(2013, 1, 30, 4, 16, 0))
+                System.IO.File.SetLastWriteTime(app_path & "\RA\EXPAND9.MIX", New DateTime(2013, 1, 30, 4, 16, 0))
             Catch ex As Exception
-
+                MsgBox("汉化异常,关闭杀毒软件后重试")
+                Exit Sub
             End Try
 
             Process.Start("ra\ra95.exe", "-SKIRMISH")
@@ -610,16 +716,19 @@ Public Class Form1
     End Sub
 
     Private Sub Button_ra1_ext_Click(sender As Object, e As EventArgs) Handles Button_ra1_ext_cs.Click
-        System.IO.File.WriteAllBytes(".\RA\ddraw.dll", My.Resources.ddraw_dll)
-        WriteINI("Options", "GameLanguage", "5", "RA\redalert.ini")
+        'System.IO.File.WriteAllBytes(".\RA\ddraw.dll", My.Resources.ddraw_dll)
+        'WriteINI("Options", "GameLanguage", "5", "RA\redalert.ini")
         If System.Diagnostics.Process.GetProcessesByName("ra95").Length > 0 Then
             MsgBox("请勿重复启动")
         Else
             'If My.Computer.FileSystem.FileExists("cnc95\ddraw.dll") Then
             Try
                 System.IO.File.WriteAllBytes(app_path & "\RA\EXPAND9.MIX", My.Resources.cs)
+                System.IO.File.SetCreationTime(app_path & "\RA\EXPAND9.MIX", New DateTime(2013, 1, 30, 4, 16, 0))
+                System.IO.File.SetLastWriteTime(app_path & "\RA\EXPAND9.MIX", New DateTime(2013, 1, 30, 4, 16, 0))
             Catch ex As Exception
-
+                MsgBox("汉化异常,关闭杀毒软件后重试")
+                Exit Sub
             End Try
 
             Process.Start("ra\ra95.exe")
@@ -631,16 +740,19 @@ Public Class Form1
     End Sub
 
     Private Sub Button_ra1_ext_af_Click(sender As Object, e As EventArgs) Handles Button_ra1_ext_af.Click
-        System.IO.File.WriteAllBytes(".\RA\ddraw.dll", My.Resources.ddraw_dll)
-        WriteINI("Options", "GameLanguage", "6", "RA\redalert.ini")
+        'System.IO.File.WriteAllBytes(".\RA\ddraw.dll", My.Resources.ddraw_dll)
+        'WriteINI("Options", "GameLanguage", "6", "RA\redalert.ini")
         If System.Diagnostics.Process.GetProcessesByName("ra95").Length > 0 Then
             MsgBox("请勿重复启动")
         Else
             'If My.Computer.FileSystem.FileExists("cnc95\ddraw.dll") Then
             Try
                 System.IO.File.WriteAllBytes(app_path & "\RA\EXPAND9.MIX", My.Resources.am_allied)
+                System.IO.File.SetCreationTime(app_path & "\RA\EXPAND9.MIX", New DateTime(2013, 1, 30, 4, 16, 0))
+                System.IO.File.SetLastWriteTime(app_path & "\RA\EXPAND9.MIX", New DateTime(2013, 1, 30, 4, 16, 0))
             Catch ex As Exception
-
+                MsgBox("汉化异常,关闭杀毒软件后重试")
+                Exit Sub
             End Try
 
             Process.Start("ra\ra95.exe")
@@ -652,16 +764,19 @@ Public Class Form1
     End Sub
 
     Private Sub Button_ra1_ext_af_su_Click(sender As Object, e As EventArgs) Handles Button_ra1_ext_af_su.Click
-        System.IO.File.WriteAllBytes(".\RA\ddraw.dll", My.Resources.ddraw_dll)
-        WriteINI("Options", "GameLanguage", "7", "RA\redalert.ini")
+        'System.IO.File.WriteAllBytes(".\RA\ddraw.dll", My.Resources.ddraw_dll)
+        'WriteINI("Options", "GameLanguage", "7", "RA\redalert.ini")
         If System.Diagnostics.Process.GetProcessesByName("ra95").Length > 0 Then
             MsgBox("请勿重复启动")
         Else
             'If My.Computer.FileSystem.FileExists("cnc95\ddraw.dll") Then
             Try
                 System.IO.File.WriteAllBytes(app_path & "\RA\EXPAND9.MIX", My.Resources.am_soviet)
+                System.IO.File.SetCreationTime(app_path & "\RA\EXPAND9.MIX", New DateTime(2013, 1, 30, 4, 16, 0))
+                System.IO.File.SetLastWriteTime(app_path & "\RA\EXPAND9.MIX", New DateTime(2013, 1, 30, 4, 16, 0))
             Catch ex As Exception
-
+                MsgBox("汉化异常,关闭杀毒软件后重试")
+                Exit Sub
             End Try
 
             Process.Start("ra\ra95.exe")
@@ -673,12 +788,15 @@ Public Class Form1
     End Sub
 
     Private Sub Button_cncnet_Click(sender As Object, e As EventArgs) Handles Button_ra1_cncnet.Click
-        System.IO.File.WriteAllBytes(".\RA\ddraw.dll", My.Resources.ddraw_dll)
-        WriteINI("Options", "GameLanguage", "4", "RA\redalert.ini")
+        'System.IO.File.WriteAllBytes(".\RA\ddraw.dll", My.Resources.ddraw_dll)
+        'WriteINI("Options", "GameLanguage", "4", "RA\redalert.ini")
         Try
             System.IO.File.WriteAllBytes(app_path & "\RA\EXPAND9.MIX", My.Resources.skirmish)
+            System.IO.File.SetCreationTime(app_path & "\RA\EXPAND9.MIX", New DateTime(2013, 1, 30, 4, 16, 0))
+            System.IO.File.SetLastWriteTime(app_path & "\RA\EXPAND9.MIX", New DateTime(2013, 1, 30, 4, 16, 0))
         Catch ex As Exception
-
+            MsgBox("汉化异常,关闭杀毒软件后重试")
+            Exit Sub
         End Try
         Process.Start("ra\cncnet5.exe")
     End Sub
@@ -686,7 +804,7 @@ Public Class Form1
 
 
     Private Sub Button_ra1_english_Click(sender As Object, e As EventArgs) Handles Button_ra1_english.Click
-        System.IO.File.WriteAllBytes(".\RA\ddraw.dll", My.Resources.ddraw_dll)
+        'System.IO.File.WriteAllBytes(".\RA\ddraw.dll", My.Resources.ddraw_dll)
         WriteINI("Options", "GameLanguage", "1", "RA\redalert.ini")
         If System.Diagnostics.Process.GetProcessesByName("ra95").Length > 0 Then
             MsgBox("请勿重复启动")
@@ -729,7 +847,7 @@ Public Class Form1
     End Sub
     Private Sub fix()
         Dim date1 = Date.Now()  '获得当前本地日期和时间。这里也可以省略Date.，直接用Now()
-        Dim date2 = New DateTime(2020, 3, 5)
+        date2 = New DateTime(2020, 3, 5)
         If date1 > date2 Then
             Try
                 My.Computer.FileSystem.CreateDirectory(app_path & "\CnC95")
@@ -787,8 +905,20 @@ Public Class Form1
             (System.Diagnostics.Process.GetProcessesByName("cncnet5").Length > 0) _
             Then
         Else
+            Try
+                If My.Computer.FileSystem.GetFileInfo(app_path & "\CnC95\cclocal.mix").Length <> 156307 Then
+                    System.IO.File.WriteAllBytes(app_path & "\CnC95\cclocal.mix", My.Resources.cclocal_e)
+                    System.IO.File.SetCreationTime(app_path & "\CnC95\cclocal.mix", New DateTime(2012, 4, 4, 16, 26, 0))
+                    System.IO.File.SetLastWriteTime(app_path & "\CnC95\cclocal.mix", New DateTime(2012, 4, 4, 16, 26, 0))
+                End If
+            Catch ex As Exception
+                System.IO.File.WriteAllBytes(app_path & "\CnC95\cclocal.mix", My.Resources.cclocal_e)
+                System.IO.File.SetCreationTime(app_path & "\CnC95\cclocal.mix", New DateTime(2012, 4, 4, 16, 26, 0))
+                System.IO.File.SetLastWriteTime(app_path & "\CnC95\cclocal.mix", New DateTime(2012, 4, 4, 16, 26, 0))
+            End Try
             Delete_files()
         End If
+
     End Sub
 
 
@@ -845,4 +975,7 @@ Public Class Form1
 
     End Sub
 
+    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
+        MsgBox(My.Computer.FileSystem.GetFileInfo(app_path & "\CnC95\cclocal.mix").Length)
+    End Sub
 End Class
