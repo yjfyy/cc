@@ -152,9 +152,9 @@ Partial Class Form1
         Me.Label_l_version.AutoSize = True
         Me.Label_l_version.Location = New System.Drawing.Point(229, 473)
         Me.Label_l_version.Name = "Label_l_version"
-        Me.Label_l_version.Size = New System.Drawing.Size(11, 12)
+        Me.Label_l_version.Size = New System.Drawing.Size(29, 12)
         Me.Label_l_version.TabIndex = 39
-        Me.Label_l_version.Text = "0"
+        Me.Label_l_version.Text = "1.58"
         '
         'Label3
         '

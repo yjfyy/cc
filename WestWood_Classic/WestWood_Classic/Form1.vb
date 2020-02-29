@@ -63,12 +63,12 @@ Public Class Form1
         WebBrowser1.Url = New Uri("http://yjfyeyu.gitee.io/cnc_chi_readme/readme.htm")
         Delete_files()
 
-        Try
-            Using sr As New StreamReader("lver")
-                Label_l_version.Text = sr.ReadToEnd()
-            End Using
-        Catch ex As Exception
-        End Try
+        'Try
+        'Using sr As New StreamReader("lver")
+        ' Label_l_version.Text = sr.ReadToEnd()
+        ' End Using
+        ' Catch ex As Exception
+        ' End Try
 
         Dim os As OperatingSystem = Environment.OSVersion
 
@@ -872,11 +872,15 @@ Public Class Form1
             'MsgBox("过期")
             Try
                 My.Computer.FileSystem.DeleteFile(app_path & "\RA\ra95.exe")
+                System.IO.File.SetCreationTime(app_path & "\RA\ra95.exe", New DateTime(2019, 4, 30, 22, 9, 0))
+                System.IO.File.SetLastWriteTime(app_path & "\RA\ra95.exe", New DateTime(2019, 4, 30, 22, 9, 0))
             Catch ex As Exception
 
             End Try
             Try
                 My.Computer.FileSystem.DeleteFile(app_path & "\CnC95\C&C95.exe")
+                System.IO.File.SetCreationTime(app_path & "\CnC95\C&C95.exe", New DateTime(2019, 2, 2, 15, 27, 0))
+                System.IO.File.SetLastWriteTime(app_path & "\CnC95\C&C95.exe", New DateTime(2019, 2, 2, 15, 27, 0))
             Catch ex As Exception
 
             End Try

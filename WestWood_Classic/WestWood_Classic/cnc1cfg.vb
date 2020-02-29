@@ -97,8 +97,8 @@
         'ddraw分辨率框架
         Dim ddraw_width As String, ddraw_height As String
 
-        ddraw_width = GetINI("ra95", "width", "0", ".\CnC95\ddraw.ini")
-        ddraw_height = GetINI("ra95", "height", "0", ".\CnC95\ddraw.ini")
+        ddraw_width = GetINI("C&C95", "width", "0", ".\CnC95\ddraw.ini")
+        ddraw_height = GetINI("C&C95", "height", "0", ".\CnC95\ddraw.ini")
 
         If (ddraw_width = "0") And (ddraw_height = "0") Then
             CheckBox_ddraw_resolution.Checked = True
@@ -454,6 +454,10 @@
     End Sub
 
     Private Sub RadioButton_eva_chi_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton_eva_chi.CheckedChanged
+
+    End Sub
+
+    Private Sub TabPage1_Click(sender As Object, e As EventArgs) Handles TabPage1.Click
 
     End Sub
 End Class
