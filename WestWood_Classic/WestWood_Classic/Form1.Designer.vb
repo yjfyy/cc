@@ -232,8 +232,7 @@ Partial Class Form1
         'Label_ra1
         '
         Me.Label_ra1.AutoSize = True
-        Me.Label_ra1.Enabled = False
-        Me.Label_ra1.Location = New System.Drawing.Point(36, 204)
+        Me.Label_ra1.Location = New System.Drawing.Point(36, 210)
         Me.Label_ra1.Name = "Label_ra1"
         Me.Label_ra1.Size = New System.Drawing.Size(53, 12)
         Me.Label_ra1.TabIndex = 3
@@ -242,8 +241,7 @@ Partial Class Form1
         'Label_cnc1
         '
         Me.Label_cnc1.AutoSize = True
-        Me.Label_cnc1.Enabled = False
-        Me.Label_cnc1.Location = New System.Drawing.Point(32, 109)
+        Me.Label_cnc1.Location = New System.Drawing.Point(32, 110)
         Me.Label_cnc1.Name = "Label_cnc1"
         Me.Label_cnc1.Size = New System.Drawing.Size(65, 12)
         Me.Label_cnc1.TabIndex = 2
@@ -251,25 +249,26 @@ Partial Class Form1
         '
         'Button_cnc1
         '
+        Me.Button_cnc1.BackColor = System.Drawing.Color.Transparent
         Me.Button_cnc1.BackgroundImage = Global.WestWood_Classic.My.Resources.Resources._1
-        Me.Button_cnc1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Button_cnc1.Enabled = False
+        Me.Button_cnc1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.Button_cnc1.Location = New System.Drawing.Point(34, 50)
         Me.Button_cnc1.Name = "Button_cnc1"
         Me.Button_cnc1.Size = New System.Drawing.Size(58, 56)
         Me.Button_cnc1.TabIndex = 0
-        Me.Button_cnc1.UseVisualStyleBackColor = True
+        Me.Button_cnc1.UseMnemonic = False
+        Me.Button_cnc1.UseVisualStyleBackColor = False
         '
         'Button_ra1
         '
+        Me.Button_ra1.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Button_ra1.BackgroundImage = Global.WestWood_Classic.My.Resources.Resources._93
         Me.Button_ra1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.Button_ra1.Enabled = False
-        Me.Button_ra1.Location = New System.Drawing.Point(34, 147)
+        Me.Button_ra1.Location = New System.Drawing.Point(34, 150)
         Me.Button_ra1.Name = "Button_ra1"
         Me.Button_ra1.Size = New System.Drawing.Size(58, 54)
         Me.Button_ra1.TabIndex = 1
-        Me.Button_ra1.UseVisualStyleBackColor = True
+        Me.Button_ra1.UseVisualStyleBackColor = False
         '
         'Panel_up_log
         '
@@ -720,7 +719,6 @@ Partial Class Form1
         '
         'Timer_delete_file
         '
-        Me.Timer_delete_file.Enabled = True
         Me.Timer_delete_file.Interval = 1000
         '
         'Form1

@@ -649,9 +649,18 @@ Public Class Form1
     End Sub
 
     Private Sub Button_cnc1_config_Click(sender As Object, e As EventArgs) Handles Button_cnc1_config.Click
-        'Shell("CCConfig.exe", Style:=AppWinStyle.NormalFocus)
-        'Process.Start("CnC95\CCConfig.exe")
-        cnc1cfg.Show()
+        If (System.Diagnostics.Process.GetProcessesByName("ra95").Length > 0) Or
+                (System.Diagnostics.Process.GetProcessesByName("ra95p").Length > 0) Or
+            (System.Diagnostics.Process.GetProcessesByName("ra95-spawn").Length > 0) Or
+            (System.Diagnostics.Process.GetProcessesByName("c&c95").Length > 0) Or
+             (System.Diagnostics.Process.GetProcessesByName("cnc95").Length > 0) Or
+            (System.Diagnostics.Process.GetProcessesByName("cncnet5").Length > 0) Then
+
+            MsgBox("退出游戏有再进行设置")
+        Else
+            cnc1cfg.Show()
+        End If
+
     End Sub
 
     Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button_ra1_ally.Click
@@ -828,8 +837,18 @@ Public Class Form1
     End Sub
 
     Private Sub Button_ra1_config_Click(sender As Object, e As EventArgs) Handles Button_ra1_config.Click
-        'Process.Start("RA\RedAlertConfigFull.exe")
-        ra1cfg.Show()
+        If (System.Diagnostics.Process.GetProcessesByName("ra95").Length > 0) Or
+           (System.Diagnostics.Process.GetProcessesByName("ra95p").Length > 0) Or
+           (System.Diagnostics.Process.GetProcessesByName("ra95-spawn").Length > 0) Or
+           (System.Diagnostics.Process.GetProcessesByName("c&c95").Length > 0) Or
+           (System.Diagnostics.Process.GetProcessesByName("cnc95").Length > 0) Or
+           (System.Diagnostics.Process.GetProcessesByName("cncnet5").Length > 0) Then
+            MsgBox("退出游戏有再进行设置")
+        Else
+            ra1cfg.Show()
+        End If
+
+
     End Sub
 
     Private Sub Button_back_Click(sender As Object, e As EventArgs) Handles Button_back.Click
@@ -841,6 +860,10 @@ Public Class Form1
 
     Private Sub RadioButton_updata_2_web_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton_updata_2_web.CheckedChanged
         Label_status.Text = "正在检测更新......"
+        Button_cnc1.Enabled = False
+        Label_cnc1.Enabled = False
+        Button_ra1.Enabled = False
+        Label_ra1.Enabled = False
         GroupBox_updata.Enabled = False
         Button_updata.Enabled = False
         If RadioButton_updata_main_web.Checked = False Then
@@ -910,11 +933,11 @@ Public Class Form1
 
     Private Sub Timer_delete_file_Tick(sender As Object, e As EventArgs) Handles Timer_delete_file.Tick
         If (System.Diagnostics.Process.GetProcessesByName("ra95").Length > 0) Or
-                (System.Diagnostics.Process.GetProcessesByName("c&c95").Length > 0) Or
-            (System.Diagnostics.Process.GetProcessesByName("ra95-spawn").Length > 0) Or
-            (System.Diagnostics.Process.GetProcessesByName("cnc95").Length > 0) Or
-            (System.Diagnostics.Process.GetProcessesByName("cncnet5").Length > 0) _
-            Then
+           (System.Diagnostics.Process.GetProcessesByName("ra95p").Length > 0) Or
+           (System.Diagnostics.Process.GetProcessesByName("ra95-spawn").Length > 0) Or
+           (System.Diagnostics.Process.GetProcessesByName("c&c95").Length > 0) Or
+           (System.Diagnostics.Process.GetProcessesByName("cnc95").Length > 0) Or
+           (System.Diagnostics.Process.GetProcessesByName("cncnet5").Length > 0) Then
         Else
             Try
                 If My.Computer.FileSystem.GetFileInfo(app_path & "\CnC95\cclocal.mix").Length <> 156307 Then
@@ -937,21 +960,35 @@ Public Class Form1
     End Sub
 
     Private Sub show_game_logo()
+        Dim b_p As Point, l_p As Point
+        b_p = Button_cnc1.Location
+        l_p = Label_cnc1.Location
 
         If My.Computer.FileSystem.FileExists(app_path & "\CnC95\conquer.mix") Then
+            Button_cnc1.Visible = True
             Button_cnc1.Enabled = True
+            Label_cnc1.Visible = True
             Label_cnc1.Enabled = True
+            b_p.Y = b_p.Y + 100
+            l_p.Y = l_p.Y + 100
         Else
-            Button_cnc1.Enabled = False
-            Label_cnc1.Enabled = False
+            Button_cnc1.Visible = False
+            Label_cnc1.Visible = False
         End If
 
         If My.Computer.FileSystem.FileExists(app_path & "\RA\REDALERT.MIX") Then
+            l_p.X = l_p.X + 4
+            Button_ra1.Location = b_p
+            Label_ra1.Location = l_p
+            Button_ra1.Visible = True
             Button_ra1.Enabled = True
+            Label_ra1.Visible = True
             Label_ra1.Enabled = True
+            b_p.Y = b_p.Y + 100
+            l_p.Y = l_p.Y + 100
         Else
-            Button_ra1.Enabled = False
-            Label_ra1.Enabled = False
+            Button_ra1.Visible = False
+            Label_ra1.Visible = False
         End If
 
     End Sub
@@ -986,5 +1023,9 @@ Public Class Form1
 
     Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
         ' MsgBox(My.Computer.FileSystem.GetFileInfo(app_path & "\CnC95\cclocal.mix").Length)
+    End Sub
+
+    Private Sub RadioButton_updata_main_web_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton_updata_main_web.CheckedChanged
+
     End Sub
 End Class

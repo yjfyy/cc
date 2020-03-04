@@ -20,6 +20,14 @@
 
     Private Sub ra1cfg_Shown(sender As Object, e As EventArgs) Handles Me.Shown
         read_ini()
+        Form1.Button_ra1_ally.Enabled = False
+        Form1.Button_ra1_soviet.Enabled = False
+        Form1.Button_ra1_skirmish.Enabled = False
+        Form1.Button_ra1_ext_cs.Enabled = False
+        Form1.Button_ra1_ext_af.Enabled = False
+        Form1.Button_ra1_ext_af_su.Enabled = False
+        Form1.Button_ra1_cncnet.Enabled = False
+        Form1.Button_ra1_english.Enabled = False
     End Sub
 
     Private Sub Button_reset_Click(sender As Object, e As EventArgs) Handles Button_reset.Click
@@ -170,7 +178,7 @@
         End If
 
         '设置兼容性
-        If GetINI("ra1", "compatibility", "0", ".\config.ini") = "0" Then
+        If GetINI("ra1", "compatibility", "1", ".\config.ini") = "0" Then
             CheckBox_ra1_compat.Checked = False
         Else
             CheckBox_ra1_compat.Checked = True
@@ -378,6 +386,7 @@
 
     Private Sub CheckBox_ddraw_resolution_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox_ddraw_resolution.CheckedChanged
         If CheckBox_ddraw_resolution.Checked = True Then
+
             TextBox_ddraw_height.Enabled = False
             TextBox_ddraw_height.Text = 0
             TextBox_ddraw_width.Enabled = False
@@ -404,4 +413,23 @@
     Private Sub TabPage1_Click(sender As Object, e As EventArgs) Handles TabPage1.Click
 
     End Sub
+
+    Private Sub ra1cfg_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
+
+    Private Sub ra1cfg_FormClosed(sender As Object, e As FormClosedEventArgs) Handles Me.FormClosed
+        If GetINI("ra1", "fristrun", "1", ".\config.ini") = "0" Then
+            Form1.Button_ra1_ally.Enabled = True
+            Form1.Button_ra1_soviet.Enabled = True
+            Form1.Button_ra1_ext_cs.Enabled = True
+            Form1.Button_ra1_skirmish.Enabled = True
+            Form1.Button_ra1_cncnet.Enabled = True
+            Form1.Button_ra1_english.Enabled = True
+            Form1.Button_ra1_ext_af.Enabled = True
+            Form1.Button_ra1_ext_af_su.Enabled = True
+        End If
+    End Sub
+
+
 End Class

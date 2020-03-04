@@ -3,6 +3,12 @@
     Dim app_path As String = Application.StartupPath()
 
     Private Sub cnc1cfg_Shown(sender As Object, e As EventArgs) Handles Me.Shown
+        Form1.Button_cnc1_GDI_miss.Enabled = False
+        Form1.Button_cnc1_NOD_miss.Enabled = False
+        Form1.Button_cnc1_ext.Enabled = False
+        Form1.Button_cnc1_tv.Enabled = False
+        Form1.Button_cnc1_cncnet.Enabled = False
+        Form1.Button_cnc1_english.Enabled = False
         Read_ini()
     End Sub
 
@@ -427,6 +433,7 @@
 
     Private Sub CheckBox_ddraw_resolution_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox_ddraw_resolution.CheckedChanged
         If CheckBox_ddraw_resolution.Checked = True Then
+
             TextBox_ddraw_height.Enabled = False
             TextBox_ddraw_height.Text = 0
             TextBox_ddraw_width.Enabled = False
@@ -460,4 +467,26 @@
     Private Sub TabPage1_Click(sender As Object, e As EventArgs) Handles TabPage1.Click
 
     End Sub
+
+    Private Sub cnc1cfg_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
+
+    Private Sub cnc1cfg_FormClosed(sender As Object, e As FormClosedEventArgs) Handles Me.FormClosed
+        If GetINI("cnc1", "fristrun", "1", ".\config.ini") = "0" Then
+            Form1.Button_cnc1_GDI_miss.Enabled = True
+            Form1.Button_cnc1_NOD_miss.Enabled = True
+            Form1.Button_cnc1_ext.Enabled = True
+            Form1.Button_cnc1_tv.Enabled = True
+            Form1.Button_cnc1_cncnet.Enabled = True
+            Form1.Button_cnc1_english.Enabled = True
+        End If
+
+    End Sub
+
+    Private Sub RadioButton_full_win_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton_full_win.CheckedChanged
+
+    End Sub
+
+
 End Class
