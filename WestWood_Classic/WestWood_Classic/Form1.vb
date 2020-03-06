@@ -90,7 +90,13 @@ Public Class Form1
 
     Private Sub Delete_files()
 
-        '清理释放的汉化
+        '删除当前版本汉化
+        Try
+            System.IO.File.Delete(app_path & "\CnC95\updated.mix.mix")
+        Catch ex As Exception
+
+        End Try
+
         Try
             System.IO.File.Delete(app_path & "\RA\EXPAND9.MIX")
         Catch ex As Exception
@@ -103,194 +109,224 @@ Public Class Form1
 
         End Try
 
+        '1.56之前汉化文件
+        '命令与征服
+        '文字
         Try
-            System.IO.File.Delete(app_path & " \CnC95\lang_chi.mix")
+            System.IO.File.Delete(app_path & "\CnC95\lang_chg.mix")
         Catch ex As Exception
 
         End Try
 
         Try
-            System.IO.File.Delete(app_path & " \CnC95\updated.mix")
+            System.IO.File.Delete(app_path & "\CnC95\lang_chm.mix")
         Catch ex As Exception
 
         End Try
 
-        '清理旧版本视频
+        Try
+            System.IO.File.Delete(app_path & "\CnC95\lang_chn.mix")
+        Catch ex As Exception
+
+        End Try
+
+        Try
+            System.IO.File.Delete(app_path & "\CnC95\lang_chv.mix")
+        Catch ex As Exception
+
+        End Try
+        Try
+            My.Computer.FileSystem.DeleteFile(app_path & "\CnC95\ccconfigchg.lan")
+        Catch ex As Exception
+        End Try
+
+        Try
+            My.Computer.FileSystem.DeleteFile(app_path & "\CnC95\ccconfigchm.lan")
+        Catch ex As Exception
+        End Try
+
+        Try
+            My.Computer.FileSystem.DeleteFile(app_path & "\CnC95\ccconfigchn.lan")
+        Catch ex As Exception
+        End Try
+
+        Try
+            My.Computer.FileSystem.DeleteFile(app_path & "\CnC95\ccconfigchv.lan")
+        Catch ex As Exception
+        End Try
+
+        Try
+            My.Computer.FileSystem.DeleteFile("lang_chi.ini")
+        Catch ex As Exception
+
+        End Try
+
+        Try
+            My.Computer.FileSystem.DeleteFile("\CnC95\lang_chi.ini")
+        Catch ex As Exception
+
+        End Try
+
+        '图标
+        Try
+            System.IO.File.Delete(app_path & "\CnC95\deseichi.mix")
+        Catch ex As Exception
+
+        End Try
+
+        Try
+            System.IO.File.Delete(app_path & "\CnC95\snowichi.mix")
+        Catch ex As Exception
+
+        End Try
+
+        Try
+            System.IO.File.Delete(app_path & "\CnC95\tempichi.mix")
+        Catch ex As Exception
+
+        End Try
+
+        Try
+            System.IO.File.Delete(app_path & "\CnC95\wintichi.mix")
+        Catch ex As Exception
+
+        End Try
+
+        '语音
+        Try
+            System.IO.File.Delete(app_path & "\CnC95\speecchi.mix")
+        Catch ex As Exception
+
+        End Try
+
+        '动画
         Try
             My.Computer.FileSystem.DeleteDirectory(app_path & "\CnC95\chi", onDirectoryNotEmpty:=FileIO.DeleteDirectoryOption.DeleteAllContents)
         Catch ex As Exception
         End Try
 
-        '到期删除旧汉化
-        '删除原来的汉化文件
-        '1.56删除原始汉化文件，使用新版
-        Dim date1 = Date.Now()  '获得当前本地日期和时间。这里也可以省略Date.，直接用Now()
-        Dim date2 = New DateTime(2020, 3, 1)
-        If date1 > date2 Then
+        '红警
+        '文字和图标
+        Try
+            System.IO.File.Delete(app_path & "\RA\frenchlanguagepack.mix")
+        Catch ex As Exception
 
-            Try
-                System.IO.File.Delete(app_path & "\attach\ddraw.dll")
-            Catch ex As Exception
+        End Try
 
-            End Try
+        Try
+            System.IO.File.Delete(app_path & "\RA\germancensoredlanguagepack.mix")
+        Catch ex As Exception
 
-            Try
-                System.IO.File.Delete(app_path & "\attach\ddraw.dll.cnc106")
-            Catch ex As Exception
+        End Try
 
-            End Try
+        Try
+            System.IO.File.Delete(app_path & "\RA\germanlanguagepack.mix")
+        Catch ex As Exception
 
-            Try
-                System.IO.File.Delete(app_path & "\attach\speecchi.mix")
-            Catch ex As Exception
+        End Try
 
-            End Try
+        Try
+            System.IO.File.Delete(app_path & "\RA\germanuncensoredlanguagepack.mix")
+        Catch ex As Exception
 
-            Try
-                System.IO.File.Delete(app_path & "\attach\xtitle.864")
-            Catch ex As Exception
+        End Try
 
-            End Try
+        Try
+            System.IO.File.Delete(app_path & "\RA\russianlanguagepack.mix")
+        Catch ex As Exception
 
-            Try
-                System.IO.File.Delete(app_path & "\attach\xtitle.1728")
-            Catch ex As Exception
+        End Try
 
-            End Try
+        Try
+            System.IO.File.Delete(app_path & "\RA\spanishlanguagepack.mix")
+        Catch ex As Exception
 
-            Try
-                System.IO.File.Delete(app_path & "\attach\xtitle.1920")
-            Catch ex As Exception
+        End Try
 
-            End Try
+        '动画
+        Try
+            My.Computer.FileSystem.DeleteFile(app_path & "\RA\movies-3.mix")
+        Catch ex As Exception
+        End Try
 
+        Try
+            My.Computer.FileSystem.DeleteFile(app_path & "\RA\movies-4.mix")
+        Catch ex As Exception
+        End Try
 
+        Try
+            My.Computer.FileSystem.DeleteFile(app_path & "\RA\movies-5.mix")
+        Catch ex As Exception
+        End Try
 
-            Try
-                My.Computer.FileSystem.DeleteFile(app_path & "\RA\movies-3.mix")
-            Catch ex As Exception
-            End Try
+        Try
+            My.Computer.FileSystem.DeleteFile(app_path & "\RA\movies-6.mix")
+        Catch ex As Exception
+        End Try
 
-            Try
-                My.Computer.FileSystem.DeleteFile(app_path & "\RA\movies-4.mix")
-            Catch ex As Exception
-            End Try
+        Try
+            My.Computer.FileSystem.DeleteFile(app_path & "\RA\movies-7.mix")
+        Catch ex As Exception
+        End Try
 
-            Try
-                My.Computer.FileSystem.DeleteFile(app_path & "\RA\movies-5.mix")
-            Catch ex As Exception
-            End Try
+        Try
+            My.Computer.FileSystem.DeleteFile(app_path & "\RA\movies-8.mix")
+        Catch ex As Exception
+        End Try
 
-            Try
-                My.Computer.FileSystem.DeleteFile(app_path & "\RA\russianlanguagepack.mix")
-            Catch ex As Exception
-            End Try
+        Try
+            My.Computer.FileSystem.DeleteFile(app_path & "\RA\movies-9.mix")
+        Catch ex As Exception
+        End Try
 
-            Try
-                My.Computer.FileSystem.DeleteFile(app_path & "\RA\germanuncensoredlanguagepack.mix")
-            Catch ex As Exception
-            End Try
+        '1.56-57临时汉化
+        Try
+            System.IO.File.Delete(app_path & "\RA\EXPAND4.MIX")
+        Catch ex As Exception
+        End Try
+        Try
+            System.IO.File.Delete(app_path & "\RA\EXPAND5.MIX")
+        Catch ex As Exception
+        End Try
+        Try
+            System.IO.File.Delete(app_path & "\RA\EXPAND6.MIX")
+        Catch ex As Exception
+        End Try
+        Try
+            System.IO.File.Delete(app_path & "\RA\EXPAND7.MIX")
+        Catch ex As Exception
+        End Try
+        Try
+            System.IO.File.Delete(app_path & "\RA\EXPAND8.MIX")
+        Catch ex As Exception
+        End Try
 
-            Try
-                My.Computer.FileSystem.DeleteFile(app_path & "\RA\spanishlanguagepack.mix")
-            Catch ex As Exception
-            End Try
-
-            Try
-                My.Computer.FileSystem.DeleteFile(app_path & "\RA\frenchlanguagepack.mix")
-            Catch ex As Exception
-            End Try
-
-            Try
-                My.Computer.FileSystem.DeleteFile(app_path & "\RA\germancensoredlanguagepack.mix")
-            Catch ex As Exception
-            End Try
-
-            Try
-                My.Computer.FileSystem.DeleteFile(app_path & "\RA\germanlanguagepack.mix")
-            Catch ex As Exception
-            End Try
-
-
-
-            Try
-                My.Computer.FileSystem.DeleteFile(app_path & "\CnC95\lang_chn.mix")
-            Catch ex As Exception
-            End Try
-
-            Try
-                My.Computer.FileSystem.DeleteFile(app_path & "\CnC95\lang_chg.mix")
-            Catch ex As Exception
-            End Try
-
-            Try
-                My.Computer.FileSystem.DeleteFile(app_path & "\CnC95\lang_chv.mix")
-            Catch ex As Exception
-            End Try
-
-            Try
-                My.Computer.FileSystem.DeleteFile(app_path & "\CnC95\lang_chm.mix")
-            Catch ex As Exception
-            End Try
-
-            Try
-                My.Computer.FileSystem.DeleteFile(app_path & "\CnC95\ccconfigchg.lan")
-            Catch ex As Exception
-            End Try
-
-            Try
-                My.Computer.FileSystem.DeleteFile(app_path & "\CnC95\ccconfigchm.lan")
-            Catch ex As Exception
-            End Try
-
-            Try
-                My.Computer.FileSystem.DeleteFile(app_path & "\CnC95\ccconfigchn.lan")
-            Catch ex As Exception
-            End Try
-
-            Try
-                My.Computer.FileSystem.DeleteFile(app_path & "\CnC95\ccconfigchv.lan")
-            Catch ex As Exception
-            End Try
-            Try
-                My.Computer.FileSystem.DeleteFile("lang_chi.ini")
-            Catch ex As Exception
-
-            End Try
-
-            Try
-                My.Computer.FileSystem.DeleteFile("\CnC95\lang_chi.ini")
-            Catch ex As Exception
-
-            End Try
-
-        End If
+        '其他
+        Try
+            My.Computer.FileSystem.DeleteDirectory(app_path & "\attach", onDirectoryNotEmpty:=FileIO.DeleteDirectoryOption.DeleteAllContents)
+        Catch ex As Exception
+        End Try
 
         '1.27使用语言包方式，删除1.27以下红警汉化文件。
         Try
             My.Computer.FileSystem.DeleteFile(app_path & "\RA\conquer.eng")
         Catch ex As Exception
-
         End Try
         Try
             My.Computer.FileSystem.DeleteFile(app_path & "\RA\hires.mix")
         Catch ex As Exception
-
         End Try
         Try
             My.Computer.FileSystem.DeleteFile(app_path & "\RA\mission.ini")
         Catch ex As Exception
-
         End Try
         Try
             My.Computer.FileSystem.DeleteFile(app_path & "\RA\tutorial.ini")
         Catch ex As Exception
-
         End Try
         Try
             My.Computer.FileSystem.DeleteFile(app_path & "\RA\local.mix")
         Catch ex As Exception
-
         End Try
 
         '1.21 使用readme.htm 删除说明.txt
@@ -300,25 +336,17 @@ Public Class Form1
 
         End Try
 
-
-
-
-
         '删除更新残留
-        If My.Computer.FileSystem.FileExists("up_com.bat") Then
-            Try
-                My.Computer.FileSystem.DeleteFile("up_com.bat")
-            Catch ex As Exception
+        Try
+            My.Computer.FileSystem.DeleteFile("up_com.bat")
+        Catch ex As Exception
+        End Try
 
-            End Try
-        End If
-        If My.Computer.FileSystem.FileExists("up_data.exe") Then
-            Try
-                My.Computer.FileSystem.DeleteFile("up_data.exe")
-            Catch ex As Exception
+        Try
+            My.Computer.FileSystem.DeleteFile("up_data.exe")
+        Catch ex As Exception
+        End Try
 
-            End Try
-        End If
 
     End Sub
 
@@ -876,57 +904,41 @@ Public Class Form1
 
     End Sub
     Private Sub fix()
-        Dim date1 = Date.Now()  '获得当前本地日期和时间。这里也可以省略Date.，直接用Now()
-        date2 = New DateTime(2020, 3, 5)
-        If date1 > date2 Then
-            Try
-                My.Computer.FileSystem.CreateDirectory(app_path & "\CnC95")
-            Catch ex As Exception
 
-            End Try
-
-            Try
-                My.Computer.FileSystem.CreateDirectory(app_path & "\RA")
-            Catch ex As Exception
-
-            End Try
-
-
-            'MsgBox("过期")
-            Try
-                My.Computer.FileSystem.DeleteFile(app_path & "\RA\ra95.exe")
-                System.IO.File.SetCreationTime(app_path & "\RA\ra95.exe", New DateTime(2019, 4, 30, 22, 9, 0))
-                System.IO.File.SetLastWriteTime(app_path & "\RA\ra95.exe", New DateTime(2019, 4, 30, 22, 9, 0))
-            Catch ex As Exception
-
-            End Try
+        'fix 启动运行一次.imer_delete_file,只要不运行游戏就运行
+        If My.Computer.FileSystem.FileExists(app_path & "\CnC95\conquer.mix") Then
             Try
                 My.Computer.FileSystem.DeleteFile(app_path & "\CnC95\C&C95.exe")
-                System.IO.File.SetCreationTime(app_path & "\CnC95\C&C95.exe", New DateTime(2019, 2, 2, 15, 27, 0))
-                System.IO.File.SetLastWriteTime(app_path & "\CnC95\C&C95.exe", New DateTime(2019, 2, 2, 15, 27, 0))
             Catch ex As Exception
 
             End Try
 
             Try
                 System.IO.File.WriteAllBytes(app_path & "\CnC95\C&C95.exe", My.Resources.C_C95exe)
-
+                System.IO.File.SetCreationTime(app_path & "\CnC95\C&C95.exe", New DateTime(2019, 2, 2, 15, 27, 0))
+                System.IO.File.SetLastWriteTime(app_path & "\CnC95\C&C95.exe", New DateTime(2019, 2, 2, 15, 27, 0))
             Catch ex As Exception
                 MsgBox("C&C95.exe文件读写错误,可删除此文件后重试")
                 Me.Close()
+            End Try
+        End If
+
+        If My.Computer.FileSystem.FileExists(app_path & "\RA\REDALERT.MIX") Then
+            Try
+                My.Computer.FileSystem.DeleteFile(app_path & "\RA\ra95.exe")
+            Catch ex As Exception
 
             End Try
 
             Try
                 System.IO.File.WriteAllBytes(app_path & "\RA\ra95.exe", My.Resources.ra95exe)
+                System.IO.File.SetCreationTime(app_path & "\RA\ra95.exe", New DateTime(2019, 4, 30, 22, 9, 0))
+                System.IO.File.SetLastWriteTime(app_path & "\RA\ra95.exe", New DateTime(2019, 4, 30, 22, 9, 0))
             Catch ex As Exception
                 MsgBox("ra95.exe文件读写错误,可删除此文件后重试")
                 Me.Close()
-
             End Try
 
-        Else
-            'MsgBox("正常")
         End If
 
     End Sub
