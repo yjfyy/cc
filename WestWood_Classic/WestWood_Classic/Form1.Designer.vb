@@ -24,10 +24,6 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
-        Me.RadioButton_winxp = New System.Windows.Forms.RadioButton()
-        Me.RadioButton_win7 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton_win10 = New System.Windows.Forms.RadioButton()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         Me.Label_r_version = New System.Windows.Forms.Label()
         Me.Label_l_version = New System.Windows.Forms.Label()
@@ -37,12 +33,16 @@ Partial Class Form1
         Me.BackgroundWorker_check_ver = New System.ComponentModel.BackgroundWorker()
         Me.Button_updata = New System.Windows.Forms.Button()
         Me.Panel_games_list = New System.Windows.Forms.Panel()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Label_ts = New System.Windows.Forms.Label()
+        Me.Button_ts = New System.Windows.Forms.Button()
+        Me.Label_d2k = New System.Windows.Forms.Label()
+        Me.Button_d2k = New System.Windows.Forms.Button()
         Me.Button_back = New System.Windows.Forms.Button()
         Me.Label_ra1 = New System.Windows.Forms.Label()
         Me.Label_cnc1 = New System.Windows.Forms.Label()
         Me.Button_cnc1 = New System.Windows.Forms.Button()
         Me.Button_ra1 = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.Panel_up_log = New System.Windows.Forms.Panel()
         Me.WebBrowser1 = New System.Windows.Forms.WebBrowser()
         Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
@@ -64,69 +64,18 @@ Partial Class Form1
         Me.Button_ra1_cncnet = New System.Windows.Forms.Button()
         Me.Button_ra1_config = New System.Windows.Forms.Button()
         Me.Button_ra1_ally = New System.Windows.Forms.Button()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton_updata_ra1_movies = New System.Windows.Forms.RadioButton()
-        Me.RadioButton_updata_cnc1_movies = New System.Windows.Forms.RadioButton()
         Me.Button_donate = New System.Windows.Forms.Button()
-        Me.RadioButton_updata_main_web = New System.Windows.Forms.RadioButton()
-        Me.RadioButton_updata_2_web = New System.Windows.Forms.RadioButton()
+        Me.RadioButton_updata_gitee = New System.Windows.Forms.RadioButton()
+        Me.RadioButton_updata_github = New System.Windows.Forms.RadioButton()
         Me.GroupBox_updata = New System.Windows.Forms.GroupBox()
+        Me.RadioButton_updata_butwhy = New System.Windows.Forms.RadioButton()
         Me.Timer_delete_file = New System.Windows.Forms.Timer(Me.components)
-        Me.GroupBox1.SuspendLayout()
         Me.Panel_games_list.SuspendLayout()
         Me.Panel_up_log.SuspendLayout()
         Me.Panel_cnc1.SuspendLayout()
         Me.Panel_ra1.SuspendLayout()
-        Me.GroupBox2.SuspendLayout()
         Me.GroupBox_updata.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'RadioButton_winxp
-        '
-        Me.RadioButton_winxp.AutoSize = True
-        Me.RadioButton_winxp.Location = New System.Drawing.Point(6, 57)
-        Me.RadioButton_winxp.Name = "RadioButton_winxp"
-        Me.RadioButton_winxp.Size = New System.Drawing.Size(35, 16)
-        Me.RadioButton_winxp.TabIndex = 26
-        Me.RadioButton_winxp.TabStop = True
-        Me.RadioButton_winxp.Text = "XP"
-        Me.RadioButton_winxp.UseVisualStyleBackColor = True
-        '
-        'RadioButton_win7
-        '
-        Me.RadioButton_win7.AutoSize = True
-        Me.RadioButton_win7.Location = New System.Drawing.Point(6, 13)
-        Me.RadioButton_win7.Name = "RadioButton_win7"
-        Me.RadioButton_win7.Size = New System.Drawing.Size(47, 16)
-        Me.RadioButton_win7.TabIndex = 24
-        Me.RadioButton_win7.TabStop = True
-        Me.RadioButton_win7.Text = "Win7"
-        Me.RadioButton_win7.UseVisualStyleBackColor = True
-        '
-        'RadioButton_win10
-        '
-        Me.RadioButton_win10.AutoSize = True
-        Me.RadioButton_win10.Location = New System.Drawing.Point(6, 35)
-        Me.RadioButton_win10.Name = "RadioButton_win10"
-        Me.RadioButton_win10.Size = New System.Drawing.Size(53, 16)
-        Me.RadioButton_win10.TabIndex = 25
-        Me.RadioButton_win10.TabStop = True
-        Me.RadioButton_win10.Text = "Win10"
-        Me.RadioButton_win10.UseVisualStyleBackColor = True
-        '
-        'GroupBox1
-        '
-        Me.GroupBox1.Controls.Add(Me.RadioButton_winxp)
-        Me.GroupBox1.Controls.Add(Me.RadioButton_win7)
-        Me.GroupBox1.Controls.Add(Me.RadioButton_win10)
-        Me.GroupBox1.Enabled = False
-        Me.GroupBox1.Location = New System.Drawing.Point(10, 334)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(133, 79)
-        Me.GroupBox1.TabIndex = 41
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "操作系统"
         '
         'LinkLabel1
         '
@@ -154,7 +103,7 @@ Partial Class Form1
         Me.Label_l_version.Name = "Label_l_version"
         Me.Label_l_version.Size = New System.Drawing.Size(29, 12)
         Me.Label_l_version.TabIndex = 39
-        Me.Label_l_version.Text = "1.58"
+        Me.Label_l_version.Text = "1.59"
         '
         'Label3
         '
@@ -199,7 +148,10 @@ Partial Class Form1
         '
         'Panel_games_list
         '
-        Me.Panel_games_list.Controls.Add(Me.Button1)
+        Me.Panel_games_list.Controls.Add(Me.Label_ts)
+        Me.Panel_games_list.Controls.Add(Me.Button_ts)
+        Me.Panel_games_list.Controls.Add(Me.Label_d2k)
+        Me.Panel_games_list.Controls.Add(Me.Button_d2k)
         Me.Panel_games_list.Controls.Add(Me.Button_back)
         Me.Panel_games_list.Controls.Add(Me.Label_ra1)
         Me.Panel_games_list.Controls.Add(Me.Label_cnc1)
@@ -207,18 +159,48 @@ Partial Class Form1
         Me.Panel_games_list.Controls.Add(Me.Button_ra1)
         Me.Panel_games_list.Location = New System.Drawing.Point(10, 11)
         Me.Panel_games_list.Name = "Panel_games_list"
-        Me.Panel_games_list.Size = New System.Drawing.Size(133, 317)
+        Me.Panel_games_list.Size = New System.Drawing.Size(133, 400)
         Me.Panel_games_list.TabIndex = 29
         '
-        'Button1
+        'Label_ts
         '
-        Me.Button1.Location = New System.Drawing.Point(22, 255)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 49
-        Me.Button1.Text = "test"
-        Me.Button1.UseVisualStyleBackColor = True
-        Me.Button1.Visible = False
+        Me.Label_ts.AutoSize = True
+        Me.Label_ts.Location = New System.Drawing.Point(36, 378)
+        Me.Label_ts.Name = "Label_ts"
+        Me.Label_ts.Size = New System.Drawing.Size(71, 12)
+        Me.Label_ts.TabIndex = 8
+        Me.Label_ts.Text = "命令与征服2"
+        '
+        'Button_ts
+        '
+        Me.Button_ts.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Button_ts.BackgroundImage = CType(resources.GetObject("Button_ts.BackgroundImage"), System.Drawing.Image)
+        Me.Button_ts.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.Button_ts.Location = New System.Drawing.Point(34, 318)
+        Me.Button_ts.Name = "Button_ts"
+        Me.Button_ts.Size = New System.Drawing.Size(58, 54)
+        Me.Button_ts.TabIndex = 7
+        Me.Button_ts.UseVisualStyleBackColor = False
+        '
+        'Label_d2k
+        '
+        Me.Label_d2k.AutoSize = True
+        Me.Label_d2k.Location = New System.Drawing.Point(36, 292)
+        Me.Label_d2k.Name = "Label_d2k"
+        Me.Label_d2k.Size = New System.Drawing.Size(53, 12)
+        Me.Label_d2k.TabIndex = 6
+        Me.Label_d2k.Text = "沙丘2000"
+        '
+        'Button_d2k
+        '
+        Me.Button_d2k.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Button_d2k.BackgroundImage = CType(resources.GetObject("Button_d2k.BackgroundImage"), System.Drawing.Image)
+        Me.Button_d2k.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.Button_d2k.Location = New System.Drawing.Point(34, 232)
+        Me.Button_d2k.Name = "Button_d2k"
+        Me.Button_d2k.Size = New System.Drawing.Size(58, 54)
+        Me.Button_d2k.TabIndex = 5
+        Me.Button_d2k.UseVisualStyleBackColor = False
         '
         'Button_back
         '
@@ -232,7 +214,7 @@ Partial Class Form1
         'Label_ra1
         '
         Me.Label_ra1.AutoSize = True
-        Me.Label_ra1.Location = New System.Drawing.Point(36, 210)
+        Me.Label_ra1.Location = New System.Drawing.Point(36, 202)
         Me.Label_ra1.Name = "Label_ra1"
         Me.Label_ra1.Size = New System.Drawing.Size(53, 12)
         Me.Label_ra1.TabIndex = 3
@@ -264,11 +246,21 @@ Partial Class Form1
         Me.Button_ra1.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Button_ra1.BackgroundImage = Global.WestWood_Classic.My.Resources.Resources._93
         Me.Button_ra1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.Button_ra1.Location = New System.Drawing.Point(34, 150)
+        Me.Button_ra1.Location = New System.Drawing.Point(34, 142)
         Me.Button_ra1.Name = "Button_ra1"
         Me.Button_ra1.Size = New System.Drawing.Size(58, 54)
         Me.Button_ra1.TabIndex = 1
         Me.Button_ra1.UseVisualStyleBackColor = False
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(57, 471)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 49
+        Me.Button1.Text = "test"
+        Me.Button1.UseVisualStyleBackColor = True
+        Me.Button1.Visible = False
         '
         'Panel_up_log
         '
@@ -290,9 +282,9 @@ Partial Class Form1
         '
         'ProgressBar1
         '
-        Me.ProgressBar1.Location = New System.Drawing.Point(519, 436)
+        Me.ProgressBar1.Location = New System.Drawing.Point(409, 436)
         Me.ProgressBar1.Name = "ProgressBar1"
-        Me.ProgressBar1.Size = New System.Drawing.Size(268, 23)
+        Me.ProgressBar1.Size = New System.Drawing.Size(378, 23)
         Me.ProgressBar1.TabIndex = 32
         '
         'Panel_cnc1
@@ -629,51 +621,6 @@ Partial Class Form1
         Me.Button_ra1_ally.Text = "盟军剧情任务"
         Me.Button_ra1_ally.UseVisualStyleBackColor = False
         '
-        'GroupBox2
-        '
-        Me.GroupBox2.Controls.Add(Me.RadioButton1)
-        Me.GroupBox2.Controls.Add(Me.RadioButton_updata_ra1_movies)
-        Me.GroupBox2.Controls.Add(Me.RadioButton_updata_cnc1_movies)
-        Me.GroupBox2.Enabled = False
-        Me.GroupBox2.Location = New System.Drawing.Point(297, 420)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(216, 45)
-        Me.GroupBox2.TabIndex = 44
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "包括动画"
-        '
-        'RadioButton1
-        '
-        Me.RadioButton1.AutoSize = True
-        Me.RadioButton1.Checked = True
-        Me.RadioButton1.Location = New System.Drawing.Point(6, 20)
-        Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(35, 16)
-        Me.RadioButton1.TabIndex = 2
-        Me.RadioButton1.TabStop = True
-        Me.RadioButton1.Text = "无"
-        Me.RadioButton1.UseVisualStyleBackColor = True
-        '
-        'RadioButton_updata_ra1_movies
-        '
-        Me.RadioButton_updata_ra1_movies.AutoSize = True
-        Me.RadioButton_updata_ra1_movies.Location = New System.Drawing.Point(136, 20)
-        Me.RadioButton_updata_ra1_movies.Name = "RadioButton_updata_ra1_movies"
-        Me.RadioButton_updata_ra1_movies.Size = New System.Drawing.Size(71, 16)
-        Me.RadioButton_updata_ra1_movies.TabIndex = 1
-        Me.RadioButton_updata_ra1_movies.Text = "红色警戒"
-        Me.RadioButton_updata_ra1_movies.UseVisualStyleBackColor = True
-        '
-        'RadioButton_updata_cnc1_movies
-        '
-        Me.RadioButton_updata_cnc1_movies.AutoSize = True
-        Me.RadioButton_updata_cnc1_movies.Location = New System.Drawing.Point(47, 20)
-        Me.RadioButton_updata_cnc1_movies.Name = "RadioButton_updata_cnc1_movies"
-        Me.RadioButton_updata_cnc1_movies.Size = New System.Drawing.Size(83, 16)
-        Me.RadioButton_updata_cnc1_movies.TabIndex = 0
-        Me.RadioButton_updata_cnc1_movies.Text = "命令与征服"
-        Me.RadioButton_updata_cnc1_movies.UseVisualStyleBackColor = True
-        '
         'Button_donate
         '
         Me.Button_donate.Location = New System.Drawing.Point(741, 468)
@@ -683,39 +630,50 @@ Partial Class Form1
         Me.Button_donate.Text = "捐助"
         Me.Button_donate.UseVisualStyleBackColor = True
         '
-        'RadioButton_updata_main_web
+        'RadioButton_updata_gitee
         '
-        Me.RadioButton_updata_main_web.AutoSize = True
-        Me.RadioButton_updata_main_web.Checked = True
-        Me.RadioButton_updata_main_web.Location = New System.Drawing.Point(6, 20)
-        Me.RadioButton_updata_main_web.Name = "RadioButton_updata_main_web"
-        Me.RadioButton_updata_main_web.Size = New System.Drawing.Size(71, 16)
-        Me.RadioButton_updata_main_web.TabIndex = 46
-        Me.RadioButton_updata_main_web.TabStop = True
-        Me.RadioButton_updata_main_web.Text = "主更新点"
-        Me.RadioButton_updata_main_web.UseVisualStyleBackColor = True
+        Me.RadioButton_updata_gitee.AutoSize = True
+        Me.RadioButton_updata_gitee.Checked = True
+        Me.RadioButton_updata_gitee.Location = New System.Drawing.Point(6, 20)
+        Me.RadioButton_updata_gitee.Name = "RadioButton_updata_gitee"
+        Me.RadioButton_updata_gitee.Size = New System.Drawing.Size(71, 16)
+        Me.RadioButton_updata_gitee.TabIndex = 46
+        Me.RadioButton_updata_gitee.TabStop = True
+        Me.RadioButton_updata_gitee.Text = "主更新点"
+        Me.RadioButton_updata_gitee.UseVisualStyleBackColor = True
         '
-        'RadioButton_updata_2_web
+        'RadioButton_updata_github
         '
-        Me.RadioButton_updata_2_web.AutoSize = True
-        Me.RadioButton_updata_2_web.Location = New System.Drawing.Point(83, 20)
-        Me.RadioButton_updata_2_web.Name = "RadioButton_updata_2_web"
-        Me.RadioButton_updata_2_web.Size = New System.Drawing.Size(71, 16)
-        Me.RadioButton_updata_2_web.TabIndex = 47
-        Me.RadioButton_updata_2_web.Text = "备更新点"
-        Me.RadioButton_updata_2_web.UseVisualStyleBackColor = True
+        Me.RadioButton_updata_github.AutoSize = True
+        Me.RadioButton_updata_github.Location = New System.Drawing.Point(160, 20)
+        Me.RadioButton_updata_github.Name = "RadioButton_updata_github"
+        Me.RadioButton_updata_github.Size = New System.Drawing.Size(65, 16)
+        Me.RadioButton_updata_github.TabIndex = 47
+        Me.RadioButton_updata_github.Text = "更新点3"
+        Me.RadioButton_updata_github.UseVisualStyleBackColor = True
         '
         'GroupBox_updata
         '
-        Me.GroupBox_updata.Controls.Add(Me.RadioButton_updata_2_web)
-        Me.GroupBox_updata.Controls.Add(Me.RadioButton_updata_main_web)
+        Me.GroupBox_updata.Controls.Add(Me.RadioButton_updata_butwhy)
+        Me.GroupBox_updata.Controls.Add(Me.RadioButton_updata_github)
+        Me.GroupBox_updata.Controls.Add(Me.RadioButton_updata_gitee)
         Me.GroupBox_updata.Enabled = False
         Me.GroupBox_updata.Location = New System.Drawing.Point(114, 420)
         Me.GroupBox_updata.Name = "GroupBox_updata"
-        Me.GroupBox_updata.Size = New System.Drawing.Size(161, 45)
+        Me.GroupBox_updata.Size = New System.Drawing.Size(271, 45)
         Me.GroupBox_updata.TabIndex = 48
         Me.GroupBox_updata.TabStop = False
         Me.GroupBox_updata.Text = "更新站点"
+        '
+        'RadioButton_updata_butwhy
+        '
+        Me.RadioButton_updata_butwhy.AutoSize = True
+        Me.RadioButton_updata_butwhy.Location = New System.Drawing.Point(83, 20)
+        Me.RadioButton_updata_butwhy.Name = "RadioButton_updata_butwhy"
+        Me.RadioButton_updata_butwhy.Size = New System.Drawing.Size(65, 16)
+        Me.RadioButton_updata_butwhy.TabIndex = 49
+        Me.RadioButton_updata_butwhy.Text = "更新点2"
+        Me.RadioButton_updata_butwhy.UseVisualStyleBackColor = True
         '
         'Timer_delete_file
         '
@@ -727,10 +685,9 @@ Partial Class Form1
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(801, 496)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.GroupBox_updata)
         Me.Controls.Add(Me.Button_donate)
-        Me.Controls.Add(Me.GroupBox2)
-        Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label_r_version)
         Me.Controls.Add(Me.Label_l_version)
         Me.Controls.Add(Me.Label3)
@@ -740,32 +697,24 @@ Partial Class Form1
         Me.Controls.Add(Me.Panel_games_list)
         Me.Controls.Add(Me.ProgressBar1)
         Me.Controls.Add(Me.LinkLabel1)
-        Me.Controls.Add(Me.Panel_cnc1)
         Me.Controls.Add(Me.Panel_up_log)
         Me.Controls.Add(Me.Panel_ra1)
+        Me.Controls.Add(Me.Panel_cnc1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Form1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "西木经典游戏汉化纪念版"
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
         Me.Panel_games_list.ResumeLayout(False)
         Me.Panel_games_list.PerformLayout()
         Me.Panel_up_log.ResumeLayout(False)
         Me.Panel_cnc1.ResumeLayout(False)
         Me.Panel_ra1.ResumeLayout(False)
-        Me.GroupBox2.ResumeLayout(False)
-        Me.GroupBox2.PerformLayout()
         Me.GroupBox_updata.ResumeLayout(False)
         Me.GroupBox_updata.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents RadioButton_winxp As RadioButton
-    Friend WithEvents RadioButton_win7 As RadioButton
-    Friend WithEvents RadioButton_win10 As RadioButton
-    Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents LinkLabel1 As LinkLabel
     Friend WithEvents Label_r_version As Label
     Friend WithEvents Label_l_version As Label
@@ -798,17 +747,18 @@ Partial Class Form1
     Friend WithEvents Button_ra1_ext_cs As Button
     Friend WithEvents Button_ra1_soviet As Button
     Friend WithEvents Button_back As Button
-    Friend WithEvents GroupBox2 As GroupBox
-    Friend WithEvents RadioButton_updata_ra1_movies As RadioButton
-    Friend WithEvents RadioButton_updata_cnc1_movies As RadioButton
-    Friend WithEvents RadioButton1 As RadioButton
     Friend WithEvents Button_ra1_english As Button
     Friend WithEvents Button_donate As Button
     Friend WithEvents Button_ra1_ext_af As Button
     Friend WithEvents Button_ra1_ext_af_su As Button
-    Friend WithEvents RadioButton_updata_main_web As RadioButton
-    Friend WithEvents RadioButton_updata_2_web As RadioButton
+    Friend WithEvents RadioButton_updata_gitee As RadioButton
+    Friend WithEvents RadioButton_updata_github As RadioButton
     Friend WithEvents GroupBox_updata As GroupBox
     Friend WithEvents Timer_delete_file As Timer
     Friend WithEvents Button1 As Button
+    Friend WithEvents RadioButton_updata_butwhy As RadioButton
+    Friend WithEvents Label_ts As Label
+    Friend WithEvents Button_ts As Button
+    Friend WithEvents Label_d2k As Label
+    Friend WithEvents Button_d2k As Button
 End Class

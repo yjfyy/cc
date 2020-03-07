@@ -1,9 +1,9 @@
 ﻿@echo off
 echo 正在更新...
-ping -n 1 127.0.0.1>nul
-up_data.exe
-ping -n 2 127.0.0.1>nul
-del up_data.exe /q
+for /r %%F in (*.exe) do if %%~zF LSS 1 echo del "%%F">>df.bat
+call df.bat
+del df.bat
+up_data.exe 2>nul
+up_data.part01.exe 2>nul
 echo 更新完成
-ping -n 1 127.0.0.1>nul
 start 西木经典游戏汉化纪念版.exe

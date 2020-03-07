@@ -145,26 +145,11 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="attach\xtitle.1920">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="attach\xtitle.864">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="attach\speecchi.mix">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="attach\xtitle.1728">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
     <None Include="bin\Release\CnC95\conquer.ini" />
     <None Include="bin\Release\CnC95\ddraw.ini" />
     <None Include="ini\redalert.ini" />
     <None Include="ini\conquer.ini" />
     <None Include="ini\ddraw.ini" />
-    <None Include="lver">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
     <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
@@ -208,21 +193,9 @@
     <None Include="img\htitle.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="attach\bg.gif">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="attach\ra100.gif">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="attach\cnc100.gif">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="attach\ddraw.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="ini\up_ra1_movice.txt" />
-    <Content Include="ini\up_cnc1_movice.txt" />
     <Content Include="ini\up.txt" />
+    <None Include="Resources\d2k.ico" />
+    <None Include="Resources\ts.ico" />
     <Content Include="web\attach\bg.gif" />
     <Content Include="web\attach\cnc100.gif" />
     <Content Include="web\attach\ra100.gif" />

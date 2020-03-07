@@ -288,35 +288,35 @@
         End If
     End Sub
 
-    Private Sub CheckBox_cc1_compat_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox_cc1_compat.CheckedChanged
-        If CheckBox_cc1_compat.Checked = True Then
+    'Private Sub CheckBox_cc1_compat_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox_cc1_compat.CheckedChanged
+    '    If CheckBox_cc1_compat.Checked = True Then
 
-            WriteINI("cnc1", "compatibility", "1", ".\config.ini")
+    '        WriteINI("cnc1", "compatibility", "1", ".\config.ini")
 
-            If Form1.RadioButton_win10.Checked Then
-                Dim key As Microsoft.Win32.RegistryKey = Microsoft.Win32.Registry.CurrentUser.OpenSubKey("Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags", True)
-                Dim subkey As Microsoft.Win32.RegistryKey
-                subkey = key.CreateSubKey("Layers")
-                subkey.SetValue(app_path & "\CnC95\C&C95.exe", "~ HIGHDPIAWARE WIN7RTM", Microsoft.Win32.RegistryValueKind.String)
+    '        If Form1.RadioButton_win10.Checked Then
+    '            Dim key As Microsoft.Win32.RegistryKey = Microsoft.Win32.Registry.CurrentUser.OpenSubKey("Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags", True)
+    '            Dim subkey As Microsoft.Win32.RegistryKey
+    '            subkey = key.CreateSubKey("Layers")
+    '            subkey.SetValue(app_path & "\CnC95\C&C95.exe", "~ HIGHDPIAWARE WIN7RTM", Microsoft.Win32.RegistryValueKind.String)
 
-            ElseIf Form1.RadioButton_win7.Checked Then
-                Dim key As Microsoft.Win32.RegistryKey = Microsoft.Win32.Registry.CurrentUser.OpenSubKey("Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags", True)
-                Dim subkey As Microsoft.Win32.RegistryKey
-                subkey = key.CreateSubKey("Layers")
-                subkey.SetValue(app_path & "\CnC95\C&C95.exe", "WIN98", Microsoft.Win32.RegistryValueKind.String)
+    '        ElseIf Form1.RadioButton_win7.Checked Then
+    '            Dim key As Microsoft.Win32.RegistryKey = Microsoft.Win32.Registry.CurrentUser.OpenSubKey("Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags", True)
+    '            Dim subkey As Microsoft.Win32.RegistryKey
+    '            subkey = key.CreateSubKey("Layers")
+    '            subkey.SetValue(app_path & "\CnC95\C&C95.exe", "WIN98", Microsoft.Win32.RegistryValueKind.String)
 
-            End If
-        Else
-            WriteINI("cnc1", "compatibility", "0", ".\config.ini")
-            If Form1.RadioButton_winxp.Checked = False Then
-                Dim key As Microsoft.Win32.RegistryKey = Microsoft.Win32.Registry.CurrentUser.OpenSubKey("Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags", True)
-                Dim subkey As Microsoft.Win32.RegistryKey
-                subkey = key.CreateSubKey("Layers")
+    '        End If
+    '    Else
+    '        WriteINI("cnc1", "compatibility", "0", ".\config.ini")
+    '        If Form1.RadioButton_winxp.Checked = False Then
+    '            Dim key As Microsoft.Win32.RegistryKey = Microsoft.Win32.Registry.CurrentUser.OpenSubKey("Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags", True)
+    '            Dim subkey As Microsoft.Win32.RegistryKey
+    '            subkey = key.CreateSubKey("Layers")
 
-                subkey.SetValue(app_path & "\CnC95\C&C95.exe", "", Microsoft.Win32.RegistryValueKind.String)
-            End If
-        End If
-    End Sub
+    '            subkey.SetValue(app_path & "\CnC95\C&C95.exe", "", Microsoft.Win32.RegistryValueKind.String)
+    '        End If
+    '    End If
+    'End Sub
 
 
 

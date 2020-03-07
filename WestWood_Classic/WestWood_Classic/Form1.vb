@@ -12,11 +12,12 @@ Public Class Form1
     ' Dim newuplog As String
     'Dim up_root = "https://gitee.com/yjfyeyu/updatasys/raw/master/WestWood_Classic/"
     'Dim up_root = "https://raw.githubusercontent.com/yjfyy/tuzi_updata/master/WestWood_Classic/"
-    Dim up_root = "http://butwhy.vicp.net:82/tuzi_updata/WestWood_Classic/"
+    'Dim up_root = "http://butwhy.vicp.net:82/tuzi_updata/WestWood_Classic/"
     'Dim up_root = "https://gitlab.com/yjfyy/tuzi_updata/raw/master/WestWood_Classic/"
+    Dim up_root
 
     Dim app_path As String = Application.StartupPath()
-    Dim date2 = New DateTime(2020, 3, 5)
+    'Dim date2 = New DateTime(2020, 3, 5)
 
     Private Sub Button_cnc1_Click(sender As Object, e As EventArgs) Handles Button_cnc1.Click
 
@@ -70,19 +71,19 @@ Public Class Form1
         ' Catch ex As Exception
         ' End Try
 
-        Dim os As OperatingSystem = Environment.OSVersion
+        'Dim os As OperatingSystem = Environment.OSVersion
 
-        If Mid(os.Version.ToString, 1, 3) = "6.2" Then
-            RadioButton_win10.Checked = True
-        ElseIf Mid(os.Version.ToString, 1, 3) = "6.1" Then
-            RadioButton_win7.Checked = True
-        ElseIf Mid(os.Version.ToString, 1, 3) = "5.1" Then
-            RadioButton_winxp.Checked = True
-            'up_root = "http://code.taobao.org/svn/yxgcsj/trunk/WestWood_Classic/"
-        Else
-            MsgBox("未能确认操作系统版本，请手动选择")
-            GroupBox1.Enabled = True
-        End If
+        'If Mid(os.Version.ToString, 1, 3) = "6.2" Then
+        '    RadioButton_win10.Checked = True
+        'ElseIf Mid(os.Version.ToString, 1, 3) = "6.1" Then
+        '    RadioButton_win7.Checked = True
+        'ElseIf Mid(os.Version.ToString, 1, 3) = "5.1" Then
+        '    RadioButton_winxp.Checked = True
+        '    'up_root = "http://code.taobao.org/svn/yxgcsj/trunk/WestWood_Classic/"
+        'Else
+        '    MsgBox("未能确认操作系统版本，请手动选择")
+        '    GroupBox1.Enabled = True
+        'End If
 
 
     End Sub
@@ -94,20 +95,55 @@ Public Class Form1
         Try
             System.IO.File.Delete(app_path & "\CnC95\updated.mix.mix")
         Catch ex As Exception
-
         End Try
 
         Try
             System.IO.File.Delete(app_path & "\RA\EXPAND9.MIX")
         Catch ex As Exception
-
         End Try
 
         Try
             System.IO.File.Delete(app_path & "\RA\campaign.mix")
         Catch ex As Exception
-
         End Try
+
+        '删除更新残留
+        Try
+            My.Computer.FileSystem.DeleteFile("up_com.bat")
+        Catch ex As Exception
+        End Try
+
+        Try
+            My.Computer.FileSystem.DeleteFile("up_data.exe")
+        Catch ex As Exception
+        End Try
+
+        Try
+            My.Computer.FileSystem.DeleteFile("up_data.part01.exe")
+        Catch ex As Exception
+        End Try
+        Try
+            My.Computer.FileSystem.DeleteFile("up_data.part02.rar")
+        Catch ex As Exception
+        End Try
+        Try
+            My.Computer.FileSystem.DeleteFile("up_data.part03.rar")
+        Catch ex As Exception
+        End Try
+        Try
+            My.Computer.FileSystem.DeleteFile("up_data.part04.rar")
+        Catch ex As Exception
+        End Try
+        Try
+            My.Computer.FileSystem.DeleteFile("up_data.part05.rar")
+        Catch ex As Exception
+        End Try
+        Try
+            My.Computer.FileSystem.DeleteFile("up_data.part06.rar")
+        Catch ex As Exception
+        End Try
+
+
 
         '1.56之前汉化文件
         '命令与征服
@@ -115,26 +151,23 @@ Public Class Form1
         Try
             System.IO.File.Delete(app_path & "\CnC95\lang_chg.mix")
         Catch ex As Exception
-
         End Try
 
         Try
             System.IO.File.Delete(app_path & "\CnC95\lang_chm.mix")
         Catch ex As Exception
-
         End Try
 
         Try
             System.IO.File.Delete(app_path & "\CnC95\lang_chn.mix")
         Catch ex As Exception
-
         End Try
 
         Try
             System.IO.File.Delete(app_path & "\CnC95\lang_chv.mix")
         Catch ex As Exception
-
         End Try
+
         Try
             My.Computer.FileSystem.DeleteFile(app_path & "\CnC95\ccconfigchg.lan")
         Catch ex As Exception
@@ -158,45 +191,38 @@ Public Class Form1
         Try
             My.Computer.FileSystem.DeleteFile("lang_chi.ini")
         Catch ex As Exception
-
         End Try
 
         Try
             My.Computer.FileSystem.DeleteFile("\CnC95\lang_chi.ini")
         Catch ex As Exception
-
         End Try
 
         '图标
         Try
             System.IO.File.Delete(app_path & "\CnC95\deseichi.mix")
         Catch ex As Exception
-
         End Try
 
         Try
             System.IO.File.Delete(app_path & "\CnC95\snowichi.mix")
         Catch ex As Exception
-
         End Try
 
         Try
             System.IO.File.Delete(app_path & "\CnC95\tempichi.mix")
         Catch ex As Exception
-
         End Try
 
         Try
             System.IO.File.Delete(app_path & "\CnC95\wintichi.mix")
         Catch ex As Exception
-
         End Try
 
         '语音
         Try
             System.IO.File.Delete(app_path & "\CnC95\speecchi.mix")
         Catch ex As Exception
-
         End Try
 
         '动画
@@ -210,40 +236,44 @@ Public Class Form1
         Try
             System.IO.File.Delete(app_path & "\RA\frenchlanguagepack.mix")
         Catch ex As Exception
-
         End Try
 
         Try
             System.IO.File.Delete(app_path & "\RA\germancensoredlanguagepack.mix")
         Catch ex As Exception
-
         End Try
 
         Try
             System.IO.File.Delete(app_path & "\RA\germanlanguagepack.mix")
         Catch ex As Exception
-
         End Try
 
         Try
             System.IO.File.Delete(app_path & "\RA\germanuncensoredlanguagepack.mix")
         Catch ex As Exception
-
         End Try
 
         Try
             System.IO.File.Delete(app_path & "\RA\russianlanguagepack.mix")
         Catch ex As Exception
-
         End Try
 
         Try
             System.IO.File.Delete(app_path & "\RA\spanishlanguagepack.mix")
         Catch ex As Exception
-
         End Try
 
         '动画
+        Try
+            My.Computer.FileSystem.DeleteFile(app_path & "\RA\movies-1.mix")
+        Catch ex As Exception
+        End Try
+
+        Try
+            My.Computer.FileSystem.DeleteFile(app_path & "\RA\movies-2.mix")
+        Catch ex As Exception
+        End Try
+
         Try
             My.Computer.FileSystem.DeleteFile(app_path & "\RA\movies-3.mix")
         Catch ex As Exception
@@ -336,16 +366,7 @@ Public Class Form1
 
         End Try
 
-        '删除更新残留
-        Try
-            My.Computer.FileSystem.DeleteFile("up_com.bat")
-        Catch ex As Exception
-        End Try
 
-        Try
-            My.Computer.FileSystem.DeleteFile("up_data.exe")
-        Catch ex As Exception
-        End Try
 
 
     End Sub
@@ -354,7 +375,7 @@ Public Class Form1
         'MsgBox("检查更新")
         Label_status.Text = "正在检测更新......"
         l_version = Label_l_version.Text
-        BackgroundWorker_check_ver.RunWorkerAsync()
+        'BackgroundWorker_check_ver.RunWorkerAsync()
     End Sub
 
     Private Sub BackgroundWorker_check_ver_DoWork(sender As Object, e As DoWorkEventArgs) Handles BackgroundWorker_check_ver.DoWork
@@ -417,36 +438,85 @@ Public Class Form1
     End Sub
 
     Private Sub Up_autoupdata()
-
         Button_updata.Enabled = False
-
         Dim dFile As New System.Net.WebClient
-        Dim upUri_up_data As New Uri(up_root & "up_data.exe")
-        AddHandler dFile.DownloadProgressChanged, AddressOf ShowDownProgress
+        'AddHandler dFile.DownloadProgressChanged, AddressOf ShowDownProgress
+        AddHandler dFile.DownloadFileCompleted, AddressOf Up_autoupdata1
+        Label_status.Text = "正在下载..."
+        dFile.DownloadFileAsync(New Uri(up_root & "up_data.exe"), "up_data.exe")
+        ProgressBar1.Value = 15
+    End Sub
+    Private Sub Up_autoupdata1()
+        Button_updata.Enabled = False
+        Dim dFile As New System.Net.WebClient
+        'AddHandler dFile.DownloadProgressChanged, AddressOf ShowDownProgress
+        AddHandler dFile.DownloadFileCompleted, AddressOf Up_autoupdata2
+        Label_status.Text = "正在下载..."
+        dFile.DownloadFileAsync(New Uri(up_root & "up_data.part01.exe"), "up_data.part01.exe")
+        ProgressBar1.Value = 30
+    End Sub
+    Private Sub Up_autoupdata2()
+        Button_updata.Enabled = False
+        Dim dFile As New System.Net.WebClient
+        'AddHandler dFile.DownloadProgressChanged, AddressOf ShowDownProgress
+        AddHandler dFile.DownloadFileCompleted, AddressOf Up_autoupdata3
+        Label_status.Text = "正在下载..."
+        dFile.DownloadFileAsync(New Uri(up_root & "up_data.part02.rar"), "up_data.part02.rar")
+        ProgressBar1.Value = 45
+    End Sub
+    Private Sub Up_autoupdata3()
+        Button_updata.Enabled = False
+        Dim dFile As New System.Net.WebClient
+        'AddHandler dFile.DownloadProgressChanged, AddressOf ShowDownProgress
+        AddHandler dFile.DownloadFileCompleted, AddressOf Up_autoupdata4
+        Label_status.Text = "正在下载..."
+        dFile.DownloadFileAsync(New Uri(up_root & "up_data.part03.rar"), "up_data.part03.rar")
+        ProgressBar1.Value = 60
+    End Sub
+    Private Sub Up_autoupdata4()
+        Button_updata.Enabled = False
+        Dim dFile As New System.Net.WebClient
+        'AddHandler dFile.DownloadProgressChanged, AddressOf ShowDownProgress
+        AddHandler dFile.DownloadFileCompleted, AddressOf Up_autoupdata5
+        Label_status.Text = "正在下载..."
+        dFile.DownloadFileAsync(New Uri(up_root & "up_data.part04.rar"), "up_data.part04.rar")
+        ProgressBar1.Value = 75
+    End Sub
+    Private Sub Up_autoupdata5()
+        Button_updata.Enabled = False
+        Dim dFile As New System.Net.WebClient
+        'AddHandler dFile.DownloadProgressChanged, AddressOf ShowDownProgress
+        AddHandler dFile.DownloadFileCompleted, AddressOf Up_autoupdata6
+        Label_status.Text = "正在下载..."
+        dFile.DownloadFileAsync(New Uri(up_root & "up_data.part05.rar"), "up_data.part05.rar")
+        ProgressBar1.Value = 90
+    End Sub
+    Private Sub Up_autoupdata6()
+        Button_updata.Enabled = False
+        Dim dFile As New System.Net.WebClient
+        'AddHandler dFile.DownloadProgressChanged, AddressOf ShowDownProgress
         AddHandler dFile.DownloadFileCompleted, AddressOf Wanchen
         Label_status.Text = "正在下载..."
-
-        dFile.DownloadFileAsync(upUri_up_data, "up_data.exe")
-        'BackgroundWorker_download_updata.RunWorkerAsync()
-
+        dFile.DownloadFileAsync(New Uri(up_root & "up_data.part06.rar"), "up_data.part06.rar")
+        ProgressBar1.Value = 100
     End Sub
 
     Private Sub ShowDownProgress(ByVal sender As Object, ByVal e As System.Net.DownloadProgressChangedEventArgs)
-        Invoke(New Action(Of Integer)(Sub(i) ProgressBar1.Value = i), e.ProgressPercentage)
+        Invoke(New Action(Of Integer)(Sub(i) ProgressBar1.Value = i / 6), e.ProgressPercentage)
     End Sub
     Sub Wanchen(ByVal sender As Object, ByVal e As System.ComponentModel.AsyncCompletedEventArgs)
         Label_status.Text = "下载完成"
         Try
-            If RadioButton_updata_cnc1_movies.Checked Then
-                'System.IO.File.WriteAllText("up_com.bat", TextBox_up_com_as_cnc1_movies.Text, encoding:=System.Text.Encoding.Default)
-                System.IO.File.WriteAllText("up_com.bat", My.Resources.up_cnc1_movice, encoding:=System.Text.Encoding.Default)
-            ElseIf RadioButton_updata_ra1_movies.Checked Then
-                'System.IO.File.WriteAllText("up_com.bat", TextBox_up_com_as_ra1_movies.Text, encoding:=System.Text.Encoding.Default)
-                System.IO.File.WriteAllText("up_com.bat", My.Resources.up_ra1_movice, encoding:=System.Text.Encoding.Default)
-            Else
-                'System.IO.File.WriteAllText("up_com.bat", TextBox_up_com.Text, encoding:=System.Text.Encoding.Default)
-                System.IO.File.WriteAllText("up_com.bat", My.Resources.up, encoding:=System.Text.Encoding.Default)
-            End If
+            'If RadioButton_updata_cnc1_movies.Checked Then
+            'System.IO.File.WriteAllText("up_com.bat", TextBox_up_com_as_cnc1_movies.Text, encoding:=System.Text.Encoding.Default)
+            ' System.IO.File.WriteAllText("up_com.bat", My.Resources.up_cnc1_movice, encoding:=System.Text.Encoding.Default)
+            'ElseIf RadioButton_updata_ra1_movies.Checked Then
+            'System.IO.File.WriteAllText("up_com.bat", TextBox_up_com_as_ra1_movies.Text, encoding:=System.Text.Encoding.Default)
+            ' System.IO.File.WriteAllText("up_com.bat", My.Resources.up_ra1_movice, encoding:=System.Text.Encoding.Default)
+            ' Else
+            'System.IO.File.WriteAllText("up_com.bat", TextBox_up_com.Text, encoding:=System.Text.Encoding.Default)
+            System.IO.File.WriteAllText("up_com.bat", My.Resources.up, encoding:=System.Text.Encoding.Default)
+            ' End If
             Label_status.Text = "升级完成后将自动重启。"
             'Shell("up_com.bat", Style:=AppWinStyle.NormalFocus)
             Process.Start("up_com.bat")
@@ -456,24 +526,21 @@ Public Class Form1
         End Try
     End Sub
 
-    Private Sub Form_main_Closed(sender As Object, e As EventArgs) Handles Me.Closed
-
-    End Sub
 
     Private Sub Button_updata_Click(sender As Object, e As EventArgs) Handles Button_updata.Click
-        If RadioButton_updata_cnc1_movies.Checked Or RadioButton_updata_ra1_movies.Checked Then
-            Dim message As String = "更新动画包将耗费更长时间，确定更新动画包?"
-            Dim caption As String = "警告"
-            Dim result = MessageBox.Show(message, caption, MessageBoxButtons.YesNo, MessageBoxIcon.Question)
-            ' If the no button was pressed ...
-            If (result = DialogResult.No) Then
-                ' cancel the closure of the form.
-            Else
-                Up_autoupdata()
-            End If
-        Else
-            Up_autoupdata()
-        End If
+        'If RadioButton_updata_cnc1_movies.Checked Or RadioButton_updata_ra1_movies.Checked Then
+        'Dim message As String = "更新动画包将耗费更长时间，确定更新动画包?"
+        'Dim caption As String = "警告"
+        'Dim result = MessageBox.Show(message, caption, MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+        ' If the no button was pressed ...
+        'If (result = DialogResult.No) Then
+        ' cancel the closure of the form.
+        'Else
+        ' Up_autoupdata()
+        ' End If
+        ' Else
+        Up_autoupdata()
+        'End If
     End Sub
 
     'Private Sub jianrongxing()
@@ -886,23 +953,6 @@ Public Class Form1
     End Sub
 
 
-    Private Sub RadioButton_updata_2_web_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton_updata_2_web.CheckedChanged
-        Label_status.Text = "正在检测更新......"
-        Button_cnc1.Enabled = False
-        Label_cnc1.Enabled = False
-        Button_ra1.Enabled = False
-        Label_ra1.Enabled = False
-        GroupBox_updata.Enabled = False
-        Button_updata.Enabled = False
-        If RadioButton_updata_main_web.Checked = False Then
-            up_root = "https://raw.githubusercontent.com/yjfyy/tuzi_updata/master/WestWood_Classic/"
-            BackgroundWorker_check_ver.RunWorkerAsync()
-        Else
-            up_root = "http://butwhy.vicp.net:82/tuzi_updata/WestWood_Classic/"
-            BackgroundWorker_check_ver.RunWorkerAsync()
-        End If
-
-    End Sub
     Private Sub fix()
 
         'fix 启动运行一次.imer_delete_file,只要不运行游戏就运行
@@ -1003,6 +1053,36 @@ Public Class Form1
             Label_ra1.Visible = False
         End If
 
+        If My.Computer.FileSystem.FileExists(app_path & "\dune2000\dune2000.exe") Then
+            l_p.X = l_p.X + 4
+            Button_ra1.Location = b_p
+            Label_ra1.Location = l_p
+            Button_d2k.Visible = True
+            Button_d2k.Enabled = True
+            Label_d2k.Visible = True
+            Label_d2k.Enabled = True
+            b_p.Y = b_p.Y + 100
+            l_p.Y = l_p.Y + 100
+        Else
+            Button_d2k.Visible = False
+            Label_d2k.Visible = False
+        End If
+
+        If My.Computer.FileSystem.FileExists(app_path & "\ts\game.exe") Then
+            l_p.X = l_p.X + 4
+            Button_ts.Location = b_p
+            Label_ts.Location = l_p
+            Button_ts.Visible = True
+            Button_ts.Enabled = True
+            Label_ts.Visible = True
+            Label_ts.Enabled = True
+            b_p.Y = b_p.Y + 100
+            l_p.Y = l_p.Y + 100
+        Else
+            Button_ts.Visible = False
+            Label_ts.Visible = False
+        End If
+
     End Sub
 
     Private Sub Button_cnc1_GDI_miss_MouseMove(sender As Object, e As MouseEventArgs) Handles Button_cnc1_GDI_miss.MouseMove, Button_cnc1_NOD_miss.MouseMove,
@@ -1034,10 +1114,51 @@ Public Class Form1
     End Sub
 
     Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
+
         ' MsgBox(My.Computer.FileSystem.GetFileInfo(app_path & "\CnC95\cclocal.mix").Length)
     End Sub
 
-    Private Sub RadioButton_updata_main_web_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton_updata_main_web.CheckedChanged
+    Private Sub RadioButton_updata_gitee_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton_updata_gitee.CheckedChanged
+        Label_status.Text = "正在检测更新......"
+        Button_cnc1.Enabled = False
+        Label_cnc1.Enabled = False
+        Button_ra1.Enabled = False
+        Label_ra1.Enabled = False
+        GroupBox_updata.Enabled = False
+        Button_updata.Enabled = False
+        If RadioButton_updata_gitee.Checked = True Then
+            up_root = "https://gitee.com/yjfyeyu/updatasys/raw/master/WestWood_Classic/"
+            BackgroundWorker_check_ver.RunWorkerAsync()
+        End If
+    End Sub
+
+    Private Sub RadioButton_updata_butwhy_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton_updata_butwhy.CheckedChanged
+        Label_status.Text = "正在检测更新......"
+        Button_cnc1.Enabled = False
+        Label_cnc1.Enabled = False
+        Button_ra1.Enabled = False
+        Label_ra1.Enabled = False
+        GroupBox_updata.Enabled = False
+        Button_updata.Enabled = False
+        If RadioButton_updata_butwhy.Checked = True Then
+            up_root = "http://butwhy.vicp.net:82/tuzi_updata/WestWood_Classic/"
+            BackgroundWorker_check_ver.RunWorkerAsync()
+        End If
+    End Sub
+
+    Private Sub RadioButton_updata_2_web_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton_updata_github.CheckedChanged
+        Label_status.Text = "正在检测更新......"
+        Button_cnc1.Enabled = False
+        Label_cnc1.Enabled = False
+        Button_ra1.Enabled = False
+        Label_ra1.Enabled = False
+        GroupBox_updata.Enabled = False
+        Button_updata.Enabled = False
+        If RadioButton_updata_github.Checked = True Then
+            up_root = "https://raw.githubusercontent.com/yjfyy/tuzi_updata/master/WestWood_Classic/"
+            BackgroundWorker_check_ver.RunWorkerAsync()
+        End If
 
     End Sub
+
 End Class

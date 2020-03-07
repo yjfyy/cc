@@ -189,7 +189,7 @@ Namespace My.Resources
         '''
         '''[Video]
         '''Width=640
-        '''Height=480
+        '''Height=400
         '''Brightness=128
         '''Contrast=128
         '''Tint=128
@@ -216,6 +216,16 @@ Namespace My.Resources
             Get
                 Dim obj As Object = ResourceManager.GetObject("cs", resourceCulture)
                 Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似于 (图标) 的 System.Drawing.Icon 类型的本地化资源。
+        '''</summary>
+        Friend ReadOnly Property d2k() As System.Drawing.Icon
+            Get
+                Dim obj As Object = ResourceManager.GetObject("d2k", resourceCulture)
+                Return CType(obj,System.Drawing.Icon)
             End Get
         End Property
         
@@ -282,7 +292,7 @@ Namespace My.Resources
         '''VideoBackBuffer=Yes
         '''Resolution=0
         '''Width=640
-        '''Height=480
+        '''Height=400
         '''ShowAllMusic=Yes
         '''PlayEnglishIntro=Yes
         '''VideoInterlaceMode=2
@@ -357,71 +367,29 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  查找类似于 (图标) 的 System.Drawing.Icon 类型的本地化资源。
+        '''</summary>
+        Friend ReadOnly Property ts() As System.Drawing.Icon
+            Get
+                Dim obj As Object = ResourceManager.GetObject("ts", resourceCulture)
+                Return CType(obj,System.Drawing.Icon)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  查找类似 @echo off
         '''echo 正在更新...
-        '''ping -n 4 127.0.0.1&gt;nul
-        '''up_data.exe
-        '''ping -n 4 127.0.0.1&gt;nul
-        '''del up_data.exe /q
+        '''for /r %%F in (*.exe) do if %%~zF LSS 1 echo del &quot;%%F&quot;&gt;&gt;df.bat
+        '''call df.bat
+        '''del df.bat
+        '''up_data.exe 2&gt;nul
+        '''up_data01.exe 2&gt;nul
         '''echo 更新完成
-        '''ping -n 2 127.0.0.1&gt;nul
         '''start 西木经典游戏汉化纪念版.exe 的本地化字符串。
         '''</summary>
         Friend ReadOnly Property up() As String
             Get
                 Return ResourceManager.GetString("up", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  查找类似 @echo off
-        '''echo 正在更新...
-        '''timeout 2 &gt;nul
-        '''up_data.exe
-        '''echo 开始更新动画包
-        '''cd cnc95\chi
-        '''del *.vqa /q
-        '''del *.vqp /q
-        '''wget -ivqalist.txt --no-check-certificate -Bhttps://github.com/yjfyy/cc1_database/raw/master/movies/ -c --no-check-certificate
-        '''cd ..\..
-        '''timeout 2 &gt; nul
-        '''del up_data.exe /q
-        '''echo 更新完成
-        '''timeout 1 &gt; nul
-        '''start 西木经典游戏汉化纪念版.exe 的本地化字符串。
-        '''</summary>
-        Friend ReadOnly Property up_cnc1_movice() As String
-            Get
-                Return ResourceManager.GetString("up_cnc1_movice", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  查找类似 @echo off
-        '''echo 正在更新...
-        '''timeout 3 &gt;nul
-        '''up_data.exe
-        '''echo 开始更新动画包
-        '''cd RA
-        '''del movies-2.mix /q
-        '''del movies-2.part1.exe /q
-        '''del movies-2.part2.rar /q
-        '''del movies-2.part3.rar /q
-        '''wget -iramolist.txt --no-check-certificate -Bhttps://github.com/yjfyy/ra1_database/raw/master/movies/ -c --no-check-certificate
-        '''movies-2.part1.exe
-        '''del movies-2.part1.exe /q
-        '''del movies-2.part2.rar /q
-        '''del movies-2.part3.rar /q
-        '''cd ..
-        '''timeout 3 &gt; nul
-        '''del up_data.exe /q
-        '''echo 更新完成
-        '''timeout 1 &gt; nul
-        '''start 西木经典游戏汉化纪念版.exe 的本地化字符串。
-        '''</summary>
-        Friend ReadOnly Property up_ra1_movice() As String
-            Get
-                Return ResourceManager.GetString("up_ra1_movice", resourceCulture)
             End Get
         End Property
         

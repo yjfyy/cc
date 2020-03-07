@@ -139,12 +139,6 @@
   <data name="up" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\ini\up.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
-  <data name="up_cnc1_movice" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\ini\up_cnc1_movice.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
-  </data>
-  <data name="up_ra1_movice" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\ini\up_ra1_movice.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
-  </data>
   <data name="ddraw_ini" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\ini\ddraw.ini;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;gb2312</value>
   </data>
@@ -216,5 +210,11 @@
   </data>
   <data name="updated_公用" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\updated_公用.mix;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="d2k" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\d2k.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ts" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ts.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
