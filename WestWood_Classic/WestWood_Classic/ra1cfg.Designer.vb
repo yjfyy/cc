@@ -621,6 +621,7 @@ Partial Class ra1cfg
         Me.Name = "ra1cfg"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "红色警戒配置工具"
+        Me.TopMost = True
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox4.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)

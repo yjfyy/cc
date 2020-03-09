@@ -61,9 +61,8 @@ Public Class Form1
         'show_game_logo()
         'WebBrowser1.Url = New Uri(Application.StartupPath & "/readme.htm")
         WebBrowser1.ScriptErrorsSuppressed = True
-        WebBrowser1.Url = New Uri("http://yjfyeyu.gitee.io/cnc_chi_readme/readme.htm")
-        Delete_files()
-
+        'WebBrowser1.Url = New Uri("http://yjfyeyu.gitee.io/cnc_chi_readme/readme.htm")
+        up_1delete()
         'Try
         'Using sr As New StreamReader("lver")
         ' Label_l_version.Text = sr.ReadToEnd()
@@ -88,25 +87,7 @@ Public Class Form1
 
     End Sub
 
-
-    Private Sub Delete_files()
-
-        '删除当前版本汉化
-        Try
-            System.IO.File.Delete(app_path & "\CnC95\updated.mix.mix")
-        Catch ex As Exception
-        End Try
-
-        Try
-            System.IO.File.Delete(app_path & "\RA\EXPAND9.MIX")
-        Catch ex As Exception
-        End Try
-
-        Try
-            System.IO.File.Delete(app_path & "\RA\campaign.mix")
-        Catch ex As Exception
-        End Try
-
+    Private Sub up_1delete()
         '删除更新残留
         Try
             My.Computer.FileSystem.DeleteFile("up_com.bat")
@@ -142,8 +123,25 @@ Public Class Form1
             My.Computer.FileSystem.DeleteFile("up_data.part06.rar")
         Catch ex As Exception
         End Try
+    End Sub
 
+    Private Sub Delete_files()
 
+        '删除当前版本汉化
+        Try
+            System.IO.File.Delete(app_path & "\CnC95\updated.mix.mix")
+        Catch ex As Exception
+        End Try
+
+        Try
+            System.IO.File.Delete(app_path & "\RA\EXPAND9.MIX")
+        Catch ex As Exception
+        End Try
+
+        Try
+            System.IO.File.Delete(app_path & "\RA\campaign.mix")
+        Catch ex As Exception
+        End Try
 
         '1.56之前汉化文件
         '命令与征服
@@ -371,16 +369,10 @@ Public Class Form1
 
     End Sub
 
-    Private Sub Form_main_Shown(sender As Object, e As EventArgs) Handles Me.Shown
-        'MsgBox("检查更新")
-        Label_status.Text = "正在检测更新......"
-        l_version = Label_l_version.Text
-        'BackgroundWorker_check_ver.RunWorkerAsync()
-    End Sub
-
     Private Sub BackgroundWorker_check_ver_DoWork(sender As Object, e As DoWorkEventArgs) Handles BackgroundWorker_check_ver.DoWork
         Dim dFile As New System.Net.WebClient
         Dim upUri_version As New Uri(up_root & "version.txt")
+        Label_status.Text = "正在检测更新......"
         Try
             r_version = dFile.DownloadString(upUri_version)
         Catch ex As Exception
@@ -389,8 +381,8 @@ Public Class Form1
         'MsgBox(upUri_version.ToString)
     End Sub
     Private Sub BackgroundWorker_check_ver_RunWorkerCompleted(sender As Object, e As RunWorkerCompletedEventArgs) Handles BackgroundWorker_check_ver.RunWorkerCompleted
-
         Label_r_version.Text = r_version
+        l_version = Label_l_version.Text
         GroupBox_updata.Enabled = True
         If r_version = "0" Then
             Label_status.Text = "检测失败"
@@ -1160,5 +1152,6 @@ Public Class Form1
         End If
 
     End Sub
+
 
 End Class

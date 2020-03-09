@@ -55,9 +55,9 @@ Partial Class cnc1cfg
         Me.RadioButton_opengl = New System.Windows.Forms.RadioButton()
         Me.RadioButton_gdi = New System.Windows.Forms.RadioButton()
         Me.Button_ok = New System.Windows.Forms.Button()
-        Me.CheckBox_cc1_compat = New System.Windows.Forms.CheckBox()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.CheckBox_singlecpu = New System.Windows.Forms.CheckBox()
         Me.Label_height_800 = New System.Windows.Forms.Label()
         Me.GroupBox_ddraw_resolution = New System.Windows.Forms.GroupBox()
         Me.CheckBox_ddraw_resolution = New System.Windows.Forms.CheckBox()
@@ -433,17 +433,6 @@ Partial Class cnc1cfg
         Me.Button_ok.Text = "确定"
         Me.Button_ok.UseVisualStyleBackColor = True
         '
-        'CheckBox_cc1_compat
-        '
-        Me.CheckBox_cc1_compat.AutoSize = True
-        Me.CheckBox_cc1_compat.Enabled = False
-        Me.CheckBox_cc1_compat.Location = New System.Drawing.Point(475, 180)
-        Me.CheckBox_cc1_compat.Name = "CheckBox_cc1_compat"
-        Me.CheckBox_cc1_compat.Size = New System.Drawing.Size(108, 16)
-        Me.CheckBox_cc1_compat.TabIndex = 6
-        Me.CheckBox_cc1_compat.Text = "自动设置兼容性"
-        Me.CheckBox_cc1_compat.UseVisualStyleBackColor = True
-        '
         'TabControl1
         '
         Me.TabControl1.Controls.Add(Me.TabPage1)
@@ -457,6 +446,7 @@ Partial Class cnc1cfg
         '
         'TabPage1
         '
+        Me.TabPage1.Controls.Add(Me.CheckBox_singlecpu)
         Me.TabPage1.Controls.Add(Me.Label_height_800)
         Me.TabPage1.Controls.Add(Me.GroupBox_ddraw_resolution)
         Me.TabPage1.Controls.Add(Me.Label_width_1728)
@@ -466,7 +456,6 @@ Partial Class cnc1cfg
         Me.TabPage1.Controls.Add(Me.Label_height_1080)
         Me.TabPage1.Controls.Add(Me.Button_reset)
         Me.TabPage1.Controls.Add(Me.Label_height_540)
-        Me.TabPage1.Controls.Add(Me.CheckBox_cc1_compat)
         Me.TabPage1.Controls.Add(Me.Label_width_864)
         Me.TabPage1.Controls.Add(Me.Button_ok)
         Me.TabPage1.Controls.Add(Me.Label_height_400)
@@ -480,6 +469,16 @@ Partial Class cnc1cfg
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "常规与图像"
         Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'CheckBox_singlecpu
+        '
+        Me.CheckBox_singlecpu.AutoSize = True
+        Me.CheckBox_singlecpu.Location = New System.Drawing.Point(475, 181)
+        Me.CheckBox_singlecpu.Name = "CheckBox_singlecpu"
+        Me.CheckBox_singlecpu.Size = New System.Drawing.Size(90, 16)
+        Me.CheckBox_singlecpu.TabIndex = 33
+        Me.CheckBox_singlecpu.Text = "模拟单核CPU"
+        Me.CheckBox_singlecpu.UseVisualStyleBackColor = True
         '
         'Label_height_800
         '
@@ -656,6 +655,7 @@ Partial Class cnc1cfg
         Me.Name = "cnc1cfg"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "命令与征服配置工具"
+        Me.TopMost = True
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
@@ -694,7 +694,6 @@ Partial Class cnc1cfg
     Friend WithEvents RadioButton_test_resolution As RadioButton
     Friend WithEvents TextBox_height As TextBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents CheckBox_cc1_compat As CheckBox
     Friend WithEvents RadioButton_full_win As RadioButton
     Friend WithEvents TabControl1 As TabControl
     Friend WithEvents TabPage1 As TabPage
@@ -724,4 +723,5 @@ Partial Class cnc1cfg
     Friend WithEvents Label_width_864 As Label
     Friend WithEvents Label_height_400 As Label
     Friend WithEvents Label_width_1280 As Label
+    Friend WithEvents CheckBox_singlecpu As CheckBox
 End Class

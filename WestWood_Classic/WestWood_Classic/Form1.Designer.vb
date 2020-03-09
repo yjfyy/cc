@@ -103,7 +103,7 @@ Partial Class Form1
         Me.Label_l_version.Name = "Label_l_version"
         Me.Label_l_version.Size = New System.Drawing.Size(29, 12)
         Me.Label_l_version.TabIndex = 39
-        Me.Label_l_version.Text = "1.59"
+        Me.Label_l_version.Text = "1.60"
         '
         'Label3
         '
@@ -170,6 +170,7 @@ Partial Class Form1
         Me.Label_ts.Size = New System.Drawing.Size(71, 12)
         Me.Label_ts.TabIndex = 8
         Me.Label_ts.Text = "命令与征服2"
+        Me.Label_ts.Visible = False
         '
         'Button_ts
         '
@@ -181,6 +182,7 @@ Partial Class Form1
         Me.Button_ts.Size = New System.Drawing.Size(58, 54)
         Me.Button_ts.TabIndex = 7
         Me.Button_ts.UseVisualStyleBackColor = False
+        Me.Button_ts.Visible = False
         '
         'Label_d2k
         '
@@ -190,6 +192,7 @@ Partial Class Form1
         Me.Label_d2k.Size = New System.Drawing.Size(53, 12)
         Me.Label_d2k.TabIndex = 6
         Me.Label_d2k.Text = "沙丘2000"
+        Me.Label_d2k.Visible = False
         '
         'Button_d2k
         '
@@ -201,6 +204,7 @@ Partial Class Form1
         Me.Button_d2k.Size = New System.Drawing.Size(58, 54)
         Me.Button_d2k.TabIndex = 5
         Me.Button_d2k.UseVisualStyleBackColor = False
+        Me.Button_d2k.Visible = False
         '
         'Button_back
         '

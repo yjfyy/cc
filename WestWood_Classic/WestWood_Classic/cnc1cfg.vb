@@ -25,7 +25,7 @@
         'System.IO.File.WriteAllText(".\CnC95\ddraw.ini", My.Resources.ddraw, System.Text.Encoding.UTF8)
         System.IO.File.WriteAllText(".\CnC95\ddraw.ini", My.Resources.ddraw_ini)
         Read_ini()
-        CheckBox_cc1_compat.Checked = False
+        'CheckBox_cc1_compat.Checked = False
         RadioButton_eva_chi.Checked = True
     End Sub
 
@@ -163,17 +163,24 @@
         End If
 
         '设置兼容性
-        If GetINI("cnc1", "compatibility", "0", ".\config.ini") = "0" Then
-            CheckBox_cc1_compat.Checked = False
-        Else
-            CheckBox_cc1_compat.Checked = True
-        End If
+        'If GetINI("cnc1", "compatibility", "0", ".\config.ini") = "0" Then
+        '    CheckBox_cc1_compat.Checked = False
+        'Else
+        '    CheckBox_cc1_compat.Checked = True
+        'End If
 
         'eva语音
         If GetINI("cnc1", "eva", "chi", ".\config.ini") = "chi" Then
             RadioButton_eva_chi.Checked = True
         Else
             RadioButton_eva_eng.Checked = True
+        End If
+
+        '单核cpu
+        If GetINI("C&C95", "singlecpu", "true", ".\CnC95\ddraw.ini") = "true" Then
+            CheckBox_singlecpu.Checked = True
+        Else
+            CheckBox_singlecpu.Checked = False
         End If
 
     End Sub
@@ -272,6 +279,13 @@
 
         '已运行过
         WriteINI("cnc1", "fristrun", "0", ".\config.ini")
+
+        '单核cpu
+        If CheckBox_singlecpu.Checked = True Then
+            WriteINI("C&C95", "singlecpu", "true", ".\CnC95\ddraw.ini")
+        Else
+            WriteINI("C&C95", "singlecpu", "false", ".\CnC95\ddraw.ini")
+        End If
 
 
     End Sub
@@ -481,10 +495,6 @@
             Form1.Button_cnc1_cncnet.Enabled = True
             Form1.Button_cnc1_english.Enabled = True
         End If
-
-    End Sub
-
-    Private Sub RadioButton_full_win_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton_full_win.CheckedChanged
 
     End Sub
 

@@ -204,7 +204,9 @@
     <Content Include="web\faq.htm" />
     <Content Include="web\readme.htm" />
     <Content Include="web\thank_list.htm" />
-    <Content Include="web\up_log.htm" />
+    <Content Include="web\up_log.htm">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="web\修改说明.txt" />
     <None Include="Resources\ddraw.dll" />
     <None Include="Resources\allied.mix" />
