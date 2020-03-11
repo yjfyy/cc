@@ -61,7 +61,7 @@ Public Class Form1
         'show_game_logo()
         'WebBrowser1.Url = New Uri(Application.StartupPath & "/readme.htm")
         WebBrowser1.ScriptErrorsSuppressed = True
-        'WebBrowser1.Url = New Uri("http://yjfyeyu.gitee.io/cnc_chi_readme/readme.htm")
+        WebBrowser1.Url = New Uri("http://yjfyeyu.gitee.io/cnc_chi_readme/readme.htm")
         up_1delete()
         'Try
         'Using sr As New StreamReader("lver")
@@ -392,7 +392,7 @@ Public Class Form1
 
             ' Button_ra1.Enabled = True
             'Label_ra1.Enabled = True
-            show_game_logo()
+            'show_game_logo()
 
 
             GroupBox_updata.Enabled = True
@@ -436,59 +436,59 @@ Public Class Form1
         AddHandler dFile.DownloadFileCompleted, AddressOf Up_autoupdata1
         Label_status.Text = "正在下载..."
         dFile.DownloadFileAsync(New Uri(up_root & "up_data.exe"), "up_data.exe")
-        ProgressBar1.Value = 15
+        ProgressBar1.Value = 2
     End Sub
     Private Sub Up_autoupdata1()
-        Button_updata.Enabled = False
+
         Dim dFile As New System.Net.WebClient
         'AddHandler dFile.DownloadProgressChanged, AddressOf ShowDownProgress
         AddHandler dFile.DownloadFileCompleted, AddressOf Up_autoupdata2
-        Label_status.Text = "正在下载..."
+
         dFile.DownloadFileAsync(New Uri(up_root & "up_data.part01.exe"), "up_data.part01.exe")
         ProgressBar1.Value = 30
     End Sub
     Private Sub Up_autoupdata2()
-        Button_updata.Enabled = False
+
         Dim dFile As New System.Net.WebClient
         'AddHandler dFile.DownloadProgressChanged, AddressOf ShowDownProgress
         AddHandler dFile.DownloadFileCompleted, AddressOf Up_autoupdata3
-        Label_status.Text = "正在下载..."
+
         dFile.DownloadFileAsync(New Uri(up_root & "up_data.part02.rar"), "up_data.part02.rar")
         ProgressBar1.Value = 45
     End Sub
     Private Sub Up_autoupdata3()
-        Button_updata.Enabled = False
+
         Dim dFile As New System.Net.WebClient
         'AddHandler dFile.DownloadProgressChanged, AddressOf ShowDownProgress
         AddHandler dFile.DownloadFileCompleted, AddressOf Up_autoupdata4
-        Label_status.Text = "正在下载..."
+
         dFile.DownloadFileAsync(New Uri(up_root & "up_data.part03.rar"), "up_data.part03.rar")
         ProgressBar1.Value = 60
     End Sub
     Private Sub Up_autoupdata4()
-        Button_updata.Enabled = False
+
         Dim dFile As New System.Net.WebClient
         'AddHandler dFile.DownloadProgressChanged, AddressOf ShowDownProgress
         AddHandler dFile.DownloadFileCompleted, AddressOf Up_autoupdata5
-        Label_status.Text = "正在下载..."
+
         dFile.DownloadFileAsync(New Uri(up_root & "up_data.part04.rar"), "up_data.part04.rar")
         ProgressBar1.Value = 75
     End Sub
     Private Sub Up_autoupdata5()
-        Button_updata.Enabled = False
+
         Dim dFile As New System.Net.WebClient
         'AddHandler dFile.DownloadProgressChanged, AddressOf ShowDownProgress
         AddHandler dFile.DownloadFileCompleted, AddressOf Up_autoupdata6
-        Label_status.Text = "正在下载..."
+
         dFile.DownloadFileAsync(New Uri(up_root & "up_data.part05.rar"), "up_data.part05.rar")
         ProgressBar1.Value = 90
     End Sub
     Private Sub Up_autoupdata6()
-        Button_updata.Enabled = False
+
         Dim dFile As New System.Net.WebClient
         'AddHandler dFile.DownloadProgressChanged, AddressOf ShowDownProgress
         AddHandler dFile.DownloadFileCompleted, AddressOf Wanchen
-        Label_status.Text = "正在下载..."
+
         dFile.DownloadFileAsync(New Uri(up_root & "up_data.part06.rar"), "up_data.part06.rar")
         ProgressBar1.Value = 100
     End Sub
@@ -942,6 +942,7 @@ Public Class Form1
         Panel_up_log.Visible = True
         Panel_cnc1.Visible = False
         Panel_ra1.Visible = False
+        WebBrowser1.Url = New Uri("http://yjfyeyu.gitee.io/cnc_chi_readme/readme.htm")
     End Sub
 
 

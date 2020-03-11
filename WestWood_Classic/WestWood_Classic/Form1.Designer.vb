@@ -103,7 +103,7 @@ Partial Class Form1
         Me.Label_l_version.Name = "Label_l_version"
         Me.Label_l_version.Size = New System.Drawing.Size(29, 12)
         Me.Label_l_version.TabIndex = 39
-        Me.Label_l_version.Text = "1.60"
+        Me.Label_l_version.Text = "1.61"
         '
         'Label3
         '
@@ -208,11 +208,11 @@ Partial Class Form1
         '
         'Button_back
         '
-        Me.Button_back.Location = New System.Drawing.Point(34, 12)
+        Me.Button_back.Location = New System.Drawing.Point(32, 12)
         Me.Button_back.Name = "Button_back"
-        Me.Button_back.Size = New System.Drawing.Size(58, 23)
+        Me.Button_back.Size = New System.Drawing.Size(63, 23)
         Me.Button_back.TabIndex = 4
-        Me.Button_back.Text = "返回"
+        Me.Button_back.Text = "返回首页"
         Me.Button_back.UseVisualStyleBackColor = True
         '
         'Label_ra1
@@ -282,7 +282,7 @@ Partial Class Form1
         Me.WebBrowser1.ScriptErrorsSuppressed = True
         Me.WebBrowser1.Size = New System.Drawing.Size(628, 396)
         Me.WebBrowser1.TabIndex = 1
-        Me.WebBrowser1.Url = New System.Uri("http://yjfyeyu.gitee.io/cnc_chi_readme/readme.htm", System.UriKind.Absolute)
+        Me.WebBrowser1.Url = New System.Uri("", System.UriKind.Relative)
         '
         'ProgressBar1
         '

@@ -41,7 +41,7 @@
         'System.IO.File.WriteAllText(".\RA\ddraw.ini", My.Resources.ddraw, System.Text.Encoding.UTF8)
         System.IO.File.WriteAllText(".\RA\ddraw.ini", My.Resources.ddraw_ini)
         read_ini()
-        CheckBox_ra1_compat.Checked = False
+        'CheckBox_ra1_compat.Checked = False
     End Sub
 
     Private Sub read_ini()
@@ -178,11 +178,11 @@
         End If
 
         '设置兼容性
-        If GetINI("ra1", "compatibility", "1", ".\config.ini") = "0" Then
-            CheckBox_ra1_compat.Checked = False
-        Else
-            CheckBox_ra1_compat.Checked = True
-        End If
+        'If GetINI("ra1", "compatibility", "1", ".\config.ini") = "0" Then
+        '    CheckBox_ra1_compat.Checked = False
+        'Else
+        '    CheckBox_ra1_compat.Checked = True
+        'End If
 
     End Sub
 
@@ -431,5 +431,8 @@
         End If
     End Sub
 
-
+    Private Sub Button_reg_ddraw_Click(sender As Object, e As EventArgs) Handles Button_reg_ddraw.Click
+        Microsoft.Win32.Registry.SetValue("HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager", "ExcludeFromKnownDlls", "ddraw.dll")
+        MsgBox("修复成功,请重启电脑",, "提示")
+    End Sub
 End Class
