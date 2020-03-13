@@ -22,7 +22,7 @@ Public Class Form1
     Private Sub Button_cnc1_Click(sender As Object, e As EventArgs) Handles Button_cnc1.Click
 
         If GetINI("cnc1", "fristrun", "1", ".\config.ini") = "1" Then
-            MsgBox（"第一次启动游戏前必须先设置参数"）
+            MsgBox（"第一次启动游戏前,必须先设置参数",, "提示"）
             Button_cnc1_GDI_miss.Enabled = False
             Button_cnc1_NOD_miss.Enabled = False
             Button_cnc1_ext.Enabled = False
@@ -39,7 +39,7 @@ Public Class Form1
 
     Private Sub Button_ra1_Click(sender As Object, e As EventArgs) Handles Button_ra1.Click
         If GetINI("ra1", "fristrun", "1", ".\config.ini") = "1" Then
-            MsgBox（"第一次启动游戏前必须先设置参数"）
+            MsgBox（"第一次启动游戏前,必须先设置参数",, "提示"）
             Button_ra1_ally.Enabled = False
             Button_ra1_soviet.Enabled = False
             Button_ra1_ext_cs.Enabled = False
@@ -514,7 +514,7 @@ Public Class Form1
             Process.Start("up_com.bat")
             Me.Close()
         Catch ex As Exception
-            MsgBox（"升级错误，请手动执行 up_data.exe")
+            MsgBox（"升级错误，请手动执行 up_data.exe",, "提示")
         End Try
     End Sub
 
@@ -566,14 +566,14 @@ Public Class Form1
         'WriteINI("Language", "Language", "CHI", "CnC95\conquer.ini")
 
         If System.Diagnostics.Process.GetProcessesByName("c&c95").Length > 0 Then
-            MsgBox("请勿重复启动")
+            MsgBox("请勿重复启动",, "提示")
         Else
             Try
                 System.IO.File.WriteAllBytes(app_path & "\CnC95\cclocal.mix", My.Resources.cclocal_g)
                 System.IO.File.SetCreationTime(app_path & "\CnC95\cclocal.mix", New DateTime(2012, 4, 4, 16, 26, 0))
                 System.IO.File.SetLastWriteTime(app_path & "\CnC95\cclocal.mix", New DateTime(2012, 4, 4, 16, 26, 0))
             Catch ex As Exception
-                MsgBox("汉化异常,关闭杀毒软件后重试")
+                MsgBox("汉化异常,关闭杀毒软件后重试",, "提示")
                 Exit Sub
             End Try
 
@@ -582,7 +582,7 @@ Public Class Form1
                 System.IO.File.SetCreationTime(app_path & "\CnC95\updated.mix", New DateTime(2011, 3, 26, 19, 18, 0))
                 System.IO.File.SetLastWriteTime(app_path & "\CnC95\updated.mix", New DateTime(2011, 3, 26, 19, 18, 0))
             Catch ex As Exception
-                MsgBox("汉化异常,关闭杀毒软件后重试")
+                MsgBox("汉化异常,关闭杀毒软件后重试",, "提示")
                 Exit Sub
             End Try
 
@@ -602,14 +602,14 @@ Public Class Form1
 
 
         If System.Diagnostics.Process.GetProcessesByName("c&c95").Length > 0 Then
-            MsgBox("请勿重复启动")
+            MsgBox("请勿重复启动",, "提示")
         Else
             Try
                 System.IO.File.WriteAllBytes(app_path & "\CnC95\cclocal.mix", My.Resources.cclocal_n)
                 System.IO.File.SetCreationTime(app_path & "\CnC95\cclocal.mix", New DateTime(2012, 4, 4, 16, 26, 0))
                 System.IO.File.SetLastWriteTime(app_path & "\CnC95\cclocal.mix", New DateTime(2012, 4, 4, 16, 26, 0))
             Catch ex As Exception
-                MsgBox("汉化异常,关闭杀毒软件后重试")
+                MsgBox("汉化异常,关闭杀毒软件后重试",, "提示")
                 Exit Sub
             End Try
 
@@ -618,7 +618,7 @@ Public Class Form1
                 System.IO.File.SetCreationTime(app_path & "\CnC95\updated.mix", New DateTime(2011, 3, 26, 19, 18, 0))
                 System.IO.File.SetLastWriteTime(app_path & "\CnC95\updated.mix", New DateTime(2011, 3, 26, 19, 18, 0))
             Catch ex As Exception
-                MsgBox("汉化异常,关闭杀毒软件后重试")
+                MsgBox("汉化异常,关闭杀毒软件后重试",, "提示")
                 Exit Sub
             End Try
 
@@ -636,14 +636,14 @@ Public Class Form1
         ' WriteINI("Language", "Language", "CHI", "CnC95\conquer.ini")
 
         If System.Diagnostics.Process.GetProcessesByName("c&c95").Length > 0 Then
-            MsgBox("请勿重复启动")
+            MsgBox("请勿重复启动",, "提示")
         Else
             Try
                 System.IO.File.WriteAllBytes(app_path & "\CnC95\cclocal.mix", My.Resources.cclocal_m)
                 System.IO.File.SetCreationTime(app_path & "\CnC95\cclocal.mix", New DateTime(2012, 4, 4, 16, 26, 0))
                 System.IO.File.SetLastWriteTime(app_path & "\CnC95\cclocal.mix", New DateTime(2012, 4, 4, 16, 26, 0))
             Catch ex As Exception
-                MsgBox("汉化异常,关闭杀毒软件后重试")
+                MsgBox("汉化异常,关闭杀毒软件后重试",, "提示")
                 Exit Sub
             End Try
 
@@ -652,7 +652,7 @@ Public Class Form1
                 System.IO.File.SetCreationTime(app_path & "\CnC95\updated.mix", New DateTime(2011, 3, 26, 19, 18, 0))
                 System.IO.File.SetLastWriteTime(app_path & "\CnC95\updated.mix", New DateTime(2011, 3, 26, 19, 18, 0))
             Catch ex As Exception
-                MsgBox("汉化异常,关闭杀毒软件后重试")
+                MsgBox("汉化异常,关闭杀毒软件后重试",, "提示")
                 Exit Sub
             End Try
 
@@ -670,14 +670,14 @@ Public Class Form1
         ' WriteINI("Language", "Language", "CHI", "CnC95\conquer.ini")
 
         If System.Diagnostics.Process.GetProcessesByName("c&c95").Length > 0 Then
-            MsgBox("请勿重复启动")
+            MsgBox("请勿重复启动",, "提示")
         Else
             Try
                 System.IO.File.WriteAllBytes(app_path & "\CnC95\cclocal.mix", My.Resources.cclocal_v)
                 System.IO.File.SetCreationTime(app_path & "\CnC95\cclocal.mix", New DateTime(2012, 4, 4, 16, 26, 0))
                 System.IO.File.SetLastWriteTime(app_path & "\CnC95\cclocal.mix", New DateTime(2012, 4, 4, 16, 26, 0))
             Catch ex As Exception
-                MsgBox("汉化异常,关闭杀毒软件后重试")
+                MsgBox("汉化异常,关闭杀毒软件后重试",, "提示")
                 Exit Sub
             End Try
 
@@ -686,7 +686,7 @@ Public Class Form1
                 System.IO.File.SetCreationTime(app_path & "\CnC95\updated.mix", New DateTime(2011, 3, 26, 19, 18, 0))
                 System.IO.File.SetLastWriteTime(app_path & "\CnC95\updated.mix", New DateTime(2011, 3, 26, 19, 18, 0))
             Catch ex As Exception
-                MsgBox("汉化异常,关闭杀毒软件后重试")
+                MsgBox("汉化异常,关闭杀毒软件后重试",, "提示")
                 Exit Sub
             End Try
 
@@ -705,7 +705,7 @@ Public Class Form1
 
         If System.Diagnostics.Process.GetProcessesByName("c&c95").Length > 0 Then
 
-            MsgBox("请勿重复启动")
+            MsgBox("请勿重复启动",, "提示")
         Else
             Try
                 System.IO.File.WriteAllBytes(app_path & "\CnC95\cclocal.mix", My.Resources.cclocal_e)
@@ -743,7 +743,7 @@ Public Class Form1
              (System.Diagnostics.Process.GetProcessesByName("cnc95").Length > 0) Or
             (System.Diagnostics.Process.GetProcessesByName("cncnet5").Length > 0) Then
 
-            MsgBox("退出游戏有再进行设置")
+            MsgBox("退出游戏后,再进行设置",, "提示")
         Else
             cnc1cfg.Show()
         End If
@@ -754,7 +754,7 @@ Public Class Form1
         'System.IO.File.WriteAllBytes(".\RA\ddraw.dll", My.Resources.ddraw_dll)
         'WriteINI("Options", "GameLanguage", "2", "RA\redalert.ini")
         If System.Diagnostics.Process.GetProcessesByName("ra95").Length > 0 Then
-            MsgBox("请勿重复启动")
+            MsgBox("请勿重复启动",, "提示")
         Else
             'If My.Computer.FileSystem.FileExists("cnc95\ddraw.dll") Then
             Try
@@ -762,7 +762,7 @@ Public Class Form1
                 System.IO.File.SetCreationTime(app_path & "\RA\EXPAND9.MIX", New DateTime(2013, 1, 30, 4, 16, 0))
                 System.IO.File.SetLastWriteTime(app_path & "\RA\EXPAND9.MIX", New DateTime(2013, 1, 30, 4, 16, 0))
             Catch ex As Exception
-                MsgBox("汉化异常,关闭杀毒软件后重试")
+                MsgBox("汉化异常,关闭杀毒软件后重试",, "提示")
                 Exit Sub
             End Try
             Process.Start("ra\ra95.exe")
@@ -773,7 +773,7 @@ Public Class Form1
         'System.IO.File.WriteAllBytes(".\RA\ddraw.dll", My.Resources.ddraw_dll)
         'WriteINI("Options", "GameLanguage", "3", "RA\redalert.ini")
         If System.Diagnostics.Process.GetProcessesByName("ra95").Length > 0 Then
-            MsgBox("请勿重复启动")
+            MsgBox("请勿重复启动",, "提示")
         Else
             'If My.Computer.FileSystem.FileExists("cnc95\ddraw.dll") Then
             Try
@@ -781,7 +781,7 @@ Public Class Form1
                 System.IO.File.SetCreationTime(app_path & "\RA\EXPAND9.MIX", New DateTime(2013, 1, 30, 4, 16, 0))
                 System.IO.File.SetLastWriteTime(app_path & "\RA\EXPAND9.MIX", New DateTime(2013, 1, 30, 4, 16, 0))
             Catch ex As Exception
-                MsgBox("汉化异常,关闭杀毒软件后重试")
+                MsgBox("汉化异常,关闭杀毒软件后重试",, "提示")
                 Exit Sub
             End Try
             Process.Start("ra\ra95.exe")
@@ -796,7 +796,7 @@ Public Class Form1
         'System.IO.File.WriteAllBytes(".\RA\ddraw.dll", My.Resources.ddraw_dll)
         'WriteINI("Options", "GameLanguage", "4", "RA\redalert.ini")
         If System.Diagnostics.Process.GetProcessesByName("ra95").Length > 0 Then
-            MsgBox("请勿重复启动")
+            MsgBox("请勿重复启动",, "提示")
         Else
             'If My.Computer.FileSystem.FileExists("cnc95\ddraw.dll") Then
             Try
@@ -804,7 +804,7 @@ Public Class Form1
                 System.IO.File.SetCreationTime(app_path & "\RA\EXPAND9.MIX", New DateTime(2013, 1, 30, 4, 16, 0))
                 System.IO.File.SetLastWriteTime(app_path & "\RA\EXPAND9.MIX", New DateTime(2013, 1, 30, 4, 16, 0))
             Catch ex As Exception
-                MsgBox("汉化异常,关闭杀毒软件后重试")
+                MsgBox("汉化异常,关闭杀毒软件后重试",, "提示")
                 Exit Sub
             End Try
 
@@ -821,7 +821,7 @@ Public Class Form1
         'System.IO.File.WriteAllBytes(".\RA\ddraw.dll", My.Resources.ddraw_dll)
         'WriteINI("Options", "GameLanguage", "5", "RA\redalert.ini")
         If System.Diagnostics.Process.GetProcessesByName("ra95").Length > 0 Then
-            MsgBox("请勿重复启动")
+            MsgBox("请勿重复启动",, "提示")
         Else
             'If My.Computer.FileSystem.FileExists("cnc95\ddraw.dll") Then
             Try
@@ -829,7 +829,7 @@ Public Class Form1
                 System.IO.File.SetCreationTime(app_path & "\RA\campaign.mix", New DateTime(2013, 1, 30, 4, 16, 0))
                 System.IO.File.SetLastWriteTime(app_path & "\RA\campaign.mix", New DateTime(2013, 1, 30, 4, 16, 0))
             Catch ex As Exception
-                MsgBox("汉化异常,关闭杀毒软件后重试")
+                MsgBox("汉化异常,关闭杀毒软件后重试",, "提示")
                 Exit Sub
             End Try
 
@@ -845,7 +845,7 @@ Public Class Form1
         'System.IO.File.WriteAllBytes(".\RA\ddraw.dll", My.Resources.ddraw_dll)
         'WriteINI("Options", "GameLanguage", "6", "RA\redalert.ini")
         If System.Diagnostics.Process.GetProcessesByName("ra95").Length > 0 Then
-            MsgBox("请勿重复启动")
+            MsgBox("请勿重复启动",, "提示")
         Else
             'If My.Computer.FileSystem.FileExists("cnc95\ddraw.dll") Then
             Try
@@ -853,7 +853,7 @@ Public Class Form1
                 System.IO.File.SetCreationTime(app_path & "\RA\campaign.mix", New DateTime(2013, 1, 30, 4, 16, 0))
                 System.IO.File.SetLastWriteTime(app_path & "\RA\campaign.mix", New DateTime(2013, 1, 30, 4, 16, 0))
             Catch ex As Exception
-                MsgBox("汉化异常,关闭杀毒软件后重试")
+                MsgBox("汉化异常,关闭杀毒软件后重试",, "提示")
                 Exit Sub
             End Try
 
@@ -869,7 +869,7 @@ Public Class Form1
         'System.IO.File.WriteAllBytes(".\RA\ddraw.dll", My.Resources.ddraw_dll)
         'WriteINI("Options", "GameLanguage", "7", "RA\redalert.ini")
         If System.Diagnostics.Process.GetProcessesByName("ra95").Length > 0 Then
-            MsgBox("请勿重复启动")
+            MsgBox("请勿重复启动",, "提示")
         Else
             'If My.Computer.FileSystem.FileExists("cnc95\ddraw.dll") Then
             Try
@@ -877,7 +877,7 @@ Public Class Form1
                 System.IO.File.SetCreationTime(app_path & "\RA\campaign.mix", New DateTime(2013, 1, 30, 4, 16, 0))
                 System.IO.File.SetLastWriteTime(app_path & "\RA\campaign.mix", New DateTime(2013, 1, 30, 4, 16, 0))
             Catch ex As Exception
-                MsgBox("汉化异常,关闭杀毒软件后重试")
+                MsgBox("汉化异常,关闭杀毒软件后重试",, "提示")
                 Exit Sub
             End Try
 
@@ -897,7 +897,7 @@ Public Class Form1
             System.IO.File.SetCreationTime(app_path & "\RA\EXPAND9.MIX", New DateTime(2013, 1, 30, 4, 16, 0))
             System.IO.File.SetLastWriteTime(app_path & "\RA\EXPAND9.MIX", New DateTime(2013, 1, 30, 4, 16, 0))
         Catch ex As Exception
-            MsgBox("汉化异常,关闭杀毒软件后重试")
+            MsgBox("汉化异常,关闭杀毒软件后重试",, "提示")
             Exit Sub
         End Try
         Process.Start("ra\cncnet5.exe")
@@ -909,7 +909,7 @@ Public Class Form1
         'System.IO.File.WriteAllBytes(".\RA\ddraw.dll", My.Resources.ddraw_dll)
         WriteINI("Options", "GameLanguage", "1", "RA\redalert.ini")
         If System.Diagnostics.Process.GetProcessesByName("ra95").Length > 0 Then
-            MsgBox("请勿重复启动")
+            MsgBox("请勿重复启动",, "提示")
         Else
             Try
                 System.IO.File.Delete(app_path & "\RA\EXPAND9.MIX")
@@ -930,7 +930,7 @@ Public Class Form1
            (System.Diagnostics.Process.GetProcessesByName("c&c95").Length > 0) Or
            (System.Diagnostics.Process.GetProcessesByName("cnc95").Length > 0) Or
            (System.Diagnostics.Process.GetProcessesByName("cncnet5").Length > 0) Then
-            MsgBox("退出游戏有再进行设置")
+            MsgBox("退出游戏后,再进行设置",, "提示")
         Else
             ra1cfg.Show()
         End If
@@ -961,7 +961,7 @@ Public Class Form1
                 System.IO.File.SetCreationTime(app_path & "\CnC95\C&C95.exe", New DateTime(2019, 2, 2, 15, 27, 0))
                 System.IO.File.SetLastWriteTime(app_path & "\CnC95\C&C95.exe", New DateTime(2019, 2, 2, 15, 27, 0))
             Catch ex As Exception
-                MsgBox("C&C95.exe文件读写错误,可删除此文件后重试")
+                MsgBox("C&C95.exe文件读写错误,可删除此文件后重试",, "提示")
                 Me.Close()
             End Try
         End If
@@ -978,7 +978,7 @@ Public Class Form1
                 System.IO.File.SetCreationTime(app_path & "\RA\ra95.exe", New DateTime(2019, 4, 30, 22, 9, 0))
                 System.IO.File.SetLastWriteTime(app_path & "\RA\ra95.exe", New DateTime(2019, 4, 30, 22, 9, 0))
             Catch ex As Exception
-                MsgBox("ra95.exe文件读写错误,可删除此文件后重试")
+                MsgBox("ra95.exe文件读写错误,可删除此文件后重试",, "提示")
                 Me.Close()
             End Try
 

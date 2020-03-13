@@ -70,6 +70,8 @@ Partial Class Form1
         Me.GroupBox_updata = New System.Windows.Forms.GroupBox()
         Me.RadioButton_updata_butwhy = New System.Windows.Forms.RadioButton()
         Me.Timer_delete_file = New System.Windows.Forms.Timer(Me.components)
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel_games_list.SuspendLayout()
         Me.Panel_up_log.SuspendLayout()
         Me.Panel_cnc1.SuspendLayout()
@@ -684,11 +686,31 @@ Partial Class Form1
         Me.Timer_delete_file.Enabled = True
         Me.Timer_delete_file.Interval = 1000
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(258, 473)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(11, 12)
+        Me.Label1.TabIndex = 50
+        Me.Label1.Text = "b"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(420, 473)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(11, 12)
+        Me.Label2.TabIndex = 51
+        Me.Label2.Text = "b"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(801, 496)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.GroupBox_updata)
         Me.Controls.Add(Me.Button_donate)
@@ -765,4 +787,6 @@ Partial Class Form1
     Friend WithEvents Button_ts As Button
     Friend WithEvents Label_d2k As Label
     Friend WithEvents Button_d2k As Button
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label2 As Label
 End Class
