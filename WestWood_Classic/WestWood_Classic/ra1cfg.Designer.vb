@@ -71,7 +71,6 @@ Partial Class ra1cfg
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
-        Me.Button_reg_ddraw = New System.Windows.Forms.Button()
         Me.GroupBox4.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -476,7 +475,7 @@ Partial Class ra1cfg
         '
         'Button_reset
         '
-        Me.Button_reset.Location = New System.Drawing.Point(415, 240)
+        Me.Button_reset.Location = New System.Drawing.Point(415, 228)
         Me.Button_reset.Name = "Button_reset"
         Me.Button_reset.Size = New System.Drawing.Size(102, 23)
         Me.Button_reset.TabIndex = 6
@@ -558,7 +557,6 @@ Partial Class ra1cfg
         '
         'TabPage1
         '
-        Me.TabPage1.Controls.Add(Me.Button_reg_ddraw)
         Me.TabPage1.Controls.Add(Me.GroupBox1)
         Me.TabPage1.Controls.Add(Me.Label_height_800)
         Me.TabPage1.Controls.Add(Me.Button_reset)
@@ -599,15 +597,6 @@ Partial Class ra1cfg
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "快捷键"
         Me.TabPage3.UseVisualStyleBackColor = True
-        '
-        'Button_reg_ddraw
-        '
-        Me.Button_reg_ddraw.Location = New System.Drawing.Point(409, 204)
-        Me.Button_reg_ddraw.Name = "Button_reg_ddraw"
-        Me.Button_reg_ddraw.Size = New System.Drawing.Size(111, 23)
-        Me.Button_reg_ddraw.TabIndex = 31
-        Me.Button_reg_ddraw.Text = "修复卡屏花屏死机"
-        Me.Button_reg_ddraw.UseVisualStyleBackColor = True
         '
         'ra1cfg
         '
@@ -682,5 +671,4 @@ Partial Class ra1cfg
     Friend WithEvents TabPage1 As TabPage
     Friend WithEvents TabPage2 As TabPage
     Friend WithEvents TabPage3 As TabPage
-    Friend WithEvents Button_reg_ddraw As Button
 End Class

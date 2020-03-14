@@ -72,6 +72,7 @@ Partial Class Form1
         Me.Timer_delete_file = New System.Windows.Forms.Timer(Me.components)
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.Button_reg_ddraw = New System.Windows.Forms.Button()
         Me.Panel_games_list.SuspendLayout()
         Me.Panel_up_log.SuspendLayout()
         Me.Panel_cnc1.SuspendLayout()
@@ -288,9 +289,9 @@ Partial Class Form1
         '
         'ProgressBar1
         '
-        Me.ProgressBar1.Location = New System.Drawing.Point(409, 436)
+        Me.ProgressBar1.Location = New System.Drawing.Point(368, 433)
         Me.ProgressBar1.Name = "ProgressBar1"
-        Me.ProgressBar1.Size = New System.Drawing.Size(378, 23)
+        Me.ProgressBar1.Size = New System.Drawing.Size(259, 23)
         Me.ProgressBar1.TabIndex = 32
         '
         'Panel_cnc1
@@ -666,7 +667,7 @@ Partial Class Form1
         Me.GroupBox_updata.Enabled = False
         Me.GroupBox_updata.Location = New System.Drawing.Point(114, 420)
         Me.GroupBox_updata.Name = "GroupBox_updata"
-        Me.GroupBox_updata.Size = New System.Drawing.Size(271, 45)
+        Me.GroupBox_updata.Size = New System.Drawing.Size(248, 45)
         Me.GroupBox_updata.TabIndex = 48
         Me.GroupBox_updata.TabStop = False
         Me.GroupBox_updata.Text = "更新站点"
@@ -693,7 +694,7 @@ Partial Class Form1
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(11, 12)
         Me.Label1.TabIndex = 50
-        Me.Label1.Text = "b"
+        Me.Label1.Text = "c"
         '
         'Label2
         '
@@ -702,13 +703,23 @@ Partial Class Form1
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(11, 12)
         Me.Label2.TabIndex = 51
-        Me.Label2.Text = "b"
+        Me.Label2.Text = "c"
+        '
+        'Button_reg_ddraw
+        '
+        Me.Button_reg_ddraw.Location = New System.Drawing.Point(633, 433)
+        Me.Button_reg_ddraw.Name = "Button_reg_ddraw"
+        Me.Button_reg_ddraw.Size = New System.Drawing.Size(156, 23)
+        Me.Button_reg_ddraw.TabIndex = 52
+        Me.Button_reg_ddraw.Text = "修复无法运行,花屏,死机"
+        Me.Button_reg_ddraw.UseVisualStyleBackColor = True
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(801, 496)
+        Me.Controls.Add(Me.Button_reg_ddraw)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Button1)
@@ -789,4 +800,5 @@ Partial Class Form1
     Friend WithEvents Button_d2k As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
+    Friend WithEvents Button_reg_ddraw As Button
 End Class

@@ -470,21 +470,7 @@
         End If
     End Sub
 
-    Private Sub RadioButton_eva_eng_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton_eva_eng.CheckedChanged
 
-    End Sub
-
-    Private Sub RadioButton_eva_chi_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton_eva_chi.CheckedChanged
-
-    End Sub
-
-    Private Sub TabPage1_Click(sender As Object, e As EventArgs) Handles TabPage1.Click
-
-    End Sub
-
-    Private Sub cnc1cfg_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
 
     Private Sub cnc1cfg_FormClosed(sender As Object, e As FormClosedEventArgs) Handles Me.FormClosed
         If GetINI("cnc1", "fristrun", "1", ".\config.ini") = "0" Then
@@ -498,8 +484,4 @@
 
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button_reg_ddraw.Click
-        Microsoft.Win32.Registry.SetValue("HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager", "ExcludeFromKnownDlls", "ddraw.dll")
-        MsgBox("修复成功,请重启电脑",, "提示")
-    End Sub
 End Class

@@ -74,7 +74,6 @@ Partial Class cnc1cfg
         Me.Label_width_1280 = New System.Windows.Forms.Label()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
-        Me.Button_reg_ddraw = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -86,7 +85,7 @@ Partial Class cnc1cfg
         '
         'Button_reset
         '
-        Me.Button_reset.Location = New System.Drawing.Point(484, 214)
+        Me.Button_reset.Location = New System.Drawing.Point(484, 208)
         Me.Button_reset.Name = "Button_reset"
         Me.Button_reset.Size = New System.Drawing.Size(93, 23)
         Me.Button_reset.TabIndex = 0
@@ -447,7 +446,6 @@ Partial Class cnc1cfg
         '
         'TabPage1
         '
-        Me.TabPage1.Controls.Add(Me.Button_reg_ddraw)
         Me.TabPage1.Controls.Add(Me.CheckBox_singlecpu)
         Me.TabPage1.Controls.Add(Me.Label_height_800)
         Me.TabPage1.Controls.Add(Me.GroupBox_ddraw_resolution)
@@ -475,7 +473,7 @@ Partial Class cnc1cfg
         'CheckBox_singlecpu
         '
         Me.CheckBox_singlecpu.AutoSize = True
-        Me.CheckBox_singlecpu.Location = New System.Drawing.Point(478, 136)
+        Me.CheckBox_singlecpu.Location = New System.Drawing.Point(486, 164)
         Me.CheckBox_singlecpu.Name = "CheckBox_singlecpu"
         Me.CheckBox_singlecpu.Size = New System.Drawing.Size(90, 16)
         Me.CheckBox_singlecpu.TabIndex = 33
@@ -647,15 +645,6 @@ Partial Class cnc1cfg
         Me.TabPage3.Text = "快捷键"
         Me.TabPage3.UseVisualStyleBackColor = True
         '
-        'Button_reg_ddraw
-        '
-        Me.Button_reg_ddraw.Location = New System.Drawing.Point(475, 173)
-        Me.Button_reg_ddraw.Name = "Button_reg_ddraw"
-        Me.Button_reg_ddraw.Size = New System.Drawing.Size(111, 23)
-        Me.Button_reg_ddraw.TabIndex = 9
-        Me.Button_reg_ddraw.Text = "修复卡屏花屏死机"
-        Me.Button_reg_ddraw.UseVisualStyleBackColor = True
-        '
         'cnc1cfg
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
@@ -735,5 +724,4 @@ Partial Class cnc1cfg
     Friend WithEvents Label_height_400 As Label
     Friend WithEvents Label_width_1280 As Label
     Friend WithEvents CheckBox_singlecpu As CheckBox
-    Friend WithEvents Button_reg_ddraw As Button
 End Class

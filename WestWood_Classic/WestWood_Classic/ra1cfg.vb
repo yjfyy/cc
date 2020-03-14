@@ -431,8 +431,4 @@
         End If
     End Sub
 
-    Private Sub Button_reg_ddraw_Click(sender As Object, e As EventArgs) Handles Button_reg_ddraw.Click
-        Microsoft.Win32.Registry.SetValue("HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager", "ExcludeFromKnownDlls", "ddraw.dll")
-        MsgBox("修复成功,请重启电脑",, "提示")
-    End Sub
 End Class
