@@ -106,7 +106,7 @@ Partial Class Form1
         Me.Label_l_version.Name = "Label_l_version"
         Me.Label_l_version.Size = New System.Drawing.Size(29, 12)
         Me.Label_l_version.TabIndex = 39
-        Me.Label_l_version.Text = "1.61"
+        Me.Label_l_version.Text = "1.62"
         '
         'Label3
         '
@@ -692,18 +692,16 @@ Partial Class Form1
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(258, 473)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(11, 12)
+        Me.Label1.Size = New System.Drawing.Size(0, 12)
         Me.Label1.TabIndex = 50
-        Me.Label1.Text = "c"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Location = New System.Drawing.Point(420, 473)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(11, 12)
+        Me.Label2.Size = New System.Drawing.Size(0, 12)
         Me.Label2.TabIndex = 51
-        Me.Label2.Text = "c"
         '
         'Button_reg_ddraw
         '
@@ -734,9 +732,9 @@ Partial Class Form1
         Me.Controls.Add(Me.Panel_games_list)
         Me.Controls.Add(Me.ProgressBar1)
         Me.Controls.Add(Me.LinkLabel1)
+        Me.Controls.Add(Me.Panel_up_log)
         Me.Controls.Add(Me.Panel_ra1)
         Me.Controls.Add(Me.Panel_cnc1)
-        Me.Controls.Add(Me.Panel_up_log)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Form1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
