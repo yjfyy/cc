@@ -177,6 +177,20 @@
             End If
         End If
 
+        '游戏版本
+        If GetINI("Options", "CounterstrikeEnabled", "Yes", ".\RA\redalert.ini") = "Yes" Then
+            CheckBox_CS.Checked = True
+        Else
+            CheckBox_CS.Checked = False
+        End If
+
+        If GetINI("Options", "AftermathEnabled", "Yes", ".\RA\redalert.ini") = "Yes" Then
+            CheckBox_AM.Checked = True
+        Else
+            CheckBox_AM.Checked = False
+        End If
+
+
         '设置兼容性
         'If GetINI("ra1", "compatibility", "1", ".\config.ini") = "0" Then
         '    CheckBox_ra1_compat.Checked = False
@@ -273,6 +287,19 @@
         If RadioButton_windows.Checked = True Then
             WriteINI("ddraw", "fullscreen", "false", ".\RA\ddraw.ini")
             WriteINI("ddraw", "windowed", "true", ".\RA\ddraw.ini")
+        End If
+
+        '保存对战游戏版本
+        If CheckBox_CS.Checked = True Then
+            WriteINI("Options", "CounterstrikeEnabled", "Yes", ".\RA\redalert.ini")
+        Else
+            WriteINI("Options", "CounterstrikeEnabled", "No", ".\RA\redalert.ini")
+        End If
+
+        If CheckBox_AM.Checked = True Then
+            WriteINI("Options", "AftermathEnabled", "Yes", ".\RA\redalert.ini")
+        Else
+            WriteINI("Options", "AftermathEnabled", "No", ".\RA\redalert.ini")
         End If
 
         '兼容性在兼容性调整中保存

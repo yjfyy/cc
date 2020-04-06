@@ -71,12 +71,16 @@ Partial Class ra1cfg
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.CheckBox_CS = New System.Windows.Forms.CheckBox()
+        Me.CheckBox_AM = New System.Windows.Forms.CheckBox()
         Me.GroupBox4.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox_ddraw_resolution.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
+        Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
         '
         'RadioButton_gdi
@@ -250,7 +254,7 @@ Partial Class ra1cfg
         '
         'Button_ok
         '
-        Me.Button_ok.Location = New System.Drawing.Point(429, 276)
+        Me.Button_ok.Location = New System.Drawing.Point(386, 297)
         Me.Button_ok.Name = "Button_ok"
         Me.Button_ok.Size = New System.Drawing.Size(75, 23)
         Me.Button_ok.TabIndex = 11
@@ -264,7 +268,7 @@ Partial Class ra1cfg
         Me.GroupBox3.Controls.Add(Me.RadioButton_full)
         Me.GroupBox3.Location = New System.Drawing.Point(276, 201)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(125, 109)
+        Me.GroupBox3.Size = New System.Drawing.Size(92, 92)
         Me.GroupBox3.TabIndex = 9
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "显示模式"
@@ -392,7 +396,7 @@ Partial Class ra1cfg
         'Label_height_800
         '
         Me.Label_height_800.AutoSize = True
-        Me.Label_height_800.Location = New System.Drawing.Point(475, 70)
+        Me.Label_height_800.Location = New System.Drawing.Point(440, 70)
         Me.Label_height_800.Name = "Label_height_800"
         Me.Label_height_800.Size = New System.Drawing.Size(23, 12)
         Me.Label_height_800.TabIndex = 24
@@ -402,7 +406,7 @@ Partial Class ra1cfg
         'Label_width_640
         '
         Me.Label_width_640.AutoSize = True
-        Me.Label_width_640.Location = New System.Drawing.Point(449, 58)
+        Me.Label_width_640.Location = New System.Drawing.Point(414, 58)
         Me.Label_width_640.Name = "Label_width_640"
         Me.Label_width_640.Size = New System.Drawing.Size(23, 12)
         Me.Label_width_640.TabIndex = 11
@@ -413,7 +417,7 @@ Partial Class ra1cfg
         '
         Me.Label_height_540.AutoSize = True
         Me.Label_height_540.ForeColor = System.Drawing.Color.Red
-        Me.Label_height_540.Location = New System.Drawing.Point(475, 81)
+        Me.Label_height_540.Location = New System.Drawing.Point(440, 81)
         Me.Label_height_540.Name = "Label_height_540"
         Me.Label_height_540.Size = New System.Drawing.Size(23, 12)
         Me.Label_height_540.TabIndex = 16
@@ -424,7 +428,7 @@ Partial Class ra1cfg
         '
         Me.Label_width_864.AutoSize = True
         Me.Label_width_864.ForeColor = System.Drawing.Color.Red
-        Me.Label_width_864.Location = New System.Drawing.Point(447, 81)
+        Me.Label_width_864.Location = New System.Drawing.Point(412, 81)
         Me.Label_width_864.Name = "Label_width_864"
         Me.Label_width_864.Size = New System.Drawing.Size(23, 12)
         Me.Label_width_864.TabIndex = 15
@@ -434,7 +438,7 @@ Partial Class ra1cfg
         'Label_width_1280
         '
         Me.Label_width_1280.AutoSize = True
-        Me.Label_width_1280.Location = New System.Drawing.Point(443, 69)
+        Me.Label_width_1280.Location = New System.Drawing.Point(408, 69)
         Me.Label_width_1280.Name = "Label_width_1280"
         Me.Label_width_1280.Size = New System.Drawing.Size(29, 12)
         Me.Label_width_1280.TabIndex = 23
@@ -445,7 +449,7 @@ Partial Class ra1cfg
         '
         Me.Label_width_1728.AutoSize = True
         Me.Label_width_1728.ForeColor = System.Drawing.Color.Red
-        Me.Label_width_1728.Location = New System.Drawing.Point(441, 93)
+        Me.Label_width_1728.Location = New System.Drawing.Point(406, 93)
         Me.Label_width_1728.Name = "Label_width_1728"
         Me.Label_width_1728.Size = New System.Drawing.Size(29, 12)
         Me.Label_width_1728.TabIndex = 19
@@ -455,7 +459,7 @@ Partial Class ra1cfg
         'Label_height_400
         '
         Me.Label_height_400.AutoSize = True
-        Me.Label_height_400.Location = New System.Drawing.Point(474, 58)
+        Me.Label_height_400.Location = New System.Drawing.Point(439, 58)
         Me.Label_height_400.Name = "Label_height_400"
         Me.Label_height_400.Size = New System.Drawing.Size(23, 12)
         Me.Label_height_400.TabIndex = 12
@@ -466,7 +470,7 @@ Partial Class ra1cfg
         '
         Me.Label_height_1080.AutoSize = True
         Me.Label_height_1080.ForeColor = System.Drawing.Color.Red
-        Me.Label_height_1080.Location = New System.Drawing.Point(469, 93)
+        Me.Label_height_1080.Location = New System.Drawing.Point(434, 93)
         Me.Label_height_1080.Name = "Label_height_1080"
         Me.Label_height_1080.Size = New System.Drawing.Size(29, 12)
         Me.Label_height_1080.TabIndex = 20
@@ -475,7 +479,7 @@ Partial Class ra1cfg
         '
         'Button_reset
         '
-        Me.Button_reset.Location = New System.Drawing.Point(415, 228)
+        Me.Button_reset.Location = New System.Drawing.Point(276, 297)
         Me.Button_reset.Name = "Button_reset"
         Me.Button_reset.Size = New System.Drawing.Size(102, 23)
         Me.Button_reset.TabIndex = 6
@@ -552,11 +556,12 @@ Partial Class ra1cfg
         Me.TabControl1.Location = New System.Drawing.Point(12, 12)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(534, 352)
+        Me.TabControl1.Size = New System.Drawing.Size(487, 358)
         Me.TabControl1.TabIndex = 25
         '
         'TabPage1
         '
+        Me.TabPage1.Controls.Add(Me.GroupBox2)
         Me.TabPage1.Controls.Add(Me.GroupBox1)
         Me.TabPage1.Controls.Add(Me.Label_height_800)
         Me.TabPage1.Controls.Add(Me.Button_reset)
@@ -574,7 +579,7 @@ Partial Class ra1cfg
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(526, 326)
+        Me.TabPage1.Size = New System.Drawing.Size(479, 332)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "常规与图像"
         Me.TabPage1.UseVisualStyleBackColor = True
@@ -598,11 +603,46 @@ Partial Class ra1cfg
         Me.TabPage3.Text = "快捷键"
         Me.TabPage3.UseVisualStyleBackColor = True
         '
+        'GroupBox2
+        '
+        Me.GroupBox2.Controls.Add(Me.CheckBox_AM)
+        Me.GroupBox2.Controls.Add(Me.CheckBox_CS)
+        Me.GroupBox2.Location = New System.Drawing.Point(374, 201)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(95, 68)
+        Me.GroupBox2.TabIndex = 3
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "对战游戏版本"
+        '
+        'CheckBox_CS
+        '
+        Me.CheckBox_CS.AutoSize = True
+        Me.CheckBox_CS.Checked = True
+        Me.CheckBox_CS.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.CheckBox_CS.Location = New System.Drawing.Point(6, 20)
+        Me.CheckBox_CS.Name = "CheckBox_CS"
+        Me.CheckBox_CS.Size = New System.Drawing.Size(48, 16)
+        Me.CheckBox_CS.TabIndex = 0
+        Me.CheckBox_CS.Text = "反击"
+        Me.CheckBox_CS.UseVisualStyleBackColor = True
+        '
+        'CheckBox_AM
+        '
+        Me.CheckBox_AM.AutoSize = True
+        Me.CheckBox_AM.Checked = True
+        Me.CheckBox_AM.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.CheckBox_AM.Location = New System.Drawing.Point(6, 42)
+        Me.CheckBox_AM.Name = "CheckBox_AM"
+        Me.CheckBox_AM.Size = New System.Drawing.Size(48, 16)
+        Me.CheckBox_AM.TabIndex = 1
+        Me.CheckBox_AM.Text = "余生"
+        Me.CheckBox_AM.UseVisualStyleBackColor = True
+        '
         'ra1cfg
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(558, 371)
+        Me.ClientSize = New System.Drawing.Size(507, 382)
         Me.Controls.Add(Me.TabControl1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "ra1cfg"
@@ -620,6 +660,8 @@ Partial Class ra1cfg
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
+        Me.GroupBox2.ResumeLayout(False)
+        Me.GroupBox2.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -671,4 +713,7 @@ Partial Class ra1cfg
     Friend WithEvents TabPage1 As TabPage
     Friend WithEvents TabPage2 As TabPage
     Friend WithEvents TabPage3 As TabPage
+    Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents CheckBox_AM As CheckBox
+    Friend WithEvents CheckBox_CS As CheckBox
 End Class

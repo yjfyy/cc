@@ -765,7 +765,11 @@ Public Class Form1
                 MsgBox("汉化异常,关闭杀毒软件后重试",, "提示")
                 Exit Sub
             End Try
-            Process.Start("ra\ra95.exe")
+            'Process.Start("ra\ra95.exe")
+            Dim p = New System.Diagnostics.Process()
+            p.StartInfo.WorkingDirectory = app_path & "\ra\"
+            p.StartInfo.FileName = "ra95.exe"
+            p.Start()
         End If
     End Sub
 
@@ -784,7 +788,11 @@ Public Class Form1
                 MsgBox("汉化异常,关闭杀毒软件后重试",, "提示")
                 Exit Sub
             End Try
-            Process.Start("ra\ra95.exe")
+            'Process.Start("ra\ra95.exe")
+            Dim p = New System.Diagnostics.Process()
+            p.StartInfo.WorkingDirectory = app_path & "\ra\"
+            p.StartInfo.FileName = "ra95.exe"
+            p.Start()
             'Else
             'MsgBox("请在设置中打开ddraw")
             'End If
@@ -807,8 +815,15 @@ Public Class Form1
                 MsgBox("汉化异常,关闭杀毒软件后重试",, "提示")
                 Exit Sub
             End Try
+            'Process.Start("ra\ra95", "-SKIRMISH")
+            'Process.Start("ra\ra.bat")
+            Dim p = New System.Diagnostics.Process()
+            p.StartInfo.WorkingDirectory = app_path & "\ra\"
+            p.StartInfo.FileName = "ra95.exe"
+            p.StartInfo.Arguments = "-SKIRMISH"
+            p.Start()
 
-            Process.Start("ra\ra95.exe", "-SKIRMISH")
+            'Process.Start("ra\ra95", "-SKIRMISH")
             'Else
             'MsgBox("请在设置中打开ddraw")
             'End If
@@ -832,8 +847,11 @@ Public Class Form1
                 MsgBox("汉化异常,关闭杀毒软件后重试",, "提示")
                 Exit Sub
             End Try
-
-            Process.Start("ra\ra95.exe")
+            Dim p = New System.Diagnostics.Process()
+            p.StartInfo.WorkingDirectory = app_path & "\ra\"
+            p.StartInfo.FileName = "ra95.exe"
+            p.Start()
+            'Process.Start("ra\ra95.exe")
             'Else
             'MsgBox("请在设置中打开ddraw")
             'End If
@@ -856,8 +874,11 @@ Public Class Form1
                 MsgBox("汉化异常,关闭杀毒软件后重试",, "提示")
                 Exit Sub
             End Try
-
-            Process.Start("ra\ra95.exe")
+            Dim p = New System.Diagnostics.Process()
+            p.StartInfo.WorkingDirectory = app_path & "\ra\"
+            p.StartInfo.FileName = "ra95.exe"
+            p.Start()
+            'Process.Start("ra\ra95.exe")
             'Else
             'MsgBox("请在设置中打开ddraw")
             'End If
@@ -880,8 +901,11 @@ Public Class Form1
                 MsgBox("汉化异常,关闭杀毒软件后重试",, "提示")
                 Exit Sub
             End Try
-
-            Process.Start("ra\ra95.exe")
+            Dim p = New System.Diagnostics.Process()
+            p.StartInfo.WorkingDirectory = app_path & "\ra\"
+            p.StartInfo.FileName = "ra95.exe"
+            p.Start()
+            'Process.Start("ra\ra95.exe")
             'Else
             'MsgBox("请在设置中打开ddraw")
             'End If
@@ -900,7 +924,11 @@ Public Class Form1
             MsgBox("汉化异常,关闭杀毒软件后重试",, "提示")
             Exit Sub
         End Try
-        Process.Start("ra\cncnet5.exe")
+        Dim p = New System.Diagnostics.Process()
+        p.StartInfo.WorkingDirectory = app_path & "\ra\"
+        p.StartInfo.FileName = "cncnet5.exe"
+        p.Start()
+        'Process.Start("ra\cncnet5.exe")
     End Sub
 
 
@@ -917,8 +945,11 @@ Public Class Form1
             Catch ex As Exception
 
             End Try
-
-            Process.Start("ra\ra95.exe")
+            Dim p = New System.Diagnostics.Process()
+            p.StartInfo.WorkingDirectory = app_path & "\ra\"
+            p.StartInfo.FileName = "ra95.exe"
+            p.Start()
+            'Process.Start("ra\ra95.exe")
 
         End If
     End Sub
