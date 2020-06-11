@@ -171,6 +171,26 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  查找 System.Byte[] 类型的本地化资源。
+        '''</summary>
+        Friend ReadOnly Property ccspeecchi() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("ccspeecchi", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找 System.Byte[] 类型的本地化资源。
+        '''</summary>
+        Friend ReadOnly Property ccspeecheng() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("ccspeecheng", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
         '''  查找类似 [Options]
         '''HardwareFills=0
         '''VideoBackBuffer=1
@@ -284,6 +304,16 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  查找 System.Byte[] 类型的本地化资源。
+        '''</summary>
+        Friend ReadOnly Property raspeechchi() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("raspeechchi", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
         '''  查找类似 [Options]
         '''ScrollFix=Yes
         '''LimitCpuUsage=Yes
@@ -337,26 +367,6 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  查找 System.Byte[] 类型的本地化资源。
-        '''</summary>
-        Friend ReadOnly Property speecchi() As Byte()
-            Get
-                Dim obj As Object = ResourceManager.GetObject("speecchi", resourceCulture)
-                Return CType(obj,Byte())
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  查找 System.Byte[] 类型的本地化资源。
-        '''</summary>
-        Friend ReadOnly Property speech() As Byte()
-            Get
-                Dim obj As Object = ResourceManager.GetObject("speech", resourceCulture)
-                Return CType(obj,Byte())
-            End Get
-        End Property
-        
-        '''<summary>
         '''  查找 System.Drawing.Bitmap 类型的本地化资源。
         '''</summary>
         Friend ReadOnly Property title() As System.Drawing.Bitmap
@@ -379,12 +389,19 @@ Namespace My.Resources
         '''<summary>
         '''  查找类似 @echo off
         '''echo 正在更新...
+        '''ping -n 2 127.0.0.1&gt;nul
         '''for /r %%F in (*.exe) do if %%~zF LSS 1 echo del &quot;%%F&quot;&gt;&gt;df.bat
+        '''ping -n 1 127.0.0.1&gt;nul
         '''call df.bat
+        '''ping -n 1 127.0.0.1&gt;nul
         '''del df.bat
+        '''ping -n 1 127.0.0.1&gt;nul
         '''up_data.exe 2&gt;nul
-        '''up_data01.exe 2&gt;nul
+        '''ping -n 1 127.0.0.1&gt;nul
+        '''up_data.part01.exe 2&gt;nul
+        '''ping -n 1 127.0.0.1&gt;nul
         '''echo 更新完成
+        '''ping -n 1 127.0.0.1&gt;nul
         '''start 西木经典游戏汉化纪念版.exe 的本地化字符串。
         '''</summary>
         Friend ReadOnly Property up() As String

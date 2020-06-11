@@ -177,6 +177,14 @@
             End If
         End If
 
+        'eva语音
+        If GetINI("ra95", "eva", "chi", ".\config.ini") = "chi" Then
+            RadioButton_eva_chi.Checked = True
+        Else
+            RadioButton_eva_eng.Checked = True
+        End If
+
+
         '游戏版本
         If GetINI("Options", "CounterstrikeEnabled", "Yes", ".\RA\redalert.ini") = "Yes" Then
             CheckBox_CS.Checked = True
@@ -191,12 +199,7 @@
         End If
 
 
-        '设置兼容性
-        'If GetINI("ra1", "compatibility", "1", ".\config.ini") = "0" Then
-        '    CheckBox_ra1_compat.Checked = False
-        'Else
-        '    CheckBox_ra1_compat.Checked = True
-        'End If
+
 
     End Sub
 
@@ -289,6 +292,13 @@
             WriteINI("ddraw", "windowed", "true", ".\RA\ddraw.ini")
         End If
 
+        '语音
+        If RadioButton_eva_chi.Checked = True Then
+            WriteINI("ra95", "eva", "chi", ".\config.ini")
+        Else
+            WriteINI("ra95", "eva", "eng", ".\config.ini")
+        End If
+
         '保存对战游戏版本
         If CheckBox_CS.Checked = True Then
             WriteINI("Options", "CounterstrikeEnabled", "Yes", ".\RA\redalert.ini")
@@ -305,7 +315,7 @@
         '兼容性在兼容性调整中保存
 
         '已运行过
-        WriteINI("ra1", "fristrun", "0", ".\config.ini")
+        WriteINI("ra95", "fristrun", "0", ".\config.ini")
 
     End Sub
 
@@ -446,7 +456,7 @@
     End Sub
 
     Private Sub ra1cfg_FormClosed(sender As Object, e As FormClosedEventArgs) Handles Me.FormClosed
-        If GetINI("ra1", "fristrun", "1", ".\config.ini") = "0" Then
+        If GetINI("ra95", "fristrun", "1", ".\config.ini") = "0" Then
             Form1.Button_ra1_ally.Enabled = True
             Form1.Button_ra1_soviet.Enabled = True
             Form1.Button_ra1_ext_cs.Enabled = True

@@ -69,17 +69,21 @@ Partial Class ra1cfg
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.GroupBox5 = New System.Windows.Forms.GroupBox()
+        Me.RadioButton_eva_eng = New System.Windows.Forms.RadioButton()
+        Me.RadioButton_eva_chi = New System.Windows.Forms.RadioButton()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.CheckBox_AM = New System.Windows.Forms.CheckBox()
+        Me.CheckBox_CS = New System.Windows.Forms.CheckBox()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.CheckBox_CS = New System.Windows.Forms.CheckBox()
-        Me.CheckBox_AM = New System.Windows.Forms.CheckBox()
         Me.GroupBox4.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox_ddraw_resolution.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
+        Me.GroupBox5.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -254,7 +258,7 @@ Partial Class ra1cfg
         '
         'Button_ok
         '
-        Me.Button_ok.Location = New System.Drawing.Point(386, 297)
+        Me.Button_ok.Location = New System.Drawing.Point(495, 243)
         Me.Button_ok.Name = "Button_ok"
         Me.Button_ok.Size = New System.Drawing.Size(75, 23)
         Me.Button_ok.TabIndex = 11
@@ -268,7 +272,7 @@ Partial Class ra1cfg
         Me.GroupBox3.Controls.Add(Me.RadioButton_full)
         Me.GroupBox3.Location = New System.Drawing.Point(276, 201)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(92, 92)
+        Me.GroupBox3.Size = New System.Drawing.Size(92, 109)
         Me.GroupBox3.TabIndex = 9
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "显示模式"
@@ -479,7 +483,7 @@ Partial Class ra1cfg
         '
         'Button_reset
         '
-        Me.Button_reset.Location = New System.Drawing.Point(276, 297)
+        Me.Button_reset.Location = New System.Drawing.Point(481, 208)
         Me.Button_reset.Name = "Button_reset"
         Me.Button_reset.Size = New System.Drawing.Size(102, 23)
         Me.Button_reset.TabIndex = 6
@@ -556,11 +560,12 @@ Partial Class ra1cfg
         Me.TabControl1.Location = New System.Drawing.Point(12, 12)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(487, 358)
+        Me.TabControl1.Size = New System.Drawing.Size(610, 358)
         Me.TabControl1.TabIndex = 25
         '
         'TabPage1
         '
+        Me.TabPage1.Controls.Add(Me.GroupBox5)
         Me.TabPage1.Controls.Add(Me.GroupBox2)
         Me.TabPage1.Controls.Add(Me.GroupBox1)
         Me.TabPage1.Controls.Add(Me.Label_height_800)
@@ -579,52 +584,54 @@ Partial Class ra1cfg
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(479, 332)
+        Me.TabPage1.Size = New System.Drawing.Size(602, 332)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "常规与图像"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
-        'TabPage2
+        'GroupBox5
         '
-        Me.TabPage2.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(526, 326)
-        Me.TabPage2.TabIndex = 1
-        Me.TabPage2.Text = "游戏内置选项"
-        Me.TabPage2.UseVisualStyleBackColor = True
+        Me.GroupBox5.Controls.Add(Me.RadioButton_eva_eng)
+        Me.GroupBox5.Controls.Add(Me.RadioButton_eva_chi)
+        Me.GroupBox5.Location = New System.Drawing.Point(374, 201)
+        Me.GroupBox5.Name = "GroupBox5"
+        Me.GroupBox5.Size = New System.Drawing.Size(84, 109)
+        Me.GroupBox5.TabIndex = 25
+        Me.GroupBox5.TabStop = False
+        Me.GroupBox5.Text = "EVA语音"
         '
-        'TabPage3
+        'RadioButton_eva_eng
         '
-        Me.TabPage3.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage3.Name = "TabPage3"
-        Me.TabPage3.Size = New System.Drawing.Size(526, 326)
-        Me.TabPage3.TabIndex = 2
-        Me.TabPage3.Text = "快捷键"
-        Me.TabPage3.UseVisualStyleBackColor = True
+        Me.RadioButton_eva_eng.AutoSize = True
+        Me.RadioButton_eva_eng.Location = New System.Drawing.Point(6, 42)
+        Me.RadioButton_eva_eng.Name = "RadioButton_eva_eng"
+        Me.RadioButton_eva_eng.Size = New System.Drawing.Size(47, 16)
+        Me.RadioButton_eva_eng.TabIndex = 1
+        Me.RadioButton_eva_eng.Text = "英文"
+        Me.RadioButton_eva_eng.UseVisualStyleBackColor = True
+        '
+        'RadioButton_eva_chi
+        '
+        Me.RadioButton_eva_chi.AutoSize = True
+        Me.RadioButton_eva_chi.Checked = True
+        Me.RadioButton_eva_chi.Location = New System.Drawing.Point(6, 20)
+        Me.RadioButton_eva_chi.Name = "RadioButton_eva_chi"
+        Me.RadioButton_eva_chi.Size = New System.Drawing.Size(47, 16)
+        Me.RadioButton_eva_chi.TabIndex = 0
+        Me.RadioButton_eva_chi.TabStop = True
+        Me.RadioButton_eva_chi.Text = "中文"
+        Me.RadioButton_eva_chi.UseVisualStyleBackColor = True
         '
         'GroupBox2
         '
         Me.GroupBox2.Controls.Add(Me.CheckBox_AM)
         Me.GroupBox2.Controls.Add(Me.CheckBox_CS)
-        Me.GroupBox2.Location = New System.Drawing.Point(374, 201)
+        Me.GroupBox2.Location = New System.Drawing.Point(475, 16)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(95, 68)
         Me.GroupBox2.TabIndex = 3
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "对战游戏版本"
-        '
-        'CheckBox_CS
-        '
-        Me.CheckBox_CS.AutoSize = True
-        Me.CheckBox_CS.Checked = True
-        Me.CheckBox_CS.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.CheckBox_CS.Location = New System.Drawing.Point(6, 20)
-        Me.CheckBox_CS.Name = "CheckBox_CS"
-        Me.CheckBox_CS.Size = New System.Drawing.Size(48, 16)
-        Me.CheckBox_CS.TabIndex = 0
-        Me.CheckBox_CS.Text = "反击"
-        Me.CheckBox_CS.UseVisualStyleBackColor = True
         '
         'CheckBox_AM
         '
@@ -638,11 +645,42 @@ Partial Class ra1cfg
         Me.CheckBox_AM.Text = "余生"
         Me.CheckBox_AM.UseVisualStyleBackColor = True
         '
+        'CheckBox_CS
+        '
+        Me.CheckBox_CS.AutoSize = True
+        Me.CheckBox_CS.Checked = True
+        Me.CheckBox_CS.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.CheckBox_CS.Location = New System.Drawing.Point(6, 20)
+        Me.CheckBox_CS.Name = "CheckBox_CS"
+        Me.CheckBox_CS.Size = New System.Drawing.Size(48, 16)
+        Me.CheckBox_CS.TabIndex = 0
+        Me.CheckBox_CS.Text = "反击"
+        Me.CheckBox_CS.UseVisualStyleBackColor = True
+        '
+        'TabPage2
+        '
+        Me.TabPage2.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage2.Name = "TabPage2"
+        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage2.Size = New System.Drawing.Size(602, 332)
+        Me.TabPage2.TabIndex = 1
+        Me.TabPage2.Text = "游戏内置选项"
+        Me.TabPage2.UseVisualStyleBackColor = True
+        '
+        'TabPage3
+        '
+        Me.TabPage3.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage3.Name = "TabPage3"
+        Me.TabPage3.Size = New System.Drawing.Size(602, 332)
+        Me.TabPage3.TabIndex = 2
+        Me.TabPage3.Text = "快捷键"
+        Me.TabPage3.UseVisualStyleBackColor = True
+        '
         'ra1cfg
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(507, 382)
+        Me.ClientSize = New System.Drawing.Size(634, 381)
         Me.Controls.Add(Me.TabControl1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "ra1cfg"
@@ -660,6 +698,8 @@ Partial Class ra1cfg
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
+        Me.GroupBox5.ResumeLayout(False)
+        Me.GroupBox5.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         Me.ResumeLayout(False)
@@ -716,4 +756,7 @@ Partial Class ra1cfg
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents CheckBox_AM As CheckBox
     Friend WithEvents CheckBox_CS As CheckBox
+    Friend WithEvents GroupBox5 As GroupBox
+    Friend WithEvents RadioButton_eva_eng As RadioButton
+    Friend WithEvents RadioButton_eva_chi As RadioButton
 End Class

@@ -123,6 +123,14 @@ Public Class Form1
             My.Computer.FileSystem.DeleteFile("up_data.part06.rar")
         Catch ex As Exception
         End Try
+        Try
+            My.Computer.FileSystem.DeleteFile("up_data.part07.rar")
+        Catch ex As Exception
+        End Try
+        Try
+            My.Computer.FileSystem.DeleteFile("up_data.part08.rar")
+        Catch ex As Exception
+        End Try
     End Sub
 
     Private Sub Delete_files()
@@ -253,6 +261,17 @@ Public Class Form1
 
         Try
             System.IO.File.Delete(app_path & "\RA\russianlanguagepack.mix")
+        Catch ex As Exception
+        End Try
+
+        Try
+            System.IO.File.Delete(app_path & "\RA\spanishlanguagepack.mix")
+        Catch ex As Exception
+        End Try
+
+        '语音
+        Try
+            System.IO.File.Delete(app_path & "\RA\speech.mix")
         Catch ex As Exception
         End Try
 
@@ -454,7 +473,7 @@ Public Class Form1
         AddHandler dFile.DownloadFileCompleted, AddressOf Up_autoupdata3
 
         dFile.DownloadFileAsync(New Uri(up_root & "up_data.part02.rar"), "up_data.part02.rar")
-        ProgressBar1.Value = 45
+        ProgressBar1.Value = 40
     End Sub
     Private Sub Up_autoupdata3()
 
@@ -463,7 +482,7 @@ Public Class Form1
         AddHandler dFile.DownloadFileCompleted, AddressOf Up_autoupdata4
 
         dFile.DownloadFileAsync(New Uri(up_root & "up_data.part03.rar"), "up_data.part03.rar")
-        ProgressBar1.Value = 60
+        ProgressBar1.Value = 50
     End Sub
     Private Sub Up_autoupdata4()
 
@@ -472,7 +491,7 @@ Public Class Form1
         AddHandler dFile.DownloadFileCompleted, AddressOf Up_autoupdata5
 
         dFile.DownloadFileAsync(New Uri(up_root & "up_data.part04.rar"), "up_data.part04.rar")
-        ProgressBar1.Value = 75
+        ProgressBar1.Value = 60
     End Sub
     Private Sub Up_autoupdata5()
 
@@ -481,17 +500,37 @@ Public Class Form1
         AddHandler dFile.DownloadFileCompleted, AddressOf Up_autoupdata6
 
         dFile.DownloadFileAsync(New Uri(up_root & "up_data.part05.rar"), "up_data.part05.rar")
-        ProgressBar1.Value = 90
+        ProgressBar1.Value = 70
     End Sub
     Private Sub Up_autoupdata6()
 
         Dim dFile As New System.Net.WebClient
         'AddHandler dFile.DownloadProgressChanged, AddressOf ShowDownProgress
-        AddHandler dFile.DownloadFileCompleted, AddressOf Wanchen
+        AddHandler dFile.DownloadFileCompleted, AddressOf Up_autoupdata7
 
         dFile.DownloadFileAsync(New Uri(up_root & "up_data.part06.rar"), "up_data.part06.rar")
+        ProgressBar1.Value = 80
+    End Sub
+    Private Sub Up_autoupdata7()
+
+        Dim dFile As New System.Net.WebClient
+        'AddHandler dFile.DownloadProgressChanged, AddressOf ShowDownProgress
+        AddHandler dFile.DownloadFileCompleted, AddressOf Up_autoupdata8
+
+        dFile.DownloadFileAsync(New Uri(up_root & "up_data.part07.rar"), "up_data.part07.rar")
+        ProgressBar1.Value = 90
+    End Sub
+    Private Sub Up_autoupdata8()
+
+        Dim dFile As New System.Net.WebClient
+        'AddHandler dFile.DownloadProgressChanged, AddressOf ShowDownProgress
+        AddHandler dFile.DownloadFileCompleted, AddressOf Wanchen
+
+        dFile.DownloadFileAsync(New Uri(up_root & "up_data.part08.rar"), "up_data.part08.rar")
         ProgressBar1.Value = 100
     End Sub
+
+
 
     Private Sub ShowDownProgress(ByVal sender As Object, ByVal e As System.Net.DownloadProgressChangedEventArgs)
         Invoke(New Action(Of Integer)(Sub(i) ProgressBar1.Value = i / 6), e.ProgressPercentage)
@@ -757,10 +796,27 @@ Public Class Form1
             MsgBox("请勿重复启动",, "提示")
         Else
             'If My.Computer.FileSystem.FileExists("cnc95\ddraw.dll") Then
+
             Try
                 System.IO.File.WriteAllBytes(app_path & "\RA\EXPAND9.MIX", My.Resources.allied)
                 System.IO.File.SetCreationTime(app_path & "\RA\EXPAND9.MIX", New DateTime(2013, 1, 30, 4, 16, 0))
                 System.IO.File.SetLastWriteTime(app_path & "\RA\EXPAND9.MIX", New DateTime(2013, 1, 30, 4, 16, 0))
+
+                If GetINI("ra95", "eva", "chi", ".\config.ini") = "chi" Then
+                    Try
+                        System.IO.File.WriteAllBytes(app_path & "\ra\speech.mix", My.Resources.raspeechchi)
+                    Catch ex As Exception
+
+                    End Try
+
+                Else
+                    Try
+                        My.Computer.FileSystem.DeleteFile(app_path & "\RA\speech.mix")
+                    Catch ex As Exception
+
+                    End Try
+
+                End If
             Catch ex As Exception
                 MsgBox("汉化异常,关闭杀毒软件后重试",, "提示")
                 Exit Sub
@@ -784,6 +840,21 @@ Public Class Form1
                 System.IO.File.WriteAllBytes(app_path & "\RA\EXPAND9.MIX", My.Resources.soviet)
                 System.IO.File.SetCreationTime(app_path & "\RA\EXPAND9.MIX", New DateTime(2013, 1, 30, 4, 16, 0))
                 System.IO.File.SetLastWriteTime(app_path & "\RA\EXPAND9.MIX", New DateTime(2013, 1, 30, 4, 16, 0))
+                If GetINI("ra95", "eva", "chi", ".\config.ini") = "chi" Then
+                    Try
+                        System.IO.File.WriteAllBytes(app_path & "\ra\speech.mix", My.Resources.raspeechchi)
+                    Catch ex As Exception
+
+                    End Try
+
+                Else
+                    Try
+                        My.Computer.FileSystem.DeleteFile(app_path & "\RA\speech.mix")
+                    Catch ex As Exception
+
+                    End Try
+
+                End If
             Catch ex As Exception
                 MsgBox("汉化异常,关闭杀毒软件后重试",, "提示")
                 Exit Sub
@@ -811,6 +882,21 @@ Public Class Form1
                 System.IO.File.WriteAllBytes(app_path & "\RA\EXPAND9.MIX", My.Resources.skirmish)
                 System.IO.File.SetCreationTime(app_path & "\RA\EXPAND9.MIX", New DateTime(2013, 1, 30, 4, 16, 0))
                 System.IO.File.SetLastWriteTime(app_path & "\RA\EXPAND9.MIX", New DateTime(2013, 1, 30, 4, 16, 0))
+                If GetINI("ra95", "eva", "chi", ".\config.ini") = "chi" Then
+                    Try
+                        System.IO.File.WriteAllBytes(app_path & "\ra\speech.mix", My.Resources.raspeechchi)
+                    Catch ex As Exception
+
+                    End Try
+
+                Else
+                    Try
+                        My.Computer.FileSystem.DeleteFile(app_path & "\RA\speech.mix")
+                    Catch ex As Exception
+
+                    End Try
+
+                End If
             Catch ex As Exception
                 MsgBox("汉化异常,关闭杀毒软件后重试",, "提示")
                 Exit Sub
@@ -843,6 +929,21 @@ Public Class Form1
                 System.IO.File.WriteAllBytes(app_path & "\RA\campaign.mix", My.Resources.cs)
                 System.IO.File.SetCreationTime(app_path & "\RA\campaign.mix", New DateTime(2013, 1, 30, 4, 16, 0))
                 System.IO.File.SetLastWriteTime(app_path & "\RA\campaign.mix", New DateTime(2013, 1, 30, 4, 16, 0))
+                If GetINI("ra95", "eva", "chi", ".\config.ini") = "chi" Then
+                    Try
+                        System.IO.File.WriteAllBytes(app_path & "\ra\speech.mix", My.Resources.raspeechchi)
+                    Catch ex As Exception
+
+                    End Try
+
+                Else
+                    Try
+                        My.Computer.FileSystem.DeleteFile(app_path & "\RA\speech.mix")
+                    Catch ex As Exception
+
+                    End Try
+
+                End If
             Catch ex As Exception
                 MsgBox("汉化异常,关闭杀毒软件后重试",, "提示")
                 Exit Sub
@@ -870,6 +971,21 @@ Public Class Form1
                 System.IO.File.WriteAllBytes(app_path & "\RA\campaign.mix", My.Resources.am_allied)
                 System.IO.File.SetCreationTime(app_path & "\RA\campaign.mix", New DateTime(2013, 1, 30, 4, 16, 0))
                 System.IO.File.SetLastWriteTime(app_path & "\RA\campaign.mix", New DateTime(2013, 1, 30, 4, 16, 0))
+                If GetINI("ra95", "eva", "chi", ".\config.ini") = "chi" Then
+                    Try
+                        System.IO.File.WriteAllBytes(app_path & "\ra\speech.mix", My.Resources.raspeechchi)
+                    Catch ex As Exception
+
+                    End Try
+
+                Else
+                    Try
+                        My.Computer.FileSystem.DeleteFile(app_path & "\RA\speech.mix")
+                    Catch ex As Exception
+
+                    End Try
+
+                End If
             Catch ex As Exception
                 MsgBox("汉化异常,关闭杀毒软件后重试",, "提示")
                 Exit Sub
@@ -897,6 +1013,21 @@ Public Class Form1
                 System.IO.File.WriteAllBytes(app_path & "\RA\campaign.mix", My.Resources.am_soviet)
                 System.IO.File.SetCreationTime(app_path & "\RA\campaign.mix", New DateTime(2013, 1, 30, 4, 16, 0))
                 System.IO.File.SetLastWriteTime(app_path & "\RA\campaign.mix", New DateTime(2013, 1, 30, 4, 16, 0))
+                If GetINI("ra95", "eva", "chi", ".\config.ini") = "chi" Then
+                    Try
+                        System.IO.File.WriteAllBytes(app_path & "\ra\speech.mix", My.Resources.raspeechchi)
+                    Catch ex As Exception
+
+                    End Try
+
+                Else
+                    Try
+                        My.Computer.FileSystem.DeleteFile(app_path & "\RA\speech.mix")
+                    Catch ex As Exception
+
+                    End Try
+
+                End If
             Catch ex As Exception
                 MsgBox("汉化异常,关闭杀毒软件后重试",, "提示")
                 Exit Sub
@@ -920,6 +1051,21 @@ Public Class Form1
             System.IO.File.WriteAllBytes(app_path & "\RA\EXPAND9.MIX", My.Resources.skirmish)
             System.IO.File.SetCreationTime(app_path & "\RA\EXPAND9.MIX", New DateTime(2013, 1, 30, 4, 16, 0))
             System.IO.File.SetLastWriteTime(app_path & "\RA\EXPAND9.MIX", New DateTime(2013, 1, 30, 4, 16, 0))
+            If GetINI("ra95", "eva", "chi", ".\config.ini") = "chi" Then
+                Try
+                    System.IO.File.WriteAllBytes(app_path & "\ra\speech.mix", My.Resources.raspeechchi)
+                Catch ex As Exception
+
+                End Try
+
+            Else
+                Try
+                    My.Computer.FileSystem.DeleteFile(app_path & "\RA\speech.mix")
+                Catch ex As Exception
+
+                End Try
+
+            End If
         Catch ex As Exception
             MsgBox("汉化异常,关闭杀毒软件后重试",, "提示")
             Exit Sub
@@ -942,6 +1088,15 @@ Public Class Form1
             Try
                 System.IO.File.Delete(app_path & "\RA\EXPAND9.MIX")
                 System.IO.File.Delete(app_path & "\RA\campaign.mix")
+                System.IO.File.Delete(app_path & "\RA\speech.mix")
+
+                Try
+                    My.Computer.FileSystem.DeleteFile(app_path & "\RA\speech.mix")
+                Catch ex As Exception
+
+                End Try
+
+
             Catch ex As Exception
 
             End Try

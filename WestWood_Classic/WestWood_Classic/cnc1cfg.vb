@@ -271,6 +271,7 @@
             WriteINI("ddraw", "windowed", "true", ".\CnC95\ddraw.ini")
         End If
 
+        '语音
         If RadioButton_eva_chi.Checked = True Then
             WriteINI("cnc1", "eva", "chi", ".\config.ini")
         Else
@@ -375,9 +376,9 @@
         '输出中文或英文语音
         If RadioButton_eva_chi.Checked = True Then
             'FileIO.FileSystem.CopyFile("attach\speecchi.mix", ".\CnC95\speecchi.mix", True)
-            System.IO.File.WriteAllBytes(app_path & "\CnC95\speech.mix", My.Resources.speecchi)
+            System.IO.File.WriteAllBytes(app_path & "\CnC95\speech.mix", My.Resources.ccspeecchi)
         Else
-            System.IO.File.WriteAllBytes(app_path & "\CnC95\speech.mix", My.Resources.speech)
+            System.IO.File.WriteAllBytes(app_path & "\CnC95\speech.mix", My.Resources.ccspeecheng)
             'FileIO.FileSystem.CopyFile("CnC95\speech.mix", ".\CnC95\speecchi.mix", True)
         End If
 
@@ -484,4 +485,7 @@
 
     End Sub
 
+    Private Sub cnc1cfg_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class

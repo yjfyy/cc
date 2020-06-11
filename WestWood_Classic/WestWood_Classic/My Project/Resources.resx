@@ -169,12 +169,6 @@
   <data name="ddraw_dll" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ddraw.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="speecchi" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\speecchi.mix;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="speech" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\speech.mix;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="xtitle_1280" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\xtitle_1280.pcx;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -216,5 +210,14 @@
   </data>
   <data name="ts" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ts.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ccspeecchi" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\ccspeecchi.mix;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ccspeecheng" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\ccspeecheng.mix;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="raspeechchi" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\raspeechchi.mix;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>

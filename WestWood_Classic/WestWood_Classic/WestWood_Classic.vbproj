@@ -168,10 +168,11 @@
     <None Include="Resources\cclocal_n.mix" />
     <None Include="Resources\cclocal_v.mix" />
     <None Include="Resources\cs.mix" />
+    <None Include="Resources\raspeechchi.mix" />
     <None Include="Resources\skirmish.mix" />
     <None Include="Resources\soviet.mix" />
-    <None Include="Resources\speecchi.mix" />
-    <None Include="Resources\speech.mix" />
+    <None Include="Resources\ccspeecchi.mix" />
+    <None Include="Resources\ccspeecheng.mix" />
     <None Include="Resources\updated_公用.mix" />
     <None Include="Resources\xtitle_1280.pcx" />
     <None Include="Resources\xtitle_1280x960.pcx" />
