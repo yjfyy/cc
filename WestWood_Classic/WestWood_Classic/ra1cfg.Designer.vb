@@ -77,6 +77,9 @@ Partial Class ra1cfg
         Me.CheckBox_CS = New System.Windows.Forms.CheckBox()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.TabPage4 = New System.Windows.Forms.TabPage()
+        Me.Button_RedAlertEditorLauncher = New System.Windows.Forms.Button()
+        Me.Button_edwin = New System.Windows.Forms.Button()
         Me.GroupBox4.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -85,6 +88,7 @@ Partial Class ra1cfg
         Me.TabPage1.SuspendLayout()
         Me.GroupBox5.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
+        Me.TabPage4.SuspendLayout()
         Me.SuspendLayout()
         '
         'RadioButton_gdi
@@ -557,6 +561,7 @@ Partial Class ra1cfg
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Controls.Add(Me.TabPage2)
         Me.TabControl1.Controls.Add(Me.TabPage3)
+        Me.TabControl1.Controls.Add(Me.TabPage4)
         Me.TabControl1.Location = New System.Drawing.Point(12, 12)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
@@ -593,6 +598,7 @@ Partial Class ra1cfg
         '
         Me.GroupBox5.Controls.Add(Me.RadioButton_eva_eng)
         Me.GroupBox5.Controls.Add(Me.RadioButton_eva_chi)
+        Me.GroupBox5.Enabled = False
         Me.GroupBox5.Location = New System.Drawing.Point(374, 201)
         Me.GroupBox5.Name = "GroupBox5"
         Me.GroupBox5.Size = New System.Drawing.Size(84, 109)
@@ -603,22 +609,22 @@ Partial Class ra1cfg
         'RadioButton_eva_eng
         '
         Me.RadioButton_eva_eng.AutoSize = True
+        Me.RadioButton_eva_eng.Checked = True
         Me.RadioButton_eva_eng.Location = New System.Drawing.Point(6, 42)
         Me.RadioButton_eva_eng.Name = "RadioButton_eva_eng"
         Me.RadioButton_eva_eng.Size = New System.Drawing.Size(47, 16)
         Me.RadioButton_eva_eng.TabIndex = 1
+        Me.RadioButton_eva_eng.TabStop = True
         Me.RadioButton_eva_eng.Text = "英文"
         Me.RadioButton_eva_eng.UseVisualStyleBackColor = True
         '
         'RadioButton_eva_chi
         '
         Me.RadioButton_eva_chi.AutoSize = True
-        Me.RadioButton_eva_chi.Checked = True
         Me.RadioButton_eva_chi.Location = New System.Drawing.Point(6, 20)
         Me.RadioButton_eva_chi.Name = "RadioButton_eva_chi"
         Me.RadioButton_eva_chi.Size = New System.Drawing.Size(47, 16)
         Me.RadioButton_eva_chi.TabIndex = 0
-        Me.RadioButton_eva_chi.TabStop = True
         Me.RadioButton_eva_chi.Text = "中文"
         Me.RadioButton_eva_chi.UseVisualStyleBackColor = True
         '
@@ -676,6 +682,36 @@ Partial Class ra1cfg
         Me.TabPage3.Text = "快捷键"
         Me.TabPage3.UseVisualStyleBackColor = True
         '
+        'TabPage4
+        '
+        Me.TabPage4.Controls.Add(Me.Button_RedAlertEditorLauncher)
+        Me.TabPage4.Controls.Add(Me.Button_edwin)
+        Me.TabPage4.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage4.Name = "TabPage4"
+        Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage4.Size = New System.Drawing.Size(602, 332)
+        Me.TabPage4.TabIndex = 3
+        Me.TabPage4.Text = "工具"
+        Me.TabPage4.UseVisualStyleBackColor = True
+        '
+        'Button_RedAlertEditorLauncher
+        '
+        Me.Button_RedAlertEditorLauncher.Location = New System.Drawing.Point(146, 6)
+        Me.Button_RedAlertEditorLauncher.Name = "Button_RedAlertEditorLauncher"
+        Me.Button_RedAlertEditorLauncher.Size = New System.Drawing.Size(127, 23)
+        Me.Button_RedAlertEditorLauncher.TabIndex = 1
+        Me.Button_RedAlertEditorLauncher.Text = "RAED场景编辑器"
+        Me.Button_RedAlertEditorLauncher.UseVisualStyleBackColor = True
+        '
+        'Button_edwin
+        '
+        Me.Button_edwin.Location = New System.Drawing.Point(6, 6)
+        Me.Button_edwin.Name = "Button_edwin"
+        Me.Button_edwin.Size = New System.Drawing.Size(134, 23)
+        Me.Button_edwin.TabIndex = 0
+        Me.Button_edwin.Text = "原版地图编辑器"
+        Me.Button_edwin.UseVisualStyleBackColor = True
+        '
         'ra1cfg
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
@@ -702,6 +738,7 @@ Partial Class ra1cfg
         Me.GroupBox5.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
+        Me.TabPage4.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -759,4 +796,7 @@ Partial Class ra1cfg
     Friend WithEvents GroupBox5 As GroupBox
     Friend WithEvents RadioButton_eva_eng As RadioButton
     Friend WithEvents RadioButton_eva_chi As RadioButton
+    Friend WithEvents TabPage4 As TabPage
+    Friend WithEvents Button_RedAlertEditorLauncher As Button
+    Friend WithEvents Button_edwin As Button
 End Class

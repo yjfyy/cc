@@ -178,11 +178,11 @@
         End If
 
         'eva语音
-        If GetINI("ra95", "eva", "chi", ".\config.ini") = "chi" Then
-            RadioButton_eva_chi.Checked = True
-        Else
-            RadioButton_eva_eng.Checked = True
-        End If
+        'If GetINI("ra95", "eva", "chi", ".\config.ini") = "chi" Then
+        'RadioButton_eva_chi.Checked = True
+        'Else
+        ' RadioButton_eva_eng.Checked = True
+        'End If
 
 
         '游戏版本
@@ -293,11 +293,11 @@
         End If
 
         '语音
-        If RadioButton_eva_chi.Checked = True Then
-            WriteINI("ra95", "eva", "chi", ".\config.ini")
-        Else
-            WriteINI("ra95", "eva", "eng", ".\config.ini")
-        End If
+        'If RadioButton_eva_chi.Checked = True Then
+        'WriteINI("ra95", "eva", "chi", ".\config.ini")
+        'Else
+        ' WriteINI("ra95", "eva", "eng", ".\config.ini")
+        'End If
 
         '保存对战游戏版本
         If CheckBox_CS.Checked = True Then
@@ -468,4 +468,26 @@
         End If
     End Sub
 
+    Private Sub Button_edwin_Click(sender As Object, e As EventArgs) Handles Button_edwin.Click
+        Dim p = New System.Diagnostics.Process()
+        p.StartInfo.WorkingDirectory = app_path & "\ra\"
+        p.StartInfo.FileName = "edwin.exe"
+        p.Start()
+    End Sub
+
+    Private Sub Button_RedAlertEditorLauncher_Click(sender As Object, e As EventArgs) Handles Button_RedAlertEditorLauncher.Click
+        Dim p = New System.Diagnostics.Process()
+        p.StartInfo.WorkingDirectory = app_path & "\ra\"
+        p.StartInfo.FileName = "RedAlertEditorLauncher.exe"
+        p.Start()
+        Me.Close()
+    End Sub
+
+    Private Sub RadioButton_eva_chi_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton_eva_chi.CheckedChanged
+
+    End Sub
+
+    Private Sub RadioButton_eva_eng_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton_eva_eng.CheckedChanged
+
+    End Sub
 End Class

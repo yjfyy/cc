@@ -605,7 +605,7 @@ Partial Class Form1
         Me.Button_ra1_config.Name = "Button_ra1_config"
         Me.Button_ra1_config.Size = New System.Drawing.Size(170, 22)
         Me.Button_ra1_config.TabIndex = 1
-        Me.Button_ra1_config.Text = "设置"
+        Me.Button_ra1_config.Text = "设置和工具"
         Me.Button_ra1_config.UseVisualStyleBackColor = False
         '
         'Button_ra1_ally
