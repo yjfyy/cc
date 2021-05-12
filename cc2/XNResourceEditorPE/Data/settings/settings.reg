@@ -1,0 +1,52 @@
+REGEDIT4
+
+[HKEY_CURRENT_USER\Software\Woozle]
+
+[HKEY_CURRENT_USER\Software\Woozle\XN Resource Editor]
+
+[HKEY_CURRENT_USER\Software\Woozle\XN Resource Editor\Directories]
+"Import"="E:\\Projects\\cc\\cc2\\"
+
+[HKEY_CURRENT_USER\Software\Woozle\XN Resource Editor\Position]
+"Left"=dword:00000251
+"Top"=dword:00000078
+"Width"=dword:000003a4
+"Height"=dword:000001ca
+"State"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Woozle\XN Resource Editor\Position\Options]
+"Splitter"=dword:000000a9
+"Left"=dword:00000176
+"Top"=dword:000000bd
+"Width"=dword:00000243
+"Height"=dword:00000190
+"State"=dword:00000000
+
+[HKEY_CURRENT_USER\Software\Woozle\XN Resource Editor\Position\选项]
+"Splitter"=dword:000000a9
+"Left"=dword:00000176
+"Top"=dword:000000bd
+"Width"=dword:0000024b
+"Height"=dword:00000195
+"State"=dword:00000000
+
+[HKEY_CURRENT_USER\Software\Woozle\XN Resource Editor\Properties]
+"Show Toolbar"=dword:00000001
+"Show Statusbar"=dword:00000001
+"RC Include Path"=dword:00000000
+"RC Custom Include"=""
+"RC Include Path Package"=""
+"Parser Type"=dword:00000000
+"International Font Name"="Arial Unicode MS"
+"International Font Height"=dword:00000010
+
+[HKEY_CURRENT_USER\Software\Woozle\XN Resource Editor\Recent Files]
+"File 0"="d:\\dynertia3\\dynertia3.exe"
+"File 1"="e:\\projects\\cc\\cc2\\c_language\\language1.dll"
+"File 2"="c:\\documents and settings\\griffithsdj\\desktop\\xnresourceeditor.exe"
+"File 3"="e:\\projects\\cc\\cc2\\c_language\\language.dll"
+"File 4"="e:\\projects\\cc\\cc2\\德语\\language.dll"
+"File 5"="e:\\projects\\cc\\cc2\\language.dll"
+"File 6"="e:\\projects\\cc\\cc2\\language1.dll"
+"File 7"="d:\\hj95_cn\\hj95_cn\\ra95修改器 - 副本.exe"
+"File 8"="e:\\projects\\cc\\cc2\\languaged.dll"

@@ -1,0 +1,10 @@
+主菜单 gmenu 图片
+
+一般菜单 language.dll
+
+开始选择 battle.ini (支持中文字库)
+选项
+language string 9 129 右上角选项 0x105a0  字库12metfnt
+
+选择难度 
+language dialog 148 7 	0x050c0
