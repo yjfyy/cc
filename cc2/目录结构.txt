@@ -1,0 +1,51 @@
+e01scd01.mix		//得分转圈动画
+e01scd02.mix			//得分转圈动画
+	expand01.mix		//资料片文件
+	|e01sc01.mix
+	|e01sc02.mix
+	|e01vox01.mix		//单位语音
+	|e01vox02.mix		//单位语音
+	|ecache02.mix		//建筑单位动画
+	|gmenu.mix			//主菜单文件//汉化
+	|isotemp.mix		//地图建筑
+	|snow.mix			//雪地建筑模型
+	|sounds01.mix		//单位语音
+	|temperat.mix		//普通常见建筑模型
+	|loading.pcx		//载入界面//汉化
+	|title.pcs			//游戏主界面//汉化
+	|ts_title.vqa		//游戏选择界面，选择ts动画
+gmenu.mix				//主菜单文件//汉化
+language.dll			//语言文件，主要菜单结构//汉化
+maps01.mix				//地图
+maps02.mix				//地图
+maps03.mix				//地图
+movies01.mix			//动画
+movies02.mix			//动画
+movies03.mix			//动画
+multi.mix				//多人地图
+patch.mix				//补丁 *.ini规则
+scores.mix				//音乐
+sidecd01.mix			//过关玄关动画音乐
+sidecd02.mix			//过关玄关动画音乐
+tibsun.mix
+	|cache.mix			//字库,调色板,扳手,电源图标
+	|conquer.mix		//各种shp单位人物动画
+	|isosnow.mix		//雪地地图组件
+	|isotemp.mix		//地图组件
+	|local.mix			//语言
+		||dlgsysa.pcx	//二极菜单字库蒙版//汉化
+		||dlgsysi.pcx	//二级菜单字库//汉化
+		||fullfnt3.shp	//带动画字,可能是任务简报//待确定
+	|sidec01.mix		//shp 应该是右上角地图动画
+	|sidec02.mix		//shp 应该是右上角地图动画
+	|sidenc01.mix		//shp 应该是选择关卡动画
+		||bigfont.shp	//应该是简报字库//汉化 cd1
+	|sidenc02.mix		//shp 应该是选择关卡动画
+		||bigfont.shp	//应该是简报字库//汉化 cd2
+	|sno.mix			//水面动画???
+	|snow.mix			//雪地模型
+	|sounds.mix			//单位语音
+	|speech01.mix		//eva语音
+	|speech02.mix		//eva语音
+	|tem.mix			//水面动画???
+	|temperat.mix		//普通模型
