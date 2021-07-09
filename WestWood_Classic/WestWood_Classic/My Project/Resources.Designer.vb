@@ -22,7 +22,7 @@ Namespace My.Resources
     '''<summary>
     '''  一个强类型的资源类，用于查找本地化的字符串等。
     '''</summary>
-    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0"),  _
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0"),  _
      Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.Runtime.CompilerServices.CompilerGeneratedAttribute(),  _
      Global.Microsoft.VisualBasic.HideModuleNameAttribute()>  _
@@ -58,26 +58,6 @@ Namespace My.Resources
             Set
                 resourceCulture = value
             End Set
-        End Property
-        
-        '''<summary>
-        '''  查找 System.Drawing.Bitmap 类型的本地化资源。
-        '''</summary>
-        Friend ReadOnly Property _1() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("1", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  查找 System.Drawing.Bitmap 类型的本地化资源。
-        '''</summary>
-        Friend ReadOnly Property _93() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("93", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
         End Property
         
         '''<summary>
@@ -117,6 +97,16 @@ Namespace My.Resources
             Get
                 Dim obj As Object = ResourceManager.GetObject("C_C95exe", resourceCulture)
                 Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找 System.Drawing.Bitmap 类型的本地化资源。
+        '''</summary>
+        Friend ReadOnly Property cc() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("cc", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
         
@@ -294,21 +284,21 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  查找 System.Byte[] 类型的本地化资源。
+        '''  查找 System.Drawing.Bitmap 类型的本地化资源。
         '''</summary>
-        Friend ReadOnly Property ra95exe() As Byte()
+        Friend ReadOnly Property ra() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("ra95exe", resourceCulture)
-                Return CType(obj,Byte())
+                Dim obj As Object = ResourceManager.GetObject("ra", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
         
         '''<summary>
         '''  查找 System.Byte[] 类型的本地化资源。
         '''</summary>
-        Friend ReadOnly Property raspeechchi() As Byte()
+        Friend ReadOnly Property ra95exe() As Byte()
             Get
-                Dim obj As Object = ResourceManager.GetObject("raspeechchi", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("ra95exe", resourceCulture)
                 Return CType(obj,Byte())
             End Get
         End Property

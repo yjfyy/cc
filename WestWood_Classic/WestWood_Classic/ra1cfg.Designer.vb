@@ -605,6 +605,7 @@ Partial Class ra1cfg
         Me.GroupBox5.TabIndex = 25
         Me.GroupBox5.TabStop = False
         Me.GroupBox5.Text = "EVA语音"
+        Me.GroupBox5.Visible = False
         '
         'RadioButton_eva_eng
         '

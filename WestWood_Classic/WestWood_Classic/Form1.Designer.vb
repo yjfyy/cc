@@ -33,6 +33,7 @@ Partial Class Form1
         Me.BackgroundWorker_check_ver = New System.ComponentModel.BackgroundWorker()
         Me.Button_updata = New System.Windows.Forms.Button()
         Me.Panel_games_list = New System.Windows.Forms.Panel()
+        Me.Button_donate = New System.Windows.Forms.Button()
         Me.Label_ts = New System.Windows.Forms.Label()
         Me.Button_ts = New System.Windows.Forms.Button()
         Me.Label_d2k = New System.Windows.Forms.Label()
@@ -64,7 +65,6 @@ Partial Class Form1
         Me.Button_ra1_cncnet = New System.Windows.Forms.Button()
         Me.Button_ra1_config = New System.Windows.Forms.Button()
         Me.Button_ra1_ally = New System.Windows.Forms.Button()
-        Me.Button_donate = New System.Windows.Forms.Button()
         Me.RadioButton_updata_gitee = New System.Windows.Forms.RadioButton()
         Me.RadioButton_updata_github = New System.Windows.Forms.RadioButton()
         Me.GroupBox_updata = New System.Windows.Forms.GroupBox()
@@ -106,7 +106,7 @@ Partial Class Form1
         Me.Label_l_version.Name = "Label_l_version"
         Me.Label_l_version.Size = New System.Drawing.Size(29, 12)
         Me.Label_l_version.TabIndex = 39
-        Me.Label_l_version.Text = "1.63"
+        Me.Label_l_version.Text = "1.64"
         '
         'Label3
         '
@@ -142,7 +142,7 @@ Partial Class Form1
         'Button_updata
         '
         Me.Button_updata.Enabled = False
-        Me.Button_updata.Location = New System.Drawing.Point(12, 433)
+        Me.Button_updata.Location = New System.Drawing.Point(12, 437)
         Me.Button_updata.Name = "Button_updata"
         Me.Button_updata.Size = New System.Drawing.Size(92, 23)
         Me.Button_updata.TabIndex = 33
@@ -151,6 +151,7 @@ Partial Class Form1
         '
         'Panel_games_list
         '
+        Me.Panel_games_list.Controls.Add(Me.Button_donate)
         Me.Panel_games_list.Controls.Add(Me.Label_ts)
         Me.Panel_games_list.Controls.Add(Me.Button_ts)
         Me.Panel_games_list.Controls.Add(Me.Label_d2k)
@@ -164,6 +165,15 @@ Partial Class Form1
         Me.Panel_games_list.Name = "Panel_games_list"
         Me.Panel_games_list.Size = New System.Drawing.Size(133, 400)
         Me.Panel_games_list.TabIndex = 29
+        '
+        'Button_donate
+        '
+        Me.Button_donate.Location = New System.Drawing.Point(34, 230)
+        Me.Button_donate.Name = "Button_donate"
+        Me.Button_donate.Size = New System.Drawing.Size(58, 54)
+        Me.Button_donate.TabIndex = 45
+        Me.Button_donate.Text = "捐助"
+        Me.Button_donate.UseVisualStyleBackColor = True
         '
         'Label_ts
         '
@@ -226,6 +236,7 @@ Partial Class Form1
         Me.Label_ra1.Size = New System.Drawing.Size(53, 12)
         Me.Label_ra1.TabIndex = 3
         Me.Label_ra1.Text = "红色警戒"
+        Me.Label_ra1.Visible = False
         '
         'Label_cnc1
         '
@@ -235,11 +246,12 @@ Partial Class Form1
         Me.Label_cnc1.Size = New System.Drawing.Size(65, 12)
         Me.Label_cnc1.TabIndex = 2
         Me.Label_cnc1.Text = "命令与征服"
+        Me.Label_cnc1.Visible = False
         '
         'Button_cnc1
         '
         Me.Button_cnc1.BackColor = System.Drawing.Color.Transparent
-        Me.Button_cnc1.BackgroundImage = Global.WestWood_Classic.My.Resources.Resources._1
+        Me.Button_cnc1.BackgroundImage = Global.WestWood_Classic.My.Resources.Resources.cc
         Me.Button_cnc1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.Button_cnc1.Location = New System.Drawing.Point(34, 50)
         Me.Button_cnc1.Name = "Button_cnc1"
@@ -247,17 +259,19 @@ Partial Class Form1
         Me.Button_cnc1.TabIndex = 0
         Me.Button_cnc1.UseMnemonic = False
         Me.Button_cnc1.UseVisualStyleBackColor = False
+        Me.Button_cnc1.Visible = False
         '
         'Button_ra1
         '
         Me.Button_ra1.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Button_ra1.BackgroundImage = Global.WestWood_Classic.My.Resources.Resources._93
+        Me.Button_ra1.BackgroundImage = Global.WestWood_Classic.My.Resources.Resources.ra
         Me.Button_ra1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.Button_ra1.Location = New System.Drawing.Point(34, 142)
         Me.Button_ra1.Name = "Button_ra1"
         Me.Button_ra1.Size = New System.Drawing.Size(58, 54)
         Me.Button_ra1.TabIndex = 1
         Me.Button_ra1.UseVisualStyleBackColor = False
+        Me.Button_ra1.Visible = False
         '
         'Button1
         '
@@ -628,15 +642,6 @@ Partial Class Form1
         Me.Button_ra1_ally.Text = "盟军剧情任务"
         Me.Button_ra1_ally.UseVisualStyleBackColor = False
         '
-        'Button_donate
-        '
-        Me.Button_donate.Location = New System.Drawing.Point(741, 468)
-        Me.Button_donate.Name = "Button_donate"
-        Me.Button_donate.Size = New System.Drawing.Size(48, 23)
-        Me.Button_donate.TabIndex = 45
-        Me.Button_donate.Text = "捐助"
-        Me.Button_donate.UseVisualStyleBackColor = True
-        '
         'RadioButton_updata_gitee
         '
         Me.RadioButton_updata_gitee.AutoSize = True
@@ -722,7 +727,6 @@ Partial Class Form1
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.GroupBox_updata)
-        Me.Controls.Add(Me.Button_donate)
         Me.Controls.Add(Me.Label_r_version)
         Me.Controls.Add(Me.Label_l_version)
         Me.Controls.Add(Me.Label3)

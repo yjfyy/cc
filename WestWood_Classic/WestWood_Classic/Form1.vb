@@ -802,21 +802,21 @@ Public Class Form1
                 System.IO.File.SetCreationTime(app_path & "\RA\EXPAND9.MIX", New DateTime(2013, 1, 30, 4, 16, 0))
                 System.IO.File.SetLastWriteTime(app_path & "\RA\EXPAND9.MIX", New DateTime(2013, 1, 30, 4, 16, 0))
 
-                If GetINI("ra95", "eva", "chi", ".\config.ini") = "chi" Then
-                    Try
-                        System.IO.File.WriteAllBytes(app_path & "\ra\speech.mix", My.Resources.raspeechchi)
-                    Catch ex As Exception
+                'If GetINI("ra95", "eva", "chi", ".\config.ini") = "chi" Then
+                '    Try
+                '        System.IO.File.WriteAllBytes(app_path & "\ra\speech.mix", My.Resources.raspeechchi)
+                '    Catch ex As Exception
 
-                    End Try
+                '    End Try
 
-                Else
-                    Try
-                        My.Computer.FileSystem.DeleteFile(app_path & "\RA\speech.mix")
-                    Catch ex As Exception
+                'Else
+                '    Try
+                '        My.Computer.FileSystem.DeleteFile(app_path & "\RA\speech.mix")
+                '    Catch ex As Exception
 
-                    End Try
+                '    End Try
 
-                End If
+                'End If
             Catch ex As Exception
                 MsgBox("汉化异常,关闭杀毒软件后重试",, "提示")
                 Exit Sub
@@ -840,21 +840,21 @@ Public Class Form1
                 System.IO.File.WriteAllBytes(app_path & "\RA\EXPAND9.MIX", My.Resources.soviet)
                 System.IO.File.SetCreationTime(app_path & "\RA\EXPAND9.MIX", New DateTime(2013, 1, 30, 4, 16, 0))
                 System.IO.File.SetLastWriteTime(app_path & "\RA\EXPAND9.MIX", New DateTime(2013, 1, 30, 4, 16, 0))
-                If GetINI("ra95", "eva", "chi", ".\config.ini") = "chi" Then
-                    Try
-                        System.IO.File.WriteAllBytes(app_path & "\ra\speech.mix", My.Resources.raspeechchi)
-                    Catch ex As Exception
+                'If GetINI("ra95", "eva", "chi", ".\config.ini") = "chi" Then
+                '    Try
+                '        System.IO.File.WriteAllBytes(app_path & "\ra\speech.mix", My.Resources.raspeechchi)
+                '    Catch ex As Exception
 
-                    End Try
+                '    End Try
 
-                Else
-                    Try
-                        My.Computer.FileSystem.DeleteFile(app_path & "\RA\speech.mix")
-                    Catch ex As Exception
+                'Else
+                '    Try
+                '        My.Computer.FileSystem.DeleteFile(app_path & "\RA\speech.mix")
+                '    Catch ex As Exception
 
-                    End Try
+                '    End Try
 
-                End If
+                'End If
             Catch ex As Exception
                 MsgBox("汉化异常,关闭杀毒软件后重试",, "提示")
                 Exit Sub
@@ -882,21 +882,21 @@ Public Class Form1
                 System.IO.File.WriteAllBytes(app_path & "\RA\EXPAND9.MIX", My.Resources.skirmish)
                 System.IO.File.SetCreationTime(app_path & "\RA\EXPAND9.MIX", New DateTime(2013, 1, 30, 4, 16, 0))
                 System.IO.File.SetLastWriteTime(app_path & "\RA\EXPAND9.MIX", New DateTime(2013, 1, 30, 4, 16, 0))
-                If GetINI("ra95", "eva", "chi", ".\config.ini") = "chi" Then
-                    Try
-                        System.IO.File.WriteAllBytes(app_path & "\ra\speech.mix", My.Resources.raspeechchi)
-                    Catch ex As Exception
+                'If GetINI("ra95", "eva", "chi", ".\config.ini") = "chi" Then
+                '    Try
+                '        System.IO.File.WriteAllBytes(app_path & "\ra\speech.mix", My.Resources.raspeechchi)
+                '    Catch ex As Exception
 
-                    End Try
+                '    End Try
 
-                Else
-                    Try
-                        My.Computer.FileSystem.DeleteFile(app_path & "\RA\speech.mix")
-                    Catch ex As Exception
+                'Else
+                '    Try
+                '        My.Computer.FileSystem.DeleteFile(app_path & "\RA\speech.mix")
+                '    Catch ex As Exception
 
-                    End Try
+                '    End Try
 
-                End If
+                'End If
             Catch ex As Exception
                 MsgBox("汉化异常,关闭杀毒软件后重试",, "提示")
                 Exit Sub
@@ -929,21 +929,21 @@ Public Class Form1
                 System.IO.File.WriteAllBytes(app_path & "\RA\campaign.mix", My.Resources.cs)
                 System.IO.File.SetCreationTime(app_path & "\RA\campaign.mix", New DateTime(2013, 1, 30, 4, 16, 0))
                 System.IO.File.SetLastWriteTime(app_path & "\RA\campaign.mix", New DateTime(2013, 1, 30, 4, 16, 0))
-                If GetINI("ra95", "eva", "chi", ".\config.ini") = "chi" Then
-                    Try
-                        System.IO.File.WriteAllBytes(app_path & "\ra\speech.mix", My.Resources.raspeechchi)
-                    Catch ex As Exception
+                'If GetINI("ra95", "eva", "chi", ".\config.ini") = "chi" Then
+                '    Try
+                '        System.IO.File.WriteAllBytes(app_path & "\ra\speech.mix", My.Resources.raspeechchi)
+                '    Catch ex As Exception
 
-                    End Try
+                '    End Try
 
-                Else
-                    Try
-                        My.Computer.FileSystem.DeleteFile(app_path & "\RA\speech.mix")
-                    Catch ex As Exception
+                'Else
+                '    Try
+                '        My.Computer.FileSystem.DeleteFile(app_path & "\RA\speech.mix")
+                '    Catch ex As Exception
 
-                    End Try
+                '    End Try
 
-                End If
+                'End If
             Catch ex As Exception
                 MsgBox("汉化异常,关闭杀毒软件后重试",, "提示")
                 Exit Sub
@@ -971,21 +971,21 @@ Public Class Form1
                 System.IO.File.WriteAllBytes(app_path & "\RA\campaign.mix", My.Resources.am_allied)
                 System.IO.File.SetCreationTime(app_path & "\RA\campaign.mix", New DateTime(2013, 1, 30, 4, 16, 0))
                 System.IO.File.SetLastWriteTime(app_path & "\RA\campaign.mix", New DateTime(2013, 1, 30, 4, 16, 0))
-                If GetINI("ra95", "eva", "chi", ".\config.ini") = "chi" Then
-                    Try
-                        System.IO.File.WriteAllBytes(app_path & "\ra\speech.mix", My.Resources.raspeechchi)
-                    Catch ex As Exception
+                'If GetINI("ra95", "eva", "chi", ".\config.ini") = "chi" Then
+                '    Try
+                '        System.IO.File.WriteAllBytes(app_path & "\ra\speech.mix", My.Resources.raspeechchi)
+                '    Catch ex As Exception
 
-                    End Try
+                '    End Try
 
-                Else
-                    Try
-                        My.Computer.FileSystem.DeleteFile(app_path & "\RA\speech.mix")
-                    Catch ex As Exception
+                'Else
+                '    Try
+                '        My.Computer.FileSystem.DeleteFile(app_path & "\RA\speech.mix")
+                '    Catch ex As Exception
 
-                    End Try
+                '    End Try
 
-                End If
+                'End If
             Catch ex As Exception
                 MsgBox("汉化异常,关闭杀毒软件后重试",, "提示")
                 Exit Sub
@@ -1013,21 +1013,21 @@ Public Class Form1
                 System.IO.File.WriteAllBytes(app_path & "\RA\campaign.mix", My.Resources.am_soviet)
                 System.IO.File.SetCreationTime(app_path & "\RA\campaign.mix", New DateTime(2013, 1, 30, 4, 16, 0))
                 System.IO.File.SetLastWriteTime(app_path & "\RA\campaign.mix", New DateTime(2013, 1, 30, 4, 16, 0))
-                If GetINI("ra95", "eva", "chi", ".\config.ini") = "chi" Then
-                    Try
-                        System.IO.File.WriteAllBytes(app_path & "\ra\speech.mix", My.Resources.raspeechchi)
-                    Catch ex As Exception
+                'If GetINI("ra95", "eva", "chi", ".\config.ini") = "chi" Then
+                '    Try
+                '        System.IO.File.WriteAllBytes(app_path & "\ra\speech.mix", My.Resources.raspeechchi)
+                '    Catch ex As Exception
 
-                    End Try
+                '    End Try
 
-                Else
-                    Try
-                        My.Computer.FileSystem.DeleteFile(app_path & "\RA\speech.mix")
-                    Catch ex As Exception
+                'Else
+                '    Try
+                '        My.Computer.FileSystem.DeleteFile(app_path & "\RA\speech.mix")
+                '    Catch ex As Exception
 
-                    End Try
+                '    End Try
 
-                End If
+                'End If
             Catch ex As Exception
                 MsgBox("汉化异常,关闭杀毒软件后重试",, "提示")
                 Exit Sub
@@ -1051,21 +1051,21 @@ Public Class Form1
             System.IO.File.WriteAllBytes(app_path & "\RA\EXPAND9.MIX", My.Resources.skirmish)
             System.IO.File.SetCreationTime(app_path & "\RA\EXPAND9.MIX", New DateTime(2013, 1, 30, 4, 16, 0))
             System.IO.File.SetLastWriteTime(app_path & "\RA\EXPAND9.MIX", New DateTime(2013, 1, 30, 4, 16, 0))
-            If GetINI("ra95", "eva", "chi", ".\config.ini") = "chi" Then
-                Try
-                    System.IO.File.WriteAllBytes(app_path & "\ra\speech.mix", My.Resources.raspeechchi)
-                Catch ex As Exception
+            'If GetINI("ra95", "eva", "chi", ".\config.ini") = "chi" Then
+            '    Try
+            '        System.IO.File.WriteAllBytes(app_path & "\ra\speech.mix", My.Resources.raspeechchi)
+            '    Catch ex As Exception
 
-                End Try
+            '    End Try
 
-            Else
-                Try
-                    My.Computer.FileSystem.DeleteFile(app_path & "\RA\speech.mix")
-                Catch ex As Exception
+            'Else
+            '    Try
+            '        My.Computer.FileSystem.DeleteFile(app_path & "\RA\speech.mix")
+            '    Catch ex As Exception
 
-                End Try
+            '    End Try
 
-            End If
+            'End If
         Catch ex As Exception
             MsgBox("汉化异常,关闭杀毒软件后重试",, "提示")
             Exit Sub
@@ -1261,7 +1261,7 @@ Public Class Form1
             Button_ts.Visible = False
             Label_ts.Visible = False
         End If
-
+        Button_donate.Location = b_p
     End Sub
 
     Private Sub Button_cnc1_GDI_miss_MouseMove(sender As Object, e As MouseEventArgs) Handles Button_cnc1_GDI_miss.MouseMove, Button_cnc1_NOD_miss.MouseMove,
